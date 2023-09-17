@@ -6,6 +6,9 @@ package locura.instantánea;
 
 import javax.swing.UIManager;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+import java.awt.Color;
+import java.util.Random;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,12 +16,58 @@ import com.formdev.flatlaf.themes.FlatMacDarkLaf;
  */
 public class Locura_Instantánea extends javax.swing.JFrame {
 
+    public Cubos Cubo1 = new Cubos();
+    public Cubos Cubo2 = new Cubos();
+    public Cubos Cubo3 = new Cubos();
+    public Cubos Cubo4 = new Cubos();
     /**
-     * Creates new form Locura_Instantánea
+     * Creates new form
      */
     public Locura_Instantánea() {
         initComponents();
-        
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+
+        if (Cubo1.C1 == null) {
+            Cubo1C1G.setVisible(false);
+            Cubo1C2G.setVisible(false);
+            Cubo1C3G.setVisible(false);
+            Cubo1C4G.setVisible(false);
+            Cubo1C5G.setVisible(false);
+            Cubo1C6G.setVisible(false);
+
+        }
+
+        if (Cubo2.C1 == null) {
+            Cubo2C1G.setVisible(false);
+            Cubo2C2G.setVisible(false);
+            Cubo2C3G.setVisible(false);
+            Cubo2C4G.setVisible(false);
+            Cubo2C5G.setVisible(false);
+            Cubo2C6G.setVisible(false);
+
+        }
+
+        if (Cubo3.C1 == null) {
+            Cubo3C1G.setVisible(false);
+            Cubo3C2G.setVisible(false);
+            Cubo3C3G.setVisible(false);
+            Cubo3C4G.setVisible(false);
+            Cubo3C5G.setVisible(false);
+            Cubo3C6G.setVisible(false);
+
+        }
+
+        if (Cubo4.C1 == null) {
+            Cubo4C1G.setVisible(false);
+            Cubo4C2G.setVisible(false);
+            Cubo4C3G.setVisible(false);
+            Cubo4C4G.setVisible(false);
+            Cubo4C5G.setVisible(false);
+            Cubo4C6G.setVisible(false);
+
+        }
+
     }
 
     /**
@@ -34,55 +83,2291 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jLabel33 = new javax.swing.JLabel();
+        Cubo1C1 = new javax.swing.JComboBox<>();
+        jLabel34 = new javax.swing.JLabel();
+        Cubo1C2 = new javax.swing.JComboBox<>();
+        jLabel35 = new javax.swing.JLabel();
+        Cubo1C3 = new javax.swing.JComboBox<>();
+        jLabel36 = new javax.swing.JLabel();
+        Cubo1C4 = new javax.swing.JComboBox<>();
+        jLabel37 = new javax.swing.JLabel();
+        Cubo1C5 = new javax.swing.JComboBox<>();
+        jLabel38 = new javax.swing.JLabel();
+        Cubo1C6 = new javax.swing.JComboBox<>();
+        genCubo1 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        Cubo3C1 = new javax.swing.JComboBox<>();
+        jLabel22 = new javax.swing.JLabel();
+        Cubo3C2 = new javax.swing.JComboBox<>();
+        jLabel23 = new javax.swing.JLabel();
+        Cubo3C3 = new javax.swing.JComboBox<>();
+        jLabel24 = new javax.swing.JLabel();
+        Cubo3C4 = new javax.swing.JComboBox<>();
+        jLabel25 = new javax.swing.JLabel();
+        Cubo3C5 = new javax.swing.JComboBox<>();
+        jLabel26 = new javax.swing.JLabel();
+        Cubo3C6 = new javax.swing.JComboBox<>();
+        jLabel39 = new javax.swing.JLabel();
+        Cubo4C1 = new javax.swing.JComboBox<>();
+        jLabel40 = new javax.swing.JLabel();
+        Cubo4C2 = new javax.swing.JComboBox<>();
+        jLabel41 = new javax.swing.JLabel();
+        Cubo4C3 = new javax.swing.JComboBox<>();
+        jLabel42 = new javax.swing.JLabel();
+        Cubo4C4 = new javax.swing.JComboBox<>();
+        jLabel43 = new javax.swing.JLabel();
+        Cubo4C5 = new javax.swing.JComboBox<>();
+        jLabel44 = new javax.swing.JLabel();
+        Cubo4C6 = new javax.swing.JComboBox<>();
+        siguienteBtn = new javax.swing.JButton();
+        genCubo3 = new javax.swing.JButton();
+        genCubo4 = new javax.swing.JButton();
+        jLabel45 = new javax.swing.JLabel();
+        Cubo2C1 = new javax.swing.JComboBox<>();
+        jLabel46 = new javax.swing.JLabel();
+        Cubo2C2 = new javax.swing.JComboBox<>();
+        jLabel47 = new javax.swing.JLabel();
+        Cubo2C3 = new javax.swing.JComboBox<>();
+        jLabel48 = new javax.swing.JLabel();
+        Cubo2C4 = new javax.swing.JComboBox<>();
+        jLabel49 = new javax.swing.JLabel();
+        Cubo2C5 = new javax.swing.JComboBox<>();
+        jLabel50 = new javax.swing.JLabel();
+        Cubo2C6 = new javax.swing.JComboBox<>();
+        genCubo2 = new javax.swing.JButton();
+        genAleatorio = new javax.swing.JButton();
+        Cubo1C5G = new javax.swing.JLabel();
+        Cubo1C3G = new javax.swing.JLabel();
+        Cubo1C1G = new javax.swing.JLabel();
+        Cubo1C2G = new javax.swing.JLabel();
+        Cubo1C6G = new javax.swing.JLabel();
+        Cubo1C4G = new javax.swing.JLabel();
+        Cubo2C1G = new javax.swing.JLabel();
+        Cubo2C3G = new javax.swing.JLabel();
+        Cubo2C5G = new javax.swing.JLabel();
+        Cubo2C2G = new javax.swing.JLabel();
+        Cubo2C6G = new javax.swing.JLabel();
+        Cubo2C4G = new javax.swing.JLabel();
+        Cubo3C1G = new javax.swing.JLabel();
+        Cubo3C3G = new javax.swing.JLabel();
+        Cubo3C5G = new javax.swing.JLabel();
+        Cubo3C2G = new javax.swing.JLabel();
+        Cubo3C6G = new javax.swing.JLabel();
+        Cubo3C4G = new javax.swing.JLabel();
+        Cubo4C1G = new javax.swing.JLabel();
+        Cubo4C3G = new javax.swing.JLabel();
+        Cubo4C5G = new javax.swing.JLabel();
+        Cubo4C2G = new javax.swing.JLabel();
+        Cubo4C6G = new javax.swing.JLabel();
+        Cubo4C4G = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        genAleatorio1 = new javax.swing.JButton();
+        Cubo1C1J = new javax.swing.JLabel();
+        arribaCubo1 = new javax.swing.JButton();
+        izquierdaCubo1 = new javax.swing.JButton();
+        Cubo1C5J = new javax.swing.JLabel();
+        Cubo1C6J = new javax.swing.JLabel();
+        Cubo1C4J = new javax.swing.JLabel();
+        Cubo1C3J = new javax.swing.JLabel();
+        derechaCubo1 = new javax.swing.JButton();
+        abajoCubo1 = new javax.swing.JButton();
+        Cubo1C2J = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
-        jLabel1.setFont(new java.awt.Font("Ravie", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 204, 0));
         jLabel1.setText("tánea");
         jLabel1.setFocusable(false);
 
-        jLabel2.setFont(new java.awt.Font("Ravie", 0, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(136, 29, 60));
         jLabel2.setText("Locu");
 
-        jLabel3.setFont(new java.awt.Font("Ravie", 1, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("ra  In");
 
-        jLabel4.setFont(new java.awt.Font("Ravie", 0, 36)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(45, 160, 106));
         jLabel4.setText("stan");
+
+        jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane1StateChanged(evt);
+            }
+        });
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setText("Cubo 1");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 48, 74, -1));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setText("Cubo 2");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 48, 74, -1));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setText("Cubo 3");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 48, 74, -1));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel8.setText("Cubo 4");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(736, 48, 74, -1));
+
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 61, 10, 260));
+
+        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 68, 12, 260));
+
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 68, 10, 260));
+
+        jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 68, 10, 260));
+
+        jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(877, 68, 10, 260));
+
+        jLabel33.setText("Cara 1");
+        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 96, 43, -1));
+
+        Cubo1C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo1C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 91, 97, -1));
+
+        jLabel34.setText("Cara 2");
+        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 136, 43, -1));
+
+        Cubo1C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo1C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 131, 97, -1));
+
+        jLabel35.setText("Cara 3");
+        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 176, 43, -1));
+
+        Cubo1C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo1C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 171, 97, -1));
+
+        jLabel36.setText("Cara 4");
+        jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 216, 43, -1));
+
+        Cubo1C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo1C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 211, 97, -1));
+
+        jLabel37.setText("Cara 5");
+        jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 256, 43, -1));
+
+        Cubo1C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo1C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 251, 97, -1));
+
+        jLabel38.setText("Cara 6");
+        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 296, 43, -1));
+
+        Cubo1C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo1C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 291, 97, -1));
+
+        genCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        genCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        genCubo1.setForeground(new java.awt.Color(0, 0, 0));
+        genCubo1.setText("Generar");
+        genCubo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genCubo1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(genCubo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 340, -1, -1));
+
+        jLabel21.setText("Cara 1");
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 96, 43, -1));
+
+        Cubo3C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo3C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 91, 97, -1));
+
+        jLabel22.setText("Cara 2");
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 136, 43, -1));
+
+        Cubo3C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo3C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 131, 97, -1));
+
+        jLabel23.setText("Cara 3");
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 176, 43, -1));
+
+        Cubo3C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo3C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 171, 97, -1));
+
+        jLabel24.setText("Cara 4");
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 216, 43, -1));
+
+        Cubo3C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo3C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 211, 97, -1));
+
+        jLabel25.setText("Cara 5");
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 256, 43, -1));
+
+        Cubo3C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo3C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 251, 97, -1));
+
+        jLabel26.setText("Cara 6");
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 296, 43, -1));
+
+        Cubo3C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo3C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 291, 97, -1));
+
+        jLabel39.setText("Cara 1");
+        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 96, 43, -1));
+
+        Cubo4C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo4C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 91, 97, -1));
+
+        jLabel40.setText("Cara 2");
+        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 136, 43, -1));
+
+        Cubo4C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo4C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 131, 97, -1));
+
+        jLabel41.setText("Cara 3");
+        jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 176, 43, -1));
+
+        Cubo4C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo4C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 171, 97, -1));
+
+        jLabel42.setText("Cara 4");
+        jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 216, 43, -1));
+
+        Cubo4C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo4C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 211, 97, -1));
+
+        jLabel43.setText("Cara 5");
+        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 256, 43, -1));
+
+        Cubo4C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo4C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 251, 97, -1));
+
+        jLabel44.setText("Cara 6");
+        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 296, 43, -1));
+
+        Cubo4C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo4C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 291, 97, -1));
+
+        siguienteBtn.setBackground(new java.awt.Color(147, 157, 255));
+        siguienteBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        siguienteBtn.setForeground(new java.awt.Color(0, 0, 0));
+        siguienteBtn.setText("Siguiente");
+        siguienteBtn.setAlignmentX(jTabbedPane1.getAlignmentX());
+        siguienteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                siguienteBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(siguienteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, 180, 36));
+
+        genCubo3.setBackground(new java.awt.Color(147, 157, 255));
+        genCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        genCubo3.setForeground(new java.awt.Color(0, 0, 0));
+        genCubo3.setText("Generar");
+        genCubo3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genCubo3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(genCubo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 340, -1, -1));
+
+        genCubo4.setBackground(new java.awt.Color(147, 157, 255));
+        genCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        genCubo4.setForeground(new java.awt.Color(0, 0, 0));
+        genCubo4.setText("Generar");
+        genCubo4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genCubo4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(genCubo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 340, -1, -1));
+
+        jLabel45.setText("Cara 1");
+        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 96, 43, -1));
+
+        Cubo2C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo2C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 91, 97, -1));
+
+        jLabel46.setText("Cara 2");
+        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 135, 43, -1));
+
+        Cubo2C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo2C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 130, 97, -1));
+
+        jLabel47.setText("Cara 3");
+        jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 176, 43, -1));
+
+        Cubo2C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo2C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 171, 97, -1));
+
+        jLabel48.setText("Cara 4");
+        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 216, 43, -1));
+
+        Cubo2C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo2C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 211, 97, -1));
+
+        jLabel49.setText("Cara 5");
+        jPanel1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 256, 43, -1));
+
+        Cubo2C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo2C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 251, 97, -1));
+
+        jLabel50.setText("Cara 6");
+        jPanel1.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 296, 43, -1));
+
+        Cubo2C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        jPanel1.add(Cubo2C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 291, 97, -1));
+
+        genCubo2.setBackground(new java.awt.Color(147, 157, 255));
+        genCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        genCubo2.setForeground(new java.awt.Color(0, 0, 0));
+        genCubo2.setText("Generar");
+        genCubo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genCubo2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(genCubo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 340, -1, -1));
+
+        genAleatorio.setBackground(new java.awt.Color(147, 157, 255));
+        genAleatorio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        genAleatorio.setForeground(new java.awt.Color(0, 0, 0));
+        genAleatorio.setText("Generar Aleatorio");
+        genAleatorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genAleatorioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(genAleatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 10, 170, -1));
+
+        Cubo1C5G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C5G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C5G.setText("5");
+        Cubo1C5G.setOpaque(true);
+        jPanel1.add(Cubo1C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 458, 31, 31));
+
+        Cubo1C3G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C3G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C3G.setText("3");
+        Cubo1C3G.setOpaque(true);
+        jPanel1.add(Cubo1C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 421, 31, 31));
+
+        Cubo1C1G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C1G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C1G.setText("1");
+        Cubo1C1G.setOpaque(true);
+        jPanel1.add(Cubo1C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 458, 31, 31));
+
+        Cubo1C2G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C2G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C2G.setText("2");
+        Cubo1C2G.setOpaque(true);
+        jPanel1.add(Cubo1C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 458, 31, 31));
+
+        Cubo1C6G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C6G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C6G.setText("6");
+        Cubo1C6G.setOpaque(true);
+        jPanel1.add(Cubo1C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 458, 31, 31));
+
+        Cubo1C4G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C4G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C4G.setText("4");
+        Cubo1C4G.setOpaque(true);
+        jPanel1.add(Cubo1C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 495, 31, 31));
+
+        Cubo2C1G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C1G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C1G.setText("1");
+        Cubo2C1G.setOpaque(true);
+        jPanel1.add(Cubo2C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 458, 31, 31));
+
+        Cubo2C3G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C3G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C3G.setText("3");
+        Cubo2C3G.setOpaque(true);
+        jPanel1.add(Cubo2C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 421, 31, 31));
+
+        Cubo2C5G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C5G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C5G.setText("5");
+        Cubo2C5G.setOpaque(true);
+        jPanel1.add(Cubo2C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 458, 31, 31));
+
+        Cubo2C2G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C2G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C2G.setText("2");
+        Cubo2C2G.setOpaque(true);
+        jPanel1.add(Cubo2C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 458, 31, 31));
+
+        Cubo2C6G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C6G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C6G.setText("6");
+        Cubo2C6G.setOpaque(true);
+        jPanel1.add(Cubo2C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 458, 31, 31));
+
+        Cubo2C4G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C4G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C4G.setText("4");
+        Cubo2C4G.setOpaque(true);
+        jPanel1.add(Cubo2C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 495, 31, 31));
+
+        Cubo3C1G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C1G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C1G.setText("1");
+        Cubo3C1G.setOpaque(true);
+        jPanel1.add(Cubo3C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 458, 31, 31));
+
+        Cubo3C3G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C3G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C3G.setText("3");
+        Cubo3C3G.setOpaque(true);
+        jPanel1.add(Cubo3C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 421, 31, 31));
+
+        Cubo3C5G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C5G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C5G.setText("5");
+        Cubo3C5G.setOpaque(true);
+        jPanel1.add(Cubo3C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 458, 31, 31));
+
+        Cubo3C2G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C2G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C2G.setText("2");
+        Cubo3C2G.setOpaque(true);
+        jPanel1.add(Cubo3C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 458, 31, 31));
+
+        Cubo3C6G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C6G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C6G.setText("6");
+        Cubo3C6G.setOpaque(true);
+        jPanel1.add(Cubo3C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 458, 31, 31));
+
+        Cubo3C4G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C4G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C4G.setText("4");
+        Cubo3C4G.setOpaque(true);
+        jPanel1.add(Cubo3C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 495, 31, 31));
+
+        Cubo4C1G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C1G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C1G.setText("1");
+        Cubo4C1G.setOpaque(true);
+        jPanel1.add(Cubo4C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 458, 31, 31));
+
+        Cubo4C3G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C3G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C3G.setText("3");
+        Cubo4C3G.setOpaque(true);
+        jPanel1.add(Cubo4C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 421, 31, 31));
+
+        Cubo4C5G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C5G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C5G.setText("5");
+        Cubo4C5G.setOpaque(true);
+        jPanel1.add(Cubo4C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 458, 31, 31));
+
+        Cubo4C2G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C2G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C2G.setText("2");
+        Cubo4C2G.setOpaque(true);
+        jPanel1.add(Cubo4C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 458, 31, 31));
+
+        Cubo4C6G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C6G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C6G.setText("6");
+        Cubo4C6G.setOpaque(true);
+        jPanel1.add(Cubo4C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(803, 458, 31, 31));
+
+        Cubo4C4G.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C4G.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C4G.setText("4");
+        Cubo4C4G.setOpaque(true);
+        jPanel1.add(Cubo4C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 495, 31, 31));
+
+        jLabel9.setText("1)");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 395, 16, -1));
+
+        jLabel10.setText("2)");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 395, 16, -1));
+
+        jLabel11.setText("3)");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 395, 16, -1));
+
+        jLabel12.setText("4)");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 395, 16, -1));
+
+        jTabbedPane1.addTab("Selección de Colores", jPanel1);
+
+        genAleatorio1.setBackground(new java.awt.Color(147, 157, 255));
+        genAleatorio1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        genAleatorio1.setForeground(new java.awt.Color(0, 0, 0));
+        genAleatorio1.setText("Mostrar Solución");
+        genAleatorio1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genAleatorio1ActionPerformed(evt);
+            }
+        });
+
+        Cubo1C1J.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C1J.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C1J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C1J.setText("1");
+        Cubo1C1J.setOpaque(true);
+
+        arribaCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        arribaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        arribaCubo1.setForeground(new java.awt.Color(0, 0, 0));
+        arribaCubo1.setText("▲");
+        arribaCubo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                arribaCubo1ActionPerformed(evt);
+            }
+        });
+
+        izquierdaCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        izquierdaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        izquierdaCubo1.setForeground(new java.awt.Color(0, 0, 0));
+        izquierdaCubo1.setText("◄");
+        izquierdaCubo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                izquierdaCubo1ActionPerformed(evt);
+            }
+        });
+
+        Cubo1C5J.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C5J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C5J.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C5J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C5J.setText("5");
+        Cubo1C5J.setOpaque(true);
+
+        Cubo1C6J.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C6J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C6J.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C6J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C6J.setText("6");
+        Cubo1C6J.setOpaque(true);
+
+        Cubo1C4J.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C4J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C4J.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C4J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C4J.setText("4");
+        Cubo1C4J.setOpaque(true);
+
+        Cubo1C3J.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C3J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C3J.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C3J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C3J.setText("3");
+        Cubo1C3J.setOpaque(true);
+
+        derechaCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        derechaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        derechaCubo1.setForeground(new java.awt.Color(0, 0, 0));
+        derechaCubo1.setText("►");
+        derechaCubo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                derechaCubo1ActionPerformed(evt);
+            }
+        });
+
+        abajoCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        abajoCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        abajoCubo1.setForeground(new java.awt.Color(0, 0, 0));
+        abajoCubo1.setText("▼");
+        abajoCubo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                abajoCubo1ActionPerformed(evt);
+            }
+        });
+
+        Cubo1C2J.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C2J.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C2J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C2J.setText("2");
+        Cubo1C2J.setOpaque(true);
+
+        jLabel13.setText("1)");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(arribaCubo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(genAleatorio1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(69, 69, 69)
+                                .addComponent(abajoCubo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(izquierdaCubo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel13))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Cubo1C6J)
+                                        .addGap(6, 6, 6)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Cubo1C3J, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(Cubo1C4J, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(Cubo1C1J, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(6, 6, 6)
+                                                .addComponent(Cubo1C5J)
+                                                .addGap(6, 6, 6)
+                                                .addComponent(derechaCubo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                        .addGap(100, 100, 100)
+                                        .addComponent(Cubo1C2J, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 725, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(genAleatorio1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(arribaCubo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Cubo1C2J, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13))))
+                .addGap(2, 2, 2)
+                .addComponent(Cubo1C3J, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Cubo1C6J, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(izquierdaCubo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Cubo1C1J, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo1C5J, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(derechaCubo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(5, 5, 5)
+                .addComponent(Cubo1C4J, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2)
+                .addComponent(abajoCubo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(447, 447, 447))
+        );
+
+        jTabbedPane1.addTab("Juego", jPanel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(213, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addGap(4, 4, 4)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel3)
                 .addGap(2, 2, 2)
                 .addComponent(jLabel4)
-                .addGap(2, 2, 2)
+                .addGap(3, 3, 3)
                 .addComponent(jLabel1)
-                .addGap(206, 206, 206))
+                .addGap(165, 165, 165))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(jLabel1))
-                .addContainerGap(515, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+
+    private void genCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genCubo1ActionPerformed
+        // TODO add your handling code here:
+        Cubo1C1G.setVisible(true);
+        Cubo1C2G.setVisible(true);
+        Cubo1C3G.setVisible(true);
+        Cubo1C4G.setVisible(true);
+        Cubo1C5G.setVisible(true);
+        Cubo1C6G.setVisible(true);
+
+        Color C1 = null;
+        if (Cubo1C1.getItemAt(Cubo1C1.getSelectedIndex()).equals("Rojo")) {
+            C1 = new Color(153, 0, 0);
+            Cubo1C1G.setText("R");
+            Cubo1C1G.setBackground(C1);
+        } else if (Cubo1C1.getItemAt(Cubo1C1.getSelectedIndex()).equals("Blanco")) {
+            C1 = new Color(255, 255, 255);
+            Cubo1C1G.setText("B");
+            Cubo1C1G.setBackground(C1);
+        } else if (Cubo1C1.getItemAt(Cubo1C1.getSelectedIndex()).equals("Verde")) {
+            C1 = new Color(0, 153, 0);
+            Cubo1C1G.setText("V");
+            Cubo1C1G.setBackground(C1);
+        } else if (Cubo1C1.getItemAt(Cubo1C1.getSelectedIndex()).equals("Amarillo")) {
+            C1 = new Color(255, 226, 58);
+            Cubo1C1G.setText("A");
+            Cubo1C1G.setBackground(C1);
+        }
+
+        Color C2 = null;
+        if (Cubo1C2.getItemAt(Cubo1C2.getSelectedIndex()).equals("Rojo")) {
+            C2 = new Color(153, 0, 0);
+            Cubo1C2G.setText("R");
+            Cubo1C2G.setBackground(C2);
+        } else if (Cubo1C2.getItemAt(Cubo1C2.getSelectedIndex()).equals("Blanco")) {
+            C2 = new Color(255, 255, 255);
+            Cubo1C2G.setText("B");
+            Cubo1C2G.setBackground(C2);
+        } else if (Cubo1C2.getItemAt(Cubo1C2.getSelectedIndex()).equals("Verde")) {
+            C2 = new Color(0, 153, 0);
+            Cubo1C2G.setText("V");
+            Cubo1C2G.setBackground(C2);
+        } else if (Cubo1C2.getItemAt(Cubo1C2.getSelectedIndex()).equals("Amarillo")) {
+            C2 = new Color(255, 226, 58);
+            Cubo1C2G.setText("A");
+            Cubo1C2G.setBackground(C2);
+        }
+
+        Color C3 = null;
+        if (Cubo1C3.getItemAt(Cubo1C3.getSelectedIndex()).equals("Rojo")) {
+            C3 = new Color(153, 0, 0);
+            Cubo1C3G.setText("R");
+            Cubo1C3G.setBackground(C3);
+        } else if (Cubo1C3.getItemAt(Cubo1C3.getSelectedIndex()).equals("Blanco")) {
+            C3 = new Color(255, 255, 255);
+            Cubo1C3G.setText("B");
+            Cubo1C3G.setBackground(C3);
+        } else if (Cubo1C3.getItemAt(Cubo1C3.getSelectedIndex()).equals("Verde")) {
+            C3 = new Color(0, 153, 0);
+            Cubo1C3G.setText("V");
+            Cubo1C3G.setBackground(C3);
+        } else if (Cubo1C3.getItemAt(Cubo1C3.getSelectedIndex()).equals("Amarillo")) {
+            C3 = new Color(255, 226, 58);
+            Cubo1C3G.setText("A");
+            Cubo1C3G.setBackground(C3);
+        }
+
+        Color C4 = null;
+        if (Cubo1C4.getItemAt(Cubo1C4.getSelectedIndex()).equals("Rojo")) {
+            C4 = new Color(153, 0, 0);
+            Cubo1C4G.setText("R");
+            Cubo1C4G.setBackground(C4);
+        } else if (Cubo1C4.getItemAt(Cubo1C4.getSelectedIndex()).equals("Blanco")) {
+            C4 = new Color(255, 255, 255);
+            Cubo1C4G.setText("B");
+            Cubo1C4G.setBackground(C4);
+        } else if (Cubo1C4.getItemAt(Cubo1C4.getSelectedIndex()).equals("Verde")) {
+            C4 = new Color(0, 153, 0);
+            Cubo1C4G.setText("V");
+            Cubo1C4G.setBackground(C4);
+        } else if (Cubo1C4.getItemAt(Cubo1C4.getSelectedIndex()).equals("Amarillo")) {
+            C4 = new Color(255, 226, 58);
+            Cubo1C4G.setText("A");
+            Cubo1C4G.setBackground(C4);
+        }
+
+        Color C5 = null;
+        if (Cubo1C5.getItemAt(Cubo1C5.getSelectedIndex()).equals("Rojo")) {
+            C5 = new Color(153, 0, 0);
+            Cubo1C5G.setText("R");
+            Cubo1C5G.setBackground(C5);
+        } else if (Cubo1C5.getItemAt(Cubo1C5.getSelectedIndex()).equals("Blanco")) {
+            C5 = new Color(255, 255, 255);
+            Cubo1C5G.setText("B");
+            Cubo1C5G.setBackground(C5);
+        } else if (Cubo1C5.getItemAt(Cubo1C5.getSelectedIndex()).equals("Verde")) {
+            C5 = new Color(0, 153, 0);
+            Cubo1C5G.setText("V");
+            Cubo1C5G.setBackground(C5);
+        } else if (Cubo1C5.getItemAt(Cubo1C5.getSelectedIndex()).equals("Amarillo")) {
+            C5 = new Color(255, 226, 58);
+            Cubo1C5G.setText("A");
+            Cubo1C5G.setBackground(C5);
+        }
+
+        Color C6 = null;
+        if (Cubo1C6.getItemAt(Cubo1C6.getSelectedIndex()).equals("Rojo")) {
+            C6 = new Color(153, 0, 0);
+            Cubo1C6G.setText("R");
+            Cubo1C6G.setBackground(C6);
+        } else if (Cubo1C6.getItemAt(Cubo1C6.getSelectedIndex()).equals("Blanco")) {
+            C6 = new Color(255, 255, 255);
+            Cubo1C6G.setText("B");
+            Cubo1C6G.setBackground(C6);
+        } else if (Cubo1C6.getItemAt(Cubo1C6.getSelectedIndex()).equals("Verde")) {
+            C6 = new Color(0, 153, 0);
+            Cubo1C6G.setText("V");
+            Cubo1C6G.setBackground(C6);
+        } else if (Cubo1C6.getItemAt(Cubo1C6.getSelectedIndex()).equals("Amarillo")) {
+            C6 = new Color(255, 226, 58);
+            Cubo1C6G.setText("A");
+            Cubo1C6G.setBackground(C6);
+        }
+
+        /*
+        1, 2, 3, 4 x
+        1, 2, 3, 5 x
+        1, 2, 3, 6 x
+        1, 2, 4, 5 x
+        1, 2, 4, 6 x
+        1, 2, 5, 6 x
+        1, 3, 4, 5 x
+        1, 3, 4, 6 x
+        1, 3, 5, 6 x
+        1, 4, 5, 6 x
+        2, 3, 4, 5 x
+        2, 3, 4, 6 x
+        2, 3, 5, 6 x
+        2, 4, 5, 6 x
+        3, 4, 5, 6
+         */
+        if (((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C4))
+                && (!C2.equals(C3) && !C2.equals(C4)) && (!C3.equals(C4))) //
+                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C5))
+                && (!C2.equals(C3) && !C2.equals(C5)) && (!C3.equals(C5))) //
+                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C6))
+                && (!C2.equals(C3) && !C2.equals(C6)) && (!C3.equals(C6))) //
+                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C5))
+                && (!C2.equals(C4) && !C2.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C6))
+                && (!C2.equals(C4) && !C2.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C1.equals(C2) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C2.equals(C5) && !C2.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C5))
+                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C6))
+                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C1.equals(C3) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) // 
+                || ((!C1.equals(C4) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C5))
+                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C6))
+                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C2.equals(C3) && !C2.equals(C5) && !C2.equals(C6))
+                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C2.equals(C4) && !C2.equals(C5) && !C2.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) // 
+                || ((!C3.equals(C4) && !C3.equals(C5) && !C3.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6)))) {
+
+            Cubos cubo1 = new Cubos(C1, C2, C3, C4, C5, C6);
+            Cubo1 = cubo1;
+            System.out.println("Colores generados");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Es obligatorio que cada cubo tenga los 4 colores disponibles");
+        }
+
+    }//GEN-LAST:event_genCubo1ActionPerformed
+
+    private void genCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genCubo3ActionPerformed
+        // TODO add your handling code here:
+        Cubo3C1G.setVisible(true);
+        Cubo3C2G.setVisible(true);
+        Cubo3C3G.setVisible(true);
+        Cubo3C4G.setVisible(true);
+        Cubo3C5G.setVisible(true);
+        Cubo3C6G.setVisible(true);
+
+        Color C1 = null;
+        if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Rojo")) {
+            C1 = new Color(153, 0, 0);
+            Cubo3C1G.setText("R");
+            Cubo3C1G.setBackground(C1);
+        } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Blanco")) {
+            C1 = new Color(255, 255, 255);
+            Cubo3C1G.setText("B");
+            Cubo3C1G.setBackground(C1);
+        } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Verde")) {
+            C1 = new Color(0, 153, 0);
+            Cubo3C1G.setText("V");
+            Cubo3C1G.setBackground(C1);
+        } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Amarillo")) {
+            C1 = new Color(255, 226, 58);
+            Cubo3C1G.setText("A");
+            Cubo3C1G.setBackground(C1);
+        }
+
+        Color C2 = null;
+        if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Rojo")) {
+            C2 = new Color(153, 0, 0);
+            Cubo3C2G.setText("R");
+            Cubo3C2G.setBackground(C2);
+        } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Blanco")) {
+            C2 = new Color(255, 255, 255);
+            Cubo3C2G.setText("B");
+            Cubo3C2G.setBackground(C2);
+        } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Verde")) {
+            C2 = new Color(0, 153, 0);
+            Cubo3C2G.setText("V");
+            Cubo3C2G.setBackground(C2);
+        } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Amarillo")) {
+            C2 = new Color(255, 226, 58);
+            Cubo3C2G.setText("A");
+            Cubo3C2G.setBackground(C2);
+        }
+
+        Color C3 = null;
+        if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Rojo")) {
+            C3 = new Color(153, 0, 0);
+            Cubo3C3G.setText("R");
+            Cubo3C3G.setBackground(C3);
+        } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Blanco")) {
+            C3 = new Color(255, 255, 255);
+            Cubo3C3G.setText("B");
+            Cubo3C3G.setBackground(C3);
+        } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Verde")) {
+            C3 = new Color(0, 153, 0);
+            Cubo3C3G.setText("V");
+            Cubo3C3G.setBackground(C3);
+        } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Amarillo")) {
+            C3 = new Color(255, 226, 58);
+            Cubo3C3G.setText("A");
+            Cubo3C3G.setBackground(C3);
+        }
+
+        Color C4 = null;
+        if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Rojo")) {
+            C4 = new Color(153, 0, 0);
+            Cubo3C4G.setText("R");
+            Cubo3C4G.setBackground(C4);
+        } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Blanco")) {
+            C4 = new Color(255, 255, 255);
+            Cubo3C4G.setText("B");
+            Cubo3C4G.setBackground(C4);
+        } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Verde")) {
+            C4 = new Color(0, 153, 0);
+            Cubo3C4G.setText("V");
+            Cubo3C4G.setBackground(C4);
+        } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Amarillo")) {
+            C4 = new Color(255, 226, 58);
+            Cubo3C4G.setText("A");
+            Cubo3C4G.setBackground(C4);
+        }
+
+        Color C5 = null;
+        if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Rojo")) {
+            C5 = new Color(153, 0, 0);
+            Cubo3C5G.setText("R");
+            Cubo3C5G.setBackground(C5);
+        } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Blanco")) {
+            C5 = new Color(255, 255, 255);
+            Cubo3C5G.setText("B");
+            Cubo3C5G.setBackground(C5);
+        } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Verde")) {
+            C5 = new Color(0, 153, 0);
+            Cubo3C5G.setText("V");
+            Cubo3C5G.setBackground(C5);
+        } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Amarillo")) {
+            C5 = new Color(255, 226, 58);
+            Cubo3C5G.setText("A");
+            Cubo3C5G.setBackground(C5);
+        }
+
+        Color C6 = null;
+        if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Rojo")) {
+            C6 = new Color(153, 0, 0);
+            Cubo3C6G.setText("R");
+            Cubo3C6G.setBackground(C6);
+        } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Blanco")) {
+            C6 = new Color(255, 255, 255);
+            Cubo3C6G.setText("B");
+            Cubo3C6G.setBackground(C6);
+        } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Verde")) {
+            C6 = new Color(0, 153, 0);
+            Cubo3C6G.setText("V");
+            Cubo3C6G.setBackground(C6);
+        } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Amarillo")) {
+            C6 = new Color(255, 226, 58);
+            Cubo3C6G.setText("A");
+            Cubo3C6G.setBackground(C6);
+        }
+
+        if (((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C4))
+                && (!C2.equals(C3) && !C2.equals(C4)) && (!C3.equals(C4))) //
+                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C5))
+                && (!C2.equals(C3) && !C2.equals(C5)) && (!C3.equals(C5))) //
+                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C6))
+                && (!C2.equals(C3) && !C2.equals(C6)) && (!C3.equals(C6))) //
+                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C5))
+                && (!C2.equals(C4) && !C2.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C6))
+                && (!C2.equals(C4) && !C2.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C1.equals(C2) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C2.equals(C5) && !C2.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C5))
+                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C6))
+                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C1.equals(C3) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) // 
+                || ((!C1.equals(C4) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C5))
+                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C6))
+                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C2.equals(C3) && !C2.equals(C5) && !C2.equals(C6))
+                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C2.equals(C4) && !C2.equals(C5) && !C2.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) // 
+                || ((!C3.equals(C4) && !C3.equals(C5) && !C3.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6)))) {
+
+            Cubos cubo3 = new Cubos(C1, C2, C3, C4, C5, C6);
+            Cubo3 = cubo3;
+            System.out.println("Colores Asignados");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Es obligatorio que cada cubo tenga los 4 colores disponibles");
+        }
+
+    }//GEN-LAST:event_genCubo3ActionPerformed
+
+    private void genCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genCubo4ActionPerformed
+        // TODO add your handling code here:
+        Cubo4C1G.setVisible(true);
+        Cubo4C2G.setVisible(true);
+        Cubo4C3G.setVisible(true);
+        Cubo4C4G.setVisible(true);
+        Cubo4C5G.setVisible(true);
+        Cubo4C6G.setVisible(true);
+
+        Color C1 = null;
+        if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Rojo")) {
+            C1 = new Color(153, 0, 0);
+            Cubo4C1G.setText("R");
+            Cubo4C1G.setBackground(C1);
+        } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Blanco")) {
+            C1 = new Color(255, 255, 255);
+            Cubo4C1G.setText("B");
+            Cubo4C1G.setBackground(C1);
+        } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Verde")) {
+            C1 = new Color(0, 153, 0);
+            Cubo4C1G.setText("V");
+            Cubo4C1G.setBackground(C1);
+        } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Amarillo")) {
+            C1 = new Color(255, 226, 58);
+            Cubo4C1G.setText("A");
+            Cubo4C1G.setBackground(C1);
+        }
+
+        Color C2 = null;
+        if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Rojo")) {
+            C2 = new Color(153, 0, 0);
+            Cubo4C2G.setText("R");
+            Cubo4C2G.setBackground(C2);
+        } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Blanco")) {
+            C2 = new Color(255, 255, 255);
+            Cubo4C2G.setText("B");
+            Cubo4C2G.setBackground(C2);
+        } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Verde")) {
+            C2 = new Color(0, 153, 0);
+            Cubo4C2G.setText("V");
+            Cubo4C2G.setBackground(C2);
+        } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Amarillo")) {
+            C2 = new Color(255, 226, 58);
+            Cubo4C2G.setText("A");
+            Cubo4C2G.setBackground(C2);
+        }
+
+        Color C3 = null;
+        if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Rojo")) {
+            C3 = new Color(153, 0, 0);
+            Cubo4C3G.setText("R");
+            Cubo4C3G.setBackground(C3);
+        } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Blanco")) {
+            C3 = new Color(255, 255, 255);
+            Cubo4C3G.setText("B");
+            Cubo4C3G.setBackground(C3);
+        } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Verde")) {
+            C3 = new Color(0, 153, 0);
+            Cubo4C3G.setText("V");
+            Cubo4C3G.setBackground(C3);
+        } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Amarillo")) {
+            C3 = new Color(255, 226, 58);
+            Cubo4C3G.setText("A");
+            Cubo4C3G.setBackground(C3);
+        }
+
+        Color C4 = null;
+        if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Rojo")) {
+            C4 = new Color(153, 0, 0);
+            Cubo4C4G.setText("R");
+            Cubo4C4G.setBackground(C4);
+        } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Blanco")) {
+            C4 = new Color(255, 255, 255);
+            Cubo4C4G.setText("B");
+            Cubo4C4G.setBackground(C4);
+        } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Verde")) {
+            C4 = new Color(0, 153, 0);
+            Cubo4C4G.setText("V");
+            Cubo4C4G.setBackground(C4);
+        } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Amarillo")) {
+            C4 = new Color(255, 226, 58);
+            Cubo4C4G.setText("A");
+            Cubo4C4G.setBackground(C4);
+        }
+
+        Color C5 = null;
+        if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Rojo")) {
+            C5 = new Color(153, 0, 0);
+            Cubo4C5G.setText("R");
+            Cubo4C5G.setBackground(C5);
+        } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Blanco")) {
+            C5 = new Color(255, 255, 255);
+            Cubo4C5G.setText("B");
+            Cubo4C5G.setBackground(C5);
+        } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Verde")) {
+            C5 = new Color(0, 153, 0);
+            Cubo4C5G.setText("V");
+            Cubo4C5G.setBackground(C5);
+        } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Amarillo")) {
+            C5 = new Color(255, 226, 58);
+            Cubo4C5G.setText("A");
+            Cubo4C5G.setBackground(C5);
+        }
+
+        Color C6 = null;
+        if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Rojo")) {
+            C6 = new Color(153, 0, 0);
+            Cubo4C6G.setText("R");
+            Cubo4C6G.setBackground(C6);
+        } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Blanco")) {
+            C6 = new Color(255, 255, 255);
+            Cubo4C6G.setText("B");
+            Cubo4C6G.setBackground(C6);
+        } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Verde")) {
+            C6 = new Color(0, 153, 0);
+            Cubo4C6G.setText("V");
+            Cubo4C6G.setBackground(C6);
+        } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Amarillo")) {
+            C6 = new Color(255, 226, 58);
+            Cubo4C6G.setText("A");
+            Cubo4C6G.setBackground(C6);
+        }
+
+        if (((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C4))
+                && (!C2.equals(C3) && !C2.equals(C4)) && (!C3.equals(C4))) //
+                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C5))
+                && (!C2.equals(C3) && !C2.equals(C5)) && (!C3.equals(C5))) //
+                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C6))
+                && (!C2.equals(C3) && !C2.equals(C6)) && (!C3.equals(C6))) //
+                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C5))
+                && (!C2.equals(C4) && !C2.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C6))
+                && (!C2.equals(C4) && !C2.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C1.equals(C2) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C2.equals(C5) && !C2.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C5))
+                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C6))
+                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C1.equals(C3) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) // 
+                || ((!C1.equals(C4) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C5))
+                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C6))
+                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C2.equals(C3) && !C2.equals(C5) && !C2.equals(C6))
+                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C2.equals(C4) && !C2.equals(C5) && !C2.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) // 
+                || ((!C3.equals(C4) && !C3.equals(C5) && !C3.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6)))) {
+
+            Cubos cubo4 = new Cubos(C1, C2, C3, C4, C5, C6);
+            Cubo4 = cubo4;
+            System.out.println("Colores Asignados");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Es obligatorio que cada cubo tenga los 4 colores disponibles");
+        }
+    }//GEN-LAST:event_genCubo4ActionPerformed
+
+    private void genCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genCubo2ActionPerformed
+        // TODO add your handling code here:
+        Cubo2C1G.setVisible(true);
+        Cubo2C2G.setVisible(true);
+        Cubo2C3G.setVisible(true);
+        Cubo2C4G.setVisible(true);
+        Cubo2C5G.setVisible(true);
+        Cubo2C6G.setVisible(true);
+
+        Color C1 = null;
+        if (Cubo2C1.getItemAt(Cubo2C1.getSelectedIndex()).equals("Rojo")) {
+            C1 = new Color(153, 0, 0);
+            Cubo2C1G.setText("R");
+            Cubo2C1G.setBackground(C1);
+        } else if (Cubo2C1.getItemAt(Cubo2C1.getSelectedIndex()).equals("Blanco")) {
+            C1 = new Color(255, 255, 255);
+            Cubo2C1G.setText("B");
+            Cubo2C1G.setBackground(C1);
+        } else if (Cubo2C1.getItemAt(Cubo2C1.getSelectedIndex()).equals("Verde")) {
+            C1 = new Color(0, 153, 0);
+            Cubo2C1G.setText("V");
+            Cubo2C1G.setBackground(C1);
+        } else if (Cubo2C1.getItemAt(Cubo2C1.getSelectedIndex()).equals("Amarillo")) {
+            C1 = new Color(255, 226, 58);
+            Cubo2C1G.setText("A");
+            Cubo2C1G.setBackground(C1);
+        }
+
+        Color C2 = null;
+        if (Cubo2C2.getItemAt(Cubo2C2.getSelectedIndex()).equals("Rojo")) {
+            C2 = new Color(153, 0, 0);
+            Cubo2C2G.setText("R");
+            Cubo2C2G.setBackground(C2);
+        } else if (Cubo2C2.getItemAt(Cubo2C2.getSelectedIndex()).equals("Blanco")) {
+            C2 = new Color(255, 255, 255);
+            Cubo2C2G.setText("B");
+            Cubo2C2G.setBackground(C2);
+        } else if (Cubo2C2.getItemAt(Cubo2C2.getSelectedIndex()).equals("Verde")) {
+            C2 = new Color(0, 153, 0);
+            Cubo2C2G.setText("V");
+            Cubo2C2G.setBackground(C2);
+        } else if (Cubo2C2.getItemAt(Cubo2C2.getSelectedIndex()).equals("Amarillo")) {
+            C2 = new Color(255, 226, 58);
+            Cubo2C2G.setText("A");
+            Cubo2C2G.setBackground(C2);
+        }
+
+        Color C3 = null;
+        if (Cubo2C3.getItemAt(Cubo2C3.getSelectedIndex()).equals("Rojo")) {
+            C3 = new Color(153, 0, 0);
+            Cubo2C3G.setText("R");
+            Cubo2C3G.setBackground(C3);
+        } else if (Cubo2C3.getItemAt(Cubo2C3.getSelectedIndex()).equals("Blanco")) {
+            C3 = new Color(255, 255, 255);
+            Cubo2C3G.setText("B");
+            Cubo2C3G.setBackground(C3);
+        } else if (Cubo2C3.getItemAt(Cubo2C3.getSelectedIndex()).equals("Verde")) {
+            C3 = new Color(0, 153, 0);
+            Cubo2C3G.setText("V");
+            Cubo2C3G.setBackground(C3);
+        } else if (Cubo2C3.getItemAt(Cubo2C3.getSelectedIndex()).equals("Amarillo")) {
+            C3 = new Color(255, 226, 58);
+            Cubo2C3G.setText("A");
+            Cubo2C3G.setBackground(C3);
+        }
+
+        Color C4 = null;
+        if (Cubo2C4.getItemAt(Cubo2C4.getSelectedIndex()).equals("Rojo")) {
+            C4 = new Color(153, 0, 0);
+            Cubo2C4G.setText("R");
+            Cubo2C4G.setBackground(C4);
+        } else if (Cubo2C4.getItemAt(Cubo2C4.getSelectedIndex()).equals("Blanco")) {
+            C4 = new Color(255, 255, 255);
+            Cubo2C4G.setText("B");
+            Cubo2C4G.setBackground(C4);
+        } else if (Cubo2C4.getItemAt(Cubo2C4.getSelectedIndex()).equals("Verde")) {
+            C4 = new Color(0, 153, 0);
+            Cubo2C4G.setText("V");
+            Cubo2C4G.setBackground(C4);
+        } else if (Cubo2C4.getItemAt(Cubo2C4.getSelectedIndex()).equals("Amarillo")) {
+            C4 = new Color(255, 226, 58);
+            Cubo2C4G.setText("A");
+            Cubo2C4G.setBackground(C4);
+        }
+
+        Color C5 = null;
+        if (Cubo2C5.getItemAt(Cubo2C5.getSelectedIndex()).equals("Rojo")) {
+            C5 = new Color(153, 0, 0);
+            Cubo2C5G.setText("R");
+            Cubo2C5G.setBackground(C5);
+        } else if (Cubo2C5.getItemAt(Cubo2C5.getSelectedIndex()).equals("Blanco")) {
+            C5 = new Color(255, 255, 255);
+            Cubo2C5G.setText("B");
+            Cubo2C5G.setBackground(C5);
+        } else if (Cubo2C5.getItemAt(Cubo2C5.getSelectedIndex()).equals("Verde")) {
+            C5 = new Color(0, 153, 0);
+            Cubo2C5G.setText("V");
+            Cubo2C5G.setBackground(C5);
+        } else if (Cubo2C5.getItemAt(Cubo2C5.getSelectedIndex()).equals("Amarillo")) {
+            C5 = new Color(255, 226, 58);
+            Cubo2C5G.setText("A");
+            Cubo2C5G.setBackground(C5);
+        }
+
+        Color C6 = null;
+        if (Cubo2C6.getItemAt(Cubo2C6.getSelectedIndex()).equals("Rojo")) {
+            C6 = new Color(153, 0, 0);
+            Cubo2C6G.setText("R");
+            Cubo2C6G.setBackground(C6);
+        } else if (Cubo2C6.getItemAt(Cubo2C6.getSelectedIndex()).equals("Blanco")) {
+            C6 = new Color(255, 255, 255);
+            Cubo2C6G.setText("B");
+            Cubo2C6G.setBackground(C6);
+        } else if (Cubo2C6.getItemAt(Cubo2C6.getSelectedIndex()).equals("Verde")) {
+            C6 = new Color(0, 153, 0);
+            Cubo2C6G.setText("V");
+            Cubo2C6G.setBackground(C6);
+        } else if (Cubo2C6.getItemAt(Cubo2C6.getSelectedIndex()).equals("Amarillo")) {
+            C6 = new Color(255, 226, 58);
+            Cubo2C6G.setText("A");
+            Cubo2C6G.setBackground(C6);
+        }
+
+        if (((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C4))
+                && (!C2.equals(C3) && !C2.equals(C4)) && (!C3.equals(C4))) //
+                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C5))
+                && (!C2.equals(C3) && !C2.equals(C5)) && (!C3.equals(C5))) //
+                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C6))
+                && (!C2.equals(C3) && !C2.equals(C6)) && (!C3.equals(C6))) //
+                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C5))
+                && (!C2.equals(C4) && !C2.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C6))
+                && (!C2.equals(C4) && !C2.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C1.equals(C2) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C2.equals(C5) && !C2.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C5))
+                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C6))
+                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C1.equals(C3) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) // 
+                || ((!C1.equals(C4) && !C1.equals(C5) && !C1.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C5))
+                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
+                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C6))
+                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
+                || ((!C2.equals(C3) && !C2.equals(C5) && !C2.equals(C6))
+                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) //
+                || ((!C2.equals(C4) && !C2.equals(C5) && !C2.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) // 
+                || ((!C3.equals(C4) && !C3.equals(C5) && !C3.equals(C6))
+                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6)))) {
+
+            Cubos cubo2 = new Cubos(C1, C2, C3, C4, C5, C6);
+            Cubo2 = cubo2;
+            System.out.println("Colores Asignados");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Es obligatorio que cada cubo tenga los 4 colores disponibles");
+        }
+    }//GEN-LAST:event_genCubo2ActionPerformed
+
+    private void genAleatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genAleatorioActionPerformed
+        // TODO add your handling code here:
+        Object[] options = {"Sí",
+            "No"};
+        int yes = JOptionPane.showOptionDialog(null,
+                "Está acción distribuye los colores de forma\n"
+                + " aleatoria en los 4 cubos, desea continuar?",
+                "Confirmación",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[0]);
+
+        if (JOptionPane.YES_OPTION == yes) {
+            Color[] coloresDisp = {new Color(153, 0, 0), new Color(255, 255, 255),
+                new Color(0, 153, 0), new Color(255, 226, 58)};
+
+            Random random = new Random();
+
+            Color C1 = coloresDisp[random.nextInt(coloresDisp.length)];
+            Color C2 = coloresDisp[random.nextInt(coloresDisp.length)];
+            Color C3 = coloresDisp[random.nextInt(coloresDisp.length)];
+            Color C4 = coloresDisp[random.nextInt(coloresDisp.length)];
+            Color C5 = coloresDisp[random.nextInt(coloresDisp.length)];
+            Color C6 = coloresDisp[random.nextInt(coloresDisp.length)];
+
+            Cubo1C1G.setVisible(true);
+            Cubo1C2G.setVisible(true);
+            Cubo1C3G.setVisible(true);
+            Cubo1C4G.setVisible(true);
+            Cubo1C5G.setVisible(true);
+            Cubo1C6G.setVisible(true);
+
+            Cubo2C1G.setVisible(true);
+            Cubo2C2G.setVisible(true);
+            Cubo2C3G.setVisible(true);
+            Cubo2C4G.setVisible(true);
+            Cubo2C5G.setVisible(true);
+            Cubo2C6G.setVisible(true);
+
+            Cubo3C1G.setVisible(true);
+            Cubo3C2G.setVisible(true);
+            Cubo3C3G.setVisible(true);
+            Cubo3C4G.setVisible(true);
+            Cubo3C5G.setVisible(true);
+            Cubo3C6G.setVisible(true);
+
+            Cubo4C1G.setVisible(true);
+            Cubo4C2G.setVisible(true);
+            Cubo4C3G.setVisible(true);
+            Cubo4C4G.setVisible(true);
+            Cubo4C5G.setVisible(true);
+            Cubo4C6G.setVisible(true);
+            //
+            while (!((C1 != C2 && C1 != C3 && C1 != C4) && (C2 != C3 && C2 != C4) && (C3 != C4))) {
+                C1 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C2 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C3 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C4 = coloresDisp[random.nextInt(coloresDisp.length)];
+
+            }
+
+            if (C1.equals(new Color(153, 0, 0))) {
+                Cubo1C1.setSelectedItem("Rojo");
+                Cubo1.C1I = "R";
+                Cubo1C1G.setText(Cubo1.C1I);
+                Cubo1C1G.setBackground(C1);
+            } else if (C1.equals(new Color(255, 255, 255))) {
+                Cubo1C1.setSelectedItem("Blanco");
+                Cubo1.C1I = "B";
+                Cubo1C1G.setText(Cubo1.C1I);
+                Cubo1C1G.setBackground(C1);
+            } else if (C1.equals(new Color(0, 153, 0))) {
+                Cubo1C1.setSelectedItem("Verde");
+                Cubo1.C1I = "V";
+                Cubo1C1G.setText(Cubo1.C1I);
+                Cubo1C1G.setBackground(C1);
+            } else if (C1.equals(new Color(255, 226, 58))) {
+                Cubo1C1.setSelectedItem("Amarillo");
+                Cubo1.C1I = "A";
+                Cubo1C1G.setText(Cubo1.C1I);
+                Cubo1C1G.setBackground(C1);
+
+            }
+
+            if (C2.equals(new Color(153, 0, 0))) {
+                Cubo1C2.setSelectedItem("Rojo");
+                Cubo1.C2I = "R";
+                Cubo1C2G.setText(Cubo1.C2I);
+                Cubo1C2G.setBackground(C2);
+            } else if (C2.equals(new Color(255, 255, 255))) {
+                Cubo1C2.setSelectedItem("Blanco");
+                Cubo1.C2I = "B";
+                Cubo1C2G.setText(Cubo1.C2I);
+                Cubo1C2G.setBackground(C2);
+            } else if (C2.equals(new Color(0, 153, 0))) {
+                Cubo1C2.setSelectedItem("Verde");
+                Cubo1.C2I = "V";
+                Cubo1C2G.setText(Cubo1.C2I);
+                Cubo1C2G.setBackground(C2);
+            } else if (C2.equals(new Color(255, 226, 58))) {
+                Cubo1C2.setSelectedItem("Amarillo");
+                Cubo1.C2I = "A";
+                Cubo1C2G.setText(Cubo1.C2I);
+                Cubo1C2G.setBackground(C2);
+
+            }
+
+            if (C3.equals(new Color(153, 0, 0))) {
+                Cubo1C3.setSelectedItem("Rojo");
+                Cubo1.C3I = "R";
+                Cubo1C3G.setText(Cubo1.C3I);
+                Cubo1C3G.setBackground(C3);
+            } else if (C3.equals(new Color(255, 255, 255))) {
+                Cubo1C3.setSelectedItem("Blanco");
+                Cubo1.C3I = "B";
+                Cubo1C3G.setText(Cubo1.C3I);
+                Cubo1C3G.setBackground(C3);
+            } else if (C3.equals(new Color(0, 153, 0))) {
+                Cubo1C3.setSelectedItem("Verde");
+                Cubo1.C3I = "V";
+                Cubo1C3G.setText(Cubo1.C3I);
+                Cubo1C3G.setBackground(C3);
+            } else if (C3.equals(new Color(255, 226, 58))) {
+                Cubo1C3.setSelectedItem("Amarillo");
+                Cubo1.C3I = "A";
+                Cubo1C3G.setText(Cubo1.C3I);
+                Cubo1C3G.setBackground(C3);
+
+            }
+
+            if (C4.equals(new Color(153, 0, 0))) {
+                Cubo1C4.setSelectedItem("Rojo");
+                Cubo1.C4I = "R";
+                Cubo1C4G.setText(Cubo1.C4I);
+                Cubo1C4G.setBackground(C4);
+            } else if (C4.equals(new Color(255, 255, 255))) {
+                Cubo1C4.setSelectedItem("Blanco");
+                Cubo1.C4I = "B";
+                Cubo1C4G.setText(Cubo1.C4I);
+                Cubo1C4G.setBackground(C4);
+            } else if (C4.equals(new Color(0, 153, 0))) {
+                Cubo1C4.setSelectedItem("Verde");
+                Cubo1.C4I = "V";
+                Cubo1C4G.setText(Cubo1.C4I);
+                Cubo1C4G.setBackground(C4);
+            } else if (C4.equals(new Color(255, 226, 58))) {
+                Cubo1C4.setSelectedItem("Amarillo");
+                Cubo1.C4I = "A";
+                Cubo1C4G.setText(Cubo1.C4I);
+                Cubo1C4G.setBackground(C4);
+
+            }
+
+            if (C5.equals(new Color(153, 0, 0))) {
+                Cubo1C5.setSelectedItem("Rojo");
+                Cubo1.C5I = "R";
+                Cubo1C5G.setText(Cubo1.C5I);
+                Cubo1C5G.setBackground(C5);
+            } else if (C5.equals(new Color(255, 255, 255))) {
+                Cubo1C5.setSelectedItem("Blanco");
+                Cubo1.C5I = "B";
+                Cubo1C5G.setText(Cubo1.C5I);
+                Cubo1C5G.setBackground(C5);
+            } else if (C5.equals(new Color(0, 153, 0))) {
+                Cubo1C5.setSelectedItem("Verde");
+                Cubo1.C5I = "V";
+                Cubo1C5G.setText(Cubo1.C5I);
+                Cubo1C5G.setBackground(C5);
+            } else if (C5.equals(new Color(255, 226, 58))) {
+                Cubo1C5.setSelectedItem("Amarillo");
+                Cubo1.C5I = "A";
+                Cubo1C5G.setText(Cubo1.C5I);
+                Cubo1C5G.setBackground(C5);
+
+            }
+
+            if (C6.equals(new Color(153, 0, 0))) {
+                Cubo1C6.setSelectedItem("Rojo");
+                Cubo1.C6I = "R";
+                Cubo1C6G.setText(Cubo1.C6I);
+                Cubo1C6G.setBackground(C6);
+            } else if (C6.equals(new Color(255, 255, 255))) {
+                Cubo1C6.setSelectedItem("Blanco");
+                Cubo1.C6I = "B";
+                Cubo1C6G.setText(Cubo1.C6I);
+                Cubo1C6G.setBackground(C6);
+            } else if (C6.equals(new Color(0, 153, 0))) {
+                Cubo1C6.setSelectedItem("Verde");
+                Cubo1.C6I = "V";
+                Cubo1C6G.setText(Cubo1.C6I);
+                Cubo1C6G.setBackground(C6);
+            } else if (C6.equals(new Color(255, 226, 58))) {
+                Cubo1C6.setSelectedItem("Amarillo");
+                Cubo1.C6I = "A";
+                Cubo1C6G.setText(Cubo1.C6I);
+                Cubo1C6G.setBackground(C6);
+
+            }
+
+            Cubo1.C1 = C1;
+            Cubo1.C2 = C2;
+            Cubo1.C3 = C3;
+            Cubo1.C4 = C4;
+            Cubo1.C5 = C5;
+            Cubo1.C6 = C6;
+            
+
+            C1 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C2 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C3 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C4 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C5 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C6 = coloresDisp[random.nextInt(coloresDisp.length)];
+
+            while (!((C1 != C2 && C1 != C3 && C1 != C4) && (C2 != C3 && C2 != C4) && (C3 != C4))) {
+                C1 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C2 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C3 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C4 = coloresDisp[random.nextInt(coloresDisp.length)];
+
+            }
+
+            if (C1.equals(new Color(153, 0, 0))) {
+                Cubo2C1.setSelectedItem("Rojo");
+                Cubo2.C1I = "R";
+                Cubo2C1G.setText(Cubo2.C1I);
+                Cubo2C1G.setBackground(C1);
+            } else if (C1.equals(new Color(255, 255, 255))) {
+                Cubo2C1.setSelectedItem("Blanco");
+                Cubo2.C1I = "B";
+                Cubo2C1G.setText(Cubo2.C1I);
+                Cubo2C1G.setBackground(C1);
+            } else if (C1.equals(new Color(0, 153, 0))) {
+                Cubo2C1.setSelectedItem("Verde");
+                Cubo2.C1I = "V";
+                Cubo2C1G.setBackground(C1);
+                Cubo2C1G.setText(Cubo2.C1I);
+                Cubo2C1G.setBackground(C1);
+            } else if (C1.equals(new Color(255, 226, 58))) {
+                Cubo2C1.setSelectedItem("Amarillo");
+                Cubo2.C1I = "A";
+                Cubo2C1G.setText(Cubo2.C1I);
+                Cubo2C1G.setBackground(C1);
+
+            }
+
+            if (C2.equals(new Color(153, 0, 0))) {
+                Cubo2C2.setSelectedItem("Rojo");
+                Cubo2.C2I = "R";
+                Cubo2C2G.setText(Cubo2.C2I);
+                Cubo2C2G.setBackground(C2);
+            } else if (C2.equals(new Color(255, 255, 255))) {
+                Cubo2C2.setSelectedItem("Blanco");
+                Cubo2.C2I = "B";
+                Cubo2C2G.setText(Cubo2.C2I);
+                Cubo2C2G.setBackground(C2);
+            } else if (C2.equals(new Color(0, 153, 0))) {
+                Cubo2C2.setSelectedItem("Verde");
+                Cubo2.C2I = "V";
+                Cubo2C2G.setText(Cubo2.C2I);
+                Cubo2C2G.setBackground(C2);
+            } else if (C2.equals(new Color(255, 226, 58))) {
+                Cubo2C2.setSelectedItem("Amarillo");
+                Cubo2.C2I = "A";
+                Cubo2C2G.setText(Cubo2.C2I);
+                Cubo2C2G.setBackground(C2);
+
+            }
+
+            if (C3.equals(new Color(153, 0, 0))) {
+                Cubo2C3.setSelectedItem("Rojo");
+                Cubo2.C3I = "R";
+                Cubo2C3G.setText(Cubo2.C3I);
+                Cubo2C3G.setBackground(C3);
+            } else if (C3.equals(new Color(255, 255, 255))) {
+                Cubo2C3.setSelectedItem("Blanco");
+                Cubo2.C3I = "B";
+                Cubo2C3G.setText(Cubo2.C3I);
+                Cubo2C3G.setBackground(C3);
+            } else if (C3.equals(new Color(0, 153, 0))) {
+                Cubo2C3.setSelectedItem("Verde");
+                Cubo2.C3I = "V";
+                Cubo2C3G.setText(Cubo2.C3I);
+                Cubo2C3G.setBackground(C3);
+            } else if (C3.equals(new Color(255, 226, 58))) {
+                Cubo2C3.setSelectedItem("Amarillo");
+                Cubo2.C3I = "A";
+                Cubo2C3G.setText(Cubo2.C3I);
+                Cubo2C3G.setBackground(C3);
+
+            }
+
+            if (C4.equals(new Color(153, 0, 0))) {
+                Cubo2C4.setSelectedItem("Rojo");
+                Cubo2.C4I = "R";
+                Cubo2C4G.setText(Cubo2.C4I);
+                Cubo2C4G.setBackground(C4);
+            } else if (C4.equals(new Color(255, 255, 255))) {
+                Cubo2C4.setSelectedItem("Blanco");
+                Cubo2.C4I = "B";
+                Cubo2C4G.setText(Cubo2.C4I);
+                Cubo2C4G.setBackground(C4);
+            } else if (C4.equals(new Color(0, 153, 0))) {
+                Cubo2C4.setSelectedItem("Verde");
+                Cubo2.C4I = "V";
+                Cubo2C4G.setText(Cubo2.C4I);
+                Cubo2C4G.setBackground(C4);
+            } else if (C4.equals(new Color(255, 226, 58))) {
+                Cubo2C4.setSelectedItem("Amarillo");
+                Cubo2.C4I = "A";
+                Cubo2C4G.setText(Cubo2.C4I);
+                Cubo2C4G.setBackground(C4);
+
+            }
+
+            if (C5.equals(new Color(153, 0, 0))) {
+                Cubo2C5.setSelectedItem("Rojo");
+                Cubo2.C5I = "R";
+                Cubo2C5G.setText(Cubo2.C5I);
+                Cubo2C5G.setBackground(C5);
+            } else if (C5.equals(new Color(255, 255, 255))) {
+                Cubo2C5.setSelectedItem("Blanco");
+                Cubo2.C5I = "B";
+                Cubo2C5G.setText(Cubo2.C5I);
+                Cubo2C5G.setBackground(C5);
+            } else if (C5.equals(new Color(0, 153, 0))) {
+                Cubo2C5.setSelectedItem("Verde");
+                Cubo2.C5I = "V";
+                Cubo2C5G.setText(Cubo2.C5I);
+                Cubo2C5G.setBackground(C5);
+            } else if (C5.equals(new Color(255, 226, 58))) {
+                Cubo2C5.setSelectedItem("Amarillo");
+                Cubo2.C5I = "A";
+                Cubo2C5G.setText(Cubo2.C5I);
+                Cubo2C5G.setBackground(C5);
+
+            }
+
+            if (C6.equals(new Color(153, 0, 0))) {
+                Cubo2C6.setSelectedItem("Rojo");
+                Cubo2.C6I = "R";
+                Cubo2C6G.setText(Cubo2.C6I);
+                Cubo2C6G.setBackground(C6);
+            } else if (C6.equals(new Color(255, 255, 255))) {
+                Cubo2C6.setSelectedItem("Blanco");
+                Cubo2.C6I = "B";
+                Cubo2C6G.setText(Cubo2.C6I);
+                Cubo2C6G.setBackground(C6);
+            } else if (C6.equals(new Color(0, 153, 0))) {
+                Cubo2C6.setSelectedItem("Verde");
+                Cubo2.C6I = "V";
+                Cubo2C6G.setText(Cubo2.C6I);
+                Cubo2C6G.setBackground(C6);
+            } else if (C6.equals(new Color(255, 226, 58))) {
+                Cubo2C6.setSelectedItem("Amarillo");
+                Cubo2.C6I = "A";
+                Cubo2C6G.setText(Cubo2.C6I);
+                Cubo2C6G.setBackground(C6);
+
+            }
+
+            Cubo2.C1 = C1;
+            Cubo2.C2 = C2;
+            Cubo2.C3 = C3;
+            Cubo2.C4 = C4;
+            Cubo2.C5 = C5;
+            Cubo2.C6 = C6;
+
+            C1 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C2 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C3 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C4 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C5 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C6 = coloresDisp[random.nextInt(coloresDisp.length)];
+
+            while (!((C1 != C2 && C1 != C3 && C1 != C4) && (C2 != C3 && C2 != C4) && (C3 != C4))) {
+                C1 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C2 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C3 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C4 = coloresDisp[random.nextInt(coloresDisp.length)];
+
+            }
+
+            if (C1.equals(new Color(153, 0, 0))) {
+                Cubo3C1.setSelectedItem("Rojo");
+                Cubo3.C1I = "R";
+                Cubo3C1G.setText(Cubo3.C1I);
+                Cubo3C1G.setBackground(C1);
+            } else if (C1.equals(new Color(255, 255, 255))) {
+                Cubo3C1.setSelectedItem("Blanco");
+                Cubo3.C1I = "B";
+                Cubo3C1G.setText(Cubo3.C1I);
+                Cubo3C1G.setBackground(C1);
+            } else if (C1.equals(new Color(0, 153, 0))) {
+                Cubo3C1.setSelectedItem("Verde");
+                Cubo3.C1I = "V";
+                Cubo3C1G.setText(Cubo3.C1I);
+                Cubo3C1G.setBackground(C1);
+            } else if (C1.equals(new Color(255, 226, 58))) {
+                Cubo3C1.setSelectedItem("Amarillo");
+                Cubo3.C1I = "A";
+                Cubo3C1G.setText(Cubo3.C1I);
+                Cubo3C1G.setBackground(C1);
+
+            }
+
+            if (C2.equals(new Color(153, 0, 0))) {
+                Cubo3C2.setSelectedItem("Rojo");
+                Cubo3.C2I = "R";
+                Cubo3C2G.setText(Cubo3.C2I);
+                Cubo3C2G.setBackground(C2);
+            } else if (C2.equals(new Color(255, 255, 255))) {
+                Cubo3C2.setSelectedItem("Blanco");
+                Cubo3.C2I = "B";
+                Cubo3C2G.setText(Cubo3.C2I);
+                Cubo3C2G.setBackground(C2);
+            } else if (C2.equals(new Color(0, 153, 0))) {
+                Cubo3C2.setSelectedItem("Verde");
+                Cubo3.C2I = "V";
+                Cubo3C2G.setText(Cubo3.C2I);
+                Cubo3C2G.setBackground(C2);
+            } else if (C2.equals(new Color(255, 226, 58))) {
+                Cubo3C2.setSelectedItem("Amarillo");
+                Cubo3.C2I = "A";
+                Cubo3C2G.setText(Cubo3.C2I);
+                Cubo3C2G.setBackground(C2);
+
+            }
+
+            if (C3.equals(new Color(153, 0, 0))) {
+                Cubo3C3.setSelectedItem("Rojo");
+                Cubo3.C3I = "R";
+                Cubo3C3G.setText(Cubo3.C3I);
+                Cubo3C3G.setBackground(C3);
+            } else if (C3.equals(new Color(255, 255, 255))) {
+                Cubo3C3.setSelectedItem("Blanco");
+                Cubo3.C3I = "B";
+                Cubo3C3G.setText(Cubo3.C3I);
+                Cubo3C3G.setBackground(C3);
+            } else if (C3.equals(new Color(0, 153, 0))) {
+                Cubo3C3.setSelectedItem("Verde");
+                Cubo3.C3I = "V";
+                Cubo3C3G.setText(Cubo3.C3I);
+                Cubo3C3G.setBackground(C3);
+            } else if (C3.equals(new Color(255, 226, 58))) {
+                Cubo3C3.setSelectedItem("Amarillo");
+                Cubo3.C3I = "A";
+                Cubo3C3G.setText(Cubo3.C3I);
+                Cubo3C3G.setBackground(C3);
+
+            }
+
+            if (C4.equals(new Color(153, 0, 0))) {
+                Cubo3C4.setSelectedItem("Rojo");
+                Cubo3.C4I = "R";
+                Cubo3C4G.setText(Cubo3.C4I);
+                Cubo3C4G.setBackground(C4);
+            } else if (C4.equals(new Color(255, 255, 255))) {
+                Cubo3C4.setSelectedItem("Blanco");
+                Cubo3.C4I = "B";
+                Cubo3C4G.setText(Cubo3.C4I);
+                Cubo3C4G.setBackground(C4);
+            } else if (C4.equals(new Color(0, 153, 0))) {
+                Cubo3C4.setSelectedItem("Verde");
+                Cubo3.C4I = "V";
+                Cubo3C4G.setText(Cubo3.C4I);
+                Cubo3C4G.setBackground(C4);
+            } else if (C4.equals(new Color(255, 226, 58))) {
+                Cubo3C4.setSelectedItem("Amarillo");
+                Cubo3.C4I = "A";
+                Cubo3C4G.setText(Cubo3.C4I);
+                Cubo3C4G.setBackground(C4);
+
+            }
+
+            if (C5.equals(new Color(153, 0, 0))) {
+                Cubo3C5.setSelectedItem("Rojo");
+                Cubo3.C5I = "R";
+                Cubo3C5G.setText(Cubo3.C5I);
+                Cubo3C5G.setBackground(C5);
+            } else if (C5.equals(new Color(255, 255, 255))) {
+                Cubo3C5.setSelectedItem("Blanco");
+                Cubo3.C5I = "B";
+                Cubo3C5G.setText(Cubo3.C5I);
+                Cubo3C5G.setBackground(C5);
+            } else if (C5.equals(new Color(0, 153, 0))) {
+                Cubo3C5.setSelectedItem("Verde");
+                Cubo3.C5I = "V";
+                Cubo3C5G.setText(Cubo3.C5I);
+                Cubo3C5G.setBackground(C5);
+            } else if (C5.equals(new Color(255, 226, 58))) {
+                Cubo3C5.setSelectedItem("Amarillo");
+                Cubo3.C5I = "A";
+                Cubo3C5G.setText(Cubo3.C5I);
+                Cubo3C5G.setBackground(C5);
+
+            }
+
+            if (C6.equals(new Color(153, 0, 0))) {
+                Cubo3C6.setSelectedItem("Rojo");
+                Cubo3.C6I = "R";
+                Cubo3C6G.setText(Cubo3.C6I);
+                Cubo3C6G.setBackground(C6);
+            } else if (C6.equals(new Color(255, 255, 255))) {
+                Cubo3C6.setSelectedItem("Blanco");
+                Cubo3.C6I = "B";
+                Cubo3C6G.setText(Cubo3.C6I);
+                Cubo3C6G.setBackground(C6);
+            } else if (C6.equals(new Color(0, 153, 0))) {
+                Cubo3C6.setSelectedItem("Verde");
+                Cubo3.C6I = "V";
+                Cubo3C6G.setText(Cubo3.C6I);
+                Cubo3C6G.setBackground(C6);
+            } else if (C6.equals(new Color(255, 226, 58))) {
+                Cubo3C6.setSelectedItem("Amarillo");
+                Cubo3.C6I = "A";
+                Cubo3C6G.setText(Cubo3.C6I);
+                Cubo3C6G.setBackground(C6);
+
+            }
+            Cubo3.C1 = C1;
+            Cubo3.C2 = C2;
+            Cubo3.C3 = C3;
+            Cubo3.C4 = C4;
+            Cubo3.C5 = C5;
+            Cubo3.C6 = C6;
+
+            C1 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C2 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C3 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C4 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C5 = coloresDisp[random.nextInt(coloresDisp.length)];
+            C6 = coloresDisp[random.nextInt(coloresDisp.length)];
+
+            while (!((C1 != C2 && C1 != C3 && C1 != C4) && (C2 != C3 && C2 != C4) && (C3 != C4))) {
+                C1 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C2 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C3 = coloresDisp[random.nextInt(coloresDisp.length)];
+                C4 = coloresDisp[random.nextInt(coloresDisp.length)];
+
+            }
+
+            if (C1.equals(new Color(153, 0, 0))) {
+                Cubo4C1.setSelectedItem("Rojo");
+                Cubo4.C1I = "R";
+                Cubo4C1G.setText(Cubo4.C1I);
+                Cubo4C1G.setBackground(C1);
+            } else if (C1.equals(new Color(255, 255, 255))) {
+                Cubo4C1.setSelectedItem("Blanco");
+                Cubo4.C1I = "B";
+                Cubo4C1G.setText(Cubo4.C1I);
+                Cubo4C1G.setBackground(C1);
+            } else if (C1.equals(new Color(0, 153, 0))) {
+                Cubo4C1.setSelectedItem("Verde");
+                Cubo4.C1I = "V";
+                Cubo4C1G.setText(Cubo4.C1I);
+                Cubo4C1G.setBackground(C1);
+            } else if (C1.equals(new Color(255, 226, 58))) {
+                Cubo4C1.setSelectedItem("Amarillo");
+                Cubo4.C1I = "A";
+                Cubo4C1G.setText(Cubo4.C1I);
+                Cubo4C1G.setBackground(C1);
+
+            }
+
+            if (C2.equals(new Color(153, 0, 0))) {
+                Cubo4C2.setSelectedItem("Rojo");
+                Cubo4.C2I = "R";
+                Cubo4C2G.setText(Cubo4.C2I);
+                Cubo4C2G.setBackground(C2);
+            } else if (C2.equals(new Color(255, 255, 255))) {
+                Cubo4C2.setSelectedItem("Blanco");
+                Cubo4.C2I = "B";
+                Cubo4C2G.setText(Cubo4.C2I);
+                Cubo4C2G.setBackground(C2);
+            } else if (C2.equals(new Color(0, 153, 0))) {
+                Cubo4C2.setSelectedItem("Verde");
+                Cubo4.C2I = "V";
+                Cubo4C2G.setText(Cubo4.C2I);
+                Cubo4C2G.setBackground(C2);
+            } else if (C2.equals(new Color(255, 226, 58))) {
+                Cubo4C2.setSelectedItem("Amarillo");
+                Cubo4.C2I = "A";
+                Cubo4C2G.setText(Cubo4.C2I);
+                Cubo4C2G.setBackground(C2);
+
+            }
+
+            if (C3.equals(new Color(153, 0, 0))) {
+                Cubo4C3.setSelectedItem("Rojo");
+                Cubo4.C3I = "R";
+                Cubo4C3G.setText(Cubo4.C3I);
+                Cubo4C3G.setBackground(C3);
+            } else if (C3.equals(new Color(255, 255, 255))) {
+                Cubo4C3.setSelectedItem("Blanco");
+                Cubo4.C3I = "B";
+                Cubo4C3G.setText(Cubo4.C3I);
+                Cubo4C3G.setBackground(C3);
+            } else if (C3.equals(new Color(0, 153, 0))) {
+                Cubo4C3.setSelectedItem("Verde");
+                Cubo4.C3I = "V";
+                Cubo4C3G.setText(Cubo4.C3I);
+                Cubo4C3G.setBackground(C3);
+            } else if (C3.equals(new Color(255, 226, 58))) {
+                Cubo4C3.setSelectedItem("Amarillo");
+                Cubo4.C3I = "A";
+                Cubo4C3G.setText(Cubo4.C3I);
+                Cubo4C3G.setBackground(C3);
+
+            }
+
+            if (C4.equals(new Color(153, 0, 0))) {
+                Cubo4C4.setSelectedItem("Rojo");
+                Cubo4.C4I = "R";
+                Cubo4C4G.setText(Cubo4.C4I);
+                Cubo4C4G.setBackground(C4);
+            } else if (C4.equals(new Color(255, 255, 255))) {
+                Cubo4C4.setSelectedItem("Blanco");
+                Cubo4.C4I = "B";
+                Cubo4C4G.setText(Cubo4.C4I);
+                Cubo4C4G.setBackground(C4);
+            } else if (C4.equals(new Color(0, 153, 0))) {
+                Cubo4C4.setSelectedItem("Verde");
+                Cubo4.C4I = "V";
+                Cubo4C4G.setText(Cubo4.C4I);
+                Cubo4C4G.setBackground(C4);
+            } else if (C4.equals(new Color(255, 226, 58))) {
+                Cubo4C4.setSelectedItem("Amarillo");
+                Cubo4.C4I = "A";
+                Cubo4C4G.setText(Cubo4.C4I);
+                Cubo4C4G.setBackground(C4);
+
+            }
+
+            if (C5.equals(new Color(153, 0, 0))) {
+                Cubo4C5.setSelectedItem("Rojo");
+                Cubo4.C5I = "R";
+                Cubo4C5G.setText(Cubo4.C5I);
+                Cubo4C5G.setBackground(C5);
+            } else if (C5.equals(new Color(255, 255, 255))) {
+                Cubo4C5.setSelectedItem("Blanco");
+                Cubo4.C5I = "B";
+                Cubo4C5G.setText(Cubo4.C5I);
+                Cubo4C5G.setBackground(C5);
+            } else if (C5.equals(new Color(0, 153, 0))) {
+                Cubo4C5.setSelectedItem("Verde");
+                Cubo4.C5I = "V";
+                Cubo4C5G.setText(Cubo4.C5I);
+                Cubo4C5G.setBackground(C5);
+            } else if (C5.equals(new Color(255, 226, 58))) {
+                Cubo4C5.setSelectedItem("Amarillo");
+                Cubo4.C5I = "A";
+                Cubo4C5G.setText(Cubo4.C5I);
+                Cubo4C5G.setBackground(C5);
+
+            }
+
+            if (C6.equals(new Color(153, 0, 0))) {
+                Cubo4C6.setSelectedItem("Rojo");
+                Cubo4.C6I = "R";
+                Cubo4C6G.setText(Cubo4.C6I);
+                Cubo4C6G.setBackground(C6);
+            } else if (C6.equals(new Color(255, 255, 255))) {
+                Cubo4C6.setSelectedItem("Blanco");
+                Cubo4.C6I = "B";
+                Cubo4C6G.setText(Cubo4.C6I);
+                Cubo4C6G.setBackground(C6);
+            } else if (C6.equals(new Color(0, 153, 0))) {
+                Cubo4C6.setSelectedItem("Verde");
+                Cubo4.C6I = "V";
+                Cubo4C6G.setText(Cubo4.C6I);
+                Cubo4C6G.setBackground(C6);
+            } else if (C6.equals(new Color(255, 226, 58))) {
+                Cubo4C6.setSelectedItem("Amarillo");
+                Cubo4.C6I = "A";
+                Cubo4C6G.setText(Cubo4.C6I);
+                Cubo4C6G.setBackground(C6);
+
+            }
+
+            Cubo4.C1 = C1;
+            Cubo4.C2 = C2;
+            Cubo4.C3 = C3;
+            Cubo4.C4 = C4;
+            Cubo4.C5 = C5;
+            Cubo4.C6 = C6;
+
+            System.out.println(Cubo1.C1);
+            System.out.println(Cubo1.C2);
+            System.out.println(Cubo1.C3);
+            System.out.println(Cubo1.C4);
+            System.out.println(Cubo1.C5);
+            System.out.println(Cubo1.C6);
+            System.out.println("");
+            System.out.println(Cubo2.C1);
+            System.out.println(Cubo2.C2);
+            System.out.println(Cubo2.C3);
+            System.out.println(Cubo2.C4);
+            System.out.println(Cubo2.C5);
+            System.out.println(Cubo2.C6);
+            System.out.println("");
+            System.out.println(Cubo3.C1);
+            System.out.println(Cubo3.C2);
+            System.out.println(Cubo3.C3);
+            System.out.println(Cubo3.C4);
+            System.out.println(Cubo3.C5);
+            System.out.println(Cubo3.C6);
+            System.out.println("");
+            System.out.println(Cubo4.C1);
+            System.out.println(Cubo4.C2);
+            System.out.println(Cubo4.C3);
+            System.out.println(Cubo4.C4);
+            System.out.println(Cubo4.C5);
+            System.out.println(Cubo4.C6);
+        }
+    }//GEN-LAST:event_genAleatorioActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        // TODO add your handling code here:
+        Object[] options = {"Sí",
+            "No"};
+        int yes = JOptionPane.showOptionDialog(null,
+                "Está seguro que desea salir del juego?",
+                "Confirmación",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[0]);
+
+        if (JOptionPane.YES_OPTION == yes) {
+            System.exit(0);
+        } else {
+
+        }
+    }//GEN-LAST:event_formWindowClosing
+
+
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        // TODO add your handling code here:
+
+        if (jTabbedPane1.getSelectedIndex() == 1) {
+            if (Cubo1.C1 == null || Cubo2.C1 == null || Cubo3.C1 == null || Cubo4.C1 == null) {
+                jTabbedPane1.setSelectedIndex(0);
+                JOptionPane.showMessageDialog(null, "Aún no ha generado los 4 cubos");
+                
+            } else {
+                // Cubo 1
+            Cubo1C1J.setText(Cubo1.C1I);
+            Cubo1C1J.setBackground(Cubo1.C1);
+            
+            Cubo1C2J.setText(Cubo1.C2I);
+            Cubo1C2J.setBackground(Cubo1.C2);
+            
+            Cubo1C3J.setText(Cubo1.C3I);
+            Cubo1C3J.setBackground(Cubo1.C3);
+            
+            Cubo1C4J.setText(Cubo1.C4I);
+            Cubo1C4J.setBackground(Cubo1.C4);
+            
+            Cubo1C5J.setText(Cubo1.C5I);
+            Cubo1C5J.setBackground(Cubo1.C5);
+            
+            Cubo1C6J.setText(Cubo1.C6I);
+            Cubo1C6J.setBackground(Cubo1.C6);
+            //
+            }
+        }
+    }//GEN-LAST:event_jTabbedPane1StateChanged
+
+    private void siguienteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteBtnActionPerformed
+        // TODO add your handling code here:
+
+        if (Cubo1 == null || Cubo2 == null || Cubo3 == null || Cubo4 == null) {
+            JOptionPane.showMessageDialog(null, "Aún no ha generado los 4 cubos");
+        } else {
+            jTabbedPane1.setSelectedIndex(1);
+            // Cubo 1
+            Cubo1C1J.setText(Cubo1.C1I);
+            Cubo1C1J.setBackground(Cubo1.C1);
+            
+            Cubo1C2J.setText(Cubo1.C2I);
+            Cubo1C2J.setBackground(Cubo1.C2);
+            
+            Cubo1C3J.setText(Cubo1.C3I);
+            Cubo1C3J.setBackground(Cubo1.C3);
+            
+            Cubo1C4J.setText(Cubo1.C4I);
+            Cubo1C4J.setBackground(Cubo1.C4);
+            
+            Cubo1C5J.setText(Cubo1.C5I);
+            Cubo1C5J.setBackground(Cubo1.C5);
+            
+            Cubo1C6J.setText(Cubo1.C6I);
+            Cubo1C6J.setBackground(Cubo1.C6);
+            //
+        }
+
+    }//GEN-LAST:event_siguienteBtnActionPerformed
+
+    private void izquierdaCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_izquierdaCubo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_izquierdaCubo1ActionPerformed
+
+    private void arribaCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arribaCubo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_arribaCubo1ActionPerformed
+
+    private void genAleatorio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genAleatorio1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_genAleatorio1ActionPerformed
+
+    private void derechaCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_derechaCubo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_derechaCubo1ActionPerformed
+
+    private void abajoCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abajoCubo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_abajoCubo1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,9 +2388,115 @@ public class Locura_Instantánea extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> Cubo1C1;
+    private javax.swing.JLabel Cubo1C1G;
+    private javax.swing.JLabel Cubo1C1J;
+    private javax.swing.JComboBox<String> Cubo1C2;
+    private javax.swing.JLabel Cubo1C2G;
+    private javax.swing.JLabel Cubo1C2J;
+    private javax.swing.JComboBox<String> Cubo1C3;
+    private javax.swing.JLabel Cubo1C3G;
+    private javax.swing.JLabel Cubo1C3J;
+    private javax.swing.JComboBox<String> Cubo1C4;
+    private javax.swing.JLabel Cubo1C4G;
+    private javax.swing.JLabel Cubo1C4J;
+    private javax.swing.JComboBox<String> Cubo1C5;
+    private javax.swing.JLabel Cubo1C5G;
+    private javax.swing.JLabel Cubo1C5J;
+    private javax.swing.JComboBox<String> Cubo1C6;
+    private javax.swing.JLabel Cubo1C6G;
+    private javax.swing.JLabel Cubo1C6J;
+    private javax.swing.JComboBox<String> Cubo2C1;
+    private javax.swing.JLabel Cubo2C1G;
+    private javax.swing.JComboBox<String> Cubo2C2;
+    private javax.swing.JLabel Cubo2C2G;
+    private javax.swing.JComboBox<String> Cubo2C3;
+    private javax.swing.JLabel Cubo2C3G;
+    private javax.swing.JComboBox<String> Cubo2C4;
+    private javax.swing.JLabel Cubo2C4G;
+    private javax.swing.JComboBox<String> Cubo2C5;
+    private javax.swing.JLabel Cubo2C5G;
+    private javax.swing.JComboBox<String> Cubo2C6;
+    private javax.swing.JLabel Cubo2C6G;
+    private javax.swing.JComboBox<String> Cubo3C1;
+    private javax.swing.JLabel Cubo3C1G;
+    private javax.swing.JComboBox<String> Cubo3C2;
+    private javax.swing.JLabel Cubo3C2G;
+    private javax.swing.JComboBox<String> Cubo3C3;
+    private javax.swing.JLabel Cubo3C3G;
+    private javax.swing.JComboBox<String> Cubo3C4;
+    private javax.swing.JLabel Cubo3C4G;
+    private javax.swing.JComboBox<String> Cubo3C5;
+    private javax.swing.JLabel Cubo3C5G;
+    private javax.swing.JComboBox<String> Cubo3C6;
+    private javax.swing.JLabel Cubo3C6G;
+    private javax.swing.JComboBox<String> Cubo4C1;
+    private javax.swing.JLabel Cubo4C1G;
+    private javax.swing.JComboBox<String> Cubo4C2;
+    private javax.swing.JLabel Cubo4C2G;
+    private javax.swing.JComboBox<String> Cubo4C3;
+    private javax.swing.JLabel Cubo4C3G;
+    private javax.swing.JComboBox<String> Cubo4C4;
+    private javax.swing.JLabel Cubo4C4G;
+    private javax.swing.JComboBox<String> Cubo4C5;
+    private javax.swing.JLabel Cubo4C5G;
+    private javax.swing.JComboBox<String> Cubo4C6;
+    private javax.swing.JLabel Cubo4C6G;
+    private javax.swing.JButton abajoCubo1;
+    private javax.swing.JButton arribaCubo1;
+    private javax.swing.JButton derechaCubo1;
+    private javax.swing.JButton genAleatorio;
+    private javax.swing.JButton genAleatorio1;
+    private javax.swing.JButton genCubo1;
+    private javax.swing.JButton genCubo2;
+    private javax.swing.JButton genCubo3;
+    private javax.swing.JButton genCubo4;
+    private javax.swing.JButton izquierdaCubo1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JButton siguienteBtn;
     // End of variables declaration//GEN-END:variables
 }

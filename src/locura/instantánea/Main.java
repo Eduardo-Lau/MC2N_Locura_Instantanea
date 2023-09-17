@@ -4,17 +4,26 @@
  */
 package locura.instantánea;
 
+import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+import javax.swing.UIManager;
+
 /**
  *
  * @author carlo
  */
-public class LocuraInstantánea {
+public class Main {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        try {
+            UIManager.setLookAndFeel(new FlatMacDarkLaf());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        new Locura_Instantánea().setVisible(true);
     }
     
 }
