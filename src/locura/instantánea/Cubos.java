@@ -15,14 +15,19 @@ public class Cubos extends JPanel {
 
     Color C1;
     String C1I;
+    
     Color C2;
     String C2I;
+    
     Color C3;
     String C3I;
+    
     Color C4;
     String C4I;
+    
     Color C5;
     String C5I;
+
     Color C6;
     String C6I;
 
