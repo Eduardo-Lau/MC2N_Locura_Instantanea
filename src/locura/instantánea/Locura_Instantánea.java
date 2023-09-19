@@ -7,6 +7,12 @@ package locura.instantánea;
 import javax.swing.UIManager;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 import java.awt.Color;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.Random;
 import javax.swing.JOptionPane;
 
@@ -14,12 +20,29 @@ import javax.swing.JOptionPane;
  *
  * @author carlo
  */
-public class Locura_Instantánea extends javax.swing.JFrame {
+public class Locura_Instantánea extends javax.swing.JFrame implements Serializable {
 
-    public Cubos Cubo1 = new Cubos();
-    public Cubos Cubo2 = new Cubos();
-    public Cubos Cubo3 = new Cubos();
-    public Cubos Cubo4 = new Cubos();
+    public static Cubos Cubo1 = new Cubos();
+    public static Cubos Cubo2 = new Cubos();
+    public static Cubos Cubo3 = new Cubos();
+    public static Cubos Cubo4 = new Cubos();
+    // Binarios
+    public static Binarios Cubo1Bin = new Binarios();
+    public static Binarios Cubo2Bin = new Binarios();
+    public static Binarios Cubo3Bin = new Binarios();
+    public static Binarios Cubo4Bin = new Binarios();
+
+    //BIN Cubos
+    // Guardar
+    public static FileOutputStream F_binCubosOut;
+    public static String binCubosNOut = "C:\\Users\\carlo\\Documents\\NetBeansProjects\\Locura Instantánea\\Binarios\\Cubos.bin";
+    public static ObjectOutputStream O_binCubosOut;
+    // Cargar
+    public static FileInputStream F_binCubosIn;
+    public static String binCubosNIn = "C:\\Users\\carlo\\Documents\\NetBeansProjects\\Locura Instantánea\\Binarios\\Cubos.bin";
+    public static ObjectInputStream O_binCubosIn;
+
+    boolean sigBtnPressed = false;
 
     /**
      * Creates new form
@@ -28,6 +51,7 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
+        resueltoLbl.setVisible(false);
 
         if (Cubo1.C1 == null) {
             Cubo1C1G.setVisible(false);
@@ -37,6 +61,114 @@ public class Locura_Instantánea extends javax.swing.JFrame {
             Cubo1C5G.setVisible(false);
             Cubo1C6G.setVisible(false);
 
+        } else {
+            if (Cubo1.C1I.equals("R")) {
+                Cubo1C1.setSelectedItem("Rojo");
+                Cubo1C1G.setText("R");
+                Cubo1C1G.setBackground(Cubo1.C1);
+            } else if (Cubo1.C1I.equals("B")) {
+                Cubo1C1.setSelectedItem("Blanco");
+                Cubo1C1G.setText("B");
+                Cubo1C1G.setBackground(Cubo1.C1);
+            } else if (Cubo1.C1I.equals("V")) {
+                Cubo1C1.setSelectedItem("Verde");
+                Cubo1C1G.setText("V");
+                Cubo1C1G.setBackground(Cubo1.C1);
+            } else if (Cubo1.C1I.equals("A")) {
+                Cubo1C1.setSelectedItem("Amarillo");
+                Cubo1C1G.setText("A");
+                Cubo1C1G.setBackground(Cubo1.C1);
+            }
+
+            if (Cubo1.C2I.equals("R")) {
+                Cubo1C2.setSelectedItem("Rojo");
+                Cubo1C2G.setText("R");
+                Cubo1C2G.setBackground(Cubo1.C2);
+            } else if (Cubo1.C2I.equals("B")) {
+                Cubo1C2.setSelectedItem("Blanco");
+                Cubo1C2G.setText("B");
+                Cubo1C2G.setBackground(Cubo1.C2);
+            } else if (Cubo1.C2I.equals("V")) {
+                Cubo1C2.setSelectedItem("Verde");
+                Cubo1C2G.setText("V");
+                Cubo1C2G.setBackground(Cubo1.C2);
+            } else if (Cubo1.C2I.equals("A")) {
+                Cubo1C2.setSelectedItem("Amarillo");
+                Cubo1C2G.setText("A");
+                Cubo1C2G.setBackground(Cubo1.C2);
+            }
+
+            if (Cubo1.C3I.equals("R")) {
+                Cubo1C3.setSelectedItem("Rojo");
+                Cubo1C3G.setText("R");
+                Cubo1C3G.setBackground(Cubo1.C3);
+            } else if (Cubo1.C3I.equals("B")) {
+                Cubo1C3.setSelectedItem("Blanco");
+                Cubo1C3G.setText("B");
+                Cubo1C3G.setBackground(Cubo1.C3);
+            } else if (Cubo1.C3I.equals("V")) {
+                Cubo1C3.setSelectedItem("Verde");
+                Cubo1C3G.setText("V");
+                Cubo1C3G.setBackground(Cubo1.C3);
+            } else if (Cubo1.C3I.equals("A")) {
+                Cubo1C3.setSelectedItem("Amarillo");
+                Cubo1C3G.setText("A");
+                Cubo1C3G.setBackground(Cubo1.C3);
+            }
+
+            if (Cubo1.C4I.equals("R")) {
+                Cubo1C4.setSelectedItem("Rojo");
+                Cubo1C4G.setText("R");
+                Cubo1C4G.setBackground(Cubo1.C4);
+            } else if (Cubo1.C4I.equals("B")) {
+                Cubo1C4.setSelectedItem("Blanco");
+                Cubo1C4G.setText("B");
+                Cubo1C4G.setBackground(Cubo1.C4);
+            } else if (Cubo1.C4I.equals("V")) {
+                Cubo1C4.setSelectedItem("Verde");
+                Cubo1C4G.setText("V");
+                Cubo1C4G.setBackground(Cubo1.C4);
+            } else if (Cubo1.C4I.equals("A")) {
+                Cubo1C4.setSelectedItem("Amarillo");
+                Cubo1C4G.setText("A");
+                Cubo1C4G.setBackground(Cubo1.C4);
+            }
+
+            if (Cubo1.C5I.equals("R")) {
+                Cubo1C5.setSelectedItem("Rojo");
+                Cubo1C5G.setText("R");
+                Cubo1C5G.setBackground(Cubo1.C5);
+            } else if (Cubo1.C5I.equals("B")) {
+                Cubo1C5.setSelectedItem("Blanco");
+                Cubo1C5G.setText("B");
+                Cubo1C5G.setBackground(Cubo1.C5);
+            } else if (Cubo1.C5I.equals("V")) {
+                Cubo1C5.setSelectedItem("Verde");
+                Cubo1C5G.setText("V");
+                Cubo1C5G.setBackground(Cubo1.C5);
+            } else if (Cubo1.C5I.equals("A")) {
+                Cubo1C5.setSelectedItem("Amarillo");
+                Cubo1C5G.setText("A");
+                Cubo1C5G.setBackground(Cubo1.C5);
+            }
+
+            if (Cubo1.C6I.equals("R")) {
+                Cubo1C6.setSelectedItem("Rojo");
+                Cubo1C6G.setText("R");
+                Cubo1C6G.setBackground(Cubo1.C6);
+            } else if (Cubo1.C6I.equals("B")) {
+                Cubo1C6.setSelectedItem("Blanco");
+                Cubo1C6G.setText("B");
+                Cubo1C6G.setBackground(Cubo1.C6);
+            } else if (Cubo1.C6I.equals("V")) {
+                Cubo1C6.setSelectedItem("Verde");
+                Cubo1C6G.setText("V");
+                Cubo1C6G.setBackground(Cubo1.C6);
+            } else if (Cubo1.C6I.equals("A")) {
+                Cubo1C6.setSelectedItem("Amarillo");
+                Cubo1C6G.setText("A");
+                Cubo1C6G.setBackground(Cubo1.C6);
+            }
         }
 
         if (Cubo2.C1 == null) {
@@ -47,6 +179,114 @@ public class Locura_Instantánea extends javax.swing.JFrame {
             Cubo2C5G.setVisible(false);
             Cubo2C6G.setVisible(false);
 
+        } else {
+            if (Cubo2.C1I.equals("R")) {
+                Cubo2C1.setSelectedItem("Rojo");
+                Cubo2C1G.setText("R");
+                Cubo2C1G.setBackground(Cubo2.C1);
+            } else if (Cubo2.C1I.equals("B")) {
+                Cubo2C1.setSelectedItem("Blanco");
+                Cubo2C1G.setText("B");
+                Cubo2C1G.setBackground(Cubo2.C1);
+            } else if (Cubo2.C1I.equals("V")) {
+                Cubo2C1.setSelectedItem("Verde");
+                Cubo2C1G.setText("V");
+                Cubo2C1G.setBackground(Cubo2.C1);
+            } else if (Cubo2.C1I.equals("A")) {
+                Cubo2C1.setSelectedItem("Amarillo");
+                Cubo2C1G.setText("A");
+                Cubo2C1G.setBackground(Cubo2.C1);
+            }
+
+            if (Cubo2.C2I.equals("R")) {
+                Cubo2C2.setSelectedItem("Rojo");
+                Cubo2C2G.setText("R");
+                Cubo2C2G.setBackground(Cubo2.C2);
+            } else if (Cubo2.C2I.equals("B")) {
+                Cubo2C2.setSelectedItem("Blanco");
+                Cubo2C2G.setText("B");
+                Cubo2C2G.setBackground(Cubo2.C2);
+            } else if (Cubo2.C2I.equals("V")) {
+                Cubo2C2.setSelectedItem("Verde");
+                Cubo2C2G.setText("V");
+                Cubo2C2G.setBackground(Cubo2.C2);
+            } else if (Cubo2.C2I.equals("A")) {
+                Cubo2C2.setSelectedItem("Amarillo");
+                Cubo2C2G.setText("A");
+                Cubo2C2G.setBackground(Cubo2.C2);
+            }
+
+            if (Cubo2.C3I.equals("R")) {
+                Cubo2C3.setSelectedItem("Rojo");
+                Cubo2C3G.setText("R");
+                Cubo2C3G.setBackground(Cubo2.C3);
+            } else if (Cubo2.C3I.equals("B")) {
+                Cubo2C3.setSelectedItem("Blanco");
+                Cubo2C3G.setText("B");
+                Cubo2C3G.setBackground(Cubo2.C3);
+            } else if (Cubo2.C3I.equals("V")) {
+                Cubo2C3.setSelectedItem("Verde");
+                Cubo2C3G.setText("V");
+                Cubo2C3G.setBackground(Cubo2.C3);
+            } else if (Cubo2.C3I.equals("A")) {
+                Cubo2C3.setSelectedItem("Amarillo");
+                Cubo2C3G.setText("A");
+                Cubo2C3G.setBackground(Cubo2.C3);
+            }
+
+            if (Cubo2.C4I.equals("R")) {
+                Cubo2C4.setSelectedItem("Rojo");
+                Cubo2C4G.setText("R");
+                Cubo2C4G.setBackground(Cubo2.C4);
+            } else if (Cubo2.C4I.equals("B")) {
+                Cubo2C4.setSelectedItem("Blanco");
+                Cubo2C4G.setText("B");
+                Cubo2C4G.setBackground(Cubo2.C4);
+            } else if (Cubo2.C4I.equals("V")) {
+                Cubo2C4.setSelectedItem("Verde");
+                Cubo2C4G.setText("V");
+                Cubo2C4G.setBackground(Cubo2.C4);
+            } else if (Cubo2.C4I.equals("A")) {
+                Cubo2C4.setSelectedItem("Amarillo");
+                Cubo2C4G.setText("A");
+                Cubo2C4G.setBackground(Cubo2.C4);
+            }
+
+            if (Cubo2.C5I.equals("R")) {
+                Cubo2C5.setSelectedItem("Rojo");
+                Cubo2C5G.setText("R");
+                Cubo2C5G.setBackground(Cubo2.C5);
+            } else if (Cubo2.C5I.equals("B")) {
+                Cubo2C5.setSelectedItem("Blanco");
+                Cubo2C5G.setText("B");
+                Cubo2C5G.setBackground(Cubo2.C5);
+            } else if (Cubo2.C5I.equals("V")) {
+                Cubo2C5.setSelectedItem("Verde");
+                Cubo2C5G.setText("V");
+                Cubo2C5G.setBackground(Cubo2.C5);
+            } else if (Cubo2.C5I.equals("A")) {
+                Cubo2C5.setSelectedItem("Amarillo");
+                Cubo2C5G.setText("A");
+                Cubo2C5G.setBackground(Cubo2.C5);
+            }
+
+            if (Cubo2.C6I.equals("R")) {
+                Cubo2C6.setSelectedItem("Rojo");
+                Cubo2C6G.setText("R");
+                Cubo2C6G.setBackground(Cubo2.C6);
+            } else if (Cubo2.C6I.equals("B")) {
+                Cubo2C6.setSelectedItem("Blanco");
+                Cubo2C6G.setText("B");
+                Cubo2C6G.setBackground(Cubo2.C6);
+            } else if (Cubo2.C6I.equals("V")) {
+                Cubo2C6.setSelectedItem("Verde");
+                Cubo2C6G.setText("V");
+                Cubo2C6G.setBackground(Cubo2.C6);
+            } else if (Cubo2.C6I.equals("A")) {
+                Cubo2C6.setSelectedItem("Amarillo");
+                Cubo2C6G.setText("A");
+                Cubo2C6G.setBackground(Cubo2.C6);
+            }
         }
 
         if (Cubo3.C1 == null) {
@@ -57,6 +297,114 @@ public class Locura_Instantánea extends javax.swing.JFrame {
             Cubo3C5G.setVisible(false);
             Cubo3C6G.setVisible(false);
 
+        } else {
+            if (Cubo3.C1I.equals("R")) {
+                Cubo3C1.setSelectedItem("Rojo");
+                Cubo3C1G.setText("R");
+                Cubo3C1G.setBackground(Cubo3.C1);
+            } else if (Cubo3.C1I.equals("B")) {
+                Cubo3C1.setSelectedItem("Blanco");
+                Cubo3C1G.setText("B");
+                Cubo3C1G.setBackground(Cubo3.C1);
+            } else if (Cubo3.C1I.equals("V")) {
+                Cubo3C1.setSelectedItem("Verde");
+                Cubo3C1G.setText("V");
+                Cubo3C1G.setBackground(Cubo3.C1);
+            } else if (Cubo3.C1I.equals("A")) {
+                Cubo3C1.setSelectedItem("Amarillo");
+                Cubo3C1G.setText("A");
+                Cubo3C1G.setBackground(Cubo3.C1);
+            }
+
+            if (Cubo3.C2I.equals("R")) {
+                Cubo3C2.setSelectedItem("Rojo");
+                Cubo3C2G.setText("R");
+                Cubo3C2G.setBackground(Cubo3.C2);
+            } else if (Cubo3.C2I.equals("B")) {
+                Cubo3C2.setSelectedItem("Blanco");
+                Cubo3C2G.setText("B");
+                Cubo3C2G.setBackground(Cubo3.C2);
+            } else if (Cubo3.C2I.equals("V")) {
+                Cubo3C2.setSelectedItem("Verde");
+                Cubo3C2G.setText("V");
+                Cubo3C2G.setBackground(Cubo3.C2);
+            } else if (Cubo3.C2I.equals("A")) {
+                Cubo3C2.setSelectedItem("Amarillo");
+                Cubo3C2G.setText("A");
+                Cubo3C2G.setBackground(Cubo3.C2);
+            }
+
+            if (Cubo3.C3I.equals("R")) {
+                Cubo3C3.setSelectedItem("Rojo");
+                Cubo3C3G.setText("R");
+                Cubo3C3G.setBackground(Cubo3.C3);
+            } else if (Cubo3.C3I.equals("B")) {
+                Cubo3C3.setSelectedItem("Blanco");
+                Cubo3C3G.setText("B");
+                Cubo3C3G.setBackground(Cubo3.C3);
+            } else if (Cubo3.C3I.equals("V")) {
+                Cubo3C3.setSelectedItem("Verde");
+                Cubo3C3G.setText("V");
+                Cubo3C3G.setBackground(Cubo3.C3);
+            } else if (Cubo3.C3I.equals("A")) {
+                Cubo3C3.setSelectedItem("Amarillo");
+                Cubo3C3G.setText("A");
+                Cubo3C3G.setBackground(Cubo3.C3);
+            }
+
+            if (Cubo3.C4I.equals("R")) {
+                Cubo3C4.setSelectedItem("Rojo");
+                Cubo3C4G.setText("R");
+                Cubo3C4G.setBackground(Cubo3.C4);
+            } else if (Cubo3.C4I.equals("B")) {
+                Cubo3C4.setSelectedItem("Blanco");
+                Cubo3C4G.setText("B");
+                Cubo3C4G.setBackground(Cubo3.C4);
+            } else if (Cubo3.C4I.equals("V")) {
+                Cubo3C4.setSelectedItem("Verde");
+                Cubo3C4G.setText("V");
+                Cubo3C4G.setBackground(Cubo3.C4);
+            } else if (Cubo3.C4I.equals("A")) {
+                Cubo3C4.setSelectedItem("Amarillo");
+                Cubo3C4G.setText("A");
+                Cubo3C4G.setBackground(Cubo3.C4);
+            }
+
+            if (Cubo3.C5I.equals("R")) {
+                Cubo3C5.setSelectedItem("Rojo");
+                Cubo3C5G.setText("R");
+                Cubo3C5G.setBackground(Cubo3.C5);
+            } else if (Cubo3.C5I.equals("B")) {
+                Cubo3C5.setSelectedItem("Blanco");
+                Cubo3C5G.setText("B");
+                Cubo3C5G.setBackground(Cubo3.C5);
+            } else if (Cubo3.C5I.equals("V")) {
+                Cubo3C5.setSelectedItem("Verde");
+                Cubo3C5G.setText("V");
+                Cubo3C5G.setBackground(Cubo3.C5);
+            } else if (Cubo3.C5I.equals("A")) {
+                Cubo3C5.setSelectedItem("Amarillo");
+                Cubo3C5G.setText("A");
+                Cubo3C5G.setBackground(Cubo3.C5);
+            }
+
+            if (Cubo3.C6I.equals("R")) {
+                Cubo3C6.setSelectedItem("Rojo");
+                Cubo3C6G.setText("R");
+                Cubo3C6G.setBackground(Cubo3.C6);
+            } else if (Cubo3.C6I.equals("B")) {
+                Cubo3C6.setSelectedItem("Blanco");
+                Cubo3C6G.setText("B");
+                Cubo3C6G.setBackground(Cubo3.C6);
+            } else if (Cubo3.C6I.equals("V")) {
+                Cubo3C6.setSelectedItem("Verde");
+                Cubo3C6G.setText("V");
+                Cubo3C6G.setBackground(Cubo3.C6);
+            } else if (Cubo3.C6I.equals("A")) {
+                Cubo3C6.setSelectedItem("Amarillo");
+                Cubo3C6G.setText("A");
+                Cubo3C6G.setBackground(Cubo3.C6);
+            }
         }
 
         if (Cubo4.C1 == null) {
@@ -67,6 +415,114 @@ public class Locura_Instantánea extends javax.swing.JFrame {
             Cubo4C5G.setVisible(false);
             Cubo4C6G.setVisible(false);
 
+        } else {
+            if (Cubo4.C1I.equals("R")) {
+                Cubo4C1.setSelectedItem("Rojo");
+                Cubo4C1G.setText("R");
+                Cubo4C1G.setBackground(Cubo4.C1);
+            } else if (Cubo4.C1I.equals("B")) {
+                Cubo4C1.setSelectedItem("Blanco");
+                Cubo4C1G.setText("B");
+                Cubo4C1G.setBackground(Cubo4.C1);
+            } else if (Cubo4.C1I.equals("V")) {
+                Cubo4C1.setSelectedItem("Verde");
+                Cubo4C1G.setText("V");
+                Cubo4C1G.setBackground(Cubo4.C1);
+            } else if (Cubo4.C1I.equals("A")) {
+                Cubo4C1.setSelectedItem("Amarillo");
+                Cubo4C1G.setText("A");
+                Cubo4C1G.setBackground(Cubo4.C1);
+            }
+
+            if (Cubo4.C2I.equals("R")) {
+                Cubo4C2.setSelectedItem("Rojo");
+                Cubo4C2G.setText("R");
+                Cubo4C2G.setBackground(Cubo4.C2);
+            } else if (Cubo4.C2I.equals("B")) {
+                Cubo4C2.setSelectedItem("Blanco");
+                Cubo4C2G.setText("B");
+                Cubo4C2G.setBackground(Cubo4.C2);
+            } else if (Cubo4.C2I.equals("V")) {
+                Cubo4C2.setSelectedItem("Verde");
+                Cubo4C2G.setText("V");
+                Cubo4C2G.setBackground(Cubo4.C2);
+            } else if (Cubo4.C2I.equals("A")) {
+                Cubo4C2.setSelectedItem("Amarillo");
+                Cubo4C2G.setText("A");
+                Cubo4C2G.setBackground(Cubo4.C2);
+            }
+
+            if (Cubo4.C3I.equals("R")) {
+                Cubo4C3.setSelectedItem("Rojo");
+                Cubo4C3G.setText("R");
+                Cubo4C3G.setBackground(Cubo4.C3);
+            } else if (Cubo4.C3I.equals("B")) {
+                Cubo4C3.setSelectedItem("Blanco");
+                Cubo4C3G.setText("B");
+                Cubo4C3G.setBackground(Cubo4.C3);
+            } else if (Cubo4.C3I.equals("V")) {
+                Cubo4C3.setSelectedItem("Verde");
+                Cubo4C3G.setText("V");
+                Cubo4C3G.setBackground(Cubo4.C3);
+            } else if (Cubo4.C3I.equals("A")) {
+                Cubo4C3.setSelectedItem("Amarillo");
+                Cubo4C3G.setText("A");
+                Cubo4C3G.setBackground(Cubo4.C3);
+            }
+
+            if (Cubo4.C4I.equals("R")) {
+                Cubo4C4.setSelectedItem("Rojo");
+                Cubo4C4G.setText("R");
+                Cubo4C4G.setBackground(Cubo4.C4);
+            } else if (Cubo4.C4I.equals("B")) {
+                Cubo4C4.setSelectedItem("Blanco");
+                Cubo4C4G.setText("B");
+                Cubo4C4G.setBackground(Cubo4.C4);
+            } else if (Cubo4.C4I.equals("V")) {
+                Cubo4C4.setSelectedItem("Verde");
+                Cubo4C4G.setText("V");
+                Cubo4C4G.setBackground(Cubo4.C4);
+            } else if (Cubo4.C4I.equals("A")) {
+                Cubo4C4.setSelectedItem("Amarillo");
+                Cubo4C4G.setText("A");
+                Cubo4C4G.setBackground(Cubo4.C4);
+            }
+
+            if (Cubo4.C5I.equals("R")) {
+                Cubo4C5.setSelectedItem("Rojo");
+                Cubo4C5G.setText("R");
+                Cubo4C5G.setBackground(Cubo4.C5);
+            } else if (Cubo4.C5I.equals("B")) {
+                Cubo4C5.setSelectedItem("Blanco");
+                Cubo4C5G.setText("B");
+                Cubo4C5G.setBackground(Cubo4.C5);
+            } else if (Cubo4.C5I.equals("V")) {
+                Cubo4C5.setSelectedItem("Verde");
+                Cubo4C5G.setText("V");
+                Cubo4C5G.setBackground(Cubo4.C5);
+            } else if (Cubo4.C5I.equals("A")) {
+                Cubo4C5.setSelectedItem("Amarillo");
+                Cubo4C5G.setText("A");
+                Cubo4C5G.setBackground(Cubo4.C5);
+            }
+
+            if (Cubo4.C6I.equals("R")) {
+                Cubo4C6.setSelectedItem("Rojo");
+                Cubo4C6G.setText("R");
+                Cubo4C6G.setBackground(Cubo4.C6);
+            } else if (Cubo4.C6I.equals("B")) {
+                Cubo4C6.setSelectedItem("Blanco");
+                Cubo4C6G.setText("B");
+                Cubo4C6G.setBackground(Cubo4.C6);
+            } else if (Cubo4.C6I.equals("V")) {
+                Cubo4C6.setSelectedItem("Verde");
+                Cubo4C6G.setText("V");
+                Cubo4C6G.setBackground(Cubo4.C6);
+            } else if (Cubo4.C6I.equals("A")) {
+                Cubo4C6.setSelectedItem("Amarillo");
+                Cubo4C6G.setText("A");
+                Cubo4C6G.setBackground(Cubo4.C6);
+            }
         }
 
     }
@@ -179,7 +635,7 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         genAleatorio1 = new javax.swing.JButton();
-        Cubo1C1J = new javax.swing.JLabel();
+        Cubo4C3T = new javax.swing.JLabel();
         arribaCubo1 = new javax.swing.JButton();
         izquierdaCubo1 = new javax.swing.JButton();
         Cubo1C5J = new javax.swing.JLabel();
@@ -232,6 +688,29 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         horarioCubo4 = new javax.swing.JButton();
         antihorarioCubo4 = new javax.swing.JButton();
         comprobarBtn = new javax.swing.JButton();
+        Cubo1C1J = new javax.swing.JLabel();
+        Cubo1C3T = new javax.swing.JLabel();
+        Cubo2C3T = new javax.swing.JLabel();
+        Cubo3C3T = new javax.swing.JLabel();
+        resueltoLbl = new javax.swing.JLabel();
+        Cubo4C4T = new javax.swing.JLabel();
+        Cubo3C4T = new javax.swing.JLabel();
+        Cubo2C4T = new javax.swing.JLabel();
+        Cubo1C4T = new javax.swing.JLabel();
+        Cubo4C5T = new javax.swing.JLabel();
+        Cubo3C5T = new javax.swing.JLabel();
+        Cubo2C5T = new javax.swing.JLabel();
+        Cubo1C5T = new javax.swing.JLabel();
+        Cubo4C6T = new javax.swing.JLabel();
+        Cubo3C6T = new javax.swing.JLabel();
+        Cubo2C6T = new javax.swing.JLabel();
+        Cubo1C6T = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -496,7 +975,7 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         });
         jPanel1.add(genCubo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 340, -1, -1));
 
-        genAleatorio.setBackground(new java.awt.Color(120, 60, 60));
+        genAleatorio.setBackground(new java.awt.Color(109, 23, 48));
         genAleatorio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         genAleatorio.setForeground(new java.awt.Color(255, 255, 255));
         genAleatorio.setText("Generar Aleatorio");
@@ -713,9 +1192,9 @@ public class Locura_Instantánea extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Selección de Colores", jPanel1);
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setLayout(null);
 
-        genAleatorio1.setBackground(new java.awt.Color(120, 60, 60));
+        genAleatorio1.setBackground(new java.awt.Color(109, 23, 48));
         genAleatorio1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         genAleatorio1.setForeground(new java.awt.Color(255, 255, 255));
         genAleatorio1.setText("Resolver");
@@ -724,15 +1203,17 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 genAleatorio1ActionPerformed(evt);
             }
         });
-        jPanel2.add(genAleatorio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 258, 130, -1));
+        jPanel2.add(genAleatorio1);
+        genAleatorio1.setBounds(473, 258, 130, 30);
 
-        Cubo1C1J.setBackground(new java.awt.Color(51, 51, 51));
-        Cubo1C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        Cubo1C1J.setForeground(new java.awt.Color(0, 0, 0));
-        Cubo1C1J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Cubo1C1J.setText("1");
-        Cubo1C1J.setOpaque(true);
-        jPanel2.add(Cubo1C1J, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 82, 60, 60));
+        Cubo4C3T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C3T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C3T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C3T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C3T.setText("4");
+        Cubo4C3T.setOpaque(true);
+        jPanel2.add(Cubo4C3T);
+        Cubo4C3T.setBounds(290, 357, 50, 50);
 
         arribaCubo1.setBackground(new java.awt.Color(147, 157, 255));
         arribaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -743,7 +1224,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 arribaCubo1ActionPerformed(evt);
             }
         });
-        jPanel2.add(arribaCubo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 38, 25, 25));
+        jPanel2.add(arribaCubo1);
+        arribaCubo1.setBounds(87, 38, 25, 25);
 
         izquierdaCubo1.setBackground(new java.awt.Color(147, 157, 255));
         izquierdaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -754,7 +1236,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 izquierdaCubo1ActionPerformed(evt);
             }
         });
-        jPanel2.add(izquierdaCubo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 100, 25, 25));
+        jPanel2.add(izquierdaCubo1);
+        izquierdaCubo1.setBounds(23, 100, 25, 25);
 
         Cubo1C5J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C5J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -762,7 +1245,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo1C5J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C5J.setText("5");
         Cubo1C5J.setOpaque(true);
-        jPanel2.add(Cubo1C5J, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 82, -1, 60));
+        jPanel2.add(Cubo1C5J);
+        Cubo1C5J.setBounds(134, 82, 10, 60);
 
         Cubo1C6J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C6J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -770,7 +1254,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo1C6J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C6J.setText("6");
         Cubo1C6J.setOpaque(true);
-        jPanel2.add(Cubo1C6J, new org.netbeans.lib.awtextra.AbsoluteConstraints(54, 82, -1, 60));
+        jPanel2.add(Cubo1C6J);
+        Cubo1C6J.setBounds(54, 82, 10, 60);
 
         Cubo1C4J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C4J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -778,7 +1263,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo1C4J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C4J.setText("4");
         Cubo1C4J.setOpaque(true);
-        jPanel2.add(Cubo1C4J, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 147, 60, 9));
+        jPanel2.add(Cubo1C4J);
+        Cubo1C4J.setBounds(68, 147, 60, 9);
 
         Cubo1C3J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C3J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -786,7 +1272,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo1C3J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C3J.setText("3");
         Cubo1C3J.setOpaque(true);
-        jPanel2.add(Cubo1C3J, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 69, 60, 9));
+        jPanel2.add(Cubo1C3J);
+        Cubo1C3J.setBounds(68, 69, 60, 9);
 
         derechaCubo1.setBackground(new java.awt.Color(147, 157, 255));
         derechaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -797,7 +1284,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 derechaCubo1ActionPerformed(evt);
             }
         });
-        jPanel2.add(derechaCubo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 97, 25, 25));
+        jPanel2.add(derechaCubo1);
+        derechaCubo1.setBounds(148, 97, 25, 25);
 
         abajoCubo1.setBackground(new java.awt.Color(147, 157, 255));
         abajoCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -808,7 +1296,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 abajoCubo1ActionPerformed(evt);
             }
         });
-        jPanel2.add(abajoCubo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 162, 25, 25));
+        jPanel2.add(abajoCubo1);
+        abajoCubo1.setBounds(86, 162, 25, 25);
 
         Cubo1C2J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -816,10 +1305,12 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo1C2J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C2J.setText("2");
         Cubo1C2J.setOpaque(true);
-        jPanel2.add(Cubo1C2J, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 42, 25, 25));
+        jPanel2.add(Cubo1C2J);
+        Cubo1C2J.setBounds(165, 42, 25, 25);
 
         jLabel13.setText("1)");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 44, -1, -1));
+        jPanel2.add(jLabel13);
+        jLabel13.setBounds(23, 44, 12, 20);
 
         horarioCubo1.setBackground(new java.awt.Color(147, 157, 255));
         horarioCubo1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -830,7 +1321,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 horarioCubo1ActionPerformed(evt);
             }
         });
-        jPanel2.add(horarioCubo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 188, -1, 25));
+        jPanel2.add(horarioCubo1);
+        horarioCubo1.setBounds(27, 188, 35, 25);
 
         antihorarioCubo1.setBackground(new java.awt.Color(147, 157, 255));
         antihorarioCubo1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -841,7 +1333,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 antihorarioCubo1ActionPerformed(evt);
             }
         });
-        jPanel2.add(antihorarioCubo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(134, 188, -1, 25));
+        jPanel2.add(antihorarioCubo1);
+        antihorarioCubo1.setBounds(134, 188, 35, 25);
 
         Cubo2C1J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -849,7 +1342,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo2C1J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C1J.setText("1");
         Cubo2C1J.setOpaque(true);
-        jPanel2.add(Cubo2C1J, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 82, 60, 60));
+        jPanel2.add(Cubo2C1J);
+        Cubo2C1J.setBounds(285, 82, 60, 60);
 
         izquierdaCubo2.setBackground(new java.awt.Color(147, 157, 255));
         izquierdaCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -860,7 +1354,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 izquierdaCubo2ActionPerformed(evt);
             }
         });
-        jPanel2.add(izquierdaCubo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 25, 25));
+        jPanel2.add(izquierdaCubo2);
+        izquierdaCubo2.setBounds(240, 100, 25, 25);
 
         Cubo2C6J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C6J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -868,7 +1363,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo2C6J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C6J.setText("6");
         Cubo2C6J.setOpaque(true);
-        jPanel2.add(Cubo2C6J, new org.netbeans.lib.awtextra.AbsoluteConstraints(271, 82, -1, 60));
+        jPanel2.add(Cubo2C6J);
+        Cubo2C6J.setBounds(271, 82, 10, 60);
 
         Cubo2C4J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C4J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -876,7 +1372,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo2C4J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C4J.setText("4");
         Cubo2C4J.setOpaque(true);
-        jPanel2.add(Cubo2C4J, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 147, 60, 9));
+        jPanel2.add(Cubo2C4J);
+        Cubo2C4J.setBounds(285, 147, 60, 9);
 
         Cubo2C5J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C5J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -884,7 +1381,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo2C5J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C5J.setText("5");
         Cubo2C5J.setOpaque(true);
-        jPanel2.add(Cubo2C5J, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 82, -1, 60));
+        jPanel2.add(Cubo2C5J);
+        Cubo2C5J.setBounds(351, 82, 10, 60);
 
         Cubo2C3J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C3J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -892,7 +1390,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo2C3J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C3J.setText("3");
         Cubo2C3J.setOpaque(true);
-        jPanel2.add(Cubo2C3J, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 69, 60, 9));
+        jPanel2.add(Cubo2C3J);
+        Cubo2C3J.setBounds(285, 69, 60, 9);
 
         arribaCubo2.setBackground(new java.awt.Color(147, 157, 255));
         arribaCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -903,10 +1402,12 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 arribaCubo2ActionPerformed(evt);
             }
         });
-        jPanel2.add(arribaCubo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 38, 25, 25));
+        jPanel2.add(arribaCubo2);
+        arribaCubo2.setBounds(306, 38, 25, 25);
 
         jLabel14.setText("2)");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 44, -1, -1));
+        jPanel2.add(jLabel14);
+        jLabel14.setBounds(240, 44, 12, 20);
 
         Cubo2C2J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -914,7 +1415,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo2C2J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C2J.setText("2");
         Cubo2C2J.setOpaque(true);
-        jPanel2.add(Cubo2C2J, new org.netbeans.lib.awtextra.AbsoluteConstraints(382, 42, 25, 25));
+        jPanel2.add(Cubo2C2J);
+        Cubo2C2J.setBounds(382, 42, 25, 25);
 
         derechaCubo2.setBackground(new java.awt.Color(147, 157, 255));
         derechaCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -925,7 +1427,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 derechaCubo2ActionPerformed(evt);
             }
         });
-        jPanel2.add(derechaCubo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 97, 25, 25));
+        jPanel2.add(derechaCubo2);
+        derechaCubo2.setBounds(365, 97, 25, 25);
 
         abajoCubo2.setBackground(new java.awt.Color(147, 157, 255));
         abajoCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -936,7 +1439,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 abajoCubo2ActionPerformed(evt);
             }
         });
-        jPanel2.add(abajoCubo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(303, 162, 25, 25));
+        jPanel2.add(abajoCubo2);
+        abajoCubo2.setBounds(303, 162, 25, 25);
 
         horarioCubo2.setBackground(new java.awt.Color(147, 157, 255));
         horarioCubo2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -947,7 +1451,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 horarioCubo2ActionPerformed(evt);
             }
         });
-        jPanel2.add(horarioCubo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 188, -1, 25));
+        jPanel2.add(horarioCubo2);
+        horarioCubo2.setBounds(244, 188, 35, 25);
 
         antihorarioCubo2.setBackground(new java.awt.Color(147, 157, 255));
         antihorarioCubo2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -958,7 +1463,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 antihorarioCubo2ActionPerformed(evt);
             }
         });
-        jPanel2.add(antihorarioCubo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 188, -1, 25));
+        jPanel2.add(antihorarioCubo2);
+        antihorarioCubo2.setBounds(351, 188, 35, 25);
 
         Cubo3C1J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -966,7 +1472,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo3C1J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C1J.setText("1");
         Cubo3C1J.setOpaque(true);
-        jPanel2.add(Cubo3C1J, new org.netbeans.lib.awtextra.AbsoluteConstraints(514, 82, 60, 60));
+        jPanel2.add(Cubo3C1J);
+        Cubo3C1J.setBounds(514, 82, 60, 60);
 
         izquierdaCubo3.setBackground(new java.awt.Color(147, 157, 255));
         izquierdaCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -977,7 +1484,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 izquierdaCubo3ActionPerformed(evt);
             }
         });
-        jPanel2.add(izquierdaCubo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 100, 25, 25));
+        jPanel2.add(izquierdaCubo3);
+        izquierdaCubo3.setBounds(469, 100, 25, 25);
 
         Cubo3C6J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C6J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -985,7 +1493,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo3C6J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C6J.setText("6");
         Cubo3C6J.setOpaque(true);
-        jPanel2.add(Cubo3C6J, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 82, -1, 60));
+        jPanel2.add(Cubo3C6J);
+        Cubo3C6J.setBounds(500, 82, 10, 60);
 
         Cubo3C4J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C4J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -993,7 +1502,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo3C4J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C4J.setText("4");
         Cubo3C4J.setOpaque(true);
-        jPanel2.add(Cubo3C4J, new org.netbeans.lib.awtextra.AbsoluteConstraints(514, 147, 60, 9));
+        jPanel2.add(Cubo3C4J);
+        Cubo3C4J.setBounds(514, 147, 60, 9);
 
         Cubo3C5J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C5J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1001,7 +1511,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo3C5J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C5J.setText("5");
         Cubo3C5J.setOpaque(true);
-        jPanel2.add(Cubo3C5J, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 82, -1, 60));
+        jPanel2.add(Cubo3C5J);
+        Cubo3C5J.setBounds(580, 82, 10, 60);
 
         Cubo3C3J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C3J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1009,7 +1520,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo3C3J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C3J.setText("3");
         Cubo3C3J.setOpaque(true);
-        jPanel2.add(Cubo3C3J, new org.netbeans.lib.awtextra.AbsoluteConstraints(514, 69, 60, 9));
+        jPanel2.add(Cubo3C3J);
+        Cubo3C3J.setBounds(514, 69, 60, 9);
 
         arribaCubo3.setBackground(new java.awt.Color(147, 157, 255));
         arribaCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1020,10 +1532,12 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 arribaCubo3ActionPerformed(evt);
             }
         });
-        jPanel2.add(arribaCubo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(533, 38, 25, 25));
+        jPanel2.add(arribaCubo3);
+        arribaCubo3.setBounds(533, 38, 25, 25);
 
         jLabel15.setText("3)");
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 44, -1, -1));
+        jPanel2.add(jLabel15);
+        jLabel15.setBounds(469, 44, 12, 20);
 
         Cubo3C2J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1031,7 +1545,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo3C2J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C2J.setText("2");
         Cubo3C2J.setOpaque(true);
-        jPanel2.add(Cubo3C2J, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 42, 25, 25));
+        jPanel2.add(Cubo3C2J);
+        Cubo3C2J.setBounds(611, 42, 25, 25);
 
         derechaCubo3.setBackground(new java.awt.Color(147, 157, 255));
         derechaCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1042,7 +1557,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 derechaCubo3ActionPerformed(evt);
             }
         });
-        jPanel2.add(derechaCubo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(594, 97, 25, 25));
+        jPanel2.add(derechaCubo3);
+        derechaCubo3.setBounds(594, 97, 25, 25);
 
         abajoCubo3.setBackground(new java.awt.Color(147, 157, 255));
         abajoCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1053,7 +1569,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 abajoCubo3ActionPerformed(evt);
             }
         });
-        jPanel2.add(abajoCubo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(532, 162, 25, 25));
+        jPanel2.add(abajoCubo3);
+        abajoCubo3.setBounds(532, 162, 25, 25);
 
         horarioCubo3.setBackground(new java.awt.Color(147, 157, 255));
         horarioCubo3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -1064,7 +1581,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 horarioCubo3ActionPerformed(evt);
             }
         });
-        jPanel2.add(horarioCubo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(473, 188, -1, 25));
+        jPanel2.add(horarioCubo3);
+        horarioCubo3.setBounds(473, 188, 35, 25);
 
         antihorarioCubo3.setBackground(new java.awt.Color(147, 157, 255));
         antihorarioCubo3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -1075,7 +1593,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 antihorarioCubo3ActionPerformed(evt);
             }
         });
-        jPanel2.add(antihorarioCubo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 188, -1, 25));
+        jPanel2.add(antihorarioCubo3);
+        antihorarioCubo3.setBounds(580, 188, 35, 25);
 
         Cubo4C1J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1083,7 +1602,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo4C1J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C1J.setText("1");
         Cubo4C1J.setOpaque(true);
-        jPanel2.add(Cubo4C1J, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 82, 60, 60));
+        jPanel2.add(Cubo4C1J);
+        Cubo4C1J.setBounds(745, 82, 60, 60);
 
         izquierdaCubo4.setBackground(new java.awt.Color(147, 157, 255));
         izquierdaCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1094,7 +1614,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 izquierdaCubo4ActionPerformed(evt);
             }
         });
-        jPanel2.add(izquierdaCubo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 100, 25, 25));
+        jPanel2.add(izquierdaCubo4);
+        izquierdaCubo4.setBounds(700, 100, 25, 25);
 
         Cubo4C6J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C6J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1102,7 +1623,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo4C6J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C6J.setText("6");
         Cubo4C6J.setOpaque(true);
-        jPanel2.add(Cubo4C6J, new org.netbeans.lib.awtextra.AbsoluteConstraints(731, 82, -1, 60));
+        jPanel2.add(Cubo4C6J);
+        Cubo4C6J.setBounds(731, 82, 10, 60);
 
         Cubo4C4J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C4J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1110,7 +1632,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo4C4J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C4J.setText("4");
         Cubo4C4J.setOpaque(true);
-        jPanel2.add(Cubo4C4J, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 147, 60, 9));
+        jPanel2.add(Cubo4C4J);
+        Cubo4C4J.setBounds(745, 147, 60, 9);
 
         Cubo4C5J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C5J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1118,7 +1641,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo4C5J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C5J.setText("5");
         Cubo4C5J.setOpaque(true);
-        jPanel2.add(Cubo4C5J, new org.netbeans.lib.awtextra.AbsoluteConstraints(811, 82, -1, 60));
+        jPanel2.add(Cubo4C5J);
+        Cubo4C5J.setBounds(811, 82, 10, 60);
 
         Cubo4C3J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C3J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1126,7 +1650,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo4C3J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C3J.setText("3");
         Cubo4C3J.setOpaque(true);
-        jPanel2.add(Cubo4C3J, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 69, 60, 9));
+        jPanel2.add(Cubo4C3J);
+        Cubo4C3J.setBounds(745, 69, 60, 9);
 
         arribaCubo4.setBackground(new java.awt.Color(147, 157, 255));
         arribaCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1137,10 +1662,12 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 arribaCubo4ActionPerformed(evt);
             }
         });
-        jPanel2.add(arribaCubo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(763, 38, 25, 25));
+        jPanel2.add(arribaCubo4);
+        arribaCubo4.setBounds(763, 38, 25, 25);
 
         jLabel16.setText("4)");
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 44, -1, -1));
+        jPanel2.add(jLabel16);
+        jLabel16.setBounds(700, 44, 12, 20);
 
         Cubo4C2J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1148,7 +1675,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Cubo4C2J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C2J.setText("2");
         Cubo4C2J.setOpaque(true);
-        jPanel2.add(Cubo4C2J, new org.netbeans.lib.awtextra.AbsoluteConstraints(842, 42, 25, 25));
+        jPanel2.add(Cubo4C2J);
+        Cubo4C2J.setBounds(842, 42, 25, 25);
 
         derechaCubo4.setBackground(new java.awt.Color(147, 157, 255));
         derechaCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1159,7 +1687,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 derechaCubo4ActionPerformed(evt);
             }
         });
-        jPanel2.add(derechaCubo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(825, 97, 25, 25));
+        jPanel2.add(derechaCubo4);
+        derechaCubo4.setBounds(825, 97, 25, 25);
 
         abajoCubo4.setBackground(new java.awt.Color(147, 157, 255));
         abajoCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1170,7 +1699,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 abajoCubo4ActionPerformed(evt);
             }
         });
-        jPanel2.add(abajoCubo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(763, 162, 25, 25));
+        jPanel2.add(abajoCubo4);
+        abajoCubo4.setBounds(763, 162, 25, 25);
 
         horarioCubo4.setBackground(new java.awt.Color(147, 157, 255));
         horarioCubo4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -1181,7 +1711,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 horarioCubo4ActionPerformed(evt);
             }
         });
-        jPanel2.add(horarioCubo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(704, 188, -1, 25));
+        jPanel2.add(horarioCubo4);
+        horarioCubo4.setBounds(704, 188, 35, 25);
 
         antihorarioCubo4.setBackground(new java.awt.Color(147, 157, 255));
         antihorarioCubo4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -1192,7 +1723,8 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 antihorarioCubo4ActionPerformed(evt);
             }
         });
-        jPanel2.add(antihorarioCubo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(811, 188, -1, 25));
+        jPanel2.add(antihorarioCubo4);
+        antihorarioCubo4.setBounds(811, 188, 35, 25);
 
         comprobarBtn.setBackground(new java.awt.Color(147, 157, 255));
         comprobarBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1203,41 +1735,226 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 comprobarBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(comprobarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 258, 130, -1));
+        jPanel2.add(comprobarBtn);
+        comprobarBtn.setBounds(256, 258, 130, 30);
+
+        Cubo1C1J.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C1J.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C1J.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C1J.setText("1");
+        Cubo1C1J.setOpaque(true);
+        jPanel2.add(Cubo1C1J);
+        Cubo1C1J.setBounds(68, 82, 60, 60);
+
+        Cubo1C3T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C3T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C3T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C3T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C3T.setText("1");
+        Cubo1C3T.setOpaque(true);
+        jPanel2.add(Cubo1C3T);
+        Cubo1C3T.setBounds(290, 537, 50, 50);
+
+        Cubo2C3T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C3T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C3T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C3T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C3T.setText("2");
+        Cubo2C3T.setOpaque(true);
+        jPanel2.add(Cubo2C3T);
+        Cubo2C3T.setBounds(290, 477, 50, 50);
+
+        Cubo3C3T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C3T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C3T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C3T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C3T.setText("3");
+        Cubo3C3T.setOpaque(true);
+        jPanel2.add(Cubo3C3T);
+        Cubo3C3T.setBounds(290, 417, 50, 50);
+
+        resueltoLbl.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        resueltoLbl.setForeground(new java.awt.Color(255, 202, 117));
+        resueltoLbl.setText("Resuelto !");
+        jPanel2.add(resueltoLbl);
+        resueltoLbl.setBounds(400, 330, 80, 20);
+
+        Cubo4C4T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C4T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C4T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C4T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C4T.setText("4");
+        Cubo4C4T.setOpaque(true);
+        jPanel2.add(Cubo4C4T);
+        Cubo4C4T.setBounds(370, 357, 50, 50);
+
+        Cubo3C4T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C4T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C4T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C4T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C4T.setText("3");
+        Cubo3C4T.setOpaque(true);
+        jPanel2.add(Cubo3C4T);
+        Cubo3C4T.setBounds(370, 417, 50, 50);
+
+        Cubo2C4T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C4T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C4T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C4T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C4T.setText("2");
+        Cubo2C4T.setOpaque(true);
+        jPanel2.add(Cubo2C4T);
+        Cubo2C4T.setBounds(370, 477, 50, 50);
+
+        Cubo1C4T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C4T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C4T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C4T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C4T.setText("1");
+        Cubo1C4T.setOpaque(true);
+        jPanel2.add(Cubo1C4T);
+        Cubo1C4T.setBounds(370, 537, 50, 50);
+
+        Cubo4C5T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C5T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C5T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C5T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C5T.setText("4");
+        Cubo4C5T.setOpaque(true);
+        jPanel2.add(Cubo4C5T);
+        Cubo4C5T.setBounds(450, 357, 50, 50);
+
+        Cubo3C5T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C5T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C5T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C5T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C5T.setText("3");
+        Cubo3C5T.setOpaque(true);
+        jPanel2.add(Cubo3C5T);
+        Cubo3C5T.setBounds(450, 417, 50, 50);
+
+        Cubo2C5T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C5T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C5T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C5T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C5T.setText("2");
+        Cubo2C5T.setOpaque(true);
+        jPanel2.add(Cubo2C5T);
+        Cubo2C5T.setBounds(450, 477, 50, 50);
+
+        Cubo1C5T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C5T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C5T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C5T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C5T.setText("1");
+        Cubo1C5T.setOpaque(true);
+        jPanel2.add(Cubo1C5T);
+        Cubo1C5T.setBounds(450, 537, 50, 50);
+
+        Cubo4C6T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C6T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C6T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C6T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C6T.setText("4");
+        Cubo4C6T.setOpaque(true);
+        jPanel2.add(Cubo4C6T);
+        Cubo4C6T.setBounds(530, 357, 50, 50);
+
+        Cubo3C6T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C6T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C6T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C6T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C6T.setText("3");
+        Cubo3C6T.setOpaque(true);
+        jPanel2.add(Cubo3C6T);
+        Cubo3C6T.setBounds(530, 417, 50, 50);
+
+        Cubo2C6T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C6T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C6T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C6T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C6T.setText("2");
+        Cubo2C6T.setOpaque(true);
+        jPanel2.add(Cubo2C6T);
+        Cubo2C6T.setBounds(530, 477, 50, 50);
+
+        Cubo1C6T.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C6T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C6T.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C6T.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C6T.setText("1");
+        Cubo1C6T.setOpaque(true);
+        jPanel2.add(Cubo1C6T);
+        Cubo1C6T.setBounds(530, 537, 50, 50);
+
+        jLabel18.setText("4)");
+        jPanel2.add(jLabel18);
+        jLabel18.setBounds(260, 367, 12, 20);
+
+        jLabel19.setText("1)");
+        jPanel2.add(jLabel19);
+        jLabel19.setBounds(260, 547, 12, 20);
+
+        jLabel20.setText("2)");
+        jPanel2.add(jLabel20);
+        jLabel20.setBounds(260, 487, 12, 20);
+
+        jLabel27.setText("3)");
+        jPanel2.add(jLabel27);
+        jLabel27.setBounds(260, 427, 12, 20);
+
+        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel28.setText("Vistas Laterales de la Torre");
+        jPanel2.add(jLabel28);
+        jLabel28.setBounds(300, 300, 260, 29);
 
         jTabbedPane1.addTab("Juego", jPanel2);
+
+        jLabel29.setFont(new java.awt.Font("Segoe UI Emoji", 2, 14)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel29.setText("By Eduardo Lau");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel3)
-                .addGap(2, 2, 2)
-                .addComponent(jLabel4)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel1)
-                .addGap(165, 165, 165))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(191, 191, 191)
+                        .addComponent(jLabel2)
+                        .addGap(3, 3, 3)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(93, 93, 93)
+                                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel3)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(158, 158, 158)
+                                .addComponent(jLabel4)))
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel29))
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(5, 5, 5)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
@@ -2865,35 +3582,742 @@ public class Locura_Instantánea extends javax.swing.JFrame {
             Cubo4.C5 = C5;
             Cubo4.C6 = C6;
 
-            System.out.println(Cubo1.C1);
-            System.out.println(Cubo1.C2);
-            System.out.println(Cubo1.C3);
-            System.out.println(Cubo1.C4);
-            System.out.println(Cubo1.C5);
-            System.out.println(Cubo1.C6);
-            System.out.println("");
-            System.out.println(Cubo2.C1);
-            System.out.println(Cubo2.C2);
-            System.out.println(Cubo2.C3);
-            System.out.println(Cubo2.C4);
-            System.out.println(Cubo2.C5);
-            System.out.println(Cubo2.C6);
-            System.out.println("");
-            System.out.println(Cubo3.C1);
-            System.out.println(Cubo3.C2);
-            System.out.println(Cubo3.C3);
-            System.out.println(Cubo3.C4);
-            System.out.println(Cubo3.C5);
-            System.out.println(Cubo3.C6);
-            System.out.println("");
-            System.out.println(Cubo4.C1);
-            System.out.println(Cubo4.C2);
-            System.out.println(Cubo4.C3);
-            System.out.println(Cubo4.C4);
-            System.out.println(Cubo4.C5);
-            System.out.println(Cubo4.C6);
         }
     }//GEN-LAST:event_genAleatorioActionPerformed
+
+    public void BinariosOut() {
+
+        // Cubo 1
+        Cubo1Bin.C1 = Cubo1.C1;
+        Cubo1Bin.C1I = Cubo1.C1I;
+        Cubo1Bin.Cubo1C1JN = Cubo1C1J.getText();
+        Cubo1Bin.Cubo1C1JB = Cubo1C1J.getBackground();
+
+        Cubo1Bin.C2 = Cubo1.C2;
+        Cubo1Bin.C2I = Cubo1.C2I;
+        Cubo1Bin.Cubo1C2JN = Cubo1C2J.getText();
+        Cubo1Bin.Cubo1C2JB = Cubo1C2J.getBackground();
+
+        Cubo1Bin.C3 = Cubo1.C3;
+        Cubo1Bin.C3I = Cubo1.C3I;
+        Cubo1Bin.Cubo1C3JN = Cubo1C3J.getText();
+        Cubo1Bin.Cubo1C3JB = Cubo1C3J.getBackground();
+
+        Cubo1Bin.C4 = Cubo1.C4;
+        Cubo1Bin.C4I = Cubo1.C4I;
+        Cubo1Bin.Cubo1C4JN = Cubo1C4J.getText();
+        Cubo1Bin.Cubo1C4JB = Cubo1C4J.getBackground();
+
+        Cubo1Bin.C5 = Cubo1.C5;
+        Cubo1Bin.C5I = Cubo1.C5I;
+        Cubo1Bin.Cubo1C5JN = Cubo1C5J.getText();
+        Cubo1Bin.Cubo1C5JB = Cubo1C5J.getBackground();
+
+        Cubo1Bin.C6 = Cubo1.C6;
+        Cubo1Bin.C6I = Cubo1.C6I;
+        Cubo1Bin.Cubo1C6JN = Cubo1C6J.getText();
+        Cubo1Bin.Cubo1C6JB = Cubo1C6J.getBackground();
+
+        // Cubo 2
+        Cubo2Bin.C1 = Cubo2.C1;
+        Cubo2Bin.C1I = Cubo2.C1I;
+        Cubo2Bin.Cubo2C1JN = Cubo2C1J.getText();
+        Cubo2Bin.Cubo2C1JB = Cubo2C1J.getBackground();
+
+        Cubo2Bin.C2 = Cubo2.C2;
+        Cubo2Bin.C2I = Cubo2.C2I;
+        Cubo2Bin.Cubo2C2JN = Cubo2C2J.getText();
+        Cubo2Bin.Cubo2C2JB = Cubo2C2J.getBackground();
+
+        Cubo2Bin.C3 = Cubo2.C3;
+        Cubo2Bin.C3I = Cubo2.C3I;
+        Cubo2Bin.Cubo2C3JN = Cubo2C3J.getText();
+        Cubo2Bin.Cubo2C3JB = Cubo2C3J.getBackground();
+
+        Cubo2Bin.C4 = Cubo2.C4;
+        Cubo2Bin.C4I = Cubo2.C4I;
+        Cubo2Bin.Cubo2C4JN = Cubo2C4J.getText();
+        Cubo2Bin.Cubo2C4JB = Cubo2C4J.getBackground();
+
+        Cubo2Bin.C5 = Cubo2.C5;
+        Cubo2Bin.C5I = Cubo2.C5I;
+        Cubo2Bin.Cubo2C5JN = Cubo2C5J.getText();
+        Cubo2Bin.Cubo2C5JB = Cubo2C5J.getBackground();
+
+        Cubo2Bin.C6 = Cubo2.C6;
+        Cubo2Bin.C6I = Cubo2.C6I;
+        Cubo2Bin.Cubo2C6JN = Cubo2C6J.getText();
+        Cubo2Bin.Cubo2C6JB = Cubo2C6J.getBackground();
+
+        // Cubo 3
+        Cubo3Bin.C1 = Cubo3.C1;
+        Cubo3Bin.C1I = Cubo3.C1I;
+        Cubo3Bin.Cubo3C1JN = Cubo3C1J.getText();
+        Cubo3Bin.Cubo3C1JB = Cubo3C1J.getBackground();
+
+        Cubo3Bin.C2 = Cubo3.C2;
+        Cubo3Bin.C2I = Cubo3.C2I;
+        Cubo3Bin.Cubo3C2JN = Cubo3C2J.getText();
+        Cubo3Bin.Cubo3C2JB = Cubo3C2J.getBackground();
+
+        Cubo3Bin.C3 = Cubo3.C3;
+        Cubo3Bin.C3I = Cubo3.C3I;
+        Cubo3Bin.Cubo3C3JN = Cubo3C3J.getText();
+        Cubo3Bin.Cubo3C3JB = Cubo3C3J.getBackground();
+
+        Cubo3Bin.C4 = Cubo3.C4;
+        Cubo3Bin.C4I = Cubo3.C4I;
+        Cubo3Bin.Cubo3C4JN = Cubo3C4J.getText();
+        Cubo3Bin.Cubo3C4JB = Cubo3C4J.getBackground();
+
+        Cubo3Bin.C5 = Cubo3.C5;
+        Cubo3Bin.C5I = Cubo3.C5I;
+        Cubo3Bin.Cubo3C5JN = Cubo3C5J.getText();
+        Cubo3Bin.Cubo3C5JB = Cubo3C5J.getBackground();
+
+        Cubo3Bin.C6 = Cubo3.C6;
+        Cubo3Bin.C6I = Cubo3.C6I;
+        Cubo3Bin.Cubo3C6JN = Cubo3C6J.getText();
+        Cubo3Bin.Cubo3C6JB = Cubo3C6J.getBackground();
+
+        // Cubo 4
+        Cubo4Bin.C1 = Cubo4.C1;
+        Cubo4Bin.C1I = Cubo4.C1I;
+        Cubo4Bin.Cubo4C1JN = Cubo4C1J.getText();
+        Cubo4Bin.Cubo4C1JB = Cubo4C1J.getBackground();
+
+        Cubo4Bin.C2 = Cubo4.C2;
+        Cubo4Bin.C2I = Cubo4.C2I;
+        Cubo4Bin.Cubo4C2JN = Cubo4C2J.getText();
+        Cubo4Bin.Cubo4C2JB = Cubo4C2J.getBackground();
+
+        Cubo4Bin.C3 = Cubo4.C3;
+        Cubo4Bin.C3I = Cubo4.C3I;
+        Cubo4Bin.Cubo4C3JN = Cubo4C3J.getText();
+        Cubo4Bin.Cubo4C3JB = Cubo4C3J.getBackground();
+
+        Cubo4Bin.C4 = Cubo4.C4;
+        Cubo4Bin.C4I = Cubo4.C4I;
+        Cubo4Bin.Cubo4C4JN = Cubo4C4J.getText();
+        Cubo4Bin.Cubo4C4JB = Cubo4C4J.getBackground();
+
+        Cubo4Bin.C5 = Cubo4.C5;
+        Cubo4Bin.C5I = Cubo4.C5I;
+        Cubo4Bin.Cubo4C5JN = Cubo4C5J.getText();
+        Cubo4Bin.Cubo4C5JB = Cubo4C5J.getBackground();
+
+        Cubo4Bin.C6 = Cubo4.C6;
+        Cubo4Bin.C6I = Cubo4.C6I;
+        Cubo4Bin.Cubo4C6JN = Cubo4C6J.getText();
+        Cubo4Bin.Cubo4C6JB = Cubo4C6J.getBackground();
+
+        try {
+            // Crear un flujo de salida de archivos binarios
+            F_binCubosOut = new FileOutputStream(binCubosNOut);
+
+            // Crear un ObjectOutputStream para escribir objetos en el archivo binario
+            O_binCubosOut = new ObjectOutputStream(F_binCubosOut);
+
+            // Escribir el arreglo en el archivo binario
+            O_binCubosOut.writeObject(Cubo1Bin);
+            O_binCubosOut.writeObject(Cubo2Bin);
+            O_binCubosOut.writeObject(Cubo3Bin);
+            O_binCubosOut.writeObject(Cubo4Bin);
+
+            // Cerrar los flujos
+            O_binCubosOut.close();
+            F_binCubosOut.close();
+
+            System.out.println("Cubos.bin ha sido guardado con éxito");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void BinariosIn() {
+
+        try {
+            // Crear un flujo de entrada de archivos binarios
+            F_binCubosIn = new FileInputStream(binCubosNIn);
+
+            // Crear un ObjectInputStream para leer objetos desde el archivo binario
+            O_binCubosIn = new ObjectInputStream(F_binCubosIn);
+
+            // Leer el arreglo desde el archivo
+            Cubo1Bin = (Binarios) O_binCubosIn.readObject();
+            Cubo2Bin = (Binarios) O_binCubosIn.readObject();
+            Cubo3Bin = (Binarios) O_binCubosIn.readObject();
+            Cubo4Bin = (Binarios) O_binCubosIn.readObject();
+
+            // Cerrar los flujos
+            O_binCubosIn.close();
+            F_binCubosIn.close();
+
+            // Utilizar los objetos cargados
+            // Cubo 1
+            Cubo1.C1 = Cubo1Bin.C1;
+            Cubo1.C1I = Cubo1Bin.C1I;
+            Cubo1C1J.setText(Cubo1Bin.Cubo1C1JN);
+            Cubo1C1J.setBackground(Cubo1Bin.Cubo1C1JB);
+
+            Cubo1.C2 = Cubo1Bin.C2;
+            Cubo1.C2I = Cubo1Bin.C2I;
+            Cubo1C2J.setText(Cubo1Bin.Cubo1C2JN);
+            Cubo1C2J.setBackground(Cubo1Bin.Cubo1C2JB);
+
+            Cubo1.C3 = Cubo1Bin.C3;
+            Cubo1.C3I = Cubo1Bin.C3I;
+            Cubo1C3J.setText(Cubo1Bin.Cubo1C3JN);
+            Cubo1C3J.setBackground(Cubo1Bin.Cubo1C3JB);
+
+            Cubo1.C4 = Cubo1Bin.C4;
+            Cubo1.C4I = Cubo1Bin.C4I;
+            Cubo1C4J.setText(Cubo1Bin.Cubo1C4JN);
+            Cubo1C4J.setBackground(Cubo1Bin.Cubo1C4JB);
+
+            Cubo1.C5 = Cubo1Bin.C5;
+            Cubo1.C5I = Cubo1Bin.C5I;
+            Cubo1C5J.setText(Cubo1Bin.Cubo1C5JN);
+            Cubo1C5J.setBackground(Cubo1Bin.Cubo1C5JB);
+
+            Cubo1.C6 = Cubo1Bin.C6;
+            Cubo1.C6I = Cubo1Bin.C6I;
+            Cubo1C6J.setText(Cubo1Bin.Cubo1C6JN);
+            Cubo1C6J.setBackground(Cubo1Bin.Cubo1C6JB);
+
+            if (Cubo1.C1I.equals("R")) {
+                Cubo1C1.setSelectedItem("Rojo");
+                Cubo1C1G.setText("R");
+                Cubo1C1G.setBackground(Cubo1.C1);
+            } else if (Cubo1.C1I.equals("B")) {
+                Cubo1C1.setSelectedItem("Blanco");
+                Cubo1C1G.setText("B");
+                Cubo1C1G.setBackground(Cubo1.C1);
+            } else if (Cubo1.C1I.equals("V")) {
+                Cubo1C1.setSelectedItem("Verde");
+                Cubo1C1G.setText("V");
+                Cubo1C1G.setBackground(Cubo1.C1);
+            } else if (Cubo1.C1I.equals("A")) {
+                Cubo1C1.setSelectedItem("Amarillo");
+                Cubo1C1G.setText("A");
+                Cubo1C1G.setBackground(Cubo1.C1);
+            }
+
+            if (Cubo1.C2I.equals("R")) {
+                Cubo1C2.setSelectedItem("Rojo");
+                Cubo1C2G.setText("R");
+                Cubo1C2G.setBackground(Cubo1.C2);
+            } else if (Cubo1.C2I.equals("B")) {
+                Cubo1C2.setSelectedItem("Blanco");
+                Cubo1C2G.setText("B");
+                Cubo1C2G.setBackground(Cubo1.C2);
+            } else if (Cubo1.C2I.equals("V")) {
+                Cubo1C2.setSelectedItem("Verde");
+                Cubo1C2G.setText("V");
+                Cubo1C2G.setBackground(Cubo1.C2);
+            } else if (Cubo1.C2I.equals("A")) {
+                Cubo1C2.setSelectedItem("Amarillo");
+                Cubo1C2G.setText("A");
+                Cubo1C2G.setBackground(Cubo1.C2);
+            }
+
+            if (Cubo1.C3I.equals("R")) {
+                Cubo1C3.setSelectedItem("Rojo");
+                Cubo1C3G.setText("R");
+                Cubo1C3G.setBackground(Cubo1.C3);
+            } else if (Cubo1.C3I.equals("B")) {
+                Cubo1C3.setSelectedItem("Blanco");
+                Cubo1C3G.setText("B");
+                Cubo1C3G.setBackground(Cubo1.C3);
+            } else if (Cubo1.C3I.equals("V")) {
+                Cubo1C3.setSelectedItem("Verde");
+                Cubo1C3G.setText("V");
+                Cubo1C3G.setBackground(Cubo1.C3);
+            } else if (Cubo1.C3I.equals("A")) {
+                Cubo1C3.setSelectedItem("Amarillo");
+                Cubo1C3G.setText("A");
+                Cubo1C3G.setBackground(Cubo1.C3);
+            }
+
+            if (Cubo1.C4I.equals("R")) {
+                Cubo1C4.setSelectedItem("Rojo");
+                Cubo1C4G.setText("R");
+                Cubo1C4G.setBackground(Cubo1.C4);
+            } else if (Cubo1.C4I.equals("B")) {
+                Cubo1C4.setSelectedItem("Blanco");
+                Cubo1C4G.setText("B");
+                Cubo1C4G.setBackground(Cubo1.C4);
+            } else if (Cubo1.C4I.equals("V")) {
+                Cubo1C4.setSelectedItem("Verde");
+                Cubo1C4G.setText("V");
+                Cubo1C4G.setBackground(Cubo1.C4);
+            } else if (Cubo1.C4I.equals("A")) {
+                Cubo1C4.setSelectedItem("Amarillo");
+                Cubo1C4G.setText("A");
+                Cubo1C4G.setBackground(Cubo1.C4);
+            }
+
+            if (Cubo1.C5I.equals("R")) {
+                Cubo1C5.setSelectedItem("Rojo");
+                Cubo1C5G.setText("R");
+                Cubo1C5G.setBackground(Cubo1.C5);
+            } else if (Cubo1.C5I.equals("B")) {
+                Cubo1C5.setSelectedItem("Blanco");
+                Cubo1C5G.setText("B");
+                Cubo1C5G.setBackground(Cubo1.C5);
+            } else if (Cubo1.C5I.equals("V")) {
+                Cubo1C5.setSelectedItem("Verde");
+                Cubo1C5G.setText("V");
+                Cubo1C5G.setBackground(Cubo1.C5);
+            } else if (Cubo1.C5I.equals("A")) {
+                Cubo1C5.setSelectedItem("Amarillo");
+                Cubo1C5G.setText("A");
+                Cubo1C5G.setBackground(Cubo1.C5);
+            }
+
+            if (Cubo1.C6I.equals("R")) {
+                Cubo1C6.setSelectedItem("Rojo");
+                Cubo1C6G.setText("R");
+                Cubo1C6G.setBackground(Cubo1.C6);
+            } else if (Cubo1.C6I.equals("B")) {
+                Cubo1C6.setSelectedItem("Blanco");
+                Cubo1C6G.setText("B");
+                Cubo1C6G.setBackground(Cubo1.C6);
+            } else if (Cubo1.C6I.equals("V")) {
+                Cubo1C6.setSelectedItem("Verde");
+                Cubo1C6G.setText("V");
+                Cubo1C6G.setBackground(Cubo1.C6);
+            } else if (Cubo1.C6I.equals("A")) {
+                Cubo1C6.setSelectedItem("Amarillo");
+                Cubo1C6G.setText("A");
+                Cubo1C6G.setBackground(Cubo1.C6);
+            }
+
+            // Cubo 2
+            Cubo2.C1 = Cubo2Bin.C1;
+            Cubo2.C1I = Cubo2Bin.C1I;
+            Cubo2C1J.setText(Cubo2Bin.Cubo2C1JN);
+            Cubo2C1J.setBackground(Cubo2Bin.Cubo2C1JB);
+
+            Cubo2.C2 = Cubo2Bin.C2;
+            Cubo2.C2I = Cubo2Bin.C2I;
+            Cubo2C2J.setText(Cubo2Bin.Cubo2C2JN);
+            Cubo2C2J.setBackground(Cubo2Bin.Cubo2C2JB);
+
+            Cubo2.C3 = Cubo2Bin.C3;
+            Cubo2.C3I = Cubo2Bin.C3I;
+            Cubo2C3J.setText(Cubo2Bin.Cubo2C3JN);
+            Cubo2C3J.setBackground(Cubo2Bin.Cubo2C3JB);
+
+            Cubo2.C4 = Cubo2Bin.C4;
+            Cubo2.C4I = Cubo2Bin.C4I;
+            Cubo2C4J.setText(Cubo2Bin.Cubo2C4JN);
+            Cubo2C4J.setBackground(Cubo2Bin.Cubo2C4JB);
+
+            Cubo2.C5 = Cubo2Bin.C5;
+            Cubo2.C5I = Cubo2Bin.C5I;
+            Cubo2C5J.setText(Cubo2Bin.Cubo2C5JN);
+            Cubo2C5J.setBackground(Cubo2Bin.Cubo2C5JB);
+
+            Cubo2.C6 = Cubo2Bin.C6;
+            Cubo2.C6I = Cubo2Bin.C6I;
+            Cubo2C6J.setText(Cubo2Bin.Cubo2C6JN);
+            Cubo2C6J.setBackground(Cubo2Bin.Cubo2C6JB);
+
+            if (Cubo2.C1I.equals("R")) {
+                Cubo2C1.setSelectedItem("Rojo");
+                Cubo2C1G.setText("R");
+                Cubo2C1G.setBackground(Cubo2.C1);
+            } else if (Cubo2.C1I.equals("B")) {
+                Cubo2C1.setSelectedItem("Blanco");
+                Cubo2C1G.setText("B");
+                Cubo2C1G.setBackground(Cubo2.C1);
+            } else if (Cubo2.C1I.equals("V")) {
+                Cubo2C1.setSelectedItem("Verde");
+                Cubo2C1G.setText("V");
+                Cubo2C1G.setBackground(Cubo2.C1);
+            } else if (Cubo2.C1I.equals("A")) {
+                Cubo2C1.setSelectedItem("Amarillo");
+                Cubo2C1G.setText("A");
+                Cubo2C1G.setBackground(Cubo2.C1);
+            }
+
+            if (Cubo2.C2I.equals("R")) {
+                Cubo2C2.setSelectedItem("Rojo");
+                Cubo2C2G.setText("R");
+                Cubo2C2G.setBackground(Cubo2.C2);
+            } else if (Cubo2.C2I.equals("B")) {
+                Cubo2C2.setSelectedItem("Blanco");
+                Cubo2C2G.setText("B");
+                Cubo2C2G.setBackground(Cubo2.C2);
+            } else if (Cubo2.C2I.equals("V")) {
+                Cubo2C2.setSelectedItem("Verde");
+                Cubo2C2G.setText("V");
+                Cubo2C2G.setBackground(Cubo2.C2);
+            } else if (Cubo2.C2I.equals("A")) {
+                Cubo2C2.setSelectedItem("Amarillo");
+                Cubo2C2G.setText("A");
+                Cubo2C2G.setBackground(Cubo2.C2);
+            }
+
+            if (Cubo2.C3I.equals("R")) {
+                Cubo2C3.setSelectedItem("Rojo");
+                Cubo2C3G.setText("R");
+                Cubo2C3G.setBackground(Cubo2.C3);
+            } else if (Cubo2.C3I.equals("B")) {
+                Cubo2C3.setSelectedItem("Blanco");
+                Cubo2C3G.setText("B");
+                Cubo2C3G.setBackground(Cubo2.C3);
+            } else if (Cubo2.C3I.equals("V")) {
+                Cubo2C3.setSelectedItem("Verde");
+                Cubo2C3G.setText("V");
+                Cubo2C3G.setBackground(Cubo2.C3);
+            } else if (Cubo2.C3I.equals("A")) {
+                Cubo2C3.setSelectedItem("Amarillo");
+                Cubo2C3G.setText("A");
+                Cubo2C3G.setBackground(Cubo2.C3);
+            }
+
+            if (Cubo2.C4I.equals("R")) {
+                Cubo2C4.setSelectedItem("Rojo");
+                Cubo2C4G.setText("R");
+                Cubo2C4G.setBackground(Cubo2.C4);
+            } else if (Cubo2.C4I.equals("B")) {
+                Cubo2C4.setSelectedItem("Blanco");
+                Cubo2C4G.setText("B");
+                Cubo2C4G.setBackground(Cubo2.C4);
+            } else if (Cubo2.C4I.equals("V")) {
+                Cubo2C4.setSelectedItem("Verde");
+                Cubo2C4G.setText("V");
+                Cubo2C4G.setBackground(Cubo2.C4);
+            } else if (Cubo2.C4I.equals("A")) {
+                Cubo2C4.setSelectedItem("Amarillo");
+                Cubo2C4G.setText("A");
+                Cubo2C4G.setBackground(Cubo2.C4);
+            }
+
+            if (Cubo2.C5I.equals("R")) {
+                Cubo2C5.setSelectedItem("Rojo");
+                Cubo2C5G.setText("R");
+                Cubo2C5G.setBackground(Cubo2.C5);
+            } else if (Cubo2.C5I.equals("B")) {
+                Cubo2C5.setSelectedItem("Blanco");
+                Cubo2C5G.setText("B");
+                Cubo2C5G.setBackground(Cubo2.C5);
+            } else if (Cubo2.C5I.equals("V")) {
+                Cubo2C5.setSelectedItem("Verde");
+                Cubo2C5G.setText("V");
+                Cubo2C5G.setBackground(Cubo2.C5);
+            } else if (Cubo2.C5I.equals("A")) {
+                Cubo2C5.setSelectedItem("Amarillo");
+                Cubo2C5G.setText("A");
+                Cubo2C5G.setBackground(Cubo2.C5);
+            }
+
+            if (Cubo2.C6I.equals("R")) {
+                Cubo2C6.setSelectedItem("Rojo");
+                Cubo2C6G.setText("R");
+                Cubo2C6G.setBackground(Cubo2.C6);
+            } else if (Cubo2.C6I.equals("B")) {
+                Cubo2C6.setSelectedItem("Blanco");
+                Cubo2C6G.setText("B");
+                Cubo2C6G.setBackground(Cubo2.C6);
+            } else if (Cubo2.C6I.equals("V")) {
+                Cubo2C6.setSelectedItem("Verde");
+                Cubo2C6G.setText("V");
+                Cubo2C6G.setBackground(Cubo2.C6);
+            } else if (Cubo2.C6I.equals("A")) {
+                Cubo2C6.setSelectedItem("Amarillo");
+                Cubo2C6G.setText("A");
+                Cubo2C6G.setBackground(Cubo2.C6);
+            }
+
+            // Cubo 3
+            Cubo3.C1 = Cubo3Bin.C1;
+            Cubo3.C1I = Cubo3Bin.C1I;
+            Cubo3C1J.setText(Cubo3Bin.Cubo3C1JN);
+            Cubo3C1J.setBackground(Cubo3Bin.Cubo3C1JB);
+
+            Cubo3.C2 = Cubo3Bin.C2;
+            Cubo3.C2I = Cubo3Bin.C2I;
+            Cubo3C2J.setText(Cubo3Bin.Cubo3C2JN);
+            Cubo3C2J.setBackground(Cubo3Bin.Cubo3C2JB);
+
+            Cubo3.C3 = Cubo3Bin.C3;
+            Cubo3.C3I = Cubo3Bin.C3I;
+            Cubo3C3J.setText(Cubo3Bin.Cubo3C3JN);
+            Cubo3C3J.setBackground(Cubo3Bin.Cubo3C3JB);
+
+            Cubo3.C4 = Cubo3Bin.C4;
+            Cubo3.C4I = Cubo3Bin.C4I;
+            Cubo3C4J.setText(Cubo3Bin.Cubo3C4JN);
+            Cubo3C4J.setBackground(Cubo3Bin.Cubo3C4JB);
+
+            Cubo3.C5 = Cubo3Bin.C5;
+            Cubo3.C5I = Cubo3Bin.C5I;
+            Cubo3C5J.setText(Cubo3Bin.Cubo3C5JN);
+            Cubo3C5J.setBackground(Cubo3Bin.Cubo3C5JB);
+
+            Cubo3.C6 = Cubo3Bin.C6;
+            Cubo3.C6I = Cubo3Bin.C6I;
+            Cubo3C6J.setText(Cubo3Bin.Cubo3C6JN);
+            Cubo3C6J.setBackground(Cubo3Bin.Cubo3C6JB);
+
+            if (Cubo3.C1I.equals("R")) {
+                Cubo3C1.setSelectedItem("Rojo");
+                Cubo3C1G.setText("R");
+                Cubo3C1G.setBackground(Cubo3.C1);
+            } else if (Cubo3.C1I.equals("B")) {
+                Cubo3C1.setSelectedItem("Blanco");
+                Cubo3C1G.setText("B");
+                Cubo3C1G.setBackground(Cubo3.C1);
+            } else if (Cubo3.C1I.equals("V")) {
+                Cubo3C1.setSelectedItem("Verde");
+                Cubo3C1G.setText("V");
+                Cubo3C1G.setBackground(Cubo3.C1);
+            } else if (Cubo3.C1I.equals("A")) {
+                Cubo3C1.setSelectedItem("Amarillo");
+                Cubo3C1G.setText("A");
+                Cubo3C1G.setBackground(Cubo3.C1);
+            }
+
+            if (Cubo3.C2I.equals("R")) {
+                Cubo3C2.setSelectedItem("Rojo");
+                Cubo3C2G.setText("R");
+                Cubo3C2G.setBackground(Cubo3.C2);
+            } else if (Cubo3.C2I.equals("B")) {
+                Cubo3C2.setSelectedItem("Blanco");
+                Cubo3C2G.setText("B");
+                Cubo3C2G.setBackground(Cubo3.C2);
+            } else if (Cubo3.C2I.equals("V")) {
+                Cubo3C2.setSelectedItem("Verde");
+                Cubo3C2G.setText("V");
+                Cubo3C2G.setBackground(Cubo3.C2);
+            } else if (Cubo3.C2I.equals("A")) {
+                Cubo3C2.setSelectedItem("Amarillo");
+                Cubo3C2G.setText("A");
+                Cubo3C2G.setBackground(Cubo3.C2);
+            }
+
+            if (Cubo3.C3I.equals("R")) {
+                Cubo3C3.setSelectedItem("Rojo");
+                Cubo3C3G.setText("R");
+                Cubo3C3G.setBackground(Cubo3.C3);
+            } else if (Cubo3.C3I.equals("B")) {
+                Cubo3C3.setSelectedItem("Blanco");
+                Cubo3C3G.setText("B");
+                Cubo3C3G.setBackground(Cubo3.C3);
+            } else if (Cubo3.C3I.equals("V")) {
+                Cubo3C3.setSelectedItem("Verde");
+                Cubo3C3G.setText("V");
+                Cubo3C3G.setBackground(Cubo3.C3);
+            } else if (Cubo3.C3I.equals("A")) {
+                Cubo3C3.setSelectedItem("Amarillo");
+                Cubo3C3G.setText("A");
+                Cubo3C3G.setBackground(Cubo3.C3);
+            }
+
+            if (Cubo3.C4I.equals("R")) {
+                Cubo3C4.setSelectedItem("Rojo");
+                Cubo3C4G.setText("R");
+                Cubo3C4G.setBackground(Cubo3.C4);
+            } else if (Cubo3.C4I.equals("B")) {
+                Cubo3C4.setSelectedItem("Blanco");
+                Cubo3C4G.setText("B");
+                Cubo3C4G.setBackground(Cubo3.C4);
+            } else if (Cubo3.C4I.equals("V")) {
+                Cubo3C4.setSelectedItem("Verde");
+                Cubo3C4G.setText("V");
+                Cubo3C4G.setBackground(Cubo3.C4);
+            } else if (Cubo3.C4I.equals("A")) {
+                Cubo3C4.setSelectedItem("Amarillo");
+                Cubo3C4G.setText("A");
+                Cubo3C4G.setBackground(Cubo3.C4);
+            }
+
+            if (Cubo3.C5I.equals("R")) {
+                Cubo3C5.setSelectedItem("Rojo");
+                Cubo3C5G.setText("R");
+                Cubo3C5G.setBackground(Cubo3.C5);
+            } else if (Cubo3.C5I.equals("B")) {
+                Cubo3C5.setSelectedItem("Blanco");
+                Cubo3C5G.setText("B");
+                Cubo3C5G.setBackground(Cubo3.C5);
+            } else if (Cubo3.C5I.equals("V")) {
+                Cubo3C5.setSelectedItem("Verde");
+                Cubo3C5G.setText("V");
+                Cubo3C5G.setBackground(Cubo3.C5);
+            } else if (Cubo3.C5I.equals("A")) {
+                Cubo3C5.setSelectedItem("Amarillo");
+                Cubo3C5G.setText("A");
+                Cubo3C5G.setBackground(Cubo3.C5);
+            }
+
+            if (Cubo3.C6I.equals("R")) {
+                Cubo3C6.setSelectedItem("Rojo");
+                Cubo3C6G.setText("R");
+                Cubo3C6G.setBackground(Cubo3.C6);
+            } else if (Cubo3.C6I.equals("B")) {
+                Cubo3C6.setSelectedItem("Blanco");
+                Cubo3C6G.setText("B");
+                Cubo3C6G.setBackground(Cubo3.C6);
+            } else if (Cubo3.C6I.equals("V")) {
+                Cubo3C6.setSelectedItem("Verde");
+                Cubo3C6G.setText("V");
+                Cubo3C6G.setBackground(Cubo3.C6);
+            } else if (Cubo3.C6I.equals("A")) {
+                Cubo3C6.setSelectedItem("Amarillo");
+                Cubo3C6G.setText("A");
+                Cubo3C6G.setBackground(Cubo3.C6);
+            }
+
+            // Cubo 4
+            Cubo4.C1 = Cubo4Bin.C1;
+            Cubo4.C1I = Cubo4Bin.C1I;
+            Cubo4C1J.setText(Cubo4Bin.Cubo4C1JN);
+            Cubo4C1J.setBackground(Cubo4Bin.Cubo4C1JB);
+
+            Cubo4.C2 = Cubo4Bin.C2;
+            Cubo4.C2I = Cubo4Bin.C2I;
+            Cubo4C2J.setText(Cubo4Bin.Cubo4C2JN);
+            Cubo4C2J.setBackground(Cubo4Bin.Cubo4C2JB);
+
+            Cubo4.C3 = Cubo4Bin.C3;
+            Cubo4.C3I = Cubo4Bin.C3I;
+            Cubo4C3J.setText(Cubo4Bin.Cubo4C3JN);
+            Cubo4C3J.setBackground(Cubo4Bin.Cubo4C3JB);
+
+            Cubo4.C4 = Cubo4Bin.C4;
+            Cubo4.C4I = Cubo4Bin.C4I;
+            Cubo4C4J.setText(Cubo4Bin.Cubo4C4JN);
+            Cubo4C4J.setBackground(Cubo4Bin.Cubo4C4JB);
+
+            Cubo4.C5 = Cubo4Bin.C5;
+            Cubo4.C5I = Cubo4Bin.C5I;
+            Cubo4C5J.setText(Cubo4Bin.Cubo4C5JN);
+            Cubo4C5J.setBackground(Cubo4Bin.Cubo4C5JB);
+
+            Cubo4.C6 = Cubo4Bin.C6;
+            Cubo4.C6I = Cubo4Bin.C6I;
+            Cubo4C6J.setText(Cubo4Bin.Cubo4C6JN);
+            Cubo4C6J.setBackground(Cubo4Bin.Cubo4C6JB);
+
+            if (Cubo4.C1I.equals("R")) {
+                Cubo4C1.setSelectedItem("Rojo");
+                Cubo4C1G.setText("R");
+                Cubo4C1G.setBackground(Cubo4.C1);
+            } else if (Cubo4.C1I.equals("B")) {
+                Cubo4C1.setSelectedItem("Blanco");
+                Cubo4C1G.setText("B");
+                Cubo4C1G.setBackground(Cubo4.C1);
+            } else if (Cubo4.C1I.equals("V")) {
+                Cubo4C1.setSelectedItem("Verde");
+                Cubo4C1G.setText("V");
+                Cubo4C1G.setBackground(Cubo4.C1);
+            } else if (Cubo4.C1I.equals("A")) {
+                Cubo4C1.setSelectedItem("Amarillo");
+                Cubo4C1G.setText("A");
+                Cubo4C1G.setBackground(Cubo4.C1);
+            }
+
+            if (Cubo4.C2I.equals("R")) {
+                Cubo4C2.setSelectedItem("Rojo");
+                Cubo4C2G.setText("R");
+                Cubo4C2G.setBackground(Cubo4.C2);
+            } else if (Cubo4.C2I.equals("B")) {
+                Cubo4C2.setSelectedItem("Blanco");
+                Cubo4C2G.setText("B");
+                Cubo4C2G.setBackground(Cubo4.C2);
+            } else if (Cubo4.C2I.equals("V")) {
+                Cubo4C2.setSelectedItem("Verde");
+                Cubo4C2G.setText("V");
+                Cubo4C2G.setBackground(Cubo4.C2);
+            } else if (Cubo4.C2I.equals("A")) {
+                Cubo4C2.setSelectedItem("Amarillo");
+                Cubo4C2G.setText("A");
+                Cubo4C2G.setBackground(Cubo4.C2);
+            }
+
+            if (Cubo4.C3I.equals("R")) {
+                Cubo4C3.setSelectedItem("Rojo");
+                Cubo4C3G.setText("R");
+                Cubo4C3G.setBackground(Cubo4.C3);
+            } else if (Cubo4.C3I.equals("B")) {
+                Cubo4C3.setSelectedItem("Blanco");
+                Cubo4C3G.setText("B");
+                Cubo4C3G.setBackground(Cubo4.C3);
+            } else if (Cubo4.C3I.equals("V")) {
+                Cubo4C3.setSelectedItem("Verde");
+                Cubo4C3G.setText("V");
+                Cubo4C3G.setBackground(Cubo4.C3);
+            } else if (Cubo4.C3I.equals("A")) {
+                Cubo4C3.setSelectedItem("Amarillo");
+                Cubo4C3G.setText("A");
+                Cubo4C3G.setBackground(Cubo4.C3);
+            }
+
+            if (Cubo4.C4I.equals("R")) {
+                Cubo4C4.setSelectedItem("Rojo");
+                Cubo4C4G.setText("R");
+                Cubo4C4G.setBackground(Cubo4.C4);
+            } else if (Cubo4.C4I.equals("B")) {
+                Cubo4C4.setSelectedItem("Blanco");
+                Cubo4C4G.setText("B");
+                Cubo4C4G.setBackground(Cubo4.C4);
+            } else if (Cubo4.C4I.equals("V")) {
+                Cubo4C4.setSelectedItem("Verde");
+                Cubo4C4G.setText("V");
+                Cubo4C4G.setBackground(Cubo4.C4);
+            } else if (Cubo4.C4I.equals("A")) {
+                Cubo4C4.setSelectedItem("Amarillo");
+                Cubo4C4G.setText("A");
+                Cubo4C4G.setBackground(Cubo4.C4);
+            }
+
+            if (Cubo4.C5I.equals("R")) {
+                Cubo4C5.setSelectedItem("Rojo");
+                Cubo4C5G.setText("R");
+                Cubo4C5G.setBackground(Cubo4.C5);
+            } else if (Cubo4.C5I.equals("B")) {
+                Cubo4C5.setSelectedItem("Blanco");
+                Cubo4C5G.setText("B");
+                Cubo4C5G.setBackground(Cubo4.C5);
+            } else if (Cubo4.C5I.equals("V")) {
+                Cubo4C5.setSelectedItem("Verde");
+                Cubo4C5G.setText("V");
+                Cubo4C5G.setBackground(Cubo4.C5);
+            } else if (Cubo4.C5I.equals("A")) {
+                Cubo4C5.setSelectedItem("Amarillo");
+                Cubo4C5G.setText("A");
+                Cubo4C5G.setBackground(Cubo4.C5);
+            }
+
+            if (Cubo4.C6I.equals("R")) {
+                Cubo4C6.setSelectedItem("Rojo");
+                Cubo4C6G.setText("R");
+                Cubo4C6G.setBackground(Cubo4.C6);
+            } else if (Cubo4.C6I.equals("B")) {
+                Cubo4C6.setSelectedItem("Blanco");
+                Cubo4C6G.setText("B");
+                Cubo4C6G.setBackground(Cubo4.C6);
+            } else if (Cubo4.C6I.equals("V")) {
+                Cubo4C6.setSelectedItem("Verde");
+                Cubo4C6G.setText("V");
+                Cubo4C6G.setBackground(Cubo4.C6);
+            } else if (Cubo4.C6I.equals("A")) {
+                Cubo4C6.setSelectedItem("Amarillo");
+                Cubo4C6G.setText("A");
+                Cubo4C6G.setBackground(Cubo4.C6);
+            }
+
+            System.out.println("Cubos.bin ha sido cargado con éxito");
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         // TODO add your handling code here:
@@ -2909,6 +4333,7 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 options[0]);
 
         if (JOptionPane.YES_OPTION == yes) {
+            BinariosOut();
             System.exit(0);
         } else {
 
@@ -2920,90 +4345,13 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         if (jTabbedPane1.getSelectedIndex() == 1) {
-            if (Cubo1.C1 == null || Cubo2.C1 == null || Cubo3.C1 == null || Cubo4.C1 == null) {
+            if (Cubo1.C1 == null || Cubo2.C1 == null || Cubo3.C1 == null || Cubo4.C1 == null || sigBtnPressed == false) {
                 jTabbedPane1.setSelectedIndex(0);
-                JOptionPane.showMessageDialog(null, "Aún no ha generado los 4 cubos");
+                JOptionPane.showMessageDialog(null, "Debe generar los 4 cubos y presionar\n"
+                        + "el botón 'Siguiente' para continuar ");
 
             } else {
-                // Cubo 1
-                Cubo1C1J.setText(Cubo1.C1I);
-                Cubo1C1J.setBackground(Cubo1.C1);
 
-                Cubo1C2J.setText(Cubo1.C2I);
-                Cubo1C2J.setBackground(Cubo1.C2);
-
-                Cubo1C3J.setText(Cubo1.C3I);
-                Cubo1C3J.setBackground(Cubo1.C3);
-
-                Cubo1C4J.setText(Cubo1.C4I);
-                Cubo1C4J.setBackground(Cubo1.C4);
-
-                Cubo1C5J.setText(Cubo1.C5I);
-                Cubo1C5J.setBackground(Cubo1.C5);
-
-                Cubo1C6J.setText(Cubo1.C6I);
-                Cubo1C6J.setBackground(Cubo1.C6);
-                //
-
-                // Cubo 2
-                Cubo2C1J.setText(Cubo2.C1I);
-                Cubo2C1J.setBackground(Cubo2.C1);
-
-                Cubo2C2J.setText(Cubo2.C2I);
-                Cubo2C2J.setBackground(Cubo2.C2);
-
-                Cubo2C3J.setText(Cubo2.C3I);
-                Cubo2C3J.setBackground(Cubo2.C3);
-
-                Cubo2C4J.setText(Cubo2.C4I);
-                Cubo2C4J.setBackground(Cubo2.C4);
-
-                Cubo2C5J.setText(Cubo2.C5I);
-                Cubo2C5J.setBackground(Cubo2.C5);
-
-                Cubo2C6J.setText(Cubo2.C6I);
-                Cubo2C6J.setBackground(Cubo2.C6);
-                //
-
-                // Cubo 3
-                Cubo3C1J.setText(Cubo3.C1I);
-                Cubo3C1J.setBackground(Cubo3.C1);
-
-                Cubo3C2J.setText(Cubo3.C2I);
-                Cubo3C2J.setBackground(Cubo3.C2);
-
-                Cubo3C3J.setText(Cubo3.C3I);
-                Cubo3C3J.setBackground(Cubo3.C3);
-
-                Cubo3C4J.setText(Cubo3.C4I);
-                Cubo3C4J.setBackground(Cubo3.C4);
-
-                Cubo3C5J.setText(Cubo3.C5I);
-                Cubo3C5J.setBackground(Cubo3.C5);
-
-                Cubo3C6J.setText(Cubo3.C6I);
-                Cubo3C6J.setBackground(Cubo3.C6);
-                //
-
-                // Cubo 4
-                Cubo4C1J.setText(Cubo4.C1I);
-                Cubo4C1J.setBackground(Cubo4.C1);
-
-                Cubo4C2J.setText(Cubo4.C2I);
-                Cubo4C2J.setBackground(Cubo4.C2);
-
-                Cubo4C3J.setText(Cubo4.C3I);
-                Cubo4C3J.setBackground(Cubo4.C3);
-
-                Cubo4C4J.setText(Cubo4.C4I);
-                Cubo4C4J.setBackground(Cubo4.C4);
-
-                Cubo4C5J.setText(Cubo4.C5I);
-                Cubo4C5J.setBackground(Cubo4.C5);
-
-                Cubo4C6J.setText(Cubo4.C6I);
-                Cubo4C6J.setBackground(Cubo4.C6);
-                //
             }
         }
     }//GEN-LAST:event_jTabbedPane1StateChanged
@@ -3011,11 +4359,165 @@ public class Locura_Instantánea extends javax.swing.JFrame {
     private void siguienteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteBtnActionPerformed
         // TODO add your handling code here:
 
-        if (Cubo1 == null || Cubo2 == null || Cubo3 == null || Cubo4 == null) {
+        if (Cubo1.C1 == null || Cubo2.C1 == null || Cubo3.C1 == null || Cubo4.C1 == null) {
             JOptionPane.showMessageDialog(null, "Aún no ha generado los 4 cubos");
-        } else {
+        }  else if ((!Cubo1Bin.C1.equals(Cubo1.C1) || !Cubo1Bin.C2.equals(Cubo1.C2)
+                || !Cubo1Bin.C3.equals(Cubo1.C3) || !Cubo1Bin.C4.equals(Cubo1.C4)
+                || !Cubo1Bin.C5.equals(Cubo1.C5) || !Cubo1Bin.C6.equals(Cubo1.C6))
+                || (!Cubo2Bin.C1.equals(Cubo2.C1) || !Cubo2Bin.C2.equals(Cubo2.C2)
+                || !Cubo2Bin.C3.equals(Cubo2.C3) || !Cubo2Bin.C4.equals(Cubo2.C4)
+                || !Cubo2Bin.C5.equals(Cubo2.C5) || !Cubo2Bin.C6.equals(Cubo2.C6))
+                || (!Cubo3Bin.C1.equals(Cubo3.C1) || !Cubo3Bin.C2.equals(Cubo3.C2)
+                || !Cubo3Bin.C3.equals(Cubo3.C3) || !Cubo3Bin.C4.equals(Cubo3.C4)
+                || !Cubo3Bin.C5.equals(Cubo3.C5) || !Cubo3Bin.C6.equals(Cubo3.C6))
+                || (!Cubo4Bin.C1.equals(Cubo4.C1) || !Cubo4Bin.C2.equals(Cubo4.C2)
+                || !Cubo4Bin.C3.equals(Cubo4.C3) || !Cubo4Bin.C4.equals(Cubo4.C4)
+                || !Cubo4Bin.C5.equals(Cubo4.C5) || !Cubo4Bin.C6.equals(Cubo4.C6))) {
+
+            sigBtnPressed = true;
             jTabbedPane1.setSelectedIndex(1);
+
+            // Cubo 1
+            Cubo1C1J.setText(Cubo1.C1I);
+            Cubo1C1J.setBackground(Cubo1.C1);
+
+            Cubo1C2J.setText(Cubo1.C2I);
+            Cubo1C2J.setBackground(Cubo1.C2);
+
+            Cubo1C3J.setText(Cubo1.C3I);
+            Cubo1C3J.setBackground(Cubo1.C3);
+
+            Cubo1C4J.setText(Cubo1.C4I);
+            Cubo1C4J.setBackground(Cubo1.C4);
+
+            Cubo1C5J.setText(Cubo1.C5I);
+            Cubo1C5J.setBackground(Cubo1.C5);
+
+            Cubo1C6J.setText(Cubo1.C6I);
+            Cubo1C6J.setBackground(Cubo1.C6);
+            //
+
+            // Cubo 2
+            Cubo2C1J.setText(Cubo2.C1I);
+            Cubo2C1J.setBackground(Cubo2.C1);
+
+            Cubo2C2J.setText(Cubo2.C2I);
+            Cubo2C2J.setBackground(Cubo2.C2);
+
+            Cubo2C3J.setText(Cubo2.C3I);
+            Cubo2C3J.setBackground(Cubo2.C3);
+
+            Cubo2C4J.setText(Cubo2.C4I);
+            Cubo2C4J.setBackground(Cubo2.C4);
+
+            Cubo2C5J.setText(Cubo2.C5I);
+            Cubo2C5J.setBackground(Cubo2.C5);
+
+            Cubo2C6J.setText(Cubo2.C6I);
+            Cubo2C6J.setBackground(Cubo2.C6);
+            //
+
+            // Cubo 3
+            Cubo3C1J.setText(Cubo3.C1I);
+            Cubo3C1J.setBackground(Cubo3.C1);
+
+            Cubo3C2J.setText(Cubo3.C2I);
+            Cubo3C2J.setBackground(Cubo3.C2);
+
+            Cubo3C3J.setText(Cubo3.C3I);
+            Cubo3C3J.setBackground(Cubo3.C3);
+
+            Cubo3C4J.setText(Cubo3.C4I);
+            Cubo3C4J.setBackground(Cubo3.C4);
+
+            Cubo3C5J.setText(Cubo3.C5I);
+            Cubo3C5J.setBackground(Cubo3.C5);
+
+            Cubo3C6J.setText(Cubo3.C6I);
+            Cubo3C6J.setBackground(Cubo3.C6);
+            //
+
+            // Cubo 4
+            Cubo4C1J.setText(Cubo4.C1I);
+            Cubo4C1J.setBackground(Cubo4.C1);
+
+            Cubo4C2J.setText(Cubo4.C2I);
+            Cubo4C2J.setBackground(Cubo4.C2);
+
+            Cubo4C3J.setText(Cubo4.C3I);
+            Cubo4C3J.setBackground(Cubo4.C3);
+
+            Cubo4C4J.setText(Cubo4.C4I);
+            Cubo4C4J.setBackground(Cubo4.C4);
+
+            Cubo4C5J.setText(Cubo4.C5I);
+            Cubo4C5J.setBackground(Cubo4.C5);
+
+            Cubo4C6J.setText(Cubo4.C6I);
+            Cubo4C6J.setBackground(Cubo4.C6);
+            //
+
+        } else {
+            sigBtnPressed = true;
+            jTabbedPane1.setSelectedIndex(1);
+
+            // Cubo 1
+            Cubo1C1J.setText(Cubo1Bin.Cubo1C1JN);
+            Cubo1C1J.setBackground(Cubo1Bin.Cubo1C1JB);
+            Cubo1C2J.setText(Cubo1Bin.Cubo1C2JN);
+            Cubo1C2J.setBackground(Cubo1Bin.Cubo1C2JB);
+            Cubo1C3J.setText(Cubo1Bin.Cubo1C3JN);
+            Cubo1C3J.setBackground(Cubo1Bin.Cubo1C3JB);
+            Cubo1C4J.setText(Cubo1Bin.Cubo1C4JN);
+            Cubo1C4J.setBackground(Cubo1Bin.Cubo1C4JB);
+            Cubo1C5J.setText(Cubo1Bin.Cubo1C5JN);
+            Cubo1C5J.setBackground(Cubo1Bin.Cubo1C5JB);
+            Cubo1C6J.setText(Cubo1Bin.Cubo1C6JN);
+            Cubo1C6J.setBackground(Cubo1Bin.Cubo1C6JB);
+
+            // Cubo 2
+            Cubo2C1J.setText(Cubo2Bin.Cubo2C1JN);
+            Cubo2C1J.setBackground(Cubo2Bin.Cubo2C1JB);
+            Cubo2C2J.setText(Cubo2Bin.Cubo2C2JN);
+            Cubo2C2J.setBackground(Cubo2Bin.Cubo2C2JB);
+            Cubo2C3J.setText(Cubo2Bin.Cubo2C3JN);
+            Cubo2C3J.setBackground(Cubo2Bin.Cubo2C3JB);
+            Cubo2C4J.setText(Cubo2Bin.Cubo2C4JN);
+            Cubo2C4J.setBackground(Cubo2Bin.Cubo2C4JB);
+            Cubo2C5J.setText(Cubo2Bin.Cubo2C5JN);
+            Cubo2C5J.setBackground(Cubo2Bin.Cubo2C5JB);
+            Cubo2C6J.setText(Cubo2Bin.Cubo2C6JN);
+            Cubo2C6J.setBackground(Cubo2Bin.Cubo2C6JB);
+
+            // Cubo 3
+            Cubo3C1J.setText(Cubo3Bin.Cubo3C1JN);
+            Cubo3C1J.setBackground(Cubo3Bin.Cubo3C1JB);
+            Cubo3C2J.setText(Cubo3Bin.Cubo3C2JN);
+            Cubo3C2J.setBackground(Cubo3Bin.Cubo3C2JB);
+            Cubo3C3J.setText(Cubo3Bin.Cubo3C3JN);
+            Cubo3C3J.setBackground(Cubo3Bin.Cubo3C3JB);
+            Cubo3C4J.setText(Cubo3Bin.Cubo3C4JN);
+            Cubo3C4J.setBackground(Cubo3Bin.Cubo3C4JB);
+            Cubo3C5J.setText(Cubo3Bin.Cubo3C5JN);
+            Cubo3C5J.setBackground(Cubo3Bin.Cubo3C5JB);
+            Cubo3C6J.setText(Cubo3Bin.Cubo3C6JN);
+            Cubo3C6J.setBackground(Cubo3Bin.Cubo3C6JB);
+
+            // Cubo 4
+            Cubo4C1J.setText(Cubo4Bin.Cubo4C1JN);
+            Cubo4C1J.setBackground(Cubo4Bin.Cubo4C1JB);
+            Cubo4C2J.setText(Cubo4Bin.Cubo4C2JN);
+            Cubo4C2J.setBackground(Cubo4Bin.Cubo4C2JB);
+            Cubo4C3J.setText(Cubo4Bin.Cubo4C3JN);
+            Cubo4C3J.setBackground(Cubo4Bin.Cubo4C3JB);
+            Cubo4C4J.setText(Cubo4Bin.Cubo4C4JN);
+            Cubo4C4J.setBackground(Cubo4Bin.Cubo4C4JB);
+            Cubo4C5J.setText(Cubo4Bin.Cubo4C5JN);
+            Cubo4C5J.setBackground(Cubo4Bin.Cubo4C5JB);
+            Cubo4C6J.setText(Cubo4Bin.Cubo4C6JN);
+            Cubo4C6J.setBackground(Cubo4Bin.Cubo4C6JB);
         }
+
 
     }//GEN-LAST:event_siguienteBtnActionPerformed
 
@@ -3025,22 +4527,20 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo1C5B = Cubo1C5J.getBackground();
         Cubo1C5J.setText(Cubo1C2J.getText());
         Cubo1C5J.setBackground(Cubo1C2J.getBackground());
-        
+
         String Cubo1C1N = Cubo1C1J.getText();
         Color Cubo1C1B = Cubo1C1J.getBackground();
         Cubo1C1J.setText(Cubo1C5N);
         Cubo1C1J.setBackground(Cubo1C5B);
-        
-        
+
         String Cubo1C6N = Cubo1C6J.getText();
         Color Cubo1C6B = Cubo1C6J.getBackground();
         Cubo1C6J.setText(Cubo1C1N);
         Cubo1C6J.setBackground(Cubo1C1B);
-        
 
         Cubo1C2J.setText(Cubo1C6N);
         Cubo1C2J.setBackground(Cubo1C6B);
-  
+
     }//GEN-LAST:event_izquierdaCubo1ActionPerformed
 
     private void arribaCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arribaCubo1ActionPerformed
@@ -3062,11 +4562,28 @@ public class Locura_Instantánea extends javax.swing.JFrame {
 
         Cubo1C1J.setText(Cubo1C4N);
         Cubo1C1J.setBackground(Cubo1C4B);
-        
+
     }//GEN-LAST:event_arribaCubo1ActionPerformed
 
     private void genAleatorio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genAleatorio1ActionPerformed
         // TODO add your handling code here:
+        Object[] options = {"Sí, Por Favor",
+            "No, seguiré intentando"};
+        int yes = JOptionPane.showOptionDialog(null,
+                "Deseas que el programa resuelva el juego por tí?\n"
+                + " Podrás ver la explicación abajo",
+                "Confirmación",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[0]);
+
+        if (JOptionPane.YES_OPTION == yes) {
+            System.out.println("jeje");
+        } else {
+
+        }
     }//GEN-LAST:event_genAleatorio1ActionPerformed
 
     private void derechaCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_derechaCubo1ActionPerformed
@@ -3075,12 +4592,12 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo1C5B = Cubo1C5J.getBackground();
         Cubo1C5J.setText(Cubo1C1J.getText());
         Cubo1C5J.setBackground(Cubo1C1J.getBackground());
-        
+
         String Cubo1C2N = Cubo1C2J.getText();
         Color Cubo1C2B = Cubo1C2J.getBackground();
         Cubo1C2J.setText(Cubo1C5N);
         Cubo1C2J.setBackground(Cubo1C5B);
-        
+
         String Cubo1C6N = Cubo1C6J.getText();
         Color Cubo1C6B = Cubo1C6J.getBackground();
         Cubo1C6J.setText(Cubo1C2N);
@@ -3088,7 +4605,7 @@ public class Locura_Instantánea extends javax.swing.JFrame {
 
         Cubo1C1J.setText(Cubo1C6N);
         Cubo1C1J.setBackground(Cubo1C6B);
-            
+
     }//GEN-LAST:event_derechaCubo1ActionPerformed
 
     private void abajoCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abajoCubo1ActionPerformed
@@ -3102,17 +4619,16 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo1C1B = Cubo1C1J.getBackground();
         Cubo1C1J.setText(Cubo1C3N);
         Cubo1C1J.setBackground(Cubo1C3B);
-        
+
         String Cubo1C4N = Cubo1C4J.getText();
         Color Cubo1C4B = Cubo1C4J.getBackground();
         Cubo1C4J.setText(Cubo1C1N);
         Cubo1C4J.setBackground(Cubo1C1B);
-        
 
         Cubo1C2J.setText(Cubo1C4N);
         Cubo1C2J.setBackground(Cubo1C4B);
 
-        
+
     }//GEN-LAST:event_abajoCubo1ActionPerformed
 
     private void horarioCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horarioCubo1ActionPerformed
@@ -3164,18 +4680,16 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo2C5B = Cubo2C5J.getBackground();
         Cubo2C5J.setText(Cubo2C2J.getText());
         Cubo2C5J.setBackground(Cubo2C2J.getBackground());
-        
+
         String Cubo2C1N = Cubo2C1J.getText();
         Color Cubo2C1B = Cubo2C1J.getBackground();
         Cubo2C1J.setText(Cubo2C5N);
         Cubo2C1J.setBackground(Cubo2C5B);
-        
-        
+
         String Cubo2C6N = Cubo2C6J.getText();
         Color Cubo2C6B = Cubo2C6J.getBackground();
         Cubo2C6J.setText(Cubo2C1N);
         Cubo2C6J.setBackground(Cubo2C1B);
-        
 
         Cubo2C2J.setText(Cubo2C6N);
         Cubo2C2J.setBackground(Cubo2C6B);
@@ -3208,12 +4722,12 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo2C5B = Cubo2C5J.getBackground();
         Cubo2C5J.setText(Cubo2C1J.getText());
         Cubo2C5J.setBackground(Cubo2C1J.getBackground());
-        
+
         String Cubo2C2N = Cubo2C2J.getText();
         Color Cubo2C2B = Cubo2C2J.getBackground();
         Cubo2C2J.setText(Cubo2C5N);
         Cubo2C2J.setBackground(Cubo2C5B);
-        
+
         String Cubo2C6N = Cubo2C6J.getText();
         Color Cubo2C6B = Cubo2C6J.getBackground();
         Cubo2C6J.setText(Cubo2C2N);
@@ -3234,12 +4748,11 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo2C1B = Cubo2C1J.getBackground();
         Cubo2C1J.setText(Cubo2C3N);
         Cubo2C1J.setBackground(Cubo2C3B);
-        
+
         String Cubo2C4N = Cubo2C4J.getText();
         Color Cubo2C4B = Cubo2C4J.getBackground();
         Cubo2C4J.setText(Cubo2C1N);
         Cubo2C4J.setBackground(Cubo2C1B);
-        
 
         Cubo2C2J.setText(Cubo2C4N);
         Cubo2C2J.setBackground(Cubo2C4B);
@@ -3293,18 +4806,16 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo3C5B = Cubo3C5J.getBackground();
         Cubo3C5J.setText(Cubo3C2J.getText());
         Cubo3C5J.setBackground(Cubo3C2J.getBackground());
-        
+
         String Cubo3C1N = Cubo3C1J.getText();
         Color Cubo3C1B = Cubo3C1J.getBackground();
         Cubo3C1J.setText(Cubo3C5N);
         Cubo3C1J.setBackground(Cubo3C5B);
-        
-        
+
         String Cubo3C6N = Cubo3C6J.getText();
         Color Cubo3C6B = Cubo3C6J.getBackground();
         Cubo3C6J.setText(Cubo3C1N);
         Cubo3C6J.setBackground(Cubo3C1B);
-        
 
         Cubo3C2J.setText(Cubo3C6N);
         Cubo3C2J.setBackground(Cubo3C6B);
@@ -3337,12 +4848,12 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo3C5B = Cubo3C5J.getBackground();
         Cubo3C5J.setText(Cubo3C1J.getText());
         Cubo3C5J.setBackground(Cubo3C1J.getBackground());
-        
+
         String Cubo3C2N = Cubo3C2J.getText();
         Color Cubo3C2B = Cubo3C2J.getBackground();
         Cubo3C2J.setText(Cubo3C5N);
         Cubo3C2J.setBackground(Cubo3C5B);
-        
+
         String Cubo3C6N = Cubo3C6J.getText();
         Color Cubo3C6B = Cubo3C6J.getBackground();
         Cubo3C6J.setText(Cubo3C2N);
@@ -3363,12 +4874,11 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo3C1B = Cubo3C1J.getBackground();
         Cubo3C1J.setText(Cubo3C3N);
         Cubo3C1J.setBackground(Cubo3C3B);
-        
+
         String Cubo3C4N = Cubo3C4J.getText();
         Color Cubo3C4B = Cubo3C4J.getBackground();
         Cubo3C4J.setText(Cubo3C1N);
         Cubo3C4J.setBackground(Cubo3C1B);
-        
 
         Cubo3C2J.setText(Cubo3C4N);
         Cubo3C2J.setBackground(Cubo3C4B);
@@ -3422,18 +4932,16 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo4C5B = Cubo4C5J.getBackground();
         Cubo4C5J.setText(Cubo4C2J.getText());
         Cubo4C5J.setBackground(Cubo4C2J.getBackground());
-        
+
         String Cubo4C1N = Cubo4C1J.getText();
         Color Cubo4C1B = Cubo4C1J.getBackground();
         Cubo4C1J.setText(Cubo4C5N);
         Cubo4C1J.setBackground(Cubo4C5B);
-        
-        
+
         String Cubo4C6N = Cubo4C6J.getText();
         Color Cubo4C6B = Cubo4C6J.getBackground();
         Cubo4C6J.setText(Cubo4C1N);
         Cubo4C6J.setBackground(Cubo4C1B);
-        
 
         Cubo4C2J.setText(Cubo4C6N);
         Cubo4C2J.setBackground(Cubo4C6B);
@@ -3466,12 +4974,12 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo4C5B = Cubo4C5J.getBackground();
         Cubo4C5J.setText(Cubo4C1J.getText());
         Cubo4C5J.setBackground(Cubo4C1J.getBackground());
-        
+
         String Cubo4C2N = Cubo4C2J.getText();
         Color Cubo4C2B = Cubo4C2J.getBackground();
         Cubo4C2J.setText(Cubo4C5N);
         Cubo4C2J.setBackground(Cubo4C5B);
-        
+
         String Cubo4C6N = Cubo4C6J.getText();
         Color Cubo4C6B = Cubo4C6J.getBackground();
         Cubo4C6J.setText(Cubo4C2N);
@@ -3492,12 +5000,11 @@ public class Locura_Instantánea extends javax.swing.JFrame {
         Color Cubo4C1B = Cubo4C1J.getBackground();
         Cubo4C1J.setText(Cubo4C3N);
         Cubo4C1J.setBackground(Cubo4C3B);
-        
+
         String Cubo4C4N = Cubo4C4J.getText();
         Color Cubo4C4B = Cubo4C4J.getBackground();
         Cubo4C4J.setText(Cubo4C1N);
         Cubo4C4J.setBackground(Cubo4C1B);
-        
 
         Cubo4C2J.setText(Cubo4C4N);
         Cubo4C2J.setBackground(Cubo4C4B);
@@ -3577,10 +5084,120 @@ public class Locura_Instantánea extends javax.swing.JFrame {
                 && !Cubo3C6J.getBackground().equals(Cubo4C6J.getBackground()));
 
         if (condicion1 && condicion2 && condicion3 && condicion4) {
+            // Actualizar grafica de vistas laterales de la torre
+            // Cubo 1
+            Cubo1C3T.setText(Cubo1C3J.getText());
+            Cubo1C3T.setBackground(Cubo1C3J.getBackground());
+
+            Cubo1C4T.setText(Cubo1C4J.getText());
+            Cubo1C4T.setBackground(Cubo1C4J.getBackground());
+
+            Cubo1C5T.setText(Cubo1C5J.getText());
+            Cubo1C5T.setBackground(Cubo1C5J.getBackground());
+
+            Cubo1C6T.setText(Cubo1C6J.getText());
+            Cubo1C6T.setBackground(Cubo1C6J.getBackground());
+
+            // Cubo 2
+            Cubo2C3T.setText(Cubo2C3J.getText());
+            Cubo2C3T.setBackground(Cubo2C3J.getBackground());
+
+            Cubo2C4T.setText(Cubo2C4J.getText());
+            Cubo2C4T.setBackground(Cubo2C4J.getBackground());
+
+            Cubo2C5T.setText(Cubo2C5J.getText());
+            Cubo2C5T.setBackground(Cubo2C5J.getBackground());
+
+            Cubo2C6T.setText(Cubo2C6J.getText());
+            Cubo2C6T.setBackground(Cubo2C6J.getBackground());
+
+            // Cubo 3
+            Cubo3C3T.setText(Cubo3C3J.getText());
+            Cubo3C3T.setBackground(Cubo3C3J.getBackground());
+
+            Cubo3C4T.setText(Cubo3C4J.getText());
+            Cubo3C4T.setBackground(Cubo3C4J.getBackground());
+
+            Cubo3C5T.setText(Cubo3C5J.getText());
+            Cubo3C5T.setBackground(Cubo3C5J.getBackground());
+
+            Cubo3C6T.setText(Cubo3C6J.getText());
+            Cubo3C6T.setBackground(Cubo3C6J.getBackground());
+
+            // Cubo 4
+            Cubo4C3T.setText(Cubo4C3J.getText());
+            Cubo4C3T.setBackground(Cubo4C3J.getBackground());
+
+            Cubo4C4T.setText(Cubo4C4J.getText());
+            Cubo4C4T.setBackground(Cubo4C4J.getBackground());
+
+            Cubo4C5T.setText(Cubo4C5J.getText());
+            Cubo4C5T.setBackground(Cubo4C5J.getBackground());
+
+            Cubo4C6T.setText(Cubo4C6J.getText());
+            Cubo4C6T.setBackground(Cubo4C6J.getBackground());
+
+            resueltoLbl.setVisible(true);
             JOptionPane.showMessageDialog(null, "Felicidades, resolviste el juego!");
         } else {
-            JOptionPane.showMessageDialog(null, "Esta no es una solución válida, sigue intentando");
+            // Actualizar grafica de vistas laterales de la torre
+            // Cubo 1
+            Cubo1C3T.setText(Cubo1C3J.getText());
+            Cubo1C3T.setBackground(Cubo1C3J.getBackground());
+
+            Cubo1C4T.setText(Cubo1C4J.getText());
+            Cubo1C4T.setBackground(Cubo1C4J.getBackground());
+
+            Cubo1C5T.setText(Cubo1C5J.getText());
+            Cubo1C5T.setBackground(Cubo1C5J.getBackground());
+
+            Cubo1C6T.setText(Cubo1C6J.getText());
+            Cubo1C6T.setBackground(Cubo1C6J.getBackground());
+
+            // Cubo 2
+            Cubo2C3T.setText(Cubo2C3J.getText());
+            Cubo2C3T.setBackground(Cubo2C3J.getBackground());
+
+            Cubo2C4T.setText(Cubo2C4J.getText());
+            Cubo2C4T.setBackground(Cubo2C4J.getBackground());
+
+            Cubo2C5T.setText(Cubo2C5J.getText());
+            Cubo2C5T.setBackground(Cubo2C5J.getBackground());
+
+            Cubo2C6T.setText(Cubo2C6J.getText());
+            Cubo2C6T.setBackground(Cubo2C6J.getBackground());
+
+            // Cubo 3
+            Cubo3C3T.setText(Cubo3C3J.getText());
+            Cubo3C3T.setBackground(Cubo3C3J.getBackground());
+
+            Cubo3C4T.setText(Cubo3C4J.getText());
+            Cubo3C4T.setBackground(Cubo3C4J.getBackground());
+
+            Cubo3C5T.setText(Cubo3C5J.getText());
+            Cubo3C5T.setBackground(Cubo3C5J.getBackground());
+
+            Cubo3C6T.setText(Cubo3C6J.getText());
+            Cubo3C6T.setBackground(Cubo3C6J.getBackground());
+
+            // Cubo 4
+            Cubo4C3T.setText(Cubo4C3J.getText());
+            Cubo4C3T.setBackground(Cubo4C3J.getBackground());
+
+            Cubo4C4T.setText(Cubo4C4J.getText());
+            Cubo4C4T.setBackground(Cubo4C4J.getBackground());
+
+            Cubo4C5T.setText(Cubo4C5J.getText());
+            Cubo4C5T.setBackground(Cubo4C5J.getBackground());
+
+            Cubo4C6T.setText(Cubo4C6J.getText());
+            Cubo4C6T.setBackground(Cubo4C6J.getBackground());
+            
+            resueltoLbl.setVisible(false);
+            JOptionPane.showMessageDialog(null, "Esta NO es una solución válida, sigue intentando");
         }
+
+
     }//GEN-LAST:event_comprobarBtnActionPerformed
 
     /**
@@ -3611,15 +5228,19 @@ public class Locura_Instantánea extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> Cubo1C3;
     private javax.swing.JLabel Cubo1C3G;
     private javax.swing.JLabel Cubo1C3J;
+    private javax.swing.JLabel Cubo1C3T;
     private javax.swing.JComboBox<String> Cubo1C4;
     private javax.swing.JLabel Cubo1C4G;
     private javax.swing.JLabel Cubo1C4J;
+    private javax.swing.JLabel Cubo1C4T;
     private javax.swing.JComboBox<String> Cubo1C5;
     private javax.swing.JLabel Cubo1C5G;
     private javax.swing.JLabel Cubo1C5J;
+    private javax.swing.JLabel Cubo1C5T;
     private javax.swing.JComboBox<String> Cubo1C6;
     private javax.swing.JLabel Cubo1C6G;
     private javax.swing.JLabel Cubo1C6J;
+    private javax.swing.JLabel Cubo1C6T;
     private javax.swing.JComboBox<String> Cubo2C1;
     private javax.swing.JLabel Cubo2C1G;
     private javax.swing.JLabel Cubo2C1J;
@@ -3629,15 +5250,19 @@ public class Locura_Instantánea extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> Cubo2C3;
     private javax.swing.JLabel Cubo2C3G;
     private javax.swing.JLabel Cubo2C3J;
+    private javax.swing.JLabel Cubo2C3T;
     private javax.swing.JComboBox<String> Cubo2C4;
     private javax.swing.JLabel Cubo2C4G;
     private javax.swing.JLabel Cubo2C4J;
+    private javax.swing.JLabel Cubo2C4T;
     private javax.swing.JComboBox<String> Cubo2C5;
     private javax.swing.JLabel Cubo2C5G;
     private javax.swing.JLabel Cubo2C5J;
+    private javax.swing.JLabel Cubo2C5T;
     private javax.swing.JComboBox<String> Cubo2C6;
     private javax.swing.JLabel Cubo2C6G;
     private javax.swing.JLabel Cubo2C6J;
+    private javax.swing.JLabel Cubo2C6T;
     private javax.swing.JComboBox<String> Cubo3C1;
     private javax.swing.JLabel Cubo3C1G;
     private javax.swing.JLabel Cubo3C1J;
@@ -3647,15 +5272,19 @@ public class Locura_Instantánea extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> Cubo3C3;
     private javax.swing.JLabel Cubo3C3G;
     private javax.swing.JLabel Cubo3C3J;
+    private javax.swing.JLabel Cubo3C3T;
     private javax.swing.JComboBox<String> Cubo3C4;
     private javax.swing.JLabel Cubo3C4G;
     private javax.swing.JLabel Cubo3C4J;
+    private javax.swing.JLabel Cubo3C4T;
     private javax.swing.JComboBox<String> Cubo3C5;
     private javax.swing.JLabel Cubo3C5G;
     private javax.swing.JLabel Cubo3C5J;
+    private javax.swing.JLabel Cubo3C5T;
     private javax.swing.JComboBox<String> Cubo3C6;
     private javax.swing.JLabel Cubo3C6G;
     private javax.swing.JLabel Cubo3C6J;
+    private javax.swing.JLabel Cubo3C6T;
     private javax.swing.JComboBox<String> Cubo4C1;
     private javax.swing.JLabel Cubo4C1G;
     private javax.swing.JLabel Cubo4C1J;
@@ -3665,15 +5294,19 @@ public class Locura_Instantánea extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> Cubo4C3;
     private javax.swing.JLabel Cubo4C3G;
     private javax.swing.JLabel Cubo4C3J;
+    private javax.swing.JLabel Cubo4C3T;
     private javax.swing.JComboBox<String> Cubo4C4;
     private javax.swing.JLabel Cubo4C4G;
     private javax.swing.JLabel Cubo4C4J;
+    private javax.swing.JLabel Cubo4C4T;
     private javax.swing.JComboBox<String> Cubo4C5;
     private javax.swing.JLabel Cubo4C5G;
     private javax.swing.JLabel Cubo4C5J;
+    private javax.swing.JLabel Cubo4C5T;
     private javax.swing.JComboBox<String> Cubo4C6;
     private javax.swing.JLabel Cubo4C6G;
     private javax.swing.JLabel Cubo4C6J;
+    private javax.swing.JLabel Cubo4C6T;
     private javax.swing.JButton abajoCubo1;
     private javax.swing.JButton abajoCubo2;
     private javax.swing.JButton abajoCubo3;
@@ -3713,13 +5346,19 @@ public class Locura_Instantánea extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
@@ -3753,6 +5392,7 @@ public class Locura_Instantánea extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel resueltoLbl;
     private javax.swing.JButton siguienteBtn;
     // End of variables declaration//GEN-END:variables
 }

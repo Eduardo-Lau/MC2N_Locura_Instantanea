@@ -5,29 +5,25 @@
 package locura.instantánea;
 
 import java.awt.Color;
+import java.io.Serializable;
 import javax.swing.JPanel;
 
 /**
  *
  * @author carlo
  */
-public class Cubos extends JPanel {
+public class Cubos {
 
     Color C1;
     String C1I;
-    
     Color C2;
     String C2I;
-    
     Color C3;
     String C3I;
-    
     Color C4;
     String C4I;
-    
     Color C5;
     String C5I;
-
     Color C6;
     String C6I;
 
