@@ -43,6 +43,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     public static ObjectInputStream O_binCubosIn;
 
     boolean sigBtnPressed = false;
+    boolean resuelto = false;
 
     /**
      * Creates new form
@@ -634,7 +635,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        genAleatorio1 = new javax.swing.JButton();
+        resolverBtn = new javax.swing.JButton();
         Cubo4C3T = new javax.swing.JLabel();
         arribaCubo1 = new javax.swing.JButton();
         izquierdaCubo1 = new javax.swing.JButton();
@@ -710,15 +711,21 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel20 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
+        explicacionBtn = new javax.swing.JButton();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
+        jSeparator8 = new javax.swing.JSeparator();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        porLoTanto = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+        existeSolucion = new javax.swing.JLabel();
+        porLoTanto1 = new javax.swing.JLabel();
+        porLoTanto2 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -1203,17 +1210,17 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jPanel2.setLayout(null);
 
-        genAleatorio1.setBackground(new java.awt.Color(109, 23, 48));
-        genAleatorio1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        genAleatorio1.setForeground(new java.awt.Color(255, 255, 255));
-        genAleatorio1.setText("Resolver");
-        genAleatorio1.addActionListener(new java.awt.event.ActionListener() {
+        resolverBtn.setBackground(new java.awt.Color(109, 23, 48));
+        resolverBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        resolverBtn.setForeground(new java.awt.Color(255, 255, 255));
+        resolverBtn.setText("Resolver");
+        resolverBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genAleatorio1ActionPerformed(evt);
+                resolverBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(genAleatorio1);
-        genAleatorio1.setBounds(473, 258, 130, 30);
+        jPanel2.add(resolverBtn);
+        resolverBtn.setBounds(370, 260, 130, 30);
 
         Cubo4C3T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C3T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1222,7 +1229,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C3T.setText("4");
         Cubo4C3T.setOpaque(true);
         jPanel2.add(Cubo4C3T);
-        Cubo4C3T.setBounds(290, 357, 50, 50);
+        Cubo4C3T.setBounds(260, 360, 50, 50);
 
         arribaCubo1.setBackground(new java.awt.Color(147, 157, 255));
         arribaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1745,7 +1752,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(comprobarBtn);
-        comprobarBtn.setBounds(256, 258, 130, 30);
+        comprobarBtn.setBounds(220, 260, 130, 30);
 
         Cubo1C1J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1763,7 +1770,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C3T.setText("1");
         Cubo1C3T.setOpaque(true);
         jPanel2.add(Cubo1C3T);
-        Cubo1C3T.setBounds(290, 537, 50, 50);
+        Cubo1C3T.setBounds(260, 540, 50, 50);
 
         Cubo2C3T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C3T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1772,7 +1779,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C3T.setText("2");
         Cubo2C3T.setOpaque(true);
         jPanel2.add(Cubo2C3T);
-        Cubo2C3T.setBounds(290, 477, 50, 50);
+        Cubo2C3T.setBounds(260, 480, 50, 50);
 
         Cubo3C3T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C3T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1781,7 +1788,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C3T.setText("3");
         Cubo3C3T.setOpaque(true);
         jPanel2.add(Cubo3C3T);
-        Cubo3C3T.setBounds(290, 417, 50, 50);
+        Cubo3C3T.setBounds(260, 420, 50, 50);
 
         resueltoLbl.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         resueltoLbl.setForeground(new java.awt.Color(255, 202, 117));
@@ -1796,7 +1803,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C4T.setText("4");
         Cubo4C4T.setOpaque(true);
         jPanel2.add(Cubo4C4T);
-        Cubo4C4T.setBounds(370, 357, 50, 50);
+        Cubo4C4T.setBounds(460, 360, 50, 50);
 
         Cubo3C4T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C4T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1805,7 +1812,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C4T.setText("3");
         Cubo3C4T.setOpaque(true);
         jPanel2.add(Cubo3C4T);
-        Cubo3C4T.setBounds(370, 417, 50, 50);
+        Cubo3C4T.setBounds(460, 420, 50, 50);
 
         Cubo2C4T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C4T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1814,7 +1821,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C4T.setText("2");
         Cubo2C4T.setOpaque(true);
         jPanel2.add(Cubo2C4T);
-        Cubo2C4T.setBounds(370, 477, 50, 50);
+        Cubo2C4T.setBounds(460, 480, 50, 50);
 
         Cubo1C4T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C4T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1823,7 +1830,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C4T.setText("1");
         Cubo1C4T.setOpaque(true);
         jPanel2.add(Cubo1C4T);
-        Cubo1C4T.setBounds(370, 537, 50, 50);
+        Cubo1C4T.setBounds(460, 540, 50, 50);
 
         Cubo4C5T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C5T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1832,7 +1839,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C5T.setText("4");
         Cubo4C5T.setOpaque(true);
         jPanel2.add(Cubo4C5T);
-        Cubo4C5T.setBounds(450, 357, 50, 50);
+        Cubo4C5T.setBounds(360, 360, 50, 50);
 
         Cubo3C5T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C5T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1841,7 +1848,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C5T.setText("3");
         Cubo3C5T.setOpaque(true);
         jPanel2.add(Cubo3C5T);
-        Cubo3C5T.setBounds(450, 417, 50, 50);
+        Cubo3C5T.setBounds(360, 420, 50, 50);
 
         Cubo2C5T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C5T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1850,7 +1857,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C5T.setText("2");
         Cubo2C5T.setOpaque(true);
         jPanel2.add(Cubo2C5T);
-        Cubo2C5T.setBounds(450, 477, 50, 50);
+        Cubo2C5T.setBounds(360, 480, 50, 50);
 
         Cubo1C5T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C5T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1859,7 +1866,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C5T.setText("1");
         Cubo1C5T.setOpaque(true);
         jPanel2.add(Cubo1C5T);
-        Cubo1C5T.setBounds(450, 537, 50, 50);
+        Cubo1C5T.setBounds(360, 540, 50, 50);
 
         Cubo4C6T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C6T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1868,7 +1875,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C6T.setText("4");
         Cubo4C6T.setOpaque(true);
         jPanel2.add(Cubo4C6T);
-        Cubo4C6T.setBounds(530, 357, 50, 50);
+        Cubo4C6T.setBounds(560, 360, 50, 50);
 
         Cubo3C6T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C6T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1877,7 +1884,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C6T.setText("3");
         Cubo3C6T.setOpaque(true);
         jPanel2.add(Cubo3C6T);
-        Cubo3C6T.setBounds(530, 417, 50, 50);
+        Cubo3C6T.setBounds(560, 420, 50, 50);
 
         Cubo2C6T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C6T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1886,7 +1893,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C6T.setText("2");
         Cubo2C6T.setOpaque(true);
         jPanel2.add(Cubo2C6T);
-        Cubo2C6T.setBounds(530, 477, 50, 50);
+        Cubo2C6T.setBounds(560, 480, 50, 50);
 
         Cubo1C6T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C6T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1895,108 +1902,124 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C6T.setText("1");
         Cubo1C6T.setOpaque(true);
         jPanel2.add(Cubo1C6T);
-        Cubo1C6T.setBounds(530, 537, 50, 50);
+        Cubo1C6T.setBounds(560, 540, 50, 50);
 
         jLabel18.setText("4)");
         jPanel2.add(jLabel18);
-        jLabel18.setBounds(260, 367, 12, 20);
+        jLabel18.setBounds(230, 370, 12, 20);
 
         jLabel19.setText("1)");
         jPanel2.add(jLabel19);
-        jLabel19.setBounds(260, 547, 12, 20);
+        jLabel19.setBounds(230, 550, 12, 20);
 
         jLabel20.setText("2)");
         jPanel2.add(jLabel20);
-        jLabel20.setBounds(260, 487, 12, 20);
+        jLabel20.setBounds(230, 490, 12, 20);
 
         jLabel27.setText("3)");
         jPanel2.add(jLabel27);
-        jLabel27.setBounds(260, 427, 12, 20);
+        jLabel27.setBounds(230, 430, 12, 20);
 
         jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
         jLabel28.setText("Vistas Laterales de la Torre");
         jPanel2.add(jLabel28);
         jLabel28.setBounds(300, 300, 260, 29);
 
-        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        explicacionBtn.setBackground(new java.awt.Color(147, 157, 255));
+        explicacionBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        explicacionBtn.setForeground(new java.awt.Color(0, 0, 0));
+        explicacionBtn.setText("Explicación");
+        explicacionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                explicacionBtnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(explicacionBtn);
+        explicacionBtn.setBounds(520, 260, 130, 30);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 230, Short.MAX_VALUE)
-        );
+        jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel2.add(jSeparator6);
+        jSeparator6.setBounds(530, 370, 10, 210);
 
-        jPanel2.add(jPanel3);
-        jPanel3.setBounds(10, 360, 210, 230);
+        jSeparator7.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel2.add(jSeparator7);
+        jSeparator7.setBounds(330, 370, 10, 210);
 
-        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(jPanel4);
-        jPanel4.setBounds(760, 340, 120, 120);
-
-        jPanel5.setBackground(new java.awt.Color(51, 51, 51));
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(jPanel5);
-        jPanel5.setBounds(760, 470, 120, 120);
-
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel17.setText("L");
-        jPanel2.add(jLabel17);
-        jLabel17.setBounds(120, 330, 10, 16);
-
-        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel30.setText(" G");
-        jPanel2.add(jLabel30);
-        jLabel30.setBounds(100, 320, 20, 25);
-
-        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel31.setText(" G   : Vertical");
-        jPanel2.add(jLabel31);
-        jLabel31.setBounds(610, 500, 150, 25);
-
-        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel32.setText("2");
-        jPanel2.add(jLabel32);
-        jLabel32.setBounds(630, 510, 20, 16);
-
-        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel51.setText(" G   : Horizontal");
-        jPanel2.add(jLabel51);
-        jLabel51.setBounds(610, 380, 150, 25);
-
-        jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel52.setText("1");
-        jPanel2.add(jLabel52);
-        jLabel52.setBounds(630, 390, 20, 16);
+        jSeparator8.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel2.add(jSeparator8);
+        jSeparator8.setBounds(430, 370, 10, 210);
 
         jTabbedPane1.addTab("Juego", jPanel2);
+
+        jPanel6.setLayout(null);
+
+        jScrollPane1.setEnabled(false);
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jTextArea1.setRows(2);
+        jTextArea1.setText("Por último, se interpretan ambos subgrafos de la siguiente forma:\n Solución Horizontal: (Grafo G1- recorrido horario)\n - Se localiza la arista 1 (cubo 1) y se observa que vértices conecta.\n - En el cubo 1 se colocan estos 2 colores, de izquierda a derecha. (por ejemplo, R-B)\n - Se observa en que vértice termina la arista 1, y a partir de ese vértice se observa la\n   siguiente arista y los vértices que conecta, así sucesivamente. Siempre en sentido\n   horario.\n\nSolución Vertical: (Grafo G2- recorrido horario)\n - Se localiza la arista 1 (cubo 1) y se observa que vértices conecta.\n - En el cubo 1 se colocan estos 2 colores, de arriba hacia abajo. (por ejemplo, V-A)\n - Se observa en que vértice termina la arista 1, y a partir de ese vértice se observa la\n   siguiente arista y los vértices que conecta, así sucesivamente. Siempre en sentido\n   horario.");
+        jTextArea1.setBorder(null);
+        jTextArea1.setFocusable(false);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel6.add(jScrollPane1);
+        jScrollPane1.setBounds(10, 280, 870, 210);
+
+        porLoTanto.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        porLoTanto.setForeground(new java.awt.Color(45, 160, 106));
+        porLoTanto.setText("También puedes ver las vistas laterales de la Torre");
+        jPanel6.add(porLoTanto);
+        porLoTanto.setBounds(20, 540, 820, 25);
+
+        jScrollPane4.setEnabled(false);
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jTextArea2.setRows(2);
+        jTextArea2.setText("Por la naturaleza de este juego es posible que algunas combinaciones de colores simplemente no\ntengan una solución, para esta combinación en específico, obtenemos que :");
+        jTextArea2.setBorder(null);
+        jTextArea2.setFocusable(false);
+        jScrollPane4.setViewportView(jTextArea2);
+
+        jPanel6.add(jScrollPane4);
+        jScrollPane4.setBounds(10, 10, 870, 60);
+
+        jScrollPane3.setEnabled(false);
+
+        jTextArea3.setEditable(false);
+        jTextArea3.setColumns(20);
+        jTextArea3.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jTextArea3.setRows(2);
+        jTextArea3.setText("Utilizando la teoría de Grafos, se construye un grafo Gl que represente a los 4 cubos \ncon las siguientes reglas:\n - El grafo tiene 4 vértices que representan los 4 colores posibles (R, B, V, A).\n - Las aristas representan caras opuestas de cada cubo, 3 aristas por cubo.\n - Las aristas se etiquetan con el número del cubo (1, 2, 3, 4).          ↓ Deslice hacia abajo ↓\n\nDespués, se construyen 2 subgrafos de Gl (si existen) que representan las soluciones \nhorizontal y vertical, se deben seguir las siguientes reglas:\n - Cada subgrafo debe tener los 4 vértices de Gl\n - Cada subgrafo debe tener únicamente 4 aristas, 1 arista por cubo. (etiquetas 1,2,3,4)\n - El grado de cada vértice debe ser igual a 2\n - Las aristas del 1er subgrafo no se deben repetir en el 2do subgrafo");
+        jTextArea3.setBorder(null);
+        jTextArea3.setFocusable(false);
+        jScrollPane3.setViewportView(jTextArea3);
+
+        jPanel6.add(jScrollPane3);
+        jScrollPane3.setBounds(10, 100, 870, 140);
+
+        existeSolucion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        existeSolucion.setForeground(new java.awt.Color(45, 160, 106));
+        existeSolucion.setText("Existe o NO Existe una solución");
+        jPanel6.add(existeSolucion);
+        existeSolucion.setBounds(20, 70, 574, 25);
+
+        porLoTanto1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        porLoTanto1.setForeground(new java.awt.Color(255, 255, 255));
+        porLoTanto1.setText("Interpretación de subgrafos G1 y G2 :");
+        jPanel6.add(porLoTanto1);
+        porLoTanto1.setBounds(20, 250, 574, 25);
+
+        porLoTanto2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        porLoTanto2.setForeground(new java.awt.Color(45, 160, 106));
+        porLoTanto2.setText("Las soluciones horizontales y verticales fueron aplicadas a los cubos en la pestaña de juego");
+        jPanel6.add(porLoTanto2);
+        porLoTanto2.setBounds(20, 500, 820, 25);
+
+        jTabbedPane1.addTab("Explicación", jPanel6);
 
         jLabel29.setFont(new java.awt.Font("Segoe UI Emoji", 2, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(102, 102, 102));
@@ -2025,7 +2048,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4434,11 +4457,20 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         if (jTabbedPane1.getSelectedIndex() == 1) {
             if (Cubo1.C1 == null || Cubo2.C1 == null || Cubo3.C1 == null || Cubo4.C1 == null || sigBtnPressed == false) {
                 jTabbedPane1.setSelectedIndex(0);
-                JOptionPane.showMessageDialog(null, "Debe generar los 4 cubos y presionar\n"
+                JOptionPane.showMessageDialog(null, "Debes generar los 4 cubos y presionar\n"
                         + "el botón 'Siguiente' para continuar ");
 
-            } else {
+            }
+        }
 
+        if (jTabbedPane1.getSelectedIndex() == 2) {
+            if (Cubo1.C1 == null || Cubo2.C1 == null || Cubo3.C1 == null || Cubo4.C1 == null || sigBtnPressed == false) {
+                jTabbedPane1.setSelectedIndex(1);
+
+            } else if (resuelto == false) {
+                jTabbedPane1.setSelectedIndex(1);
+                JOptionPane.showMessageDialog(null, "La ventana de explicación estará disponible cuando \n"
+                        + "resuelvas el juego o presiones el botón 'Resolver");
             }
         }
     }//GEN-LAST:event_jTabbedPane1StateChanged
@@ -4448,7 +4480,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         if (Cubo1.C1 == null || Cubo2.C1 == null || Cubo3.C1 == null || Cubo4.C1 == null) {
             JOptionPane.showMessageDialog(null, "Aún no ha generado los 4 cubos");
-        }  else if ((!Cubo1Bin.C1.equals(Cubo1.C1) || !Cubo1Bin.C2.equals(Cubo1.C2)
+        } else if ((!Cubo1Bin.C1.equals(Cubo1.C1) || !Cubo1Bin.C2.equals(Cubo1.C2)
                 || !Cubo1Bin.C3.equals(Cubo1.C3) || !Cubo1Bin.C4.equals(Cubo1.C4)
                 || !Cubo1Bin.C5.equals(Cubo1.C5) || !Cubo1Bin.C6.equals(Cubo1.C6))
                 || (!Cubo2Bin.C1.equals(Cubo2.C1) || !Cubo2Bin.C2.equals(Cubo2.C2)
@@ -4627,6 +4659,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo1C2J.setText(Cubo1C6N);
         Cubo1C2J.setBackground(Cubo1C6B);
+        
+        actualTorre();
 
     }//GEN-LAST:event_izquierdaCubo1ActionPerformed
 
@@ -4649,29 +4683,2001 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo1C1J.setText(Cubo1C4N);
         Cubo1C1J.setBackground(Cubo1C4B);
+        
+        actualTorre();
 
     }//GEN-LAST:event_arribaCubo1ActionPerformed
 
-    private void genAleatorio1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genAleatorio1ActionPerformed
+    private void resolverBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resolverBtnActionPerformed
         // TODO add your handling code here:
-        Object[] options = {"Sí, Por Favor",
-            "No, seguiré intentando"};
-        int yes = JOptionPane.showOptionDialog(null,
-                "Deseas que el programa resuelva el juego por tí?\n"
-                + " Podrás ver la explicación abajo",
-                "Confirmación",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null,
-                options,
-                options[0]);
+        boolean condicion1 = ((!Cubo1C3J.getBackground().equals(Cubo2C3J.getBackground())
+                && !Cubo1C3J.getBackground().equals(Cubo3C3J.getBackground())
+                && !Cubo1C3J.getBackground().equals(Cubo4C3J.getBackground()))
+                && (!Cubo2C3J.getBackground().equals(Cubo3C3J.getBackground())
+                && !Cubo2C3J.getBackground().equals(Cubo4C3J.getBackground()))
+                && !Cubo3C3J.getBackground().equals(Cubo4C3J.getBackground()));
 
-        if (JOptionPane.YES_OPTION == yes) {
-            System.out.println("jeje");
+        boolean condicion2 = ((!Cubo1C5J.getBackground().equals(Cubo2C5J.getBackground())
+                && !Cubo1C5J.getBackground().equals(Cubo3C5J.getBackground())
+                && !Cubo1C5J.getBackground().equals(Cubo4C5J.getBackground()))
+                && (!Cubo2C5J.getBackground().equals(Cubo3C5J.getBackground())
+                && !Cubo2C5J.getBackground().equals(Cubo4C5J.getBackground()))
+                && !Cubo3C5J.getBackground().equals(Cubo4C5J.getBackground()));
+
+        boolean condicion3 = ((!Cubo1C4J.getBackground().equals(Cubo2C4J.getBackground())
+                && !Cubo1C4J.getBackground().equals(Cubo3C4J.getBackground())
+                && !Cubo1C4J.getBackground().equals(Cubo4C4J.getBackground()))
+                && (!Cubo2C4J.getBackground().equals(Cubo3C4J.getBackground())
+                && !Cubo2C4J.getBackground().equals(Cubo4C4J.getBackground()))
+                && !Cubo3C4J.getBackground().equals(Cubo4C4J.getBackground()));
+
+        boolean condicion4 = ((!Cubo1C6J.getBackground().equals(Cubo2C6J.getBackground())
+                && !Cubo1C6J.getBackground().equals(Cubo3C6J.getBackground())
+                && !Cubo1C6J.getBackground().equals(Cubo4C6J.getBackground()))
+                && (!Cubo2C6J.getBackground().equals(Cubo3C6J.getBackground())
+                && !Cubo2C6J.getBackground().equals(Cubo4C6J.getBackground()))
+                && !Cubo3C6J.getBackground().equals(Cubo4C6J.getBackground()));
+
+        if (condicion1 && condicion2 && condicion3 && condicion4) {
+            JOptionPane.showMessageDialog(null, "Felicidades, el juego ya está resuelto!");
+            resueltoLbl.setVisible(true);
         } else {
+            Object[] options = {"Sí, Por Favor",
+                "No, seguiré intentando"};
+            int yes = JOptionPane.showOptionDialog(null,
+                    "Deseas que el programa resuelva el juego por tí?\n"
+                    + " Podrás ver la explicación en la siguiente pestaña",
+                    "Confirmación",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE,
+                    null,
+                    options,
+                    options[0]);
 
+            if (JOptionPane.YES_OPTION == yes) {
+                resuelto = true;
+                resolverJuego();
+                actualTorre();
+            } else {
+                resuelto = false;
+            }
         }
-    }//GEN-LAST:event_genAleatorio1ActionPerformed
+    }//GEN-LAST:event_resolverBtnActionPerformed
+
+    public void resolverJuego() {
+
+        boolean G1Encontrado = false;
+        boolean G2Encontrado = false;
+        // Grafo Gl 
+        // Cubo 1
+        String Cubo1arista1I;
+        String Cubo1arista1F;
+
+        String Cubo1arista2I;
+        String Cubo1arista2F;
+
+        String Cubo1arista3I;
+        String Cubo1arista3F;
+
+        Cubo1arista1I = Cubo1.C1I;
+        Cubo1arista1F = Cubo1.C2I;
+
+        Cubo1arista2I = Cubo1.C3I;
+        Cubo1arista2F = Cubo1.C4I;
+
+        Cubo1arista3I = Cubo1.C5I;
+        Cubo1arista3F = Cubo1.C6I;
+
+        System.out.println("Cubo 1");
+        System.out.println(Cubo1arista1I + "-" + Cubo1arista1F);
+        System.out.println(Cubo1arista2I + "-" + Cubo1arista2F);
+        System.out.println(Cubo1arista3I + "-" + Cubo1arista3F);
+
+        // Cubo 2
+        String Cubo2arista1I;
+        String Cubo2arista1F;
+        String Cubo2arista2I;
+        String Cubo2arista2F;
+        String Cubo2arista3I;
+        String Cubo2arista3F;
+
+        Cubo2arista1I = Cubo2.C1I;
+        Cubo2arista1F = Cubo2.C2I;
+
+        Cubo2arista2I = Cubo2.C3I;
+        Cubo2arista2F = Cubo2.C4I;
+
+        Cubo2arista3I = Cubo2.C5I;
+        Cubo2arista3F = Cubo2.C6I;
+
+        System.out.println("Cubo 2");
+        System.out.println(Cubo2arista1I + "-" + Cubo2arista1F);
+        System.out.println(Cubo2arista2I + "-" + Cubo2arista2F);
+        System.out.println(Cubo2arista3I + "-" + Cubo2arista3F);
+
+        // Cubo 3
+        String Cubo3arista1I;
+        String Cubo3arista1F;
+        String Cubo3arista2I;
+        String Cubo3arista2F;
+        String Cubo3arista3I;
+        String Cubo3arista3F;
+
+        Cubo3arista1I = Cubo3.C1I;
+        Cubo3arista1F = Cubo3.C2I;
+
+        Cubo3arista2I = Cubo3.C3I;
+        Cubo3arista2F = Cubo3.C4I;
+
+        Cubo3arista3I = Cubo3.C5I;
+        Cubo3arista3F = Cubo3.C6I;
+
+        System.out.println("Cubo 3");
+        System.out.println(Cubo3arista1I + "-" + Cubo3arista1F);
+        System.out.println(Cubo3arista2I + "-" + Cubo3arista2F);
+        System.out.println(Cubo3arista3I + "-" + Cubo3arista3F);
+
+        // Cubo 4
+        String Cubo4arista1I;
+        String Cubo4arista1F;
+        String Cubo4arista2I;
+        String Cubo4arista2F;
+        String Cubo4arista3I;
+        String Cubo4arista3F;
+
+        Cubo4arista1I = Cubo4.C1I;
+        Cubo4arista1F = Cubo4.C2I;
+
+        Cubo4arista2I = Cubo4.C3I;
+        Cubo4arista2F = Cubo4.C4I;
+
+        Cubo4arista3I = Cubo4.C5I;
+        Cubo4arista3F = Cubo4.C6I;
+
+        System.out.println("Cubo 4");
+        System.out.println(Cubo4arista1I + "-" + Cubo4arista1F);
+        System.out.println(Cubo4arista2I + "-" + Cubo4arista2F);
+        System.out.println(Cubo4arista3I + "-" + Cubo4arista3F);
+
+        // Grafo G1: Solución Horizontal
+        String Cubo1aristaG1I = null;
+        String Cubo1aristaG1F = null;
+
+        String Cubo2aristaG1I = null;
+        String Cubo2aristaG1F = null;
+
+        String Cubo3aristaG1I = null;
+        String Cubo3aristaG1F = null;
+
+        String Cubo4aristaG1I = null;
+        String Cubo4aristaG1F = null;
+
+        int gradoVerticeR = 0;
+        int gradoVerticeB = 0;
+        int gradoVerticeV = 0;
+        int gradoVerticeA = 0;
+
+        String[] verticesCubo1 = {Cubo1arista1I, Cubo1arista1F, Cubo1arista2I, Cubo1arista2F, Cubo1arista3I, Cubo1arista3F};
+        String[] verticesCubo2 = {Cubo2arista1I, Cubo2arista1F, Cubo2arista2I, Cubo2arista2F, Cubo2arista3I, Cubo2arista3F};
+        String[] verticesCubo3 = {Cubo3arista1I, Cubo3arista1F, Cubo3arista2I, Cubo3arista2F, Cubo3arista3I, Cubo3arista3F};
+        String[] verticesCubo4 = {Cubo4arista1I, Cubo4arista1F, Cubo4arista2I, Cubo4arista2F, Cubo4arista3I, Cubo4arista3F};
+
+        for (int i = 0; i < 5; i += 2) {
+            for (int c = 0; c < 5; c += 2) {
+                for (int w = 0; w < 5; w += 2) {
+                    for (int r = 0; r < 5; r += 2) {
+                        gradoVerticeR = 0;
+                        gradoVerticeB = 0;
+                        gradoVerticeV = 0;
+                        gradoVerticeA = 0;
+                        // Cubo1
+                        if (verticesCubo1[i].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo1[i].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo1[i].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo1[i].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        if (verticesCubo1[i + 1].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo1[i + 1].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo1[i + 1].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo1[i + 1].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        // Cubo2
+                        if (verticesCubo2[c].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo2[c].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo2[c].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo2[c].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        if (verticesCubo2[c + 1].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo2[c + 1].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo2[c + 1].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo2[c + 1].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        // Cubo3
+                        if (verticesCubo3[w].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo3[w].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo3[w].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo3[w].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        if (verticesCubo3[w + 1].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo3[w + 1].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo3[w + 1].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo3[w + 1].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        // Cubo4
+                        if (verticesCubo4[r].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo4[r].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo4[r].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo4[r].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        if (verticesCubo4[r + 1].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo4[r + 1].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo4[r + 1].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo4[r + 1].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        if (gradoVerticeR == 2 && gradoVerticeB == 2 && gradoVerticeV == 2 && gradoVerticeA == 2) {
+
+                            System.out.println("Grafo G1: Horizontal - Encontrado");
+                            G1Encontrado = true;
+                            Cubo1aristaG1I = verticesCubo1[i];
+                            Cubo1aristaG1F = verticesCubo1[i + 1];
+
+                            Cubo2aristaG1I = verticesCubo2[c];
+                            Cubo2aristaG1F = verticesCubo2[c + 1];
+
+                            Cubo3aristaG1I = verticesCubo3[w];
+                            Cubo3aristaG1F = verticesCubo3[w + 1];
+
+                            Cubo4aristaG1I = verticesCubo4[r];
+                            Cubo4aristaG1F = verticesCubo4[r + 1];
+
+                            System.out.println("Cubo 1 arista: " + Cubo1aristaG1I + "-" + Cubo1aristaG1F);
+                            System.out.println("Cubo 2 arista: " + Cubo2aristaG1I + "-" + Cubo2aristaG1F);
+                            System.out.println("Cubo 3 arista: " + Cubo3aristaG1I + "-" + Cubo3aristaG1F);
+                            System.out.println("Cubo 4 arista: " + Cubo4aristaG1I + "-" + Cubo4aristaG1F);
+                            System.out.println("grado R: " + gradoVerticeR);
+                            System.out.println("grado B: " + gradoVerticeB);
+                            System.out.println("grado V: " + gradoVerticeV);
+                            System.out.println("grado A: " + gradoVerticeA);
+                            break;
+                        }
+
+                    }
+                    if (G1Encontrado == true) {
+                        break;
+                    }
+                }
+                if (G1Encontrado == true) {
+                    break;
+                }
+            }
+            if (G1Encontrado == true) {
+                break;
+            }
+        }
+
+        if (G1Encontrado == true) {
+
+            // Grafo G2: Solución Vertical
+            String Cubo1aristaG2I = null;
+            String Cubo1aristaG2F = null;
+
+            String Cubo2aristaG2I = null;
+            String Cubo2aristaG2F = null;
+
+            String Cubo3aristaG2I = null;
+            String Cubo3aristaG2F = null;
+
+            String Cubo4aristaG2I = null;
+            String Cubo4aristaG2F = null;
+
+            gradoVerticeR = 0;
+            gradoVerticeB = 0;
+            gradoVerticeV = 0;
+            gradoVerticeA = 0;
+
+            for (int i = 0; i < 5; i += 2) {
+                for (int c = 0; c < 5; c += 2) {
+                    for (int w = 0; w < 5; w += 2) {
+                        for (int r = 0; r < 5; r += 2) {
+                            gradoVerticeR = 0;
+                            gradoVerticeB = 0;
+                            gradoVerticeV = 0;
+                            gradoVerticeA = 0;
+                            // Cubo1
+                            if (verticesCubo1[i].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo1[i].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo1[i].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo1[i].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            if (verticesCubo1[i + 1].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo1[i + 1].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo1[i + 1].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo1[i + 1].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            // Cubo2
+                            if (verticesCubo2[c].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo2[c].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo2[c].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo2[c].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            if (verticesCubo2[c + 1].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo2[c + 1].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo2[c + 1].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo2[c + 1].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            // Cubo3
+                            if (verticesCubo3[w].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo3[w].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo3[w].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo3[w].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            if (verticesCubo3[w + 1].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo3[w + 1].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo3[w + 1].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo3[w + 1].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            // Cubo4
+                            if (verticesCubo4[r].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo4[r].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo4[r].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo4[r].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            if (verticesCubo4[r + 1].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo4[r + 1].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo4[r + 1].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo4[r + 1].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            if (gradoVerticeR == 2 && gradoVerticeB == 2 && gradoVerticeV == 2 && gradoVerticeA == 2) {
+
+                                Cubo1aristaG2I = verticesCubo1[i];
+                                Cubo1aristaG2F = verticesCubo1[i + 1];
+
+                                Cubo2aristaG2I = verticesCubo2[c];
+                                Cubo2aristaG2F = verticesCubo2[c + 1];
+
+                                Cubo3aristaG2I = verticesCubo3[w];
+                                Cubo3aristaG2F = verticesCubo3[w + 1];
+
+                                Cubo4aristaG2I = verticesCubo4[r];
+                                Cubo4aristaG2F = verticesCubo4[r + 1];
+
+                                if (!(Cubo1aristaG2I + Cubo1aristaG2F).equals(Cubo1aristaG1I + Cubo1aristaG1F)
+                                        && !(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2aristaG1I + Cubo2aristaG1F)
+                                        && !(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3aristaG1I + Cubo3aristaG1F)
+                                        && !(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4aristaG1I + Cubo4aristaG1F)) {
+
+                                    System.out.println("Grafo G2: Vertical - Encontrado");
+                                    G2Encontrado = true;
+                                    System.out.println("Cubo 1 arista: " + Cubo1aristaG2I + "-" + Cubo1aristaG2F);
+                                    System.out.println("Cubo 2 arista: " + Cubo2aristaG2I + "-" + Cubo2aristaG2F);
+                                    System.out.println("Cubo 3 arista: " + Cubo3aristaG2I + "-" + Cubo3aristaG2F);
+                                    System.out.println("Cubo 4 arista: " + Cubo4aristaG2I + "-" + Cubo4aristaG2F);
+                                    System.out.println("grado R: " + gradoVerticeR);
+                                    System.out.println("grado B: " + gradoVerticeB);
+                                    System.out.println("grado V: " + gradoVerticeV);
+                                    System.out.println("grado A: " + gradoVerticeA);
+                                    break;
+                                }
+                            }
+
+                        }
+                        if (G2Encontrado == true) {
+                            break;
+                        }
+
+                    }
+                    if (G2Encontrado == true) {
+                        break;
+                    }
+
+                }
+                if (G2Encontrado == true) {
+                    break;
+                }
+
+            }
+
+            // Ordenar posiciones de las caras
+            boolean condicion1 = (!Cubo1aristaG1I.equals(Cubo2aristaG1I)
+                    && !Cubo1aristaG1I.equals(Cubo3aristaG1I)
+                    && !Cubo1aristaG1I.equals(Cubo4aristaG1I))
+                    //
+                    && (!Cubo2aristaG1I.equals(Cubo3aristaG1I)
+                    && !Cubo2aristaG1I.equals(Cubo4aristaG1I))
+                    //
+                    && !Cubo3aristaG1I.equals(Cubo4aristaG1I);
+
+            boolean condicion2 = (!Cubo1aristaG1F.equals(Cubo2aristaG1F)
+                    && !Cubo1aristaG1F.equals(Cubo3aristaG1F)
+                    && !Cubo1aristaG1F.equals(Cubo4aristaG1F))
+                    //
+                    && (!Cubo2aristaG1F.equals(Cubo3aristaG1F)
+                    && !Cubo2aristaG1F.equals(Cubo4aristaG1F))
+                    //
+                    && !Cubo3aristaG1F.equals(Cubo4aristaG1F);
+
+            boolean condicion3 = (!Cubo1aristaG2I.equals(Cubo2aristaG2I)
+                    && !Cubo1aristaG2I.equals(Cubo3aristaG2I)
+                    && !Cubo1aristaG2I.equals(Cubo4aristaG2I))
+                    //
+                    && (!Cubo2aristaG2I.equals(Cubo3aristaG2I)
+                    && !Cubo2aristaG2I.equals(Cubo4aristaG2I))
+                    //
+                    && !Cubo3aristaG2I.equals(Cubo4aristaG2I);
+
+            boolean condicion4 = (!Cubo1aristaG2F.equals(Cubo2aristaG2F)
+                    && !Cubo1aristaG2F.equals(Cubo3aristaG2F)
+                    && !Cubo1aristaG2F.equals(Cubo4aristaG2F))
+                    //
+                    && (!Cubo2aristaG2F.equals(Cubo3aristaG2F)
+                    && !Cubo2aristaG2F.equals(Cubo4aristaG2F))
+                    //
+                    && !Cubo3aristaG2F.equals(Cubo4aristaG2F);
+
+            if (condicion1 && condicion2 && condicion3 && condicion4) {
+                System.out.println("Posición correcta");
+            } else {
+
+                // Ordenar Horizontales
+                String[] caraIzquierda = {Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                String[] caraDerecha = {Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+                String[] caraSuperior = {Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                String[] caraInferior = {Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                String Cubo1Cara6 = null;
+                String Cubo1Cara5 = null;
+                String Cubo1Cara3 = null;
+                String Cubo1Cara4 = null;
+
+                String Cubo2Cara6 = null;
+                String Cubo2Cara5 = null;
+                String Cubo2Cara3 = null;
+                String Cubo2Cara4 = null;
+
+                String Cubo3Cara6 = null;
+                String Cubo3Cara5 = null;
+                String Cubo3Cara3 = null;
+                String Cubo3Cara4 = null;
+
+                String Cubo4Cara6 = null;
+                String Cubo4Cara5 = null;
+                String Cubo4Cara3 = null;
+                String Cubo4Cara4 = null;
+
+                boolean ordenadas = false;
+
+                /* Combinaciones de un solo número:
+                1, 2, 3, 4
+
+                Combinaciones de dos números:
+                1 2, 1 3, 1 4, 2 3, 2 4, 3 4
+
+                Combinaciones de tres números:
+                1 2 3, 1 2 4, 1 3 4, 2 3 4
+
+                Combinación de cuatro números:
+                1 2 3 4
+                 */
+                // Combinación 1
+                String caraI = caraIzquierda[0];
+                caraIzquierda[0] = caraDerecha[0];
+                caraDerecha[0] = caraI;
+
+                Cubo1Cara6 = caraIzquierda[0];
+                Cubo2Cara6 = caraIzquierda[1];
+                Cubo3Cara6 = caraIzquierda[2];
+                Cubo4Cara6 = caraIzquierda[3];
+
+                Cubo1Cara5 = caraDerecha[0];
+                Cubo2Cara5 = caraDerecha[1];
+                Cubo3Cara5 = caraDerecha[2];
+                Cubo4Cara5 = caraDerecha[3];
+
+                boolean condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                        && !Cubo1Cara6.equals(Cubo3Cara6)
+                        && !Cubo1Cara6.equals(Cubo4Cara6))
+                        //
+                        && (!Cubo2Cara6.equals(Cubo3Cara6)
+                        && !Cubo2Cara6.equals(Cubo4Cara6))
+                        //
+                        && !Cubo3Cara6.equals(Cubo4Cara6);
+                if (condicionHz) {
+                    ordenadas = true;
+                    System.out.println("Posiciones Corregidas");
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 2
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[1];
+                    caraIzquierda[1] = caraDerecha[1];
+                    caraDerecha[1] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 3
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[2];
+                    caraIzquierda[2] = caraDerecha[2];
+                    caraDerecha[2] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 4
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[3];
+                    caraIzquierda[3] = caraDerecha[3];
+                    caraDerecha[3] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 5
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[0];
+                    caraIzquierda[0] = caraDerecha[0];
+                    caraDerecha[0] = caraI;
+
+                    caraI = caraIzquierda[1];
+                    caraIzquierda[1] = caraDerecha[1];
+                    caraDerecha[1] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 6
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[0];
+                    caraIzquierda[0] = caraDerecha[0];
+                    caraDerecha[0] = caraI;
+
+                    caraI = caraIzquierda[2];
+                    caraIzquierda[2] = caraDerecha[2];
+                    caraDerecha[2] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 7
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[0];
+                    caraIzquierda[0] = caraDerecha[0];
+                    caraDerecha[0] = caraI;
+
+                    caraI = caraIzquierda[3];
+                    caraIzquierda[3] = caraDerecha[3];
+                    caraDerecha[3] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 8
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[1];
+                    caraIzquierda[1] = caraDerecha[1];
+                    caraDerecha[1] = caraI;
+
+                    caraI = caraIzquierda[2];
+                    caraIzquierda[2] = caraDerecha[2];
+                    caraDerecha[2] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 9
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[1];
+                    caraIzquierda[1] = caraDerecha[1];
+                    caraDerecha[1] = caraI;
+
+                    caraI = caraIzquierda[3];
+                    caraIzquierda[3] = caraDerecha[3];
+                    caraDerecha[3] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 10
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[2];
+                    caraIzquierda[2] = caraDerecha[2];
+                    caraDerecha[2] = caraI;
+
+                    caraI = caraIzquierda[3];
+                    caraIzquierda[3] = caraDerecha[3];
+                    caraDerecha[3] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 11
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[0];
+                    caraIzquierda[0] = caraDerecha[0];
+                    caraDerecha[0] = caraI;
+
+                    caraI = caraIzquierda[1];
+                    caraIzquierda[1] = caraDerecha[1];
+                    caraDerecha[1] = caraI;
+
+                    caraI = caraIzquierda[2];
+                    caraIzquierda[2] = caraDerecha[2];
+                    caraDerecha[2] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 12
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[0];
+                    caraIzquierda[0] = caraDerecha[0];
+                    caraDerecha[0] = caraI;
+
+                    caraI = caraIzquierda[1];
+                    caraIzquierda[1] = caraDerecha[1];
+                    caraDerecha[1] = caraI;
+
+                    caraI = caraIzquierda[3];
+                    caraIzquierda[3] = caraDerecha[3];
+                    caraDerecha[3] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 13
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[0];
+                    caraIzquierda[0] = caraDerecha[0];
+                    caraDerecha[0] = caraI;
+
+                    caraI = caraIzquierda[2];
+                    caraIzquierda[2] = caraDerecha[2];
+                    caraDerecha[2] = caraI;
+
+                    caraI = caraIzquierda[3];
+                    caraIzquierda[3] = caraDerecha[3];
+                    caraDerecha[3] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 14
+
+                    caraIzquierda = new String[]{Cubo1aristaG1I, Cubo2aristaG1I, Cubo3aristaG1I, Cubo4aristaG1I};
+                    caraDerecha = new String[]{Cubo1aristaG1F, Cubo2aristaG1F, Cubo3aristaG1F, Cubo4aristaG1F};
+
+                    caraI = caraIzquierda[1];
+                    caraIzquierda[1] = caraDerecha[1];
+                    caraDerecha[1] = caraI;
+
+                    caraI = caraIzquierda[2];
+                    caraIzquierda[2] = caraDerecha[2];
+                    caraDerecha[2] = caraI;
+
+                    caraI = caraIzquierda[3];
+                    caraIzquierda[3] = caraDerecha[3];
+                    caraDerecha[3] = caraI;
+
+                    Cubo1Cara6 = caraIzquierda[0];
+                    Cubo2Cara6 = caraIzquierda[1];
+                    Cubo3Cara6 = caraIzquierda[2];
+                    Cubo4Cara6 = caraIzquierda[3];
+
+                    Cubo1Cara5 = caraDerecha[0];
+                    Cubo2Cara5 = caraDerecha[1];
+                    Cubo3Cara5 = caraDerecha[2];
+                    Cubo4Cara5 = caraDerecha[3];
+
+                    condicionHz = (!Cubo1Cara6.equals(Cubo2Cara6)
+                            && !Cubo1Cara6.equals(Cubo3Cara6)
+                            && !Cubo1Cara6.equals(Cubo4Cara6))
+                            //
+                            && (!Cubo2Cara6.equals(Cubo3Cara6)
+                            && !Cubo2Cara6.equals(Cubo4Cara6))
+                            //
+                            && !Cubo3Cara6.equals(Cubo4Cara6);
+                    if (condicionHz) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                System.out.println("Horizontales");
+                System.out.println(Cubo1Cara6 + "-" + Cubo1Cara5);
+                System.out.println(Cubo2Cara6 + "-" + Cubo2Cara5);
+                System.out.println(Cubo3Cara6 + "-" + Cubo3Cara5);
+                System.out.println(Cubo4Cara6 + "-" + Cubo4Cara5);
+
+                // Ordenar Verticales
+                ordenadas = false;
+
+                /* Combinaciones de un solo número:
+                1, 2, 3, 4
+
+                Combinaciones de dos números:
+                1 2, 1 3, 1 4, 2 3, 2 4, 3 4
+
+                Combinaciones de tres números:
+                1 2 3, 1 2 4, 1 3 4, 2 3 4
+
+                Combinación de cuatro números:
+                1 2 3 4
+                 */
+                // Combinación 1
+                String caraS = caraSuperior[0];
+                caraSuperior[0] = caraInferior[0];
+                caraInferior[0] = caraS;
+
+                Cubo1Cara3 = caraSuperior[0];
+                Cubo2Cara3 = caraSuperior[1];
+                Cubo3Cara3 = caraSuperior[2];
+                Cubo4Cara3 = caraSuperior[3];
+
+                Cubo1Cara4 = caraInferior[0];
+                Cubo2Cara4 = caraInferior[1];
+                Cubo3Cara4 = caraInferior[2];
+                Cubo4Cara4 = caraInferior[3];
+
+                boolean condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                        && !Cubo1Cara3.equals(Cubo3Cara3)
+                        && !Cubo1Cara3.equals(Cubo4Cara3))
+                        //
+                        && (!Cubo2Cara3.equals(Cubo3Cara3)
+                        && !Cubo2Cara3.equals(Cubo4Cara3))
+                        //
+                        && !Cubo3Cara3.equals(Cubo4Cara3);
+                if (condicionVt) {
+                    ordenadas = true;
+                    System.out.println("Posiciones Corregidas");
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 2
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[1];
+                    caraSuperior[1] = caraInferior[1];
+                    caraInferior[1] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 3
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[2];
+                    caraSuperior[2] = caraInferior[2];
+                    caraInferior[2] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 4
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[3];
+                    caraSuperior[3] = caraInferior[3];
+                    caraInferior[3] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 5
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[0];
+                    caraSuperior[0] = caraInferior[0];
+                    caraInferior[0] = caraS;
+
+                    caraS = caraSuperior[1];
+                    caraSuperior[1] = caraInferior[1];
+                    caraInferior[1] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 6
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[0];
+                    caraSuperior[0] = caraInferior[0];
+                    caraInferior[0] = caraS;
+
+                    caraS = caraSuperior[2];
+                    caraSuperior[2] = caraInferior[2];
+                    caraInferior[2] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 7
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[0];
+                    caraSuperior[0] = caraInferior[0];
+                    caraInferior[0] = caraS;
+
+                    caraS = caraSuperior[3];
+                    caraSuperior[3] = caraInferior[3];
+                    caraInferior[3] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 8
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[1];
+                    caraSuperior[1] = caraInferior[1];
+                    caraInferior[1] = caraS;
+
+                    caraS = caraSuperior[2];
+                    caraSuperior[2] = caraInferior[2];
+                    caraInferior[2] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 9
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[1];
+                    caraSuperior[1] = caraInferior[1];
+                    caraInferior[1] = caraS;
+
+                    caraS = caraSuperior[3];
+                    caraSuperior[3] = caraInferior[3];
+                    caraInferior[3] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 10
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[2];
+                    caraSuperior[2] = caraInferior[2];
+                    caraInferior[2] = caraS;
+
+                    caraS = caraSuperior[3];
+                    caraSuperior[3] = caraInferior[3];
+                    caraInferior[3] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 11
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[0];
+                    caraSuperior[0] = caraInferior[0];
+                    caraInferior[0] = caraS;
+
+                    caraS = caraSuperior[1];
+                    caraSuperior[1] = caraInferior[1];
+                    caraInferior[1] = caraS;
+
+                    caraS = caraSuperior[2];
+                    caraSuperior[2] = caraInferior[2];
+                    caraInferior[2] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 12
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[0];
+                    caraSuperior[0] = caraInferior[0];
+                    caraInferior[0] = caraS;
+
+                    caraS = caraSuperior[1];
+                    caraSuperior[1] = caraInferior[1];
+                    caraInferior[1] = caraS;
+
+                    caraS = caraSuperior[3];
+                    caraSuperior[3] = caraInferior[3];
+                    caraInferior[3] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 13
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[0];
+                    caraSuperior[0] = caraInferior[0];
+                    caraInferior[0] = caraS;
+
+                    caraS = caraSuperior[2];
+                    caraSuperior[2] = caraInferior[2];
+                    caraInferior[2] = caraS;
+
+                    caraS = caraSuperior[3];
+                    caraSuperior[3] = caraInferior[3];
+                    caraInferior[3] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                if (ordenadas == false) {
+                    // Combinación 14
+
+                    caraSuperior = new String[]{Cubo1aristaG2I, Cubo2aristaG2I, Cubo3aristaG2I, Cubo4aristaG2I};
+                    caraInferior = new String[]{Cubo1aristaG2F, Cubo2aristaG2F, Cubo3aristaG2F, Cubo4aristaG2F};
+
+                    caraS = caraSuperior[1];
+                    caraSuperior[1] = caraInferior[1];
+                    caraInferior[1] = caraS;
+
+                    caraS = caraSuperior[2];
+                    caraSuperior[2] = caraInferior[2];
+                    caraInferior[2] = caraS;
+
+                    caraS = caraSuperior[3];
+                    caraSuperior[3] = caraInferior[3];
+                    caraInferior[3] = caraS;
+
+                    Cubo1Cara3 = caraSuperior[0];
+                    Cubo2Cara3 = caraSuperior[1];
+                    Cubo3Cara3 = caraSuperior[2];
+                    Cubo4Cara3 = caraSuperior[3];
+
+                    Cubo1Cara4 = caraInferior[0];
+                    Cubo2Cara4 = caraInferior[1];
+                    Cubo3Cara4 = caraInferior[2];
+                    Cubo4Cara4 = caraInferior[3];
+
+                    condicionVt = (!Cubo1Cara3.equals(Cubo2Cara3)
+                            && !Cubo1Cara3.equals(Cubo3Cara3)
+                            && !Cubo1Cara3.equals(Cubo4Cara3))
+                            //
+                            && (!Cubo2Cara3.equals(Cubo3Cara3)
+                            && !Cubo2Cara3.equals(Cubo4Cara3))
+                            //
+                            && !Cubo3Cara3.equals(Cubo4Cara3);
+                    if (condicionVt) {
+                        ordenadas = true;
+                        System.out.println("Posiciones Corregidas");
+                    }
+                }
+
+                System.out.println("Verticales");
+                System.out.println(Cubo1Cara3 + "-" + Cubo1Cara4);
+                System.out.println(Cubo2Cara3 + "-" + Cubo2Cara4);
+                System.out.println(Cubo3Cara3 + "-" + Cubo3Cara4);
+                System.out.println(Cubo4Cara3 + "-" + Cubo4Cara4);
+
+                // Asignar los colores a los cubos del juego
+                // CUBO 1
+                // Cara Frontal y Trasera (NO ES RELEVANTE)
+                if (!(Cubo1aristaG1I + Cubo1aristaG1F).equals(Cubo1arista1I + Cubo1arista1F)
+                        && !(Cubo1aristaG2I + Cubo1aristaG2F).equals(Cubo1arista1I + Cubo1arista1F)) {
+                    Cubo1C1J.setText(Cubo1arista1I);
+                    Cubo1C2J.setText(Cubo1arista1F);
+                } else if (!(Cubo1aristaG1I + Cubo1aristaG1F).equals(Cubo1arista2I + Cubo1arista2F)
+                        && !(Cubo1aristaG2I + Cubo1aristaG2F).equals(Cubo1arista2I + Cubo1arista2F)) {
+                    Cubo1C1J.setText(Cubo1arista2I);
+                    Cubo1C2J.setText(Cubo1arista2F);
+                } else if (!(Cubo1aristaG1I + Cubo1aristaG1F).equals(Cubo1arista3I + Cubo1arista3F)
+                        && !(Cubo1aristaG2I + Cubo1aristaG2F).equals(Cubo1arista3I + Cubo1arista3F)) {
+                    Cubo1C1J.setText(Cubo1arista3I);
+                    Cubo1C2J.setText(Cubo1arista3F);
+                }
+
+                System.out.println("Aristas restantes: ");
+                System.out.println("Cubo 1: " + Cubo1C1J.getText() + "-" + Cubo1C2J.getText());
+
+                // Cara Frontal
+                if (Cubo1C1J.getText().equals("R")) {
+                    Cubo1C1J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo1C1J.getText().equals("B")) {
+                    Cubo1C1J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo1C1J.getText().equals("V")) {
+                    Cubo1C1J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo1C1J.getText().equals("A")) {
+                    Cubo1C1J.setBackground(new Color(255, 204, 0));
+                }
+                // Cara Trasera
+                if (Cubo1C2J.getText().equals("R")) {
+                    Cubo1C2J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo1C2J.getText().equals("B")) {
+                    Cubo1C2J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo1C2J.getText().equals("V")) {
+                    Cubo1C2J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo1C2J.getText().equals("A")) {
+                    Cubo1C2J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara izquierda
+                Cubo1C6J.setText(Cubo1Cara6);
+
+                if (Cubo1Cara6.equals("R")) {
+                    Cubo1C6J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo1Cara6.equals("B")) {
+                    Cubo1C6J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo1Cara6.equals("V")) {
+                    Cubo1C6J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo1Cara6.equals("A")) {
+                    Cubo1C6J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara derecha
+                Cubo1C5J.setText(Cubo1Cara5);
+                if (Cubo1Cara5.equals("R")) {
+                    Cubo1C5J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo1Cara5.equals("B")) {
+                    Cubo1C5J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo1Cara5.equals("V")) {
+                    Cubo1C5J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo1Cara5.equals("A")) {
+                    Cubo1C5J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara superior
+                Cubo1C3J.setText(Cubo1Cara3);
+                if (Cubo1Cara3.equals("R")) {
+                    Cubo1C3J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo1Cara3.equals("B")) {
+                    Cubo1C3J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo1Cara3.equals("V")) {
+                    Cubo1C3J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo1Cara3.equals("A")) {
+                    Cubo1C3J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara inferior
+                Cubo1C4J.setText(Cubo1Cara4);
+                if (Cubo1Cara4.equals("R")) {
+                    Cubo1C4J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo1Cara4.equals("B")) {
+                    Cubo1C4J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo1Cara4.equals("V")) {
+                    Cubo1C4J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo1Cara4.equals("A")) {
+                    Cubo1C4J.setBackground(new Color(255, 204, 0));
+                }
+
+                // CUBO 2
+                // Cara Frontal y Trasera (NO ES RELEVANTE)
+                if (!(Cubo2aristaG1I + Cubo2aristaG1F).equals(Cubo2arista1I + Cubo2arista1F)
+                        && !(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2arista1I + Cubo2arista1F)) {
+                    Cubo2C1J.setText(Cubo2arista1I);
+                    Cubo2C2J.setText(Cubo2arista1F);
+                } else if (!(Cubo2aristaG1I + Cubo2aristaG1F).equals(Cubo2arista2I + Cubo2arista2F)
+                        && !(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2arista2I + Cubo2arista2F)) {
+                    Cubo2C1J.setText(Cubo2arista2I);
+                    Cubo2C2J.setText(Cubo2arista2F);
+                } else if (!(Cubo2aristaG1I + Cubo2aristaG1F).equals(Cubo2arista3I + Cubo2arista3F)
+                        && !(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2arista3I + Cubo2arista3F)) {
+                    Cubo2C1J.setText(Cubo2arista3I);
+                    Cubo2C2J.setText(Cubo2arista3F);
+                }
+
+                System.out.println("Cubo 2: " + Cubo2C1J.getText() + "-" + Cubo2C2J.getText());
+
+                // Cara Frontal
+                if (Cubo2C1J.getText().equals("R")) {
+                    Cubo2C1J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo2C1J.getText().equals("B")) {
+                    Cubo2C1J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo2C1J.getText().equals("V")) {
+                    Cubo2C1J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo2C1J.getText().equals("A")) {
+                    Cubo2C1J.setBackground(new Color(255, 204, 0));
+                }
+                // Cara Trasera
+                if (Cubo2C2J.getText().equals("R")) {
+                    Cubo2C2J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo2C2J.getText().equals("B")) {
+                    Cubo2C2J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo2C2J.getText().equals("V")) {
+                    Cubo2C2J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo2C2J.getText().equals("A")) {
+                    Cubo2C2J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara izquierda
+                Cubo2C6J.setText(Cubo2Cara6);
+                if (Cubo2Cara6.equals("R")) {
+                    Cubo2C6J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo2Cara6.equals("B")) {
+                    Cubo2C6J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo2Cara6.equals("V")) {
+                    Cubo2C6J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo2Cara6.equals("A")) {
+                    Cubo2C6J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara derecha
+                Cubo2C5J.setText(Cubo2Cara5);
+                if (Cubo2Cara5.equals("R")) {
+                    Cubo2C5J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo2Cara5.equals("B")) {
+                    Cubo2C5J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo2Cara5.equals("V")) {
+                    Cubo2C5J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo2Cara5.equals("A")) {
+                    Cubo2C5J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara superior
+                Cubo2C3J.setText(Cubo2Cara3);
+                if (Cubo2Cara3.equals("R")) {
+                    Cubo2C3J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo2Cara3.equals("B")) {
+                    Cubo2C3J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo2Cara3.equals("V")) {
+                    Cubo2C3J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo2Cara3.equals("A")) {
+                    Cubo2C3J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara inferior
+                Cubo2C4J.setText(Cubo2Cara4);
+                if (Cubo2Cara4.equals("R")) {
+                    Cubo2C4J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo2Cara4.equals("B")) {
+                    Cubo2C4J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo2Cara4.equals("V")) {
+                    Cubo2C4J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo2Cara4.equals("A")) {
+                    Cubo2C4J.setBackground(new Color(255, 204, 0));
+                }
+
+                // CUBO 3
+                // Cara Frontal y Trasera (NO ES RELEVANTE)
+                if (!(Cubo3aristaG1I + Cubo3aristaG1F).equals(Cubo3arista1I + Cubo3arista1F)
+                        && !(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3arista1I + Cubo3arista1F)) {
+                    Cubo3C1J.setText(Cubo3arista1I);
+                    Cubo3C2J.setText(Cubo3arista1F);
+                } else if (!(Cubo3aristaG1I + Cubo3aristaG1F).equals(Cubo3arista2I + Cubo3arista2F)
+                        && !(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3arista2I + Cubo3arista2F)) {
+                    Cubo3C1J.setText(Cubo3arista2I);
+                    Cubo3C2J.setText(Cubo3arista2F);
+                } else if (!(Cubo3aristaG1I + Cubo3aristaG1F).equals(Cubo3arista3I + Cubo3arista3F)
+                        && !(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3arista3I + Cubo3arista3F)) {
+                    Cubo3C1J.setText(Cubo3arista3I);
+                    Cubo3C2J.setText(Cubo3arista3F);
+                }
+
+                System.out.println("Cubo 3: " + Cubo3C1J.getText() + "-" + Cubo3C2J.getText());
+
+                // Cara Frontal
+                if (Cubo3C1J.getText().equals("R")) {
+                    Cubo3C1J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo3C1J.getText().equals("B")) {
+                    Cubo3C1J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo3C1J.getText().equals("V")) {
+                    Cubo3C1J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo3C1J.getText().equals("A")) {
+                    Cubo3C1J.setBackground(new Color(255, 204, 0));
+                }
+                // Cara Trasera
+                if (Cubo3C2J.getText().equals("R")) {
+                    Cubo3C2J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo3C2J.getText().equals("B")) {
+                    Cubo3C2J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo3C2J.getText().equals("V")) {
+                    Cubo3C2J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo3C2J.getText().equals("A")) {
+                    Cubo3C2J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara izquierda
+                Cubo3C6J.setText(Cubo3Cara6);
+                if (Cubo3Cara6.equals("R")) {
+                    Cubo3C6J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo3Cara6.equals("B")) {
+                    Cubo3C6J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo3Cara6.equals("V")) {
+                    Cubo3C6J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo3Cara6.equals("A")) {
+                    Cubo3C6J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara derecha
+                Cubo3C5J.setText(Cubo3Cara5);
+                if (Cubo3Cara5.equals("R")) {
+                    Cubo3C5J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo3Cara5.equals("B")) {
+                    Cubo3C5J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo3Cara5.equals("V")) {
+                    Cubo3C5J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo3Cara5.equals("A")) {
+                    Cubo3C5J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara superior
+                Cubo3C3J.setText(Cubo3Cara3);
+                if (Cubo3Cara3.equals("R")) {
+                    Cubo3C3J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo3Cara3.equals("B")) {
+                    Cubo3C3J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo3Cara3.equals("V")) {
+                    Cubo3C3J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo3Cara3.equals("A")) {
+                    Cubo3C3J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara inferior
+                Cubo3C4J.setText(Cubo3Cara4);
+                if (Cubo3Cara4.equals("R")) {
+                    Cubo3C4J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo3Cara4.equals("B")) {
+                    Cubo3C4J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo3Cara4.equals("V")) {
+                    Cubo3C4J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo3Cara4.equals("A")) {
+                    Cubo3C4J.setBackground(new Color(255, 204, 0));
+                }
+
+                // CUBO 4
+                // Cara Frontal y Trasera (NO ES RELEVANTE)
+                if (!(Cubo4aristaG1I + Cubo4aristaG1F).equals(Cubo4arista1I + Cubo4arista1F)
+                        && !(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4arista1I + Cubo4arista1F)) {
+                    Cubo4C1J.setText(Cubo4arista1I);
+                    Cubo4C2J.setText(Cubo4arista1F);
+                } else if (!(Cubo4aristaG1I + Cubo4aristaG1F).equals(Cubo4arista2I + Cubo4arista2F)
+                        && !(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4arista2I + Cubo4arista2F)) {
+                    Cubo4C1J.setText(Cubo4arista2I);
+                    Cubo4C2J.setText(Cubo4arista2F);
+                } else if (!(Cubo4aristaG1I + Cubo4aristaG1F).equals(Cubo4arista3I + Cubo4arista3F)
+                        && !(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4arista3I + Cubo4arista3F)) {
+                    Cubo4C1J.setText(Cubo4arista3I);
+                    Cubo4C2J.setText(Cubo4arista3F);
+                }
+
+                System.out.println("Cubo 4: " + Cubo4C1J.getText() + "-" + Cubo4C2J.getText());
+
+                // Cara Frontal
+                if (Cubo4C1J.getText().equals("R")) {
+                    Cubo4C1J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo4C1J.getText().equals("B")) {
+                    Cubo4C1J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo4C1J.getText().equals("V")) {
+                    Cubo4C1J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo4C1J.getText().equals("A")) {
+                    Cubo4C1J.setBackground(new Color(255, 204, 0));
+                }
+                // Cara Trasera
+                if (Cubo4C2J.getText().equals("R")) {
+                    Cubo4C2J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo4C2J.getText().equals("B")) {
+                    Cubo4C2J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo4C2J.getText().equals("V")) {
+                    Cubo4C2J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo4C2J.getText().equals("A")) {
+                    Cubo4C2J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara izquierda
+                Cubo4C6J.setText(Cubo4Cara6);
+                if (Cubo4Cara6.equals("R")) {
+                    Cubo4C6J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo4Cara6.equals("B")) {
+                    Cubo4C6J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo4Cara6.equals("V")) {
+                    Cubo4C6J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo4Cara6.equals("A")) {
+                    Cubo4C6J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara derecha
+                Cubo4C5J.setText(Cubo4Cara5);
+                if (Cubo4Cara5.equals("R")) {
+                    Cubo4C5J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo4Cara5.equals("B")) {
+                    Cubo4C5J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo4Cara5.equals("V")) {
+                    Cubo4C5J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo4Cara5.equals("A")) {
+                    Cubo4C5J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara superior
+                Cubo4C3J.setText(Cubo4Cara3);
+                if (Cubo4Cara3.equals("R")) {
+                    Cubo4C3J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo4Cara3.equals("B")) {
+                    Cubo4C3J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo4Cara3.equals("V")) {
+                    Cubo4C3J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo4Cara3.equals("A")) {
+                    Cubo4C3J.setBackground(new Color(255, 204, 0));
+                }
+
+                // Cara inferior
+                Cubo4C4J.setText(Cubo4Cara4);
+                if (Cubo4Cara4.equals("R")) {
+                    Cubo4C4J.setBackground(new Color(136, 29, 60));
+                } else if (Cubo4Cara4.equals("B")) {
+                    Cubo4C4J.setBackground(new Color(255, 255, 255));
+                } else if (Cubo4Cara4.equals("V")) {
+                    Cubo4C4J.setBackground(new Color(45, 160, 106));
+                } else if (Cubo4Cara4.equals("A")) {
+                    Cubo4C4J.setBackground(new Color(255, 204, 0));
+                }
+
+            }
+            resueltoLbl.setVisible(true);
+            
+        } else {
+            resuelto = false;
+            resueltoLbl.setVisible(false);
+            JOptionPane.showMessageDialog(null, "Con esta combinación de colores NO es posible\n"
+                    + "encontrar una solución, intenta otra combinación");
+        }
+    }
 
     private void derechaCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_derechaCubo1ActionPerformed
         // TODO add your handling code here:
@@ -4692,6 +6698,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo1C1J.setText(Cubo1C6N);
         Cubo1C1J.setBackground(Cubo1C6B);
+        
+        actualTorre();
 
     }//GEN-LAST:event_derechaCubo1ActionPerformed
 
@@ -4714,6 +6722,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo1C2J.setText(Cubo1C4N);
         Cubo1C2J.setBackground(Cubo1C4B);
+        
+        actualTorre();
 
 
     }//GEN-LAST:event_abajoCubo1ActionPerformed
@@ -4737,6 +6747,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo1C6J.setText(Cubo1C4N);
         Cubo1C6J.setBackground(Cubo1C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_horarioCubo1ActionPerformed
 
     private void antihorarioCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antihorarioCubo1ActionPerformed
@@ -4758,6 +6770,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo1C5J.setText(Cubo1C4N);
         Cubo1C5J.setBackground(Cubo1C4B);
+        
+        actualTorre();
 
     }//GEN-LAST:event_antihorarioCubo1ActionPerformed
 
@@ -4780,6 +6794,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo2C2J.setText(Cubo2C6N);
         Cubo2C2J.setBackground(Cubo2C6B);
+        
+        actualTorre();
     }//GEN-LAST:event_izquierdaCubo2ActionPerformed
 
     private void arribaCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arribaCubo2ActionPerformed
@@ -4801,6 +6817,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo2C1J.setText(Cubo2C4N);
         Cubo2C1J.setBackground(Cubo2C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_arribaCubo2ActionPerformed
 
     private void derechaCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_derechaCubo2ActionPerformed
@@ -4822,6 +6840,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo2C1J.setText(Cubo2C6N);
         Cubo2C1J.setBackground(Cubo2C6B);
+        
+        actualTorre();
     }//GEN-LAST:event_derechaCubo2ActionPerformed
 
     private void abajoCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abajoCubo2ActionPerformed
@@ -4843,6 +6863,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo2C2J.setText(Cubo2C4N);
         Cubo2C2J.setBackground(Cubo2C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_abajoCubo2ActionPerformed
 
     private void horarioCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horarioCubo2ActionPerformed
@@ -4864,6 +6886,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo2C6J.setText(Cubo2C4N);
         Cubo2C6J.setBackground(Cubo2C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_horarioCubo2ActionPerformed
 
     private void antihorarioCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antihorarioCubo2ActionPerformed
@@ -4885,6 +6909,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo2C5J.setText(Cubo2C4N);
         Cubo2C5J.setBackground(Cubo2C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_antihorarioCubo2ActionPerformed
 
     private void izquierdaCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_izquierdaCubo3ActionPerformed
@@ -4906,6 +6932,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo3C2J.setText(Cubo3C6N);
         Cubo3C2J.setBackground(Cubo3C6B);
+        
+        actualTorre();
     }//GEN-LAST:event_izquierdaCubo3ActionPerformed
 
     private void arribaCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arribaCubo3ActionPerformed
@@ -4927,6 +6955,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo3C1J.setText(Cubo3C4N);
         Cubo3C1J.setBackground(Cubo3C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_arribaCubo3ActionPerformed
 
     private void derechaCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_derechaCubo3ActionPerformed
@@ -4948,6 +6978,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo3C1J.setText(Cubo3C6N);
         Cubo3C1J.setBackground(Cubo3C6B);
+        
+        actualTorre();
     }//GEN-LAST:event_derechaCubo3ActionPerformed
 
     private void abajoCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abajoCubo3ActionPerformed
@@ -4969,6 +7001,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo3C2J.setText(Cubo3C4N);
         Cubo3C2J.setBackground(Cubo3C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_abajoCubo3ActionPerformed
 
     private void horarioCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horarioCubo3ActionPerformed
@@ -4990,6 +7024,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo3C6J.setText(Cubo3C4N);
         Cubo3C6J.setBackground(Cubo3C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_horarioCubo3ActionPerformed
 
     private void antihorarioCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antihorarioCubo3ActionPerformed
@@ -5011,6 +7047,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo3C5J.setText(Cubo3C4N);
         Cubo3C5J.setBackground(Cubo3C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_antihorarioCubo3ActionPerformed
 
     private void izquierdaCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_izquierdaCubo4ActionPerformed
@@ -5032,6 +7070,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo4C2J.setText(Cubo4C6N);
         Cubo4C2J.setBackground(Cubo4C6B);
+        
+        actualTorre();
     }//GEN-LAST:event_izquierdaCubo4ActionPerformed
 
     private void arribaCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arribaCubo4ActionPerformed
@@ -5053,6 +7093,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo4C1J.setText(Cubo4C4N);
         Cubo4C1J.setBackground(Cubo4C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_arribaCubo4ActionPerformed
 
     private void derechaCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_derechaCubo4ActionPerformed
@@ -5074,6 +7116,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo4C1J.setText(Cubo4C6N);
         Cubo4C1J.setBackground(Cubo4C6B);
+        
+        actualTorre();
     }//GEN-LAST:event_derechaCubo4ActionPerformed
 
     private void abajoCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abajoCubo4ActionPerformed
@@ -5095,6 +7139,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo4C2J.setText(Cubo4C4N);
         Cubo4C2J.setBackground(Cubo4C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_abajoCubo4ActionPerformed
 
     private void horarioCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horarioCubo4ActionPerformed
@@ -5116,6 +7162,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo4C6J.setText(Cubo4C4N);
         Cubo4C6J.setBackground(Cubo4C4B);
+        
+        actualTorre();
 
     }//GEN-LAST:event_horarioCubo4ActionPerformed
 
@@ -5138,6 +7186,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo4C5J.setText(Cubo4C4N);
         Cubo4C5J.setBackground(Cubo4C4B);
+        
+        actualTorre();
     }//GEN-LAST:event_antihorarioCubo4ActionPerformed
 
     private void comprobarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprobarBtnActionPerformed
@@ -5171,121 +7221,107 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 && !Cubo3C6J.getBackground().equals(Cubo4C6J.getBackground()));
 
         if (condicion1 && condicion2 && condicion3 && condicion4) {
-            // Actualizar grafica de vistas laterales de la torre
-            // Cubo 1
-            Cubo1C3T.setText(Cubo1C3J.getText());
-            Cubo1C3T.setBackground(Cubo1C3J.getBackground());
-
-            Cubo1C4T.setText(Cubo1C4J.getText());
-            Cubo1C4T.setBackground(Cubo1C4J.getBackground());
-
-            Cubo1C5T.setText(Cubo1C5J.getText());
-            Cubo1C5T.setBackground(Cubo1C5J.getBackground());
-
-            Cubo1C6T.setText(Cubo1C6J.getText());
-            Cubo1C6T.setBackground(Cubo1C6J.getBackground());
-
-            // Cubo 2
-            Cubo2C3T.setText(Cubo2C3J.getText());
-            Cubo2C3T.setBackground(Cubo2C3J.getBackground());
-
-            Cubo2C4T.setText(Cubo2C4J.getText());
-            Cubo2C4T.setBackground(Cubo2C4J.getBackground());
-
-            Cubo2C5T.setText(Cubo2C5J.getText());
-            Cubo2C5T.setBackground(Cubo2C5J.getBackground());
-
-            Cubo2C6T.setText(Cubo2C6J.getText());
-            Cubo2C6T.setBackground(Cubo2C6J.getBackground());
-
-            // Cubo 3
-            Cubo3C3T.setText(Cubo3C3J.getText());
-            Cubo3C3T.setBackground(Cubo3C3J.getBackground());
-
-            Cubo3C4T.setText(Cubo3C4J.getText());
-            Cubo3C4T.setBackground(Cubo3C4J.getBackground());
-
-            Cubo3C5T.setText(Cubo3C5J.getText());
-            Cubo3C5T.setBackground(Cubo3C5J.getBackground());
-
-            Cubo3C6T.setText(Cubo3C6J.getText());
-            Cubo3C6T.setBackground(Cubo3C6J.getBackground());
-
-            // Cubo 4
-            Cubo4C3T.setText(Cubo4C3J.getText());
-            Cubo4C3T.setBackground(Cubo4C3J.getBackground());
-
-            Cubo4C4T.setText(Cubo4C4J.getText());
-            Cubo4C4T.setBackground(Cubo4C4J.getBackground());
-
-            Cubo4C5T.setText(Cubo4C5J.getText());
-            Cubo4C5T.setBackground(Cubo4C5J.getBackground());
-
-            Cubo4C6T.setText(Cubo4C6J.getText());
-            Cubo4C6T.setBackground(Cubo4C6J.getBackground());
-
+            actualTorre();
             resueltoLbl.setVisible(true);
-            JOptionPane.showMessageDialog(null, "Felicidades, resolviste el juego!");
+            resuelto = true;
+            Object[] options = {"Sí, Por Favor",
+                "No, gracias"};
+            int yes = JOptionPane.showOptionDialog(null,
+                    "Felicidades, resolviste el juego!\n"
+                    + " Deseas ver la explicación?",
+                    "Explicación",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.QUESTION_MESSAGE,
+                    null,
+                    options,
+                    options[0]);
+
+            if (JOptionPane.YES_OPTION == yes) {
+                jTabbedPane1.setSelectedIndex(2);
+                existeSolucion.setText("SI existe una solución");
+                existeSolucion.setForeground(new Color(0, 153, 0));
+            } else {
+
+            }
+
         } else {
-            // Actualizar grafica de vistas laterales de la torre
-            // Cubo 1
-            Cubo1C3T.setText(Cubo1C3J.getText());
-            Cubo1C3T.setBackground(Cubo1C3J.getBackground());
-
-            Cubo1C4T.setText(Cubo1C4J.getText());
-            Cubo1C4T.setBackground(Cubo1C4J.getBackground());
-
-            Cubo1C5T.setText(Cubo1C5J.getText());
-            Cubo1C5T.setBackground(Cubo1C5J.getBackground());
-
-            Cubo1C6T.setText(Cubo1C6J.getText());
-            Cubo1C6T.setBackground(Cubo1C6J.getBackground());
-
-            // Cubo 2
-            Cubo2C3T.setText(Cubo2C3J.getText());
-            Cubo2C3T.setBackground(Cubo2C3J.getBackground());
-
-            Cubo2C4T.setText(Cubo2C4J.getText());
-            Cubo2C4T.setBackground(Cubo2C4J.getBackground());
-
-            Cubo2C5T.setText(Cubo2C5J.getText());
-            Cubo2C5T.setBackground(Cubo2C5J.getBackground());
-
-            Cubo2C6T.setText(Cubo2C6J.getText());
-            Cubo2C6T.setBackground(Cubo2C6J.getBackground());
-
-            // Cubo 3
-            Cubo3C3T.setText(Cubo3C3J.getText());
-            Cubo3C3T.setBackground(Cubo3C3J.getBackground());
-
-            Cubo3C4T.setText(Cubo3C4J.getText());
-            Cubo3C4T.setBackground(Cubo3C4J.getBackground());
-
-            Cubo3C5T.setText(Cubo3C5J.getText());
-            Cubo3C5T.setBackground(Cubo3C5J.getBackground());
-
-            Cubo3C6T.setText(Cubo3C6J.getText());
-            Cubo3C6T.setBackground(Cubo3C6J.getBackground());
-
-            // Cubo 4
-            Cubo4C3T.setText(Cubo4C3J.getText());
-            Cubo4C3T.setBackground(Cubo4C3J.getBackground());
-
-            Cubo4C4T.setText(Cubo4C4J.getText());
-            Cubo4C4T.setBackground(Cubo4C4J.getBackground());
-
-            Cubo4C5T.setText(Cubo4C5J.getText());
-            Cubo4C5T.setBackground(Cubo4C5J.getBackground());
-
-            Cubo4C6T.setText(Cubo4C6J.getText());
-            Cubo4C6T.setBackground(Cubo4C6J.getBackground());
-            
+            actualTorre();
             resueltoLbl.setVisible(false);
-            JOptionPane.showMessageDialog(null, "Esta NO es una solución válida, sigue intentando");
+            resuelto = false;
+            JOptionPane.showMessageDialog(null, "La combinación NO es válida, puedes seguir\n"
+                    + "intentando o presionar el botón 'Resolver'");
+
         }
 
 
     }//GEN-LAST:event_comprobarBtnActionPerformed
+
+    public void actualTorre() {
+        // Actualizar grafica de vistas laterales de la torre
+        // Cubo 1
+        Cubo1C3T.setText(Cubo1C3J.getText());
+        Cubo1C3T.setBackground(Cubo1C3J.getBackground());
+
+        Cubo1C4T.setText(Cubo1C4J.getText());
+        Cubo1C4T.setBackground(Cubo1C4J.getBackground());
+
+        Cubo1C5T.setText(Cubo1C5J.getText());
+        Cubo1C5T.setBackground(Cubo1C5J.getBackground());
+
+        Cubo1C6T.setText(Cubo1C6J.getText());
+        Cubo1C6T.setBackground(Cubo1C6J.getBackground());
+
+        // Cubo 2
+        Cubo2C3T.setText(Cubo2C3J.getText());
+        Cubo2C3T.setBackground(Cubo2C3J.getBackground());
+
+        Cubo2C4T.setText(Cubo2C4J.getText());
+        Cubo2C4T.setBackground(Cubo2C4J.getBackground());
+
+        Cubo2C5T.setText(Cubo2C5J.getText());
+        Cubo2C5T.setBackground(Cubo2C5J.getBackground());
+
+        Cubo2C6T.setText(Cubo2C6J.getText());
+        Cubo2C6T.setBackground(Cubo2C6J.getBackground());
+
+        // Cubo 3
+        Cubo3C3T.setText(Cubo3C3J.getText());
+        Cubo3C3T.setBackground(Cubo3C3J.getBackground());
+
+        Cubo3C4T.setText(Cubo3C4J.getText());
+        Cubo3C4T.setBackground(Cubo3C4J.getBackground());
+
+        Cubo3C5T.setText(Cubo3C5J.getText());
+        Cubo3C5T.setBackground(Cubo3C5J.getBackground());
+
+        Cubo3C6T.setText(Cubo3C6J.getText());
+        Cubo3C6T.setBackground(Cubo3C6J.getBackground());
+
+        // Cubo 4
+        Cubo4C3T.setText(Cubo4C3J.getText());
+        Cubo4C3T.setBackground(Cubo4C3J.getBackground());
+
+        Cubo4C4T.setText(Cubo4C4J.getText());
+        Cubo4C4T.setBackground(Cubo4C4J.getBackground());
+
+        Cubo4C5T.setText(Cubo4C5J.getText());
+        Cubo4C5T.setBackground(Cubo4C5J.getBackground());
+
+        Cubo4C6T.setText(Cubo4C6J.getText());
+        Cubo4C6T.setBackground(Cubo4C6J.getBackground());
+    }
+
+    private void explicacionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_explicacionBtnActionPerformed
+        // TODO add your handling code here:
+        if (resuelto == true) {
+            jTabbedPane1.setSelectedIndex(2);
+            existeSolucion.setText("SI existe una solución");
+        } else {
+            JOptionPane.showMessageDialog(null, "La ventana de explicación estará disponible cuando \n"
+                    + "resuelvas el juego o presiones el botón 'Resolver'\n"
+                    + "(En caso de NO haber solución, no hay nada que explicar)");
+        }
+    }//GEN-LAST:event_explicacionBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -5411,8 +7447,9 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JButton derechaCubo2;
     private javax.swing.JButton derechaCubo3;
     private javax.swing.JButton derechaCubo4;
+    private javax.swing.JLabel existeSolucion;
+    private javax.swing.JButton explicacionBtn;
     private javax.swing.JButton genAleatorio;
-    private javax.swing.JButton genAleatorio1;
     private javax.swing.JButton genCubo1;
     private javax.swing.JButton genCubo2;
     private javax.swing.JButton genCubo3;
@@ -5433,7 +7470,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -5448,9 +7484,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
@@ -5471,23 +7504,32 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JLabel porLoTanto;
+    private javax.swing.JLabel porLoTanto1;
+    private javax.swing.JLabel porLoTanto2;
+    private javax.swing.JButton resolverBtn;
     private javax.swing.JLabel resueltoLbl;
     private javax.swing.JButton siguienteBtn;
     // End of variables declaration//GEN-END:variables
