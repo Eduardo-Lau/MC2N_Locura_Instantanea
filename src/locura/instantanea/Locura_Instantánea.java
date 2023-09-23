@@ -2,10 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package locura.instantánea;
+package locura.instantanea;
 
 import javax.swing.UIManager;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+import com.mxgraph.layout.mxParallelEdgeLayout;
 import java.awt.Color;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -15,6 +16,13 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Random;
 import javax.swing.JOptionPane;
+import com.mxgraph.swing.mxGraphComponent;
+import com.mxgraph.util.mxPoint;
+import com.mxgraph.view.mxGraph;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -35,11 +43,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     //BIN Cubos
     // Guardar
     public static FileOutputStream F_binCubosOut;
-    public static String binCubosNOut = "C:\\Users\\carlo\\Documents\\NetBeansProjects\\Locura Instantánea\\Binarios\\Cubos.bin";
+    public static String binCubosNOut = "C:\\Users\\carlo\\Documents\\NetBeansProjects\\[MC2]_ProyF_LocuraInst\\Binarios\\Cubos.bin";
     public static ObjectOutputStream O_binCubosOut;
     // Cargar
     public static FileInputStream F_binCubosIn;
-    public static String binCubosNIn = "C:\\Users\\carlo\\Documents\\NetBeansProjects\\Locura Instantánea\\Binarios\\Cubos.bin";
+    public static String binCubosNIn = "C:\\Users\\carlo\\Documents\\NetBeansProjects\\[MC2]_ProyF_LocuraInst\\Binarios\\Cubos.bin";
     public static ObjectInputStream O_binCubosIn;
 
     boolean sigBtnPressed = false;
@@ -589,7 +597,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C5 = new javax.swing.JComboBox<>();
         jLabel44 = new javax.swing.JLabel();
         Cubo4C6 = new javax.swing.JComboBox<>();
-        siguienteBtn = new javax.swing.JButton();
+        jugarBtn = new javax.swing.JButton();
         genCubo3 = new javax.swing.JButton();
         genCubo4 = new javax.swing.JButton();
         jLabel45 = new javax.swing.JLabel();
@@ -718,12 +726,37 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel6 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        porLoTanto = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
         existeSolucion = new javax.swing.JLabel();
         porLoTanto1 = new javax.swing.JLabel();
         porLoTanto2 = new javax.swing.JLabel();
+        Cubo1C1E = new javax.swing.JLabel();
+        Cubo1C6E = new javax.swing.JLabel();
+        Cubo1C3E = new javax.swing.JLabel();
+        Cubo1C5E = new javax.swing.JLabel();
+        Cubo1C4E = new javax.swing.JLabel();
+        Cubo2C3E = new javax.swing.JLabel();
+        Cubo2C6E = new javax.swing.JLabel();
+        Cubo2C5E = new javax.swing.JLabel();
+        Cubo2C4E = new javax.swing.JLabel();
+        Cubo2C1E = new javax.swing.JLabel();
+        Cubo3C3E = new javax.swing.JLabel();
+        Cubo3C6E = new javax.swing.JLabel();
+        Cubo3C5E = new javax.swing.JLabel();
+        Cubo3C4E = new javax.swing.JLabel();
+        Cubo3C1E = new javax.swing.JLabel();
+        Cubo4C3E = new javax.swing.JLabel();
+        Cubo4C6E = new javax.swing.JLabel();
+        Cubo4C5E = new javax.swing.JLabel();
+        Cubo4C4E = new javax.swing.JLabel();
+        Cubo4C1E = new javax.swing.JLabel();
+        grafoGL = new javax.swing.JPanel();
+        grafoG2 = new javax.swing.JPanel();
+        grafoG1 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -908,17 +941,17 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         jPanel1.add(Cubo4C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 291, 97, -1));
 
-        siguienteBtn.setBackground(new java.awt.Color(147, 157, 255));
-        siguienteBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        siguienteBtn.setForeground(new java.awt.Color(0, 0, 0));
-        siguienteBtn.setText("Siguiente");
-        siguienteBtn.setAlignmentX(jTabbedPane1.getAlignmentX());
-        siguienteBtn.addActionListener(new java.awt.event.ActionListener() {
+        jugarBtn.setBackground(new java.awt.Color(147, 157, 255));
+        jugarBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jugarBtn.setForeground(new java.awt.Color(0, 0, 0));
+        jugarBtn.setText("JUGAR");
+        jugarBtn.setAlignmentX(jTabbedPane1.getAlignmentX());
+        jugarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                siguienteBtnActionPerformed(evt);
+                jugarBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(siguienteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, 180, 36));
+        jPanel1.add(jugarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, 180, 36));
 
         genCubo3.setBackground(new java.awt.Color(147, 157, 255));
         genCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1204,14 +1237,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel12.setText("4)");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 395, 16, -1));
 
-        jTabbedPane1.addTab("Selección de Colores", jPanel1);
+        jTabbedPane1.addTab("Combinación", jPanel1);
 
         jPanel2.setLayout(null);
 
         resolverBtn.setBackground(new java.awt.Color(112, 23, 46));
         resolverBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         resolverBtn.setForeground(new java.awt.Color(255, 255, 255));
-        resolverBtn.setText("Resolver");
+        resolverBtn.setText("RESOLVER");
         resolverBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resolverBtnActionPerformed(evt);
@@ -1790,7 +1823,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         resueltoLbl.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         resueltoLbl.setForeground(new java.awt.Color(255, 202, 117));
-        resueltoLbl.setText("Resuelto !");
+        resueltoLbl.setText("RESUELTO !");
         jPanel2.add(resueltoLbl);
         resueltoLbl.setBounds(400, 330, 80, 20);
 
@@ -1949,7 +1982,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jTabbedPane1.addTab("Juego", jPanel2);
 
-        jPanel6.setLayout(null);
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jScrollPane1.setEnabled(false);
 
@@ -1962,14 +1995,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jTextArea1.setFocusable(false);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel6.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 250, 870, 210);
-
-        porLoTanto.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
-        porLoTanto.setForeground(new java.awt.Color(45, 160, 106));
-        porLoTanto.setText("También puedes ver las vistas laterales de la Torre");
-        jPanel6.add(porLoTanto);
-        porLoTanto.setBounds(20, 520, 820, 25);
+        jPanel6.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 235, 689, 190));
 
         jScrollPane3.setEnabled(false);
 
@@ -1982,26 +2008,133 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jTextArea3.setFocusable(false);
         jScrollPane3.setViewportView(jTextArea3);
 
-        jPanel6.add(jScrollPane3);
-        jScrollPane3.setBounds(10, 40, 870, 150);
+        jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 689, 150));
 
         existeSolucion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         existeSolucion.setForeground(new java.awt.Color(45, 160, 106));
         existeSolucion.setText("Existe o NO Existe una solución");
-        jPanel6.add(existeSolucion);
-        existeSolucion.setBounds(20, 10, 574, 25);
+        jPanel6.add(existeSolucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 574, -1));
 
         porLoTanto1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         porLoTanto1.setForeground(new java.awt.Color(255, 255, 255));
         porLoTanto1.setText("Interpretación de subgrafos G1 y G2 :");
-        jPanel6.add(porLoTanto1);
-        porLoTanto1.setBounds(20, 210, 574, 25);
+        jPanel6.add(porLoTanto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 205, 574, -1));
 
         porLoTanto2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         porLoTanto2.setForeground(new java.awt.Color(45, 160, 106));
-        porLoTanto2.setText("Las soluciones horizontales y verticales fueron aplicadas a los cubos en la pestaña de juego");
-        jPanel6.add(porLoTanto2);
-        porLoTanto2.setBounds(20, 480, 820, 25);
+        porLoTanto2.setText("También puedes ver estas soluciones aplicadas a los cubos y la torre en la pestaña de \"Juego\"");
+        jPanel6.add(porLoTanto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 575, 820, -1));
+
+        Cubo1C1E.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C1E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C1E.setForeground(new java.awt.Color(255, 255, 255));
+        Cubo1C1E.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C1E.setText("1");
+        Cubo1C1E.setOpaque(true);
+        jPanel6.add(Cubo1C1E, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 463, 80, 80));
+
+        Cubo1C6E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C6E.setText("R");
+        jPanel6.add(Cubo1C6E, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 493, -1, -1));
+
+        Cubo1C3E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C3E.setText("R");
+        jPanel6.add(Cubo1C3E, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 443, -1, -1));
+
+        Cubo1C5E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C5E.setText("R");
+        jPanel6.add(Cubo1C5E, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 493, -1, -1));
+
+        Cubo1C4E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C4E.setText("R");
+        jPanel6.add(Cubo1C4E, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 543, -1, -1));
+
+        Cubo2C3E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C3E.setText("R");
+        jPanel6.add(Cubo2C3E, new org.netbeans.lib.awtextra.AbsoluteConstraints(271, 443, -1, -1));
+
+        Cubo2C6E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C6E.setText("R");
+        jPanel6.add(Cubo2C6E, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 493, -1, -1));
+
+        Cubo2C5E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C5E.setText("R");
+        jPanel6.add(Cubo2C5E, new org.netbeans.lib.awtextra.AbsoluteConstraints(321, 493, -1, -1));
+
+        Cubo2C4E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C4E.setText("R");
+        jPanel6.add(Cubo2C4E, new org.netbeans.lib.awtextra.AbsoluteConstraints(271, 543, -1, -1));
+
+        Cubo2C1E.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C1E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C1E.setForeground(new java.awt.Color(255, 255, 255));
+        Cubo2C1E.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C1E.setText("2");
+        Cubo2C1E.setOpaque(true);
+        jPanel6.add(Cubo2C1E, new org.netbeans.lib.awtextra.AbsoluteConstraints(231, 463, 80, 80));
+
+        Cubo3C3E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C3E.setText("R");
+        jPanel6.add(Cubo3C3E, new org.netbeans.lib.awtextra.AbsoluteConstraints(443, 443, -1, -1));
+
+        Cubo3C6E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C6E.setText("R");
+        jPanel6.add(Cubo3C6E, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 493, -1, -1));
+
+        Cubo3C5E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C5E.setText("R");
+        jPanel6.add(Cubo3C5E, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 493, -1, -1));
+
+        Cubo3C4E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C4E.setText("R");
+        jPanel6.add(Cubo3C4E, new org.netbeans.lib.awtextra.AbsoluteConstraints(443, 543, -1, -1));
+
+        Cubo3C1E.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C1E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C1E.setForeground(new java.awt.Color(255, 255, 255));
+        Cubo3C1E.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C1E.setText("3");
+        Cubo3C1E.setOpaque(true);
+        jPanel6.add(Cubo3C1E, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 463, 80, 80));
+
+        Cubo4C3E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C3E.setText("R");
+        jPanel6.add(Cubo4C3E, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 443, -1, -1));
+
+        Cubo4C6E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C6E.setText("R");
+        jPanel6.add(Cubo4C6E, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 493, -1, -1));
+
+        Cubo4C5E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C5E.setText("R");
+        jPanel6.add(Cubo4C5E, new org.netbeans.lib.awtextra.AbsoluteConstraints(668, 493, -1, -1));
+
+        Cubo4C4E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C4E.setText("R");
+        jPanel6.add(Cubo4C4E, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 543, -1, -1));
+
+        Cubo4C1E.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C1E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C1E.setForeground(new java.awt.Color(255, 255, 255));
+        Cubo4C1E.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C1E.setText("4");
+        Cubo4C1E.setOpaque(true);
+        jPanel6.add(Cubo4C1E, new org.netbeans.lib.awtextra.AbsoluteConstraints(578, 463, 80, 80));
+        jPanel6.add(grafoGL, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 34, 180, 150));
+        jPanel6.add(grafoG2, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 410, 180, 160));
+        jPanel6.add(grafoG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 220, 180, 160));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel17.setText("GL");
+        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(796, 14, -1, -1));
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel30.setText("G1 : Horizontal");
+        jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(747, 194, -1, -1));
+
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel31.setText("G2 : Vertical");
+        jPanel6.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 390, -1, -1));
 
         jTabbedPane1.addTab("Explicación", jPanel6);
 
@@ -2032,7 +2165,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2048,7 +2181,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                     .addComponent(jLabel1))
                 .addGap(5, 5, 5)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -4418,18 +4551,20 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         // TODO add your handling code here:
         Object[] options = {"Sí",
-            "No"};
-        int yes = JOptionPane.showOptionDialog(null,
-                "Está seguro que desea salir del juego?",
-                "Confirmación",
-                JOptionPane.YES_NO_OPTION,
+            "No", "Cancelar"};
+        int option = JOptionPane.showOptionDialog(null,
+                "Desea guardar los cambios antes de salir?",
+                "Guardar cambios",
+                JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
                 null,
                 options,
                 options[0]);
 
-        if (JOptionPane.YES_OPTION == yes) {
+        if (JOptionPane.YES_OPTION == option) {
             BinariosOut();
+            System.exit(0);
+        } else if (JOptionPane.NO_OPTION == option) {
             System.exit(0);
         } else {
 
@@ -4462,7 +4597,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         }
     }//GEN-LAST:event_jTabbedPane1StateChanged
 
-    private void siguienteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_siguienteBtnActionPerformed
+    private void jugarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugarBtnActionPerformed
         // TODO add your handling code here:
 
         if (Cubo1.C1 == null || Cubo2.C1 == null || Cubo3.C1 == null || Cubo4.C1 == null) {
@@ -4629,7 +4764,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         }
 
 
-    }//GEN-LAST:event_siguienteBtnActionPerformed
+    }//GEN-LAST:event_jugarBtnActionPerformed
 
     private void izquierdaCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_izquierdaCubo1ActionPerformed
         // TODO add your handling code here:
@@ -4712,7 +4847,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         if (condicion1 && condicion2 && condicion3 && condicion4) {
             actualTorre();
             resuelto = true;
-            JOptionPane.showMessageDialog(null, "Felicidades, el juego ya está resuelto!");
+            JOptionPane.showMessageDialog(null, "FELICIDADES, EL JUEGO YA ESTÁ RESUELTO!");
             resueltoLbl.setVisible(true);
 
         } else {
@@ -6411,6 +6546,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara izquierda
                     Cubo1C6J.setText(Cubo1Cara6);
+                    Cubo1C6E.setText(Cubo1Cara6);
 
                     if (Cubo1Cara6.equals("R")) {
                         Cubo1C6J.setBackground(new Color(142, 27, 57));
@@ -6424,6 +6560,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara derecha
                     Cubo1C5J.setText(Cubo1Cara5);
+                    Cubo1C5E.setText(Cubo1Cara5);
                     if (Cubo1Cara5.equals("R")) {
                         Cubo1C5J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo1Cara5.equals("B")) {
@@ -6436,6 +6573,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara superior
                     Cubo1C3J.setText(Cubo1Cara3);
+                    Cubo1C3E.setText(Cubo1Cara3);
+
                     if (Cubo1Cara3.equals("R")) {
                         Cubo1C3J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo1Cara3.equals("B")) {
@@ -6448,6 +6587,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara inferior
                     Cubo1C4J.setText(Cubo1Cara4);
+                    Cubo1C4E.setText(Cubo1Cara4);
+
                     if (Cubo1Cara4.equals("R")) {
                         Cubo1C4J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo1Cara4.equals("B")) {
@@ -6499,6 +6640,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara izquierda
                     Cubo2C6J.setText(Cubo2Cara6);
+                    Cubo2C6E.setText(Cubo2Cara6);
+
                     if (Cubo2Cara6.equals("R")) {
                         Cubo2C6J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo2Cara6.equals("B")) {
@@ -6511,6 +6654,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara derecha
                     Cubo2C5J.setText(Cubo2Cara5);
+                    Cubo2C5E.setText(Cubo2Cara5);
+
                     if (Cubo2Cara5.equals("R")) {
                         Cubo2C5J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo2Cara5.equals("B")) {
@@ -6523,6 +6668,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara superior
                     Cubo2C3J.setText(Cubo2Cara3);
+                    Cubo2C3E.setText(Cubo2Cara3);
+
                     if (Cubo2Cara3.equals("R")) {
                         Cubo2C3J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo2Cara3.equals("B")) {
@@ -6535,6 +6682,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara inferior
                     Cubo2C4J.setText(Cubo2Cara4);
+                    Cubo2C4E.setText(Cubo2Cara4);
+
                     if (Cubo2Cara4.equals("R")) {
                         Cubo2C4J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo2Cara4.equals("B")) {
@@ -6586,6 +6735,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara izquierda
                     Cubo3C6J.setText(Cubo3Cara6);
+                    Cubo3C6E.setText(Cubo3Cara6);
+
                     if (Cubo3Cara6.equals("R")) {
                         Cubo3C6J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo3Cara6.equals("B")) {
@@ -6598,6 +6749,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara derecha
                     Cubo3C5J.setText(Cubo3Cara5);
+                    Cubo3C5E.setText(Cubo3Cara5);
+
                     if (Cubo3Cara5.equals("R")) {
                         Cubo3C5J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo3Cara5.equals("B")) {
@@ -6610,6 +6763,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara superior
                     Cubo3C3J.setText(Cubo3Cara3);
+                    Cubo3C3E.setText(Cubo3Cara3);
+
                     if (Cubo3Cara3.equals("R")) {
                         Cubo3C3J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo3Cara3.equals("B")) {
@@ -6622,6 +6777,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara inferior
                     Cubo3C4J.setText(Cubo3Cara4);
+                    Cubo3C4E.setText(Cubo3Cara4);
+
                     if (Cubo3Cara4.equals("R")) {
                         Cubo3C4J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo3Cara4.equals("B")) {
@@ -6673,6 +6830,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara izquierda
                     Cubo4C6J.setText(Cubo4Cara6);
+                    Cubo4C6E.setText(Cubo4Cara6);
+
                     if (Cubo4Cara6.equals("R")) {
                         Cubo4C6J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo4Cara6.equals("B")) {
@@ -6685,6 +6844,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara derecha
                     Cubo4C5J.setText(Cubo4Cara5);
+                    Cubo4C5E.setText(Cubo4Cara5);
+
                     if (Cubo4Cara5.equals("R")) {
                         Cubo4C5J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo4Cara5.equals("B")) {
@@ -6697,6 +6858,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara superior
                     Cubo4C3J.setText(Cubo4Cara3);
+                    Cubo4C3E.setText(Cubo4Cara3);
+
                     if (Cubo4Cara3.equals("R")) {
                         Cubo4C3J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo4Cara3.equals("B")) {
@@ -6709,6 +6872,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     // Cara inferior
                     Cubo4C4J.setText(Cubo4Cara4);
+                    Cubo4C4E.setText(Cubo4Cara4);
+
                     if (Cubo4Cara4.equals("R")) {
                         Cubo4C4J.setBackground(new Color(142, 27, 57));
                     } else if (Cubo4Cara4.equals("B")) {
@@ -6721,18 +6886,1022 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 }
                 resueltoLbl.setVisible(true);
+                grafoGL();
+                grafoG1();
+                grafoG2();
             } else {
                 resuelto = false;
                 resueltoLbl.setVisible(false);
-                JOptionPane.showMessageDialog(null, "NO es posible encontrar una solución,\n"
-                        + "intenta otra combinación de colores");
+                JOptionPane.showMessageDialog(null, "NO EXISTE una solución,\n"
+                        + "intenta otra combinación");
+                jTabbedPane1.setSelectedIndex(0);
             }
         } else {
             resuelto = false;
             resueltoLbl.setVisible(false);
-            JOptionPane.showMessageDialog(null, "NO es posible encontrar una solución,\n"
-                    + "intenta otra combinación de colores");
+            JOptionPane.showMessageDialog(null, "NO EXISTE una solución,\n"
+                    + "intenta otra combinación");
+            jTabbedPane1.setSelectedIndex(0);
         }
+    }
+
+    public void combinarSoluciones() {
+        Cubo1C6E.setText(Cubo1C6J.getText());
+        Cubo1C5E.setText(Cubo1C5J.getText());
+        Cubo1C3E.setText(Cubo1C3J.getText());
+        Cubo1C4E.setText(Cubo1C4J.getText());
+        
+        Cubo2C6E.setText(Cubo2C6J.getText());
+        Cubo2C5E.setText(Cubo2C5J.getText());
+        Cubo2C3E.setText(Cubo2C3J.getText());
+        Cubo2C4E.setText(Cubo2C4J.getText());
+        
+        Cubo3C6E.setText(Cubo3C6J.getText());
+        Cubo3C5E.setText(Cubo3C5J.getText());
+        Cubo3C3E.setText(Cubo3C3J.getText());
+        Cubo3C4E.setText(Cubo3C4J.getText());
+        
+        Cubo4C6E.setText(Cubo4C6J.getText());
+        Cubo4C5E.setText(Cubo4C5J.getText());
+        Cubo4C3E.setText(Cubo4C3J.getText());
+        Cubo4C4E.setText(Cubo4C4J.getText());
+        
+    }
+    public void grafoGL() {
+        // Grafo GL
+        mxGraph graphGL = new mxGraph();
+        Object parent = graphGL.getDefaultParent();
+
+        mxGraph graphG1 = new mxGraph();
+
+        graphGL.getModel().beginUpdate();
+        graphG1.getModel().beginUpdate();
+        try {
+            Object R = graphGL.insertVertex(parent, null, "R", 20, 20, 20, 20, "fontColor=#000000");
+            Object B = graphGL.insertVertex(parent, null, "B", 100, 20, 20, 20, "fontColor=#000000");
+            Object V = graphGL.insertVertex(parent, null, "V", 20, 100, 20, 20, "fontColor=#000000");
+            Object A = graphGL.insertVertex(parent, null, "A", 100, 100, 20, 20, "fontColor=#000000");
+
+            Object aristaCubo1 = null;
+            Object aristaCubo2 = null;
+            Object aristaCubo3 = null;
+            Object aristaCubo4 = null;
+
+            mxParallelEdgeLayout layout = new mxParallelEdgeLayout(graphGL);
+
+            // Cubo 1
+            // Arista 1
+            if (Cubo1C1J.getText().equals("R") && Cubo1C2J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, R, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("R") && Cubo1C2J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, B, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("R") && Cubo1C2J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, V, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("R") && Cubo1C2J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, A, "endArrow=none;");
+            }
+
+            if (Cubo1C1J.getText().equals("B") && Cubo1C2J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, R, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("B") && Cubo1C2J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, B, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("B") && Cubo1C2J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, V, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("B") && Cubo1C2J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, A, "endArrow=none;");
+            }
+
+            if (Cubo1C1J.getText().equals("V") && Cubo1C2J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, R, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("V") && Cubo1C2J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, B, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("V") && Cubo1C2J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, V, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("V") && Cubo1C2J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, A, "endArrow=none;");
+            }
+
+            if (Cubo1C1J.getText().equals("A") && Cubo1C2J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, R, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("A") && Cubo1C2J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, B, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("A") && Cubo1C2J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, V, "endArrow=none;");
+            } else if (Cubo1C1J.getText().equals("A") && Cubo1C2J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo1, "strokeColor=#FFFFFF;endArrow=none;fontColor=#FFFFFF");
+
+            // Arista 2
+            if (Cubo1C6J.getText().equals("R") && Cubo1C5J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, R, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("R") && Cubo1C5J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, B, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("R") && Cubo1C5J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, V, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("R") && Cubo1C5J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, A, "endArrow=none;");
+            }
+
+            if (Cubo1C6J.getText().equals("B") && Cubo1C5J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, R, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("B") && Cubo1C5J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, B, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("B") && Cubo1C5J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, V, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("B") && Cubo1C5J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, A, "endArrow=none;");
+            }
+
+            if (Cubo1C6J.getText().equals("V") && Cubo1C5J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, R, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("V") && Cubo1C5J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, B, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("V") && Cubo1C5J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, V, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("V") && Cubo1C5J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, A, "endArrow=none;");
+            }
+
+            if (Cubo1C6J.getText().equals("A") && Cubo1C5J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, R, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("A") && Cubo1C5J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, B, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("A") && Cubo1C5J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, V, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("A") && Cubo1C5J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo1, "strokeColor=#FFFFFF;endArrow=none;fontColor=#FFFFFF");
+
+            // Arista 3
+            if (Cubo1C3J.getText().equals("R") && Cubo1C4J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, R, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("R") && Cubo1C4J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, B, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("R") && Cubo1C4J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, V, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("R") && Cubo1C4J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", R, A, "endArrow=none;");
+            }
+
+            if (Cubo1C3J.getText().equals("B") && Cubo1C4J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, R, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("B") && Cubo1C4J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, B, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("B") && Cubo1C4J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, V, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("B") && Cubo1C4J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", B, A, "endArrow=none;");
+            }
+
+            if (Cubo1C3J.getText().equals("V") && Cubo1C4J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, R, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("V") && Cubo1C4J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, B, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("V") && Cubo1C4J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, V, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("V") && Cubo1C4J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", V, A, "endArrow=none;");
+            }
+
+            if (Cubo1C3J.getText().equals("A") && Cubo1C4J.getText().equals("R")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, R, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("A") && Cubo1C4J.getText().equals("B")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, B, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("A") && Cubo1C4J.getText().equals("V")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, V, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("A") && Cubo1C4J.getText().equals("A")) {
+                aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo1, "strokeColor=#FFFFFF;endArrow=none;fontColor=#FFFFFF");
+
+            // Cubo 2
+            // Arista 1
+            if (Cubo2C1J.getText().equals("R") && Cubo2C2J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, R, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("R") && Cubo2C2J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, B, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("R") && Cubo2C2J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, V, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("R") && Cubo2C2J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, A, "endArrow=none;");
+            }
+
+            if (Cubo2C1J.getText().equals("B") && Cubo2C2J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, R, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("B") && Cubo2C2J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, B, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("B") && Cubo2C2J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, V, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("B") && Cubo2C2J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, A, "endArrow=none;");
+            }
+
+            if (Cubo2C1J.getText().equals("V") && Cubo2C2J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, R, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("V") && Cubo2C2J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, B, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("V") && Cubo2C2J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, V, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("V") && Cubo2C2J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, A, "endArrow=none;");
+            }
+
+            if (Cubo2C1J.getText().equals("A") && Cubo2C2J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, R, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("A") && Cubo2C2J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, B, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("A") && Cubo2C2J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, V, "endArrow=none;");
+            } else if (Cubo2C1J.getText().equals("A") && Cubo2C2J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo2, "strokeColor=#FF0000;endArrow=none;fontColor=#FF0000");
+
+            // Arista 2
+            if (Cubo2C6J.getText().equals("R") && Cubo2C5J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, R, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("R") && Cubo2C5J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, B, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("R") && Cubo2C5J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, V, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("R") && Cubo2C5J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, A, "endArrow=none;");
+            }
+
+            if (Cubo2C6J.getText().equals("B") && Cubo2C5J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, R, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("B") && Cubo2C5J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, B, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("B") && Cubo2C5J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, V, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("B") && Cubo2C5J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, A, "endArrow=none;");
+            }
+
+            if (Cubo2C6J.getText().equals("V") && Cubo2C5J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, R, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("V") && Cubo2C5J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, B, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("V") && Cubo2C5J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, V, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("V") && Cubo2C5J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, A, "endArrow=none;");
+            }
+
+            if (Cubo2C6J.getText().equals("A") && Cubo2C5J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, R, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("A") && Cubo2C5J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, B, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("A") && Cubo2C5J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, V, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("A") && Cubo2C5J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo2, "strokeColor=#FF0000;endArrow=none;fontColor=#FF0000");
+
+            // Arista 3
+            if (Cubo2C3J.getText().equals("R") && Cubo2C4J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, R, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("R") && Cubo2C4J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, B, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("R") && Cubo2C4J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, V, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("R") && Cubo2C4J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", R, A, "endArrow=none;");
+            }
+
+            if (Cubo2C3J.getText().equals("B") && Cubo2C4J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, R, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("B") && Cubo2C4J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, B, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("B") && Cubo2C4J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, V, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("B") && Cubo2C4J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", B, A, "endArrow=none;");
+            }
+
+            if (Cubo2C3J.getText().equals("V") && Cubo2C4J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, R, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("V") && Cubo2C4J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, B, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("V") && Cubo2C4J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, V, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("V") && Cubo2C4J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", V, A, "endArrow=none;");
+            }
+
+            if (Cubo2C3J.getText().equals("A") && Cubo2C4J.getText().equals("R")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, R, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("A") && Cubo2C4J.getText().equals("B")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, B, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("A") && Cubo2C4J.getText().equals("V")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, V, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("A") && Cubo2C4J.getText().equals("A")) {
+                aristaCubo2 = graphGL.insertEdge(parent, null, "2", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo2, "strokeColor=#FF0000;endArrow=none;fontColor=#FF0000");
+
+            // Cubo 3
+            // Arista 1
+            if (Cubo3C1J.getText().equals("R") && Cubo3C2J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, R, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("R") && Cubo3C2J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, B, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("R") && Cubo3C2J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, V, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("R") && Cubo3C2J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, A, "endArrow=none;");
+            }
+
+            if (Cubo3C1J.getText().equals("B") && Cubo3C2J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, R, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("B") && Cubo3C2J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, B, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("B") && Cubo3C2J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, V, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("B") && Cubo3C2J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, A, "endArrow=none;");
+            }
+
+            if (Cubo3C1J.getText().equals("V") && Cubo3C2J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, R, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("V") && Cubo3C2J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, B, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("V") && Cubo3C2J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, V, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("V") && Cubo3C2J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, A, "endArrow=none;");
+            }
+
+            if (Cubo3C1J.getText().equals("A") && Cubo3C2J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, R, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("A") && Cubo3C2J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, B, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("A") && Cubo3C2J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, V, "endArrow=none;");
+            } else if (Cubo3C1J.getText().equals("A") && Cubo3C2J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo3, "strokeColor=#00FF00;endArrow=none;fontColor=#00FF00");
+
+            // Arista 2
+            if (Cubo3C6J.getText().equals("R") && Cubo3C5J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, R, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("R") && Cubo3C5J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, B, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("R") && Cubo3C5J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, V, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("R") && Cubo3C5J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, A, "endArrow=none;");
+            }
+
+            if (Cubo3C6J.getText().equals("B") && Cubo3C5J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, R, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("B") && Cubo3C5J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, B, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("B") && Cubo3C5J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, V, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("B") && Cubo3C5J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, A, "endArrow=none;");
+            }
+
+            if (Cubo3C6J.getText().equals("V") && Cubo3C5J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, R, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("V") && Cubo3C5J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, B, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("V") && Cubo3C5J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, V, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("V") && Cubo3C5J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, A, "endArrow=none;");
+            }
+
+            if (Cubo3C6J.getText().equals("A") && Cubo3C5J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, R, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("A") && Cubo3C5J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, B, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("A") && Cubo3C5J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, V, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("A") && Cubo3C5J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo3, "strokeColor=#00FF00;endArrow=none;fontColor=#00FF00");
+
+            // Arista 3
+            if (Cubo3C3J.getText().equals("R") && Cubo3C4J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, R, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("R") && Cubo3C4J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, B, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("R") && Cubo3C4J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, V, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("R") && Cubo3C4J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", R, A, "endArrow=none;");
+            }
+
+            if (Cubo3C3J.getText().equals("B") && Cubo3C4J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, R, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("B") && Cubo3C4J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, B, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("B") && Cubo3C4J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, V, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("B") && Cubo3C4J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", B, A, "endArrow=none;");
+            }
+
+            if (Cubo3C3J.getText().equals("V") && Cubo3C4J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, R, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("V") && Cubo3C4J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, B, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("V") && Cubo3C4J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, V, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("V") && Cubo3C4J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", V, A, "endArrow=none;");
+            }
+
+            if (Cubo3C3J.getText().equals("A") && Cubo3C4J.getText().equals("R")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, R, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("A") && Cubo3C4J.getText().equals("B")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, B, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("A") && Cubo3C4J.getText().equals("V")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, V, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("A") && Cubo3C4J.getText().equals("A")) {
+                aristaCubo3 = graphGL.insertEdge(parent, null, "3", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo3, "strokeColor=#00FF00;endArrow=none;fontColor=#00FF00");
+
+            // Cubo 4
+            // Arista 1
+            if (Cubo4C1J.getText().equals("R") && Cubo4C2J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, R, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("R") && Cubo4C2J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, B, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("R") && Cubo4C2J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, V, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("R") && Cubo4C2J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, A, "endArrow=none;");
+            }
+
+            if (Cubo4C1J.getText().equals("B") && Cubo4C2J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, R, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("B") && Cubo4C2J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, B, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("B") && Cubo4C2J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, V, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("B") && Cubo4C2J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, A, "endArrow=none;");
+            }
+
+            if (Cubo4C1J.getText().equals("V") && Cubo4C2J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, R, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("V") && Cubo4C2J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, B, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("V") && Cubo4C2J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, V, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("V") && Cubo4C2J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, A, "endArrow=none;");
+            }
+
+            if (Cubo4C1J.getText().equals("A") && Cubo4C2J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, R, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("A") && Cubo4C2J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, B, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("A") && Cubo4C2J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, V, "endArrow=none;");
+            } else if (Cubo4C1J.getText().equals("A") && Cubo4C2J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
+
+            // Arista 2
+            if (Cubo4C6J.getText().equals("R") && Cubo4C5J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, R, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("R") && Cubo4C5J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, B, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("R") && Cubo4C5J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, V, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("R") && Cubo4C5J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, A, "endArrow=none;");
+            }
+
+            if (Cubo4C6J.getText().equals("B") && Cubo4C5J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, R, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("B") && Cubo4C5J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, B, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("B") && Cubo4C5J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, V, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("B") && Cubo4C5J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, A, "endArrow=none;");
+            }
+
+            if (Cubo4C6J.getText().equals("V") && Cubo4C5J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, R, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("V") && Cubo4C5J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, B, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("V") && Cubo4C5J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, V, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("V") && Cubo4C5J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, A, "endArrow=none;");
+            }
+
+            if (Cubo4C6J.getText().equals("A") && Cubo4C5J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, R, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("A") && Cubo4C5J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, B, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("A") && Cubo4C5J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, V, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("A") && Cubo4C5J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
+
+            // Arista 3
+            if (Cubo4C3J.getText().equals("R") && Cubo4C4J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, R, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("R") && Cubo4C4J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, B, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("R") && Cubo4C4J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, V, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("R") && Cubo4C4J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", R, A, "endArrow=none;");
+            }
+
+            if (Cubo4C3J.getText().equals("B") && Cubo4C4J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, R, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("B") && Cubo4C4J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, B, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("B") && Cubo4C4J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, V, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("B") && Cubo4C4J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", B, A, "endArrow=none;");
+            }
+
+            if (Cubo4C3J.getText().equals("V") && Cubo4C4J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, R, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("V") && Cubo4C4J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, B, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("V") && Cubo4C4J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, V, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("V") && Cubo4C4J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", V, A, "endArrow=none;");
+            }
+
+            if (Cubo4C3J.getText().equals("A") && Cubo4C4J.getText().equals("R")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, R, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("A") && Cubo4C4J.getText().equals("B")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, B, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("A") && Cubo4C4J.getText().equals("V")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, V, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("A") && Cubo4C4J.getText().equals("A")) {
+                aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, A, "endArrow=none;");
+            }
+
+            graphGL.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
+
+            layout.execute(graphGL.getDefaultParent());
+
+        } finally {
+            graphGL.getModel().endUpdate();
+
+        }
+
+        mxGraphComponent graphComponentL = new mxGraphComponent(graphGL);
+
+        grafoGL.removeAll();
+        grafoGL.add(graphComponentL);
+        graphComponentL.refresh();
+        grafoGL.repaint();
+
+        System.out.println("grafo GL actualizado");
+    }
+
+    public void grafoG1() {
+        // Grafo G1 - Horizontal
+        mxGraph graphG1 = new mxGraph();
+        Object parent = graphG1.getDefaultParent();
+
+        graphG1.getModel().beginUpdate();
+        
+        mxParallelEdgeLayout layout = new mxParallelEdgeLayout(graphG1);
+        try {
+
+            Object R = graphG1.insertVertex(parent, null, "R", 20, 20, 20, 20, "fontColor=#000000");
+            Object B = graphG1.insertVertex(parent, null, "B", 100, 20, 20, 20, "fontColor=#000000");
+            Object V = graphG1.insertVertex(parent, null, "V", 20, 100, 20, 20, "fontColor=#000000");
+            Object A = graphG1.insertVertex(parent, null, "A", 100, 100, 20, 20, "fontColor=#000000");
+
+            Object aristaCubo1 = null;
+            Object aristaCubo2 = null;
+            Object aristaCubo3 = null;
+            Object aristaCubo4 = null;
+
+            layout = new mxParallelEdgeLayout(graphG1);
+
+            // Cubo 1
+            if (Cubo1C6J.getText().equals("R") && Cubo1C5J.getText().equals("R")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", R, R, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("R") && Cubo1C5J.getText().equals("B")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", R, B, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("R") && Cubo1C5J.getText().equals("V")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", R, V, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("R") && Cubo1C5J.getText().equals("A")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", R, A, "endArrow=none;");
+            }
+
+            if (Cubo1C6J.getText().equals("B") && Cubo1C5J.getText().equals("R")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", B, R, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("B") && Cubo1C5J.getText().equals("B")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", B, B, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("B") && Cubo1C5J.getText().equals("V")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", B, V, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("B") && Cubo1C5J.getText().equals("A")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", B, A, "endArrow=none;");
+            }
+
+            if (Cubo1C6J.getText().equals("V") && Cubo1C5J.getText().equals("R")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", V, R, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("V") && Cubo1C5J.getText().equals("B")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", V, B, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("V") && Cubo1C5J.getText().equals("V")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", V, V, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("V") && Cubo1C5J.getText().equals("A")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", V, A, "endArrow=none;");
+            }
+
+            if (Cubo1C6J.getText().equals("A") && Cubo1C5J.getText().equals("R")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", A, R, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("A") && Cubo1C5J.getText().equals("B")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", A, B, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("A") && Cubo1C5J.getText().equals("V")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", A, V, "endArrow=none;");
+            } else if (Cubo1C6J.getText().equals("A") && Cubo1C5J.getText().equals("A")) {
+                aristaCubo1 = graphG1.insertEdge(parent, null, "1", A, A, "endArrow=none;");
+            }
+
+            graphG1.getModel().setStyle(aristaCubo1, "strokeColor=#FFFFFF;endArrow=none;fontColor=#FFFFFF");
+
+            // Cubo 2
+            if (Cubo2C6J.getText().equals("R") && Cubo2C5J.getText().equals("R")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", R, R, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("R") && Cubo2C5J.getText().equals("B")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", R, B, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("R") && Cubo2C5J.getText().equals("V")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", R, V, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("R") && Cubo2C5J.getText().equals("A")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", R, A, "endArrow=none;");
+            }
+
+            if (Cubo2C6J.getText().equals("B") && Cubo2C5J.getText().equals("R")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", B, R, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("B") && Cubo2C5J.getText().equals("B")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", B, B, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("B") && Cubo2C5J.getText().equals("V")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", B, V, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("B") && Cubo2C5J.getText().equals("A")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", B, A, "endArrow=none;");
+            }
+
+            if (Cubo2C6J.getText().equals("V") && Cubo2C5J.getText().equals("R")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", V, R, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("V") && Cubo2C5J.getText().equals("B")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", V, B, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("V") && Cubo2C5J.getText().equals("V")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", V, V, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("V") && Cubo2C5J.getText().equals("A")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", V, A, "endArrow=none;");
+            }
+
+            if (Cubo2C6J.getText().equals("A") && Cubo2C5J.getText().equals("R")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", A, R, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("A") && Cubo2C5J.getText().equals("B")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", A, B, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("A") && Cubo2C5J.getText().equals("V")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", A, V, "endArrow=none;");
+            } else if (Cubo2C6J.getText().equals("A") && Cubo2C5J.getText().equals("A")) {
+                aristaCubo2 = graphG1.insertEdge(parent, null, "2", A, A, "endArrow=none;");
+            }
+
+            graphG1.getModel().setStyle(aristaCubo2, "strokeColor=#FF0000;endArrow=none;fontColor=#FF0000");
+
+            // Cubo 3
+            if (Cubo3C6J.getText().equals("R") && Cubo3C5J.getText().equals("R")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", R, R, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("R") && Cubo3C5J.getText().equals("B")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", R, B, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("R") && Cubo3C5J.getText().equals("V")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", R, V, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("R") && Cubo3C5J.getText().equals("A")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", R, A, "endArrow=none;");
+            }
+
+            if (Cubo3C6J.getText().equals("B") && Cubo3C5J.getText().equals("R")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", B, R, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("B") && Cubo3C5J.getText().equals("B")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", B, B, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("B") && Cubo3C5J.getText().equals("V")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", B, V, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("B") && Cubo3C5J.getText().equals("A")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", B, A, "endArrow=none;");
+            }
+
+            if (Cubo3C6J.getText().equals("V") && Cubo3C5J.getText().equals("R")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", V, R, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("V") && Cubo3C5J.getText().equals("B")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", V, B, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("V") && Cubo3C5J.getText().equals("V")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", V, V, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("V") && Cubo3C5J.getText().equals("A")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", V, A, "endArrow=none;");
+            }
+
+            if (Cubo3C6J.getText().equals("A") && Cubo3C5J.getText().equals("R")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", A, R, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("A") && Cubo3C5J.getText().equals("B")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", A, B, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("A") && Cubo3C5J.getText().equals("V")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", A, V, "endArrow=none;");
+            } else if (Cubo3C6J.getText().equals("A") && Cubo3C5J.getText().equals("A")) {
+                aristaCubo3 = graphG1.insertEdge(parent, null, "3", A, A, "endArrow=none;");
+            }
+
+            graphG1.getModel().setStyle(aristaCubo3, "strokeColor=#00FF00;endArrow=none;fontColor=#00FF00");
+
+            // Cubo 4
+            if (Cubo4C6J.getText().equals("R") && Cubo4C5J.getText().equals("R")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", R, R, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("R") && Cubo4C5J.getText().equals("B")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", R, B, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("R") && Cubo4C5J.getText().equals("V")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", R, V, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("R") && Cubo4C5J.getText().equals("A")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", R, A, "endArrow=none;");
+            }
+
+            if (Cubo4C6J.getText().equals("B") && Cubo4C5J.getText().equals("R")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", B, R, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("B") && Cubo4C5J.getText().equals("B")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", B, B, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("B") && Cubo4C5J.getText().equals("V")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", B, V, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("B") && Cubo4C5J.getText().equals("A")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", B, A, "endArrow=none;");
+            }
+
+            if (Cubo4C6J.getText().equals("V") && Cubo4C5J.getText().equals("R")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", V, R, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("V") && Cubo4C5J.getText().equals("B")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", V, B, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("V") && Cubo4C5J.getText().equals("V")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", V, V, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("V") && Cubo4C5J.getText().equals("A")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", V, A, "endArrow=none;");
+            }
+
+            if (Cubo4C6J.getText().equals("A") && Cubo4C5J.getText().equals("R")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", A, R, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("A") && Cubo4C5J.getText().equals("B")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", A, B, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("A") && Cubo4C5J.getText().equals("V")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", A, V, "endArrow=none;");
+            } else if (Cubo4C6J.getText().equals("A") && Cubo4C5J.getText().equals("A")) {
+                aristaCubo4 = graphG1.insertEdge(parent, null, "4", A, A, "endArrow=none;");
+            }
+
+            graphG1.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
+
+            layout.execute(graphG1.getDefaultParent());
+        } finally {
+            graphG1.getModel().endUpdate();
+        }
+        
+        mxGraphComponent graphComponent = new mxGraphComponent(graphG1);
+
+        grafoG1.removeAll();
+        grafoG1.add(graphComponent);
+        graphComponent.refresh();
+        grafoG1.repaint();
+
+        System.out.println("grafo G1 actualizado");
+    }
+    
+    public void grafoG2() {
+        // Grafo G1 - Horizontal
+        mxGraph graphG2 = new mxGraph();
+        Object parent = graphG2.getDefaultParent();
+
+        graphG2.getModel().beginUpdate();
+        
+        mxParallelEdgeLayout layout = new mxParallelEdgeLayout(graphG2);
+
+        try {
+
+            Object R = graphG2.insertVertex(parent, null, "R", 20, 20, 20, 20, "fontColor=#000000");
+            Object B = graphG2.insertVertex(parent, null, "B", 100, 20, 20, 20, "fontColor=#000000");
+            Object V = graphG2.insertVertex(parent, null, "V", 20, 100, 20, 20, "fontColor=#000000");
+            Object A = graphG2.insertVertex(parent, null, "A", 100, 100, 20, 20, "fontColor=#000000");
+
+            Object aristaCubo1 = null;
+            Object aristaCubo2 = null;
+            Object aristaCubo3 = null;
+            Object aristaCubo4 = null;
+
+
+            // Cubo 1
+            if (Cubo1C3J.getText().equals("R") && Cubo1C4J.getText().equals("R")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", R, R, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("R") && Cubo1C4J.getText().equals("B")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", R, B, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("R") && Cubo1C4J.getText().equals("V")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", R, V, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("R") && Cubo1C4J.getText().equals("A")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", R, A, "endArrow=none;");
+            }
+
+            if (Cubo1C3J.getText().equals("B") && Cubo1C4J.getText().equals("R")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", B, R, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("B") && Cubo1C4J.getText().equals("B")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", B, B, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("B") && Cubo1C4J.getText().equals("V")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", B, V, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("B") && Cubo1C4J.getText().equals("A")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", B, A, "endArrow=none;");
+            }
+
+            if (Cubo1C3J.getText().equals("V") && Cubo1C4J.getText().equals("R")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", V, R, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("V") && Cubo1C4J.getText().equals("B")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", V, B, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("V") && Cubo1C4J.getText().equals("V")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", V, V, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("V") && Cubo1C4J.getText().equals("A")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", V, A, "endArrow=none;");
+            }
+
+            if (Cubo1C3J.getText().equals("A") && Cubo1C4J.getText().equals("R")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", A, R, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("A") && Cubo1C4J.getText().equals("B")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", A, B, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("A") && Cubo1C4J.getText().equals("V")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", A, V, "endArrow=none;");
+            } else if (Cubo1C3J.getText().equals("A") && Cubo1C4J.getText().equals("A")) {
+                aristaCubo1 = graphG2.insertEdge(parent, null, "1", A, A, "endArrow=none;");
+            }
+
+            graphG2.getModel().setStyle(aristaCubo1, "strokeColor=#FFFFFF;endArrow=none;fontColor=#FFFFFF");
+
+            // Cubo 2
+            if (Cubo2C3J.getText().equals("R") && Cubo2C4J.getText().equals("R")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", R, R, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("R") && Cubo2C4J.getText().equals("B")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", R, B, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("R") && Cubo2C4J.getText().equals("V")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", R, V, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("R") && Cubo2C4J.getText().equals("A")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", R, A, "endArrow=none;");
+            }
+
+            if (Cubo2C3J.getText().equals("B") && Cubo2C4J.getText().equals("R")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", B, R, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("B") && Cubo2C4J.getText().equals("B")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", B, B, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("B") && Cubo2C4J.getText().equals("V")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", B, V, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("B") && Cubo2C4J.getText().equals("A")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", B, A, "endArrow=none;");
+            }
+
+            if (Cubo2C3J.getText().equals("V") && Cubo2C4J.getText().equals("R")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", V, R, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("V") && Cubo2C4J.getText().equals("B")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", V, B, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("V") && Cubo2C4J.getText().equals("V")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", V, V, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("V") && Cubo2C4J.getText().equals("A")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", V, A, "endArrow=none;");
+            }
+
+            if (Cubo2C3J.getText().equals("A") && Cubo2C4J.getText().equals("R")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", A, R, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("A") && Cubo2C4J.getText().equals("B")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", A, B, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("A") && Cubo2C4J.getText().equals("V")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", A, V, "endArrow=none;");
+            } else if (Cubo2C3J.getText().equals("A") && Cubo2C4J.getText().equals("A")) {
+                aristaCubo2 = graphG2.insertEdge(parent, null, "2", A, A, "endArrow=none;");
+            }
+
+            graphG2.getModel().setStyle(aristaCubo2, "strokeColor=#FF0000;endArrow=none;fontColor=#FF0000");
+
+            // Cubo 3
+            if (Cubo3C3J.getText().equals("R") && Cubo3C4J.getText().equals("R")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", R, R, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("R") && Cubo3C4J.getText().equals("B")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", R, B, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("R") && Cubo3C4J.getText().equals("V")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", R, V, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("R") && Cubo3C4J.getText().equals("A")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", R, A, "endArrow=none;");
+            }
+
+            if (Cubo3C3J.getText().equals("B") && Cubo3C4J.getText().equals("R")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", B, R, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("B") && Cubo3C4J.getText().equals("B")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", B, B, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("B") && Cubo3C4J.getText().equals("V")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", B, V, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("B") && Cubo3C4J.getText().equals("A")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", B, A, "endArrow=none;");
+            }
+
+            if (Cubo3C3J.getText().equals("V") && Cubo3C4J.getText().equals("R")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", V, R, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("V") && Cubo3C4J.getText().equals("B")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", V, B, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("V") && Cubo3C4J.getText().equals("V")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", V, V, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("V") && Cubo3C4J.getText().equals("A")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", V, A, "endArrow=none;");
+            }
+
+            if (Cubo3C3J.getText().equals("A") && Cubo3C4J.getText().equals("R")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", A, R, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("A") && Cubo3C4J.getText().equals("B")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", A, B, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("A") && Cubo3C4J.getText().equals("V")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", A, V, "endArrow=none;");
+            } else if (Cubo3C3J.getText().equals("A") && Cubo3C4J.getText().equals("A")) {
+                aristaCubo3 = graphG2.insertEdge(parent, null, "3", A, A, "endArrow=none;");
+            }
+
+            graphG2.getModel().setStyle(aristaCubo3, "strokeColor=#00FF00;endArrow=none;fontColor=#00FF00");
+
+            // Cubo 4
+            if (Cubo4C3J.getText().equals("R") && Cubo4C4J.getText().equals("R")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", R, R, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("R") && Cubo4C4J.getText().equals("B")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", R, B, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("R") && Cubo4C4J.getText().equals("V")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", R, V, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("R") && Cubo4C4J.getText().equals("A")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", R, A, "endArrow=none;");
+            }
+
+            if (Cubo4C3J.getText().equals("B") && Cubo4C4J.getText().equals("R")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", B, R, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("B") && Cubo4C4J.getText().equals("B")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", B, B, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("B") && Cubo4C4J.getText().equals("V")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", B, V, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("B") && Cubo4C4J.getText().equals("A")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", B, A, "endArrow=none;");
+            }
+
+            if (Cubo4C3J.getText().equals("V") && Cubo4C4J.getText().equals("R")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", V, R, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("V") && Cubo4C4J.getText().equals("B")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", V, B, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("V") && Cubo4C4J.getText().equals("V")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", V, V, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("V") && Cubo4C4J.getText().equals("A")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", V, A, "endArrow=none;");
+            }
+
+            if (Cubo4C3J.getText().equals("A") && Cubo4C4J.getText().equals("R")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", A, R, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("A") && Cubo4C4J.getText().equals("B")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", A, B, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("A") && Cubo4C4J.getText().equals("V")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", A, V, "endArrow=none;");
+            } else if (Cubo4C3J.getText().equals("A") && Cubo4C4J.getText().equals("A")) {
+                aristaCubo4 = graphG2.insertEdge(parent, null, "4", A, A, "endArrow=none;");
+            }
+
+            graphG2.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
+
+            
+            
+        } finally {
+            graphG2.getModel().endUpdate();
+        }
+        
+        
+        mxGraphComponent graphComponent = new mxGraphComponent(graphG2);
+        grafoG2.removeAll();
+        grafoG2.add(graphComponent);
+
+        layout.execute(graphG2.getDefaultParent());
+        System.out.println("grafo G2 actualizado");
     }
 
     private void derechaCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_derechaCubo1ActionPerformed
@@ -7283,7 +8452,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Object[] options = {"Sí, Por Favor",
                 "No, gracias"};
             int yes = JOptionPane.showOptionDialog(null,
-                    "Felicidades, resolviste el juego!\n"
+                    "FELICIDADES, RESOLVISTE EL JUEGO!\n"
                     + " Deseas ver la explicación?",
                     "Explicación",
                     JOptionPane.YES_NO_OPTION,
@@ -7294,6 +8463,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             if (JOptionPane.YES_OPTION == yes) {
                 jTabbedPane1.setSelectedIndex(2);
+                grafoGL();
+                grafoG1();
+                grafoG2();
+                combinarSoluciones();
                 existeSolucion.setText("SI existe una solución");
                 existeSolucion.setForeground(new Color(0, 153, 0));
             } else {
@@ -7371,6 +8544,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         // TODO add your handling code here:
         if (resuelto == true) {
             jTabbedPane1.setSelectedIndex(2);
+            grafoGL();
+            grafoG1();
+            grafoG2();
+            combinarSoluciones();
             existeSolucion.setText("SI existe una solución");
         } else {
             JOptionPane.showMessageDialog(null, "La ventana de explicación estará disponible cuando \n"
@@ -7399,90 +8576,110 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Cubo1C1;
+    private javax.swing.JLabel Cubo1C1E;
     private javax.swing.JLabel Cubo1C1G;
     private javax.swing.JLabel Cubo1C1J;
     private javax.swing.JComboBox<String> Cubo1C2;
     private javax.swing.JLabel Cubo1C2G;
     private javax.swing.JLabel Cubo1C2J;
     private javax.swing.JComboBox<String> Cubo1C3;
+    private javax.swing.JLabel Cubo1C3E;
     private javax.swing.JLabel Cubo1C3G;
     private javax.swing.JLabel Cubo1C3J;
     private javax.swing.JLabel Cubo1C3T;
     private javax.swing.JComboBox<String> Cubo1C4;
+    private javax.swing.JLabel Cubo1C4E;
     private javax.swing.JLabel Cubo1C4G;
     private javax.swing.JLabel Cubo1C4J;
     private javax.swing.JLabel Cubo1C4T;
     private javax.swing.JComboBox<String> Cubo1C5;
+    private javax.swing.JLabel Cubo1C5E;
     private javax.swing.JLabel Cubo1C5G;
     private javax.swing.JLabel Cubo1C5J;
     private javax.swing.JLabel Cubo1C5T;
     private javax.swing.JComboBox<String> Cubo1C6;
+    private javax.swing.JLabel Cubo1C6E;
     private javax.swing.JLabel Cubo1C6G;
     private javax.swing.JLabel Cubo1C6J;
     private javax.swing.JLabel Cubo1C6T;
     private javax.swing.JComboBox<String> Cubo2C1;
+    private javax.swing.JLabel Cubo2C1E;
     private javax.swing.JLabel Cubo2C1G;
     private javax.swing.JLabel Cubo2C1J;
     private javax.swing.JComboBox<String> Cubo2C2;
     private javax.swing.JLabel Cubo2C2G;
     private javax.swing.JLabel Cubo2C2J;
     private javax.swing.JComboBox<String> Cubo2C3;
+    private javax.swing.JLabel Cubo2C3E;
     private javax.swing.JLabel Cubo2C3G;
     private javax.swing.JLabel Cubo2C3J;
     private javax.swing.JLabel Cubo2C3T;
     private javax.swing.JComboBox<String> Cubo2C4;
+    private javax.swing.JLabel Cubo2C4E;
     private javax.swing.JLabel Cubo2C4G;
     private javax.swing.JLabel Cubo2C4J;
     private javax.swing.JLabel Cubo2C4T;
     private javax.swing.JComboBox<String> Cubo2C5;
+    private javax.swing.JLabel Cubo2C5E;
     private javax.swing.JLabel Cubo2C5G;
     private javax.swing.JLabel Cubo2C5J;
     private javax.swing.JLabel Cubo2C5T;
     private javax.swing.JComboBox<String> Cubo2C6;
+    private javax.swing.JLabel Cubo2C6E;
     private javax.swing.JLabel Cubo2C6G;
     private javax.swing.JLabel Cubo2C6J;
     private javax.swing.JLabel Cubo2C6T;
     private javax.swing.JComboBox<String> Cubo3C1;
+    private javax.swing.JLabel Cubo3C1E;
     private javax.swing.JLabel Cubo3C1G;
     private javax.swing.JLabel Cubo3C1J;
     private javax.swing.JComboBox<String> Cubo3C2;
     private javax.swing.JLabel Cubo3C2G;
     private javax.swing.JLabel Cubo3C2J;
     private javax.swing.JComboBox<String> Cubo3C3;
+    private javax.swing.JLabel Cubo3C3E;
     private javax.swing.JLabel Cubo3C3G;
     private javax.swing.JLabel Cubo3C3J;
     private javax.swing.JLabel Cubo3C3T;
     private javax.swing.JComboBox<String> Cubo3C4;
+    private javax.swing.JLabel Cubo3C4E;
     private javax.swing.JLabel Cubo3C4G;
     private javax.swing.JLabel Cubo3C4J;
     private javax.swing.JLabel Cubo3C4T;
     private javax.swing.JComboBox<String> Cubo3C5;
+    private javax.swing.JLabel Cubo3C5E;
     private javax.swing.JLabel Cubo3C5G;
     private javax.swing.JLabel Cubo3C5J;
     private javax.swing.JLabel Cubo3C5T;
     private javax.swing.JComboBox<String> Cubo3C6;
+    private javax.swing.JLabel Cubo3C6E;
     private javax.swing.JLabel Cubo3C6G;
     private javax.swing.JLabel Cubo3C6J;
     private javax.swing.JLabel Cubo3C6T;
     private javax.swing.JComboBox<String> Cubo4C1;
+    private javax.swing.JLabel Cubo4C1E;
     private javax.swing.JLabel Cubo4C1G;
     private javax.swing.JLabel Cubo4C1J;
     private javax.swing.JComboBox<String> Cubo4C2;
     private javax.swing.JLabel Cubo4C2G;
     private javax.swing.JLabel Cubo4C2J;
     private javax.swing.JComboBox<String> Cubo4C3;
+    private javax.swing.JLabel Cubo4C3E;
     private javax.swing.JLabel Cubo4C3G;
     private javax.swing.JLabel Cubo4C3J;
     private javax.swing.JLabel Cubo4C3T;
     private javax.swing.JComboBox<String> Cubo4C4;
+    private javax.swing.JLabel Cubo4C4E;
     private javax.swing.JLabel Cubo4C4G;
     private javax.swing.JLabel Cubo4C4J;
     private javax.swing.JLabel Cubo4C4T;
     private javax.swing.JComboBox<String> Cubo4C5;
+    private javax.swing.JLabel Cubo4C5E;
     private javax.swing.JLabel Cubo4C5G;
     private javax.swing.JLabel Cubo4C5J;
     private javax.swing.JLabel Cubo4C5T;
     private javax.swing.JComboBox<String> Cubo4C6;
+    private javax.swing.JLabel Cubo4C6E;
     private javax.swing.JLabel Cubo4C6G;
     private javax.swing.JLabel Cubo4C6J;
     private javax.swing.JLabel Cubo4C6T;
@@ -7510,6 +8707,9 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JButton genCubo2;
     private javax.swing.JButton genCubo3;
     private javax.swing.JButton genCubo4;
+    public static javax.swing.JPanel grafoG1;
+    public static javax.swing.JPanel grafoG2;
+    public static javax.swing.JPanel grafoGL;
     private javax.swing.JButton horarioCubo1;
     private javax.swing.JButton horarioCubo2;
     private javax.swing.JButton horarioCubo3;
@@ -7526,6 +8726,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -7540,6 +8741,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
@@ -7580,11 +8783,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JLabel porLoTanto;
+    private javax.swing.JButton jugarBtn;
     private javax.swing.JLabel porLoTanto1;
     private javax.swing.JLabel porLoTanto2;
     private javax.swing.JButton resolverBtn;
     private javax.swing.JLabel resueltoLbl;
-    private javax.swing.JButton siguienteBtn;
     // End of variables declaration//GEN-END:variables
 }
