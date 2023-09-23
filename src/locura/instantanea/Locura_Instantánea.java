@@ -2022,8 +2022,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         porLoTanto2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         porLoTanto2.setForeground(new java.awt.Color(45, 160, 106));
-        porLoTanto2.setText("También puedes ver estas soluciones aplicadas a los cubos y la torre en la pestaña de \"Juego\"");
-        jPanel6.add(porLoTanto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 575, 820, -1));
+        porLoTanto2.setText("Las soluciones fueron aplicadas en la pestaña de \"Juego\"");
+        jPanel6.add(porLoTanto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 575, 500, -1));
 
         Cubo1C1E.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C1E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2120,21 +2120,21 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C1E.setText("4");
         Cubo4C1E.setOpaque(true);
         jPanel6.add(Cubo4C1E, new org.netbeans.lib.awtextra.AbsoluteConstraints(578, 463, 80, 80));
-        jPanel6.add(grafoGL, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 34, 180, 150));
-        jPanel6.add(grafoG2, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 410, 180, 160));
-        jPanel6.add(grafoG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 220, 180, 160));
+        jPanel6.add(grafoGL, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 14, 190, 160));
+        jPanel6.add(grafoG2, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 410, 190, 170));
+        jPanel6.add(grafoG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 210, 190, 170));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel17.setText("GL");
-        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(796, 14, -1, -1));
+        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 180, -1, -1));
 
         jLabel30.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel30.setText("G1 : Horizontal");
-        jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(747, 194, -1, -1));
+        jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 380, -1, -1));
 
         jLabel31.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel31.setText("G2 : Vertical");
-        jPanel6.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 390, -1, -1));
+        jPanel6.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 580, -1, -1));
 
         jTabbedPane1.addTab("Explicación", jPanel6);
 
@@ -2165,7 +2165,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2181,7 +2181,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                     .addComponent(jLabel1))
                 .addGap(5, 5, 5)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
@@ -4616,6 +4616,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 || !Cubo4Bin.C5.equals(Cubo4.C5) || !Cubo4Bin.C6.equals(Cubo4.C6))) {
 
             sigBtnPressed = true;
+            resuelto = false;
             jTabbedPane1.setSelectedIndex(1);
 
             // Cubo 1
@@ -4702,6 +4703,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         } else {
             sigBtnPressed = true;
+            resuelto = false;
             jTabbedPane1.setSelectedIndex(1);
 
             // Cubo 1
@@ -6910,37 +6912,35 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C5E.setText(Cubo1C5J.getText());
         Cubo1C3E.setText(Cubo1C3J.getText());
         Cubo1C4E.setText(Cubo1C4J.getText());
-        
+
         Cubo2C6E.setText(Cubo2C6J.getText());
         Cubo2C5E.setText(Cubo2C5J.getText());
         Cubo2C3E.setText(Cubo2C3J.getText());
         Cubo2C4E.setText(Cubo2C4J.getText());
-        
+
         Cubo3C6E.setText(Cubo3C6J.getText());
         Cubo3C5E.setText(Cubo3C5J.getText());
         Cubo3C3E.setText(Cubo3C3J.getText());
         Cubo3C4E.setText(Cubo3C4J.getText());
-        
+
         Cubo4C6E.setText(Cubo4C6J.getText());
         Cubo4C5E.setText(Cubo4C5J.getText());
         Cubo4C3E.setText(Cubo4C3J.getText());
         Cubo4C4E.setText(Cubo4C4J.getText());
-        
+
     }
+
     public void grafoGL() {
         // Grafo GL
         mxGraph graphGL = new mxGraph();
         Object parent = graphGL.getDefaultParent();
 
-        mxGraph graphG1 = new mxGraph();
-
         graphGL.getModel().beginUpdate();
-        graphG1.getModel().beginUpdate();
         try {
-            Object R = graphGL.insertVertex(parent, null, "R", 20, 20, 20, 20, "fontColor=#000000");
-            Object B = graphGL.insertVertex(parent, null, "B", 100, 20, 20, 20, "fontColor=#000000");
-            Object V = graphGL.insertVertex(parent, null, "V", 20, 100, 20, 20, "fontColor=#000000");
-            Object A = graphGL.insertVertex(parent, null, "A", 100, 100, 20, 20, "fontColor=#000000");
+            Object R = graphGL.insertVertex(parent, "a", "R", 20, 20, 20, 20, "fontColor=#000000");
+            Object B = graphGL.insertVertex(parent, null, "B", 110, 20, 20, 20, "fontColor=#000000");
+            Object V = graphGL.insertVertex(parent, null, "V", 20, 115, 20, 20, "fontColor=#000000");
+            Object A = graphGL.insertVertex(parent, null, "A", 110, 115, 20, 20, "fontColor=#000000");
 
             Object aristaCubo1 = null;
             Object aristaCubo2 = null;
@@ -7492,14 +7492,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Object parent = graphG1.getDefaultParent();
 
         graphG1.getModel().beginUpdate();
-        
+
         mxParallelEdgeLayout layout = new mxParallelEdgeLayout(graphG1);
         try {
 
             Object R = graphG1.insertVertex(parent, null, "R", 20, 20, 20, 20, "fontColor=#000000");
-            Object B = graphG1.insertVertex(parent, null, "B", 100, 20, 20, 20, "fontColor=#000000");
-            Object V = graphG1.insertVertex(parent, null, "V", 20, 100, 20, 20, "fontColor=#000000");
-            Object A = graphG1.insertVertex(parent, null, "A", 100, 100, 20, 20, "fontColor=#000000");
+            Object B = graphG1.insertVertex(parent, null, "B", 115, 20, 20, 20, "fontColor=#000000");
+            Object V = graphG1.insertVertex(parent, null, "V", 20, 120, 20, 20, "fontColor=#000000");
+            Object A = graphG1.insertVertex(parent, null, "A", 115, 120, 20, 20, "fontColor=#000000");
 
             Object aristaCubo1 = null;
             Object aristaCubo2 = null;
@@ -7684,7 +7684,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         } finally {
             graphG1.getModel().endUpdate();
         }
-        
+
         mxGraphComponent graphComponent = new mxGraphComponent(graphG1);
 
         grafoG1.removeAll();
@@ -7694,28 +7694,27 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         System.out.println("grafo G1 actualizado");
     }
-    
+
     public void grafoG2() {
         // Grafo G1 - Horizontal
         mxGraph graphG2 = new mxGraph();
         Object parent = graphG2.getDefaultParent();
 
         graphG2.getModel().beginUpdate();
-        
+
         mxParallelEdgeLayout layout = new mxParallelEdgeLayout(graphG2);
 
         try {
 
             Object R = graphG2.insertVertex(parent, null, "R", 20, 20, 20, 20, "fontColor=#000000");
-            Object B = graphG2.insertVertex(parent, null, "B", 100, 20, 20, 20, "fontColor=#000000");
-            Object V = graphG2.insertVertex(parent, null, "V", 20, 100, 20, 20, "fontColor=#000000");
-            Object A = graphG2.insertVertex(parent, null, "A", 100, 100, 20, 20, "fontColor=#000000");
+            Object B = graphG2.insertVertex(parent, null, "B", 115, 20, 20, 20, "fontColor=#000000");
+            Object V = graphG2.insertVertex(parent, null, "V", 20, 120, 20, 20, "fontColor=#000000");
+            Object A = graphG2.insertVertex(parent, null, "A", 115, 120, 20, 20, "fontColor=#000000");
 
             Object aristaCubo1 = null;
             Object aristaCubo2 = null;
             Object aristaCubo3 = null;
             Object aristaCubo4 = null;
-
 
             // Cubo 1
             if (Cubo1C3J.getText().equals("R") && Cubo1C4J.getText().equals("R")) {
@@ -7889,13 +7888,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             graphG2.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
 
-            
-            
         } finally {
             graphG2.getModel().endUpdate();
         }
-        
-        
+
         mxGraphComponent graphComponent = new mxGraphComponent(graphG2);
         grafoG2.removeAll();
         grafoG2.add(graphComponent);
@@ -8542,6 +8538,37 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
     private void explicacionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_explicacionBtnActionPerformed
         // TODO add your handling code here:
+        boolean condicion1 = ((!Cubo1C3J.getBackground().equals(Cubo2C3J.getBackground())
+                && !Cubo1C3J.getBackground().equals(Cubo3C3J.getBackground())
+                && !Cubo1C3J.getBackground().equals(Cubo4C3J.getBackground()))
+                && (!Cubo2C3J.getBackground().equals(Cubo3C3J.getBackground())
+                && !Cubo2C3J.getBackground().equals(Cubo4C3J.getBackground()))
+                && !Cubo3C3J.getBackground().equals(Cubo4C3J.getBackground()));
+
+        boolean condicion2 = ((!Cubo1C5J.getBackground().equals(Cubo2C5J.getBackground())
+                && !Cubo1C5J.getBackground().equals(Cubo3C5J.getBackground())
+                && !Cubo1C5J.getBackground().equals(Cubo4C5J.getBackground()))
+                && (!Cubo2C5J.getBackground().equals(Cubo3C5J.getBackground())
+                && !Cubo2C5J.getBackground().equals(Cubo4C5J.getBackground()))
+                && !Cubo3C5J.getBackground().equals(Cubo4C5J.getBackground()));
+
+        boolean condicion3 = ((!Cubo1C4J.getBackground().equals(Cubo2C4J.getBackground())
+                && !Cubo1C4J.getBackground().equals(Cubo3C4J.getBackground())
+                && !Cubo1C4J.getBackground().equals(Cubo4C4J.getBackground()))
+                && (!Cubo2C4J.getBackground().equals(Cubo3C4J.getBackground())
+                && !Cubo2C4J.getBackground().equals(Cubo4C4J.getBackground()))
+                && !Cubo3C4J.getBackground().equals(Cubo4C4J.getBackground()));
+
+        boolean condicion4 = ((!Cubo1C6J.getBackground().equals(Cubo2C6J.getBackground())
+                && !Cubo1C6J.getBackground().equals(Cubo3C6J.getBackground())
+                && !Cubo1C6J.getBackground().equals(Cubo4C6J.getBackground()))
+                && (!Cubo2C6J.getBackground().equals(Cubo3C6J.getBackground())
+                && !Cubo2C6J.getBackground().equals(Cubo4C6J.getBackground()))
+                && !Cubo3C6J.getBackground().equals(Cubo4C6J.getBackground()));
+
+        if (condicion1 && condicion2 && condicion3 && condicion4) {
+            resuelto = true;
+        }
         if (resuelto == true) {
             jTabbedPane1.setSelectedIndex(2);
             grafoGL();
