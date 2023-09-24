@@ -43,11 +43,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     //BIN Cubos
     // Guardar
     public static FileOutputStream F_binCubosOut;
-    public static String binCubosNOut = "C:\\Users\\carlo\\Documents\\NetBeansProjects\\[MC2]_ProyF_LocuraInst\\Binarios\\Cubos.bin";
+    public static String binCubosNOut = "Binarios\\Cubos.bin";
     public static ObjectOutputStream O_binCubosOut;
     // Cargar
     public static FileInputStream F_binCubosIn;
-    public static String binCubosNIn = "C:\\Users\\carlo\\Documents\\NetBeansProjects\\[MC2]_ProyF_LocuraInst\\Binarios\\Cubos.bin";
+    public static String binCubosNIn = "Binarios\\Cubos.bin";
     public static ObjectInputStream O_binCubosIn;
 
     boolean sigBtnPressed = false;
