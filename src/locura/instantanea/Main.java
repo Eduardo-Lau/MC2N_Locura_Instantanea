@@ -20,11 +20,12 @@ public class Main {
         // TODO code application logic here
         try {
             UIManager.setLookAndFeel(new FlatMacDarkLaf());
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
-        new Locura_Instantánea().BinariosIn();
         new Locura_Instantánea().setVisible(true);
     }
+    
     
 }
