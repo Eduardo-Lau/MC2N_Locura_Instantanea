@@ -24,6 +24,7 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        new Locura_Instantánea().BinariosIn();
         new Locura_Instantánea().setVisible(true);
     }
     
