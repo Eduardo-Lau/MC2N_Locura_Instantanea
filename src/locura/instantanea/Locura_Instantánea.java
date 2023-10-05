@@ -1366,7 +1366,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jLabel13.setText("1)");
         jPanel2.add(jLabel13);
-        jLabel13.setBounds(23, 44, 12, 20);
+        jLabel13.setBounds(23, 44, 20, 20);
 
         horarioCubo1.setBackground(new java.awt.Color(147, 157, 255));
         horarioCubo1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -1463,7 +1463,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jLabel14.setText("2)");
         jPanel2.add(jLabel14);
-        jLabel14.setBounds(240, 44, 12, 20);
+        jLabel14.setBounds(240, 44, 20, 20);
 
         Cubo2C2J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1593,7 +1593,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jLabel15.setText("3)");
         jPanel2.add(jLabel15);
-        jLabel15.setBounds(469, 44, 12, 20);
+        jLabel15.setBounds(469, 44, 20, 20);
 
         Cubo3C2J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1723,7 +1723,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jLabel16.setText("4)");
         jPanel2.add(jLabel16);
-        jLabel16.setBounds(700, 44, 12, 20);
+        jLabel16.setBounds(700, 44, 20, 20);
 
         Cubo4C2J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1946,19 +1946,19 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo4Lbl.setText("4)");
         jPanel2.add(Cubo4Lbl);
-        Cubo4Lbl.setBounds(230, 370, 12, 20);
+        Cubo4Lbl.setBounds(230, 370, 20, 20);
 
         Cubo1Lbl.setText("1)");
         jPanel2.add(Cubo1Lbl);
-        Cubo1Lbl.setBounds(230, 550, 12, 20);
+        Cubo1Lbl.setBounds(230, 550, 20, 20);
 
         Cubo2Lbl.setText("2)");
         jPanel2.add(Cubo2Lbl);
-        Cubo2Lbl.setBounds(230, 490, 12, 20);
+        Cubo2Lbl.setBounds(230, 490, 20, 20);
 
         Cubo3Lbl.setText("3)");
         jPanel2.add(Cubo3Lbl);
-        Cubo3Lbl.setBounds(230, 430, 12, 20);
+        Cubo3Lbl.setBounds(230, 430, 20, 20);
 
         jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
         jLabel28.setText("Vistas Laterales de la Torre");
