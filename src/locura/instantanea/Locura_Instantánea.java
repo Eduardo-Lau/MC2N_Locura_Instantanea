@@ -785,7 +785,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo2.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 930, 50));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 930, 780));
 
         jLabel2.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(127, 27, 53));
