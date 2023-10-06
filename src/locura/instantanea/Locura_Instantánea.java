@@ -785,7 +785,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo2.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 930, 780));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 930, 50));
 
         jLabel2.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(127, 27, 53));
@@ -7319,10 +7319,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         graphGL.getModel().beginUpdate();
         try {
-            Object R = graphGL.insertVertex(parent, "a", "R", 20, 20, 20, 20, "fontColor=#000000");
-            Object B = graphGL.insertVertex(parent, null, "B", 110, 20, 20, 20, "fontColor=#000000");
-            Object V = graphGL.insertVertex(parent, null, "V", 20, 115, 20, 20, "fontColor=#000000");
-            Object A = graphGL.insertVertex(parent, null, "A", 110, 115, 20, 20, "fontColor=#000000");
+            Object R = graphGL.insertVertex(parent, "a", "R", 35, 20, 20, 20, "fontColor=#000000");
+            Object B = graphGL.insertVertex(parent, null, "B", 120, 20, 20, 20, "fontColor=#000000");
+            Object V = graphGL.insertVertex(parent, null, "V", 35, 115, 20, 20, "fontColor=#000000");
+            Object A = graphGL.insertVertex(parent, null, "A", 120, 115, 20, 20, "fontColor=#000000");
 
             Object aristaCubo1 = null;
             Object aristaCubo2 = null;
