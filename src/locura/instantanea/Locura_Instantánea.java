@@ -563,7 +563,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
@@ -646,6 +645,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
         resolverBtn = new javax.swing.JButton();
         Cubo4C3T = new javax.swing.JLabel();
@@ -775,277 +775,436 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo2.png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 930, 780));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 930, 770));
 
         jLabel2.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(127, 27, 53));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/instantanea/Logo_LocInst.gif"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 14, 698, -1));
 
+        jTabbedPane1.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jTabbedPane1StateChanged(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel5.setText("Cubo 1");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 74, -1));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel6.setText("Cubo 2");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 74, -1));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel7.setText("Cubo 3");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 74, -1));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel8.setText("Cubo 4");
-
-        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, 74, -1));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 12, 260));
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 10, 260));
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, 10, 260));
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 70, 10, 260));
 
+        jLabel33.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel33.setText("Cara 1");
+        jLabel33.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel33.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 60, -1));
 
+        Cubo1C1.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C1ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo1C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 97, -1));
 
+        jLabel34.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel34.setText("Cara 2");
+        jLabel34.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel34.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 60, -1));
 
+        Cubo1C2.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C2ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo1C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 97, -1));
 
+        jLabel35.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel35.setText("Cara 3");
+        jLabel35.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel35.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 60, -1));
 
+        Cubo1C3.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C3ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo1C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 97, -1));
 
+        jLabel36.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel36.setText("Cara 4");
+        jLabel36.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel36.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 60, -1));
 
+        Cubo1C4.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C4ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo1C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 97, -1));
 
+        jLabel37.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel37.setText("Cara 5");
+        jLabel37.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel37.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 60, -1));
 
+        Cubo1C5.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C5ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo1C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 97, -1));
 
+        jLabel38.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel38.setText("Cara 6");
+        jLabel38.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel38.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 60, -1));
 
+        Cubo1C6.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C6ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo1C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 97, -1));
 
+        jLabel21.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel21.setText("Cara 1");
+        jLabel21.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel21.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 60, -1));
 
+        Cubo3C1.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C1ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo3C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, 97, -1));
 
+        jLabel22.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel22.setText("Cara 2");
+        jLabel22.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel22.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 60, -1));
 
+        Cubo3C2.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C2ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo3C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, 97, -1));
 
+        jLabel23.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel23.setText("Cara 3");
+        jLabel23.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel23.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 60, -1));
 
+        Cubo3C3.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C3ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo3C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 97, -1));
 
+        jLabel24.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel24.setText("Cara 4");
+        jLabel24.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel24.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 60, -1));
 
+        Cubo3C4.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C4ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo3C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, 97, -1));
 
+        jLabel25.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel25.setText("Cara 5");
+        jLabel25.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel25.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, 60, -1));
 
+        Cubo3C5.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C5ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo3C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 97, -1));
 
+        jLabel26.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel26.setText("Cara 6");
+        jLabel26.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel26.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 60, -1));
 
+        Cubo3C6.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C6ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo3C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, 97, -1));
 
+        jLabel39.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel39.setText("Cara 1");
+        jLabel39.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel39.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, 60, -1));
 
+        Cubo4C1.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C1ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo4C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 90, 97, -1));
 
+        jLabel40.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel40.setText("Cara 2");
+        jLabel40.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel40.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, 60, -1));
 
+        Cubo4C2.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C2ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo4C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 130, 97, -1));
 
+        jLabel41.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel41.setText("Cara 3");
+        jLabel41.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel41.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, 60, -1));
 
+        Cubo4C3.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C3ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo4C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 170, 97, -1));
 
+        jLabel42.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel42.setText("Cara 4");
+        jLabel42.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel42.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, 60, -1));
 
+        Cubo4C4.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C4ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo4C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 210, 97, -1));
 
+        jLabel43.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel43.setText("Cara 5");
+        jLabel43.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel43.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 60, -1));
 
+        Cubo4C5.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C5ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo4C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 250, 97, -1));
 
+        jLabel44.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel44.setText("Cara 6");
+        jLabel44.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel44.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 60, -1));
 
+        Cubo4C6.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C6ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo4C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 290, 97, -1));
 
         jugarBtn.setBackground(new java.awt.Color(147, 157, 255));
-        jugarBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jugarBtn.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jugarBtn.setForeground(new java.awt.Color(0, 0, 0));
         jugarBtn.setText("JUGAR");
         jugarBtn.setAlignmentX(jTabbedPane1.getAlignmentX());
+        jugarBtn.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jugarBtn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jugarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jugarBtnActionPerformed(evt);
             }
         });
+        jPanel1.add(jugarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 547, 180, 36));
 
+        jLabel45.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel45.setText("Cara 1");
+        jLabel45.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel45.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 60, -1));
 
+        Cubo2C1.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C1ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo2C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 97, -1));
 
+        jLabel46.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel46.setText("Cara 2");
+        jLabel46.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel46.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 60, -1));
 
+        Cubo2C2.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C2ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo2C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 97, -1));
 
+        jLabel47.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel47.setText("Cara 3");
+        jLabel47.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel47.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 60, -1));
 
+        Cubo2C3.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C3ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo2C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 97, -1));
 
+        jLabel48.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel48.setText("Cara 4");
+        jLabel48.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel48.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 60, -1));
 
+        Cubo2C4.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C4ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo2C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 97, -1));
 
+        jLabel49.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel49.setText("Cara 5");
+        jLabel49.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel49.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 60, -1));
 
+        Cubo2C5.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C5ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo2C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 97, -1));
 
+        jLabel50.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel50.setText("Cara 6");
+        jLabel50.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel50.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel1.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 60, -1));
 
+        Cubo2C6.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C6ActionPerformed(evt);
             }
         });
+        jPanel1.add(Cubo2C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 97, -1));
 
         genAleatorio.setBackground(new java.awt.Color(112, 23, 46));
-        genAleatorio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        genAleatorio.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         genAleatorio.setForeground(new java.awt.Color(255, 255, 255));
-        genAleatorio.setText("Generar Aleatorio");
+        genAleatorio.setText("ALEATORIO");
+        genAleatorio.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        genAleatorio.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         genAleatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 genAleatorioActionPerformed(evt);
             }
         });
+        jPanel1.add(genAleatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 10, 170, 32));
 
         Cubo1C5G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1053,6 +1212,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C5G.setText("5");
         Cubo1C5G.setOpaque(true);
+        jPanel1.add(Cubo1C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 431, 31, 31));
 
         Cubo1C3G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1060,6 +1220,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C3G.setText("3");
         Cubo1C3G.setOpaque(true);
+        jPanel1.add(Cubo1C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 394, 31, 31));
 
         Cubo1C1G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1067,6 +1228,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C1G.setText("1");
         Cubo1C1G.setOpaque(true);
+        jPanel1.add(Cubo1C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 431, 31, 31));
 
         Cubo1C2G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1074,6 +1236,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C2G.setText("2");
         Cubo1C2G.setOpaque(true);
+        jPanel1.add(Cubo1C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 431, 31, 31));
 
         Cubo1C6G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1081,6 +1244,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C6G.setText("6");
         Cubo1C6G.setOpaque(true);
+        jPanel1.add(Cubo1C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 431, 31, 31));
 
         Cubo1C4G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1088,6 +1252,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C4G.setText("4");
         Cubo1C4G.setOpaque(true);
+        jPanel1.add(Cubo1C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 468, 31, 31));
 
         Cubo2C1G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1095,6 +1260,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C1G.setText("1");
         Cubo2C1G.setOpaque(true);
+        jPanel1.add(Cubo2C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 431, 31, 31));
 
         Cubo2C3G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1102,6 +1268,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C3G.setText("3");
         Cubo2C3G.setOpaque(true);
+        jPanel1.add(Cubo2C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 394, 31, 31));
 
         Cubo2C5G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1109,6 +1276,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C5G.setText("5");
         Cubo2C5G.setOpaque(true);
+        jPanel1.add(Cubo2C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 431, 31, 31));
 
         Cubo2C2G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1116,6 +1284,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C2G.setText("2");
         Cubo2C2G.setOpaque(true);
+        jPanel1.add(Cubo2C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 431, 31, 31));
 
         Cubo2C6G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1123,6 +1292,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C6G.setText("6");
         Cubo2C6G.setOpaque(true);
+        jPanel1.add(Cubo2C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 431, 31, 31));
 
         Cubo2C4G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1130,6 +1300,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C4G.setText("4");
         Cubo2C4G.setOpaque(true);
+        jPanel1.add(Cubo2C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 468, 31, 31));
 
         Cubo3C1G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1137,6 +1308,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C1G.setText("1");
         Cubo3C1G.setOpaque(true);
+        jPanel1.add(Cubo3C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 431, 31, 31));
 
         Cubo3C3G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1144,6 +1316,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C3G.setText("3");
         Cubo3C3G.setOpaque(true);
+        jPanel1.add(Cubo3C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 394, 31, 31));
 
         Cubo3C5G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1151,6 +1324,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C5G.setText("5");
         Cubo3C5G.setOpaque(true);
+        jPanel1.add(Cubo3C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 431, 31, 31));
 
         Cubo3C2G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1158,6 +1332,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C2G.setText("2");
         Cubo3C2G.setOpaque(true);
+        jPanel1.add(Cubo3C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 431, 31, 31));
 
         Cubo3C6G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1165,6 +1340,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C6G.setText("6");
         Cubo3C6G.setOpaque(true);
+        jPanel1.add(Cubo3C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 431, 31, 31));
 
         Cubo3C4G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1172,6 +1348,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C4G.setText("4");
         Cubo3C4G.setOpaque(true);
+        jPanel1.add(Cubo3C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 468, 31, 31));
 
         Cubo4C1G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1179,6 +1356,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C1G.setText("1");
         Cubo4C1G.setOpaque(true);
+        jPanel1.add(Cubo4C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 431, 31, 31));
 
         Cubo4C3G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1186,6 +1364,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C3G.setText("3");
         Cubo4C3G.setOpaque(true);
+        jPanel1.add(Cubo4C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 394, 31, 31));
 
         Cubo4C5G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1193,6 +1372,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C5G.setText("5");
         Cubo4C5G.setOpaque(true);
+        jPanel1.add(Cubo4C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 431, 31, 31));
 
         Cubo4C2G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1200,6 +1380,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C2G.setText("2");
         Cubo4C2G.setOpaque(true);
+        jPanel1.add(Cubo4C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 431, 31, 31));
 
         Cubo4C6G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1207,6 +1388,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C6G.setText("6");
         Cubo4C6G.setOpaque(true);
+        jPanel1.add(Cubo4C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(803, 431, 31, 31));
 
         Cubo4C4G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1214,375 +1396,44 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C4G.setText("4");
         Cubo4C4G.setOpaque(true);
+        jPanel1.add(Cubo4C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 468, 31, 31));
 
+        jLabel9.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jLabel9.setText("1)");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 368, 30, -1));
 
+        jLabel10.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jLabel10.setText("2)");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 368, 30, -1));
 
+        jLabel11.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jLabel11.setText("3)");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 368, 30, -1));
 
+        jLabel12.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jLabel12.setText("4)");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 368, 30, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(362, 362, 362)
-                        .addComponent(genAleatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(11, 11, 11)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(7, 7, 7)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Cubo1C1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo1C2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo1C3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo1C4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo1C5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo1C6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(30, 30, 30)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Cubo2C1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo2C2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo2C3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo2C4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo2C5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo2C6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(32, 32, 32)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(9, 9, 9)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(Cubo3C1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(Cubo3C2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(Cubo3C3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(Cubo3C4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(Cubo3C5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(Cubo3C6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(19, 19, 19)
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(1, 1, 1)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(17, 17, 17)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Cubo4C1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo4C2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo4C3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo4C4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo4C5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Cubo4C6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(27, 27, 27)
-                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(212, 212, 212)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(202, 202, 202)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(202, 202, 202)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(Cubo1C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(197, 197, 197)
-                        .addComponent(Cubo2C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(187, 187, 187)
-                        .addComponent(Cubo3C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(187, 187, 187)
-                        .addComponent(Cubo4C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(Cubo1C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo1C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo1C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo1C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86)
-                        .addComponent(Cubo2C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo2C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo2C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo2C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(76, 76, 76)
-                        .addComponent(Cubo3C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo3C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo3C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo3C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(76, 76, 76)
-                        .addComponent(Cubo4C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo4C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo4C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(6, 6, 6)
-                        .addComponent(Cubo4C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(Cubo1C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(197, 197, 197)
-                        .addComponent(Cubo2C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(187, 187, 187)
-                        .addComponent(Cubo3C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(187, 187, 187)
-                        .addComponent(Cubo4C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(354, 354, 354)
-                        .addComponent(jugarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(10, 10, 10))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(genAleatorio)
-                .addGap(8, 8, 8)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel33)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel34)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel35)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel36)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel37)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel38))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(18, 18, 18)
-                        .addComponent(Cubo1C1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo1C2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo1C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo1C4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo1C5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo1C6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel45)
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel46)
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel47)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel48)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel49)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel50))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(Cubo2C1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)
-                        .addComponent(Cubo2C2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 11, 11)
-                        .addComponent(Cubo2C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo2C4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo2C5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo2C6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel21)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel22)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel23)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel24)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel25)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel26))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(18, 18, 18)
-                        .addComponent(Cubo3C1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)
-                        .addComponent(Cubo3C2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(11, 11, 11)
-                        .addComponent(Cubo3C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo3C4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo3C5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo3C6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel39)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel40)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel41)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel42)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel43)
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel44))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addGap(18, 18, 18)
-                        .addComponent(Cubo4C1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo4C2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo4C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo4C4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo4C5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(Cubo4C6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(40, 40, 40)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Cubo1C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo2C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo3C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo4C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Cubo1C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo1C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo1C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo1C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo2C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo2C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo2C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo2C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo3C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo3C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo3C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo3C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo4C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo4C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo4C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo4C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Cubo1C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo2C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo3C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cubo4C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
-                .addComponent(jugarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-        );
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 10, 260));
 
         jTabbedPane1.addTab("Combinación", jPanel1);
 
         jPanel2.setLayout(null);
 
         resolverBtn.setBackground(new java.awt.Color(112, 23, 46));
-        resolverBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        resolverBtn.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         resolverBtn.setForeground(new java.awt.Color(255, 255, 255));
         resolverBtn.setText("RESOLVER");
+        resolverBtn.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        resolverBtn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         resolverBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resolverBtnActionPerformed(evt);
             }
         });
         jPanel2.add(resolverBtn);
-        resolverBtn.setBounds(290, 260, 130, 30);
+        resolverBtn.setBounds(280, 260, 140, 32);
 
         Cubo4C3T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C3T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1686,9 +1537,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo1C2J);
         Cubo1C2J.setBounds(165, 42, 25, 25);
 
+        jLabel13.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jLabel13.setText("1)");
         jPanel2.add(jLabel13);
-        jLabel13.setBounds(23, 44, 20, 20);
+        jLabel13.setBounds(23, 44, 20, 19);
 
         horarioCubo1.setBackground(new java.awt.Color(147, 157, 255));
         horarioCubo1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -1783,9 +1635,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(arribaCubo2);
         arribaCubo2.setBounds(306, 38, 25, 25);
 
+        jLabel14.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jLabel14.setText("2)");
         jPanel2.add(jLabel14);
-        jLabel14.setBounds(240, 44, 20, 20);
+        jLabel14.setBounds(240, 44, 20, 19);
 
         Cubo2C2J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1913,9 +1766,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(arribaCubo3);
         arribaCubo3.setBounds(533, 38, 25, 25);
 
+        jLabel15.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jLabel15.setText("3)");
         jPanel2.add(jLabel15);
-        jLabel15.setBounds(469, 44, 20, 20);
+        jLabel15.setBounds(469, 44, 20, 19);
 
         Cubo3C2J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2043,9 +1897,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(arribaCubo4);
         arribaCubo4.setBounds(763, 38, 25, 25);
 
+        jLabel16.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jLabel16.setText("4)");
         jPanel2.add(jLabel16);
-        jLabel16.setBounds(700, 44, 20, 20);
+        jLabel16.setBounds(700, 44, 20, 19);
 
         Cubo4C2J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C2J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2140,11 +1995,12 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo3C3T);
         Cubo3C3T.setBounds(260, 420, 50, 50);
 
-        resueltoLbl.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        resueltoLbl.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         resueltoLbl.setForeground(new java.awt.Color(255, 202, 117));
-        resueltoLbl.setText("RESUELTO !");
+        resueltoLbl.setText("RESUELTO!");
+        resueltoLbl.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jPanel2.add(resueltoLbl);
-        resueltoLbl.setBounds(400, 330, 80, 20);
+        resueltoLbl.setBounds(400, 330, 90, 19);
 
         Cubo4C4T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C4T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2254,50 +2110,67 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo1C6T);
         Cubo1C6T.setBounds(560, 540, 50, 50);
 
+        Cubo4Lbl.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         Cubo4Lbl.setText("4)");
         jPanel2.add(Cubo4Lbl);
-        Cubo4Lbl.setBounds(230, 370, 20, 20);
+        Cubo4Lbl.setBounds(230, 370, 20, 19);
 
+        Cubo1Lbl.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         Cubo1Lbl.setText("1)");
         jPanel2.add(Cubo1Lbl);
-        Cubo1Lbl.setBounds(230, 550, 20, 20);
+        Cubo1Lbl.setBounds(230, 550, 20, 19);
 
+        Cubo2Lbl.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         Cubo2Lbl.setText("2)");
         jPanel2.add(Cubo2Lbl);
-        Cubo2Lbl.setBounds(230, 490, 20, 20);
+        Cubo2Lbl.setBounds(230, 490, 20, 19);
 
+        Cubo3Lbl.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         Cubo3Lbl.setText("3)");
         jPanel2.add(Cubo3Lbl);
-        Cubo3Lbl.setBounds(230, 430, 20, 20);
+        Cubo3Lbl.setBounds(230, 430, 20, 19);
 
-        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel28.setFont(new java.awt.Font("Consolas", 1, 21)); // NOI18N
         jLabel28.setText("Vistas Laterales de la Torre");
+        jLabel28.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel28.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel2.add(jLabel28);
-        jLabel28.setBounds(300, 300, 260, 29);
+        jLabel28.setBounds(270, 300, 320, 25);
 
         explicacionBtn.setBackground(new java.awt.Color(147, 157, 255));
-        explicacionBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        explicacionBtn.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         explicacionBtn.setForeground(new java.awt.Color(0, 0, 0));
-        explicacionBtn.setText("Explicación");
+        explicacionBtn.setText("EXPLICACIÓN");
+        explicacionBtn.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        explicacionBtn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         explicacionBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 explicacionBtnActionPerformed(evt);
             }
         });
         jPanel2.add(explicacionBtn);
-        explicacionBtn.setBounds(440, 260, 130, 30);
+        explicacionBtn.setBounds(440, 260, 140, 32);
 
+        jSeparator6.setBackground(new java.awt.Color(51, 51, 51));
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        jSeparator6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel2.add(jSeparator6);
-        jSeparator6.setBounds(530, 370, 10, 210);
+        jSeparator6.setBounds(530, 370, 3, 210);
 
+        jSeparator7.setBackground(new java.awt.Color(51, 51, 51));
         jSeparator7.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        jSeparator7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel2.add(jSeparator7);
-        jSeparator7.setBounds(330, 370, 10, 210);
+        jSeparator7.setBounds(330, 370, 3, 210);
 
+        jSeparator8.setBackground(new java.awt.Color(51, 51, 51));
         jSeparator8.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        jSeparator8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel2.add(jSeparator8);
-        jSeparator8.setBounds(430, 370, 10, 210);
+        jSeparator8.setBounds(427, 370, 3, 210);
 
         InterCubo1_Cubo2.setBackground(new java.awt.Color(147, 157, 255));
         InterCubo1_Cubo2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -2365,20 +2238,20 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 689, 150));
 
-        existeSolucion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        existeSolucion.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         existeSolucion.setForeground(new java.awt.Color(45, 160, 106));
         existeSolucion.setText("Así se resuelve el juego : ");
         jPanel6.add(existeSolucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 574, -1));
 
-        porLoTanto1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        porLoTanto1.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         porLoTanto1.setForeground(new java.awt.Color(255, 255, 255));
         porLoTanto1.setText("Interpretación de subgrafos G1 y G2 :");
         jPanel6.add(porLoTanto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 205, 574, -1));
 
-        porLoTanto2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        porLoTanto2.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         porLoTanto2.setForeground(new java.awt.Color(45, 160, 106));
         porLoTanto2.setText("Las soluciones fueron aplicadas en la pestaña de \"Juego\"");
-        jPanel6.add(porLoTanto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 575, 500, -1));
+        jPanel6.add(porLoTanto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 575, 590, -1));
 
         Cubo1C1E.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C1E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2493,12 +2366,12 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jTabbedPane1.addTab("Explicación", jPanel6);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
-        jLabel29.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(102, 102, 102));
         jLabel29.setText("By Eduardo Lau");
-        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 130, -1));
+        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 100, 122, -1));
         getContentPane().add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 750, 930, 20));
 
         pack();
@@ -4712,8 +4585,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 || !Cubo4Bin.C5.equals(Cubo4.C5) || !Cubo4Bin.C6.equals(Cubo4.C6))) {
 
             sigBtnPressed = true;
-            resuelto = false;
-            resueltoLbl.setVisible(false);
+
             jTabbedPane1.setSelectedIndex(1);
 
             // Cubo 1
@@ -4797,6 +4669,40 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             //
 
             actualTorre();
+
+            boolean condicion1 = ((!Cubo1C3J.getBackground().equals(Cubo2C3J.getBackground())
+                    && !Cubo1C3J.getBackground().equals(Cubo3C3J.getBackground())
+                    && !Cubo1C3J.getBackground().equals(Cubo4C3J.getBackground()))
+                    && (!Cubo2C3J.getBackground().equals(Cubo3C3J.getBackground())
+                    && !Cubo2C3J.getBackground().equals(Cubo4C3J.getBackground()))
+                    && !Cubo3C3J.getBackground().equals(Cubo4C3J.getBackground()));
+
+            boolean condicion2 = ((!Cubo1C5J.getBackground().equals(Cubo2C5J.getBackground())
+                    && !Cubo1C5J.getBackground().equals(Cubo3C5J.getBackground())
+                    && !Cubo1C5J.getBackground().equals(Cubo4C5J.getBackground()))
+                    && (!Cubo2C5J.getBackground().equals(Cubo3C5J.getBackground())
+                    && !Cubo2C5J.getBackground().equals(Cubo4C5J.getBackground()))
+                    && !Cubo3C5J.getBackground().equals(Cubo4C5J.getBackground()));
+
+            boolean condicion3 = ((!Cubo1C4J.getBackground().equals(Cubo2C4J.getBackground())
+                    && !Cubo1C4J.getBackground().equals(Cubo3C4J.getBackground())
+                    && !Cubo1C4J.getBackground().equals(Cubo4C4J.getBackground()))
+                    && (!Cubo2C4J.getBackground().equals(Cubo3C4J.getBackground())
+                    && !Cubo2C4J.getBackground().equals(Cubo4C4J.getBackground()))
+                    && !Cubo3C4J.getBackground().equals(Cubo4C4J.getBackground()));
+
+            boolean condicion4 = ((!Cubo1C6J.getBackground().equals(Cubo2C6J.getBackground())
+                    && !Cubo1C6J.getBackground().equals(Cubo3C6J.getBackground())
+                    && !Cubo1C6J.getBackground().equals(Cubo4C6J.getBackground()))
+                    && (!Cubo2C6J.getBackground().equals(Cubo3C6J.getBackground())
+                    && !Cubo2C6J.getBackground().equals(Cubo4C6J.getBackground()))
+                    && !Cubo3C6J.getBackground().equals(Cubo4C6J.getBackground()));
+
+            if (condicion1 && condicion2 && condicion3 && condicion4) {
+
+                resueltoLbl.setVisible(true);
+                resuelto = true;
+            }
         } else {
             sigBtnPressed = true;
             resuelto = false;
@@ -4861,6 +4767,40 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             actualTorre();
 
+            boolean condicion1 = ((!Cubo1C3J.getBackground().equals(Cubo2C3J.getBackground())
+                    && !Cubo1C3J.getBackground().equals(Cubo3C3J.getBackground())
+                    && !Cubo1C3J.getBackground().equals(Cubo4C3J.getBackground()))
+                    && (!Cubo2C3J.getBackground().equals(Cubo3C3J.getBackground())
+                    && !Cubo2C3J.getBackground().equals(Cubo4C3J.getBackground()))
+                    && !Cubo3C3J.getBackground().equals(Cubo4C3J.getBackground()));
+
+            boolean condicion2 = ((!Cubo1C5J.getBackground().equals(Cubo2C5J.getBackground())
+                    && !Cubo1C5J.getBackground().equals(Cubo3C5J.getBackground())
+                    && !Cubo1C5J.getBackground().equals(Cubo4C5J.getBackground()))
+                    && (!Cubo2C5J.getBackground().equals(Cubo3C5J.getBackground())
+                    && !Cubo2C5J.getBackground().equals(Cubo4C5J.getBackground()))
+                    && !Cubo3C5J.getBackground().equals(Cubo4C5J.getBackground()));
+
+            boolean condicion3 = ((!Cubo1C4J.getBackground().equals(Cubo2C4J.getBackground())
+                    && !Cubo1C4J.getBackground().equals(Cubo3C4J.getBackground())
+                    && !Cubo1C4J.getBackground().equals(Cubo4C4J.getBackground()))
+                    && (!Cubo2C4J.getBackground().equals(Cubo3C4J.getBackground())
+                    && !Cubo2C4J.getBackground().equals(Cubo4C4J.getBackground()))
+                    && !Cubo3C4J.getBackground().equals(Cubo4C4J.getBackground()));
+
+            boolean condicion4 = ((!Cubo1C6J.getBackground().equals(Cubo2C6J.getBackground())
+                    && !Cubo1C6J.getBackground().equals(Cubo3C6J.getBackground())
+                    && !Cubo1C6J.getBackground().equals(Cubo4C6J.getBackground()))
+                    && (!Cubo2C6J.getBackground().equals(Cubo3C6J.getBackground())
+                    && !Cubo2C6J.getBackground().equals(Cubo4C6J.getBackground()))
+                    && !Cubo3C6J.getBackground().equals(Cubo4C6J.getBackground()));
+
+            if (condicion1 && condicion2 && condicion3 && condicion4) {
+
+                resueltoLbl.setVisible(true);
+                resuelto = true;
+            }
+            
         }
 
 
