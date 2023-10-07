@@ -4702,7 +4702,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 resueltoLbl.setVisible(true);
                 resuelto = true;
+            } else {
+                resueltoLbl.setVisible(false);
+                resuelto = false;
             }
+            
         } else {
             sigBtnPressed = true;
             resuelto = false;
@@ -4799,6 +4803,9 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 resueltoLbl.setVisible(true);
                 resuelto = true;
+            } else {
+                resueltoLbl.setVisible(false);
+                resuelto = false;
             }
             
         }
