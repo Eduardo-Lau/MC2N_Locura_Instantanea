@@ -4,8 +4,6 @@
  */
 package locura.instantanea;
 
-import javax.swing.UIManager;
-import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 import com.mxgraph.layout.mxParallelEdgeLayout;
 import java.awt.Color;
 import java.io.FileInputStream;
@@ -18,7 +16,6 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.view.mxGraph;
-import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -51,25 +48,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     public static String binCubosNIn = "Binarios\\Cubos.bin";
     public static ObjectInputStream O_binCubosIn;
 
+    boolean iniciado = false;
     boolean sigBtnPressed = false;
     boolean resuelto = false;
     ImageIcon icono = new ImageIcon("Binarios\\logo.png");
-    ImageIcon fondo = new ImageIcon("Binarios\\fondo.png");
 
     Point posCubo1Abs = new Point(260, 540);
     Point posCubo2Abs = new Point(260, 480);
     Point posCubo3Abs = new Point(260, 420);
     Point posCubo4Abs = new Point(260, 360);
 
-    public Timer timerC1;
-    public Timer timerC2;
-    public Timer timerC3;
-    public Timer timerC4;
+    public Timer timer;
 
     public Locura_Instantánea() {
-
+        System.out.println("Inicio");
         initComponents();
         BinariosIn();
+
         this.setIconImage(icono.getImage());
         this.setTitle("Locura Instantánea");
 
@@ -548,7 +543,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo4C6G.setBackground(Cubo4.C6);
             }
         }
-
+        iniciado = true;
     }
 
     /**
@@ -560,7 +555,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        fondo = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -585,7 +580,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C5 = new javax.swing.JComboBox<>();
         jLabel38 = new javax.swing.JLabel();
         Cubo1C6 = new javax.swing.JComboBox<>();
-        genCubo1 = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
         Cubo3C1 = new javax.swing.JComboBox<>();
         jLabel22 = new javax.swing.JLabel();
@@ -611,8 +605,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel44 = new javax.swing.JLabel();
         Cubo4C6 = new javax.swing.JComboBox<>();
         jugarBtn = new javax.swing.JButton();
-        genCubo3 = new javax.swing.JButton();
-        genCubo4 = new javax.swing.JButton();
         jLabel45 = new javax.swing.JLabel();
         Cubo2C1 = new javax.swing.JComboBox<>();
         jLabel46 = new javax.swing.JLabel();
@@ -625,7 +617,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C5 = new javax.swing.JComboBox<>();
         jLabel50 = new javax.swing.JLabel();
         Cubo2C6 = new javax.swing.JComboBox<>();
-        genCubo2 = new javax.swing.JButton();
         genAleatorio = new javax.swing.JButton();
         Cubo1C5G = new javax.swing.JLabel();
         Cubo1C3G = new javax.swing.JLabel();
@@ -709,7 +700,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         abajoCubo4 = new javax.swing.JButton();
         horarioCubo4 = new javax.swing.JButton();
         antihorarioCubo4 = new javax.swing.JButton();
-        comprobarBtn = new javax.swing.JButton();
         Cubo1C1J = new javax.swing.JLabel();
         Cubo1C3T = new javax.swing.JLabel();
         Cubo2C3T = new javax.swing.JLabel();
@@ -784,8 +774,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo2.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 930, 780));
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo2.png"))); // NOI18N
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 930, 780));
 
         jLabel2.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(127, 27, 53));
@@ -798,157 +788,189 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel5.setText("Cubo 1");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 48, 74, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setText("Cubo 2");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 48, 74, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setText("Cubo 3");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 48, 74, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setText("Cubo 4");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(736, 48, 74, -1));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 61, 10, 260));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 68, 12, 260));
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(446, 68, 10, 260));
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(656, 68, 10, 260));
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(877, 68, 10, 260));
 
         jLabel33.setText("Cara 1");
-        jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 96, 43, -1));
 
         Cubo1C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo1C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 91, 97, -1));
-
-        jLabel34.setText("Cara 2");
-        jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 136, 43, -1));
-
-        Cubo1C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo1C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 131, 97, -1));
-
-        jLabel35.setText("Cara 3");
-        jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 176, 43, -1));
-
-        Cubo1C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo1C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 171, 97, -1));
-
-        jLabel36.setText("Cara 4");
-        jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 216, 43, -1));
-
-        Cubo1C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo1C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 211, 97, -1));
-
-        jLabel37.setText("Cara 5");
-        jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 256, 43, -1));
-
-        Cubo1C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo1C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 251, 97, -1));
-
-        jLabel38.setText("Cara 6");
-        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 296, 43, -1));
-
-        Cubo1C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo1C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 291, 97, -1));
-
-        genCubo1.setBackground(new java.awt.Color(147, 157, 255));
-        genCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        genCubo1.setForeground(new java.awt.Color(0, 0, 0));
-        genCubo1.setText("Generar");
-        genCubo1.addActionListener(new java.awt.event.ActionListener() {
+        Cubo1C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genCubo1ActionPerformed(evt);
+                Cubo1C1ActionPerformed(evt);
             }
         });
-        jPanel1.add(genCubo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 340, -1, -1));
+
+        jLabel34.setText("Cara 2");
+
+        Cubo1C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        Cubo1C2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo1C2ActionPerformed(evt);
+            }
+        });
+
+        jLabel35.setText("Cara 3");
+
+        Cubo1C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        Cubo1C3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo1C3ActionPerformed(evt);
+            }
+        });
+
+        jLabel36.setText("Cara 4");
+
+        Cubo1C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        Cubo1C4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo1C4ActionPerformed(evt);
+            }
+        });
+
+        jLabel37.setText("Cara 5");
+
+        Cubo1C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        Cubo1C5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo1C5ActionPerformed(evt);
+            }
+        });
+
+        jLabel38.setText("Cara 6");
+
+        Cubo1C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        Cubo1C6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo1C6ActionPerformed(evt);
+            }
+        });
 
         jLabel21.setText("Cara 1");
-        jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 96, 43, -1));
 
         Cubo3C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo3C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 91, 97, -1));
+        Cubo3C1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo3C1ActionPerformed(evt);
+            }
+        });
 
         jLabel22.setText("Cara 2");
-        jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 136, 43, -1));
 
         Cubo3C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo3C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 131, 97, -1));
+        Cubo3C2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo3C2ActionPerformed(evt);
+            }
+        });
 
         jLabel23.setText("Cara 3");
-        jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 176, 43, -1));
 
         Cubo3C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo3C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 171, 97, -1));
+        Cubo3C3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo3C3ActionPerformed(evt);
+            }
+        });
 
         jLabel24.setText("Cara 4");
-        jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 216, 43, -1));
 
         Cubo3C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo3C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 211, 97, -1));
+        Cubo3C4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo3C4ActionPerformed(evt);
+            }
+        });
 
         jLabel25.setText("Cara 5");
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 256, 43, -1));
 
         Cubo3C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo3C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 251, 97, -1));
+        Cubo3C5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo3C5ActionPerformed(evt);
+            }
+        });
 
         jLabel26.setText("Cara 6");
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 296, 43, -1));
 
         Cubo3C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo3C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 291, 97, -1));
+        Cubo3C6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo3C6ActionPerformed(evt);
+            }
+        });
 
         jLabel39.setText("Cara 1");
-        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 96, 43, -1));
 
         Cubo4C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo4C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 91, 97, -1));
+        Cubo4C1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo4C1ActionPerformed(evt);
+            }
+        });
 
         jLabel40.setText("Cara 2");
-        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 136, 43, -1));
 
         Cubo4C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo4C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 131, 97, -1));
+        Cubo4C2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo4C2ActionPerformed(evt);
+            }
+        });
 
         jLabel41.setText("Cara 3");
-        jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 176, 43, -1));
 
         Cubo4C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo4C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 171, 97, -1));
+        Cubo4C3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo4C3ActionPerformed(evt);
+            }
+        });
 
         jLabel42.setText("Cara 4");
-        jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 216, 43, -1));
 
         Cubo4C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo4C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 211, 97, -1));
+        Cubo4C4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo4C4ActionPerformed(evt);
+            }
+        });
 
         jLabel43.setText("Cara 5");
-        jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 256, 43, -1));
 
         Cubo4C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo4C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 251, 97, -1));
+        Cubo4C5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo4C5ActionPerformed(evt);
+            }
+        });
 
         jLabel44.setText("Cara 6");
-        jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 296, 43, -1));
 
         Cubo4C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo4C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(753, 291, 97, -1));
+        Cubo4C6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo4C6ActionPerformed(evt);
+            }
+        });
 
         jugarBtn.setBackground(new java.awt.Color(147, 157, 255));
         jugarBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -960,76 +982,60 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 jugarBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(jugarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, 180, 36));
-
-        genCubo3.setBackground(new java.awt.Color(147, 157, 255));
-        genCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        genCubo3.setForeground(new java.awt.Color(0, 0, 0));
-        genCubo3.setText("Generar");
-        genCubo3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genCubo3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(genCubo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 340, -1, -1));
-
-        genCubo4.setBackground(new java.awt.Color(147, 157, 255));
-        genCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        genCubo4.setForeground(new java.awt.Color(0, 0, 0));
-        genCubo4.setText("Generar");
-        genCubo4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genCubo4ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(genCubo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 340, -1, -1));
 
         jLabel45.setText("Cara 1");
-        jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 96, 43, -1));
 
         Cubo2C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo2C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 91, 97, -1));
-
-        jLabel46.setText("Cara 2");
-        jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 135, 43, -1));
-
-        Cubo2C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo2C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 130, 97, -1));
-
-        jLabel47.setText("Cara 3");
-        jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 176, 43, -1));
-
-        Cubo2C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo2C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 171, 97, -1));
-
-        jLabel48.setText("Cara 4");
-        jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 216, 43, -1));
-
-        Cubo2C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo2C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 211, 97, -1));
-
-        jLabel49.setText("Cara 5");
-        jPanel1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 256, 43, -1));
-
-        Cubo2C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo2C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 251, 97, -1));
-
-        jLabel50.setText("Cara 6");
-        jPanel1.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 296, 43, -1));
-
-        Cubo2C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
-        jPanel1.add(Cubo2C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 291, 97, -1));
-
-        genCubo2.setBackground(new java.awt.Color(147, 157, 255));
-        genCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        genCubo2.setForeground(new java.awt.Color(0, 0, 0));
-        genCubo2.setText("Generar");
-        genCubo2.addActionListener(new java.awt.event.ActionListener() {
+        Cubo2C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genCubo2ActionPerformed(evt);
+                Cubo2C1ActionPerformed(evt);
             }
         });
-        jPanel1.add(genCubo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 340, -1, -1));
+
+        jLabel46.setText("Cara 2");
+
+        Cubo2C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        Cubo2C2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo2C2ActionPerformed(evt);
+            }
+        });
+
+        jLabel47.setText("Cara 3");
+
+        Cubo2C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        Cubo2C3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo2C3ActionPerformed(evt);
+            }
+        });
+
+        jLabel48.setText("Cara 4");
+
+        Cubo2C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        Cubo2C4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo2C4ActionPerformed(evt);
+            }
+        });
+
+        jLabel49.setText("Cara 5");
+
+        Cubo2C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        Cubo2C5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo2C5ActionPerformed(evt);
+            }
+        });
+
+        jLabel50.setText("Cara 6");
+
+        Cubo2C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
+        Cubo2C6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Cubo2C6ActionPerformed(evt);
+            }
+        });
 
         genAleatorio.setBackground(new java.awt.Color(112, 23, 46));
         genAleatorio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1040,7 +1046,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 genAleatorioActionPerformed(evt);
             }
         });
-        jPanel1.add(genAleatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(362, 10, 170, -1));
 
         Cubo1C5G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1048,7 +1053,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C5G.setText("5");
         Cubo1C5G.setOpaque(true);
-        jPanel1.add(Cubo1C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 458, 31, 31));
 
         Cubo1C3G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1056,7 +1060,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C3G.setText("3");
         Cubo1C3G.setOpaque(true);
-        jPanel1.add(Cubo1C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 421, 31, 31));
 
         Cubo1C1G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1064,7 +1067,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C1G.setText("1");
         Cubo1C1G.setOpaque(true);
-        jPanel1.add(Cubo1C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 458, 31, 31));
 
         Cubo1C2G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1072,7 +1074,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C2G.setText("2");
         Cubo1C2G.setOpaque(true);
-        jPanel1.add(Cubo1C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 458, 31, 31));
 
         Cubo1C6G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1080,7 +1081,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C6G.setText("6");
         Cubo1C6G.setOpaque(true);
-        jPanel1.add(Cubo1C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 458, 31, 31));
 
         Cubo1C4G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1088,7 +1088,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo1C4G.setText("4");
         Cubo1C4G.setOpaque(true);
-        jPanel1.add(Cubo1C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 495, 31, 31));
 
         Cubo2C1G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1096,7 +1095,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C1G.setText("1");
         Cubo2C1G.setOpaque(true);
-        jPanel1.add(Cubo2C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 458, 31, 31));
 
         Cubo2C3G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1104,7 +1102,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C3G.setText("3");
         Cubo2C3G.setOpaque(true);
-        jPanel1.add(Cubo2C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 421, 31, 31));
 
         Cubo2C5G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1112,7 +1109,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C5G.setText("5");
         Cubo2C5G.setOpaque(true);
-        jPanel1.add(Cubo2C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 458, 31, 31));
 
         Cubo2C2G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1120,7 +1116,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C2G.setText("2");
         Cubo2C2G.setOpaque(true);
-        jPanel1.add(Cubo2C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 458, 31, 31));
 
         Cubo2C6G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1128,7 +1123,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C6G.setText("6");
         Cubo2C6G.setOpaque(true);
-        jPanel1.add(Cubo2C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 458, 31, 31));
 
         Cubo2C4G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1136,7 +1130,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo2C4G.setText("4");
         Cubo2C4G.setOpaque(true);
-        jPanel1.add(Cubo2C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 495, 31, 31));
 
         Cubo3C1G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1144,7 +1137,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C1G.setText("1");
         Cubo3C1G.setOpaque(true);
-        jPanel1.add(Cubo3C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 458, 31, 31));
 
         Cubo3C3G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1152,7 +1144,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C3G.setText("3");
         Cubo3C3G.setOpaque(true);
-        jPanel1.add(Cubo3C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 421, 31, 31));
 
         Cubo3C5G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1160,7 +1151,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C5G.setText("5");
         Cubo3C5G.setOpaque(true);
-        jPanel1.add(Cubo3C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 458, 31, 31));
 
         Cubo3C2G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1168,7 +1158,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C2G.setText("2");
         Cubo3C2G.setOpaque(true);
-        jPanel1.add(Cubo3C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 458, 31, 31));
 
         Cubo3C6G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1176,7 +1165,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C6G.setText("6");
         Cubo3C6G.setOpaque(true);
-        jPanel1.add(Cubo3C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 458, 31, 31));
 
         Cubo3C4G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1184,7 +1172,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo3C4G.setText("4");
         Cubo3C4G.setOpaque(true);
-        jPanel1.add(Cubo3C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 495, 31, 31));
 
         Cubo4C1G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C1G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1192,7 +1179,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C1G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C1G.setText("1");
         Cubo4C1G.setOpaque(true);
-        jPanel1.add(Cubo4C1G, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 458, 31, 31));
 
         Cubo4C3G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C3G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1200,7 +1186,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C3G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C3G.setText("3");
         Cubo4C3G.setOpaque(true);
-        jPanel1.add(Cubo4C3G, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 421, 31, 31));
 
         Cubo4C5G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C5G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1208,7 +1193,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C5G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C5G.setText("5");
         Cubo4C5G.setOpaque(true);
-        jPanel1.add(Cubo4C5G, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 458, 31, 31));
 
         Cubo4C2G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C2G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1216,7 +1200,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C2G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C2G.setText("2");
         Cubo4C2G.setOpaque(true);
-        jPanel1.add(Cubo4C2G, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 458, 31, 31));
 
         Cubo4C6G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C6G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1224,7 +1207,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C6G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C6G.setText("6");
         Cubo4C6G.setOpaque(true);
-        jPanel1.add(Cubo4C6G, new org.netbeans.lib.awtextra.AbsoluteConstraints(803, 458, 31, 31));
 
         Cubo4C4G.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C4G.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1232,19 +1214,359 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C4G.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Cubo4C4G.setText("4");
         Cubo4C4G.setOpaque(true);
-        jPanel1.add(Cubo4C4G, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 495, 31, 31));
 
         jLabel9.setText("1)");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 395, 16, -1));
 
         jLabel10.setText("2)");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 395, 16, -1));
 
         jLabel11.setText("3)");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 395, 16, -1));
 
         jLabel12.setText("4)");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 395, 16, -1));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(362, 362, 362)
+                        .addComponent(genAleatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(11, 11, 11)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(7, 7, 7)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Cubo1C1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo1C2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo1C3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo1C4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo1C5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo1C6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(30, 30, 30)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Cubo2C1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo2C2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo2C3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo2C4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo2C5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo2C6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(32, 32, 32)
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(9, 9, 9)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(Cubo3C1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(Cubo3C2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(Cubo3C3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(Cubo3C4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(Cubo3C5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(Cubo3C6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(19, 19, 19)
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(1, 1, 1)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Cubo4C1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo4C2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo4C3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo4C4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo4C5, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Cubo4C6, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(27, 27, 27)
+                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(212, 212, 212)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(202, 202, 202)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(202, 202, 202)
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(Cubo1C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(197, 197, 197)
+                        .addComponent(Cubo2C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(187, 187, 187)
+                        .addComponent(Cubo3C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(187, 187, 187)
+                        .addComponent(Cubo4C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(Cubo1C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo1C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo1C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo1C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(86, 86, 86)
+                        .addComponent(Cubo2C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo2C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo2C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo2C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(76, 76, 76)
+                        .addComponent(Cubo3C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo3C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo3C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo3C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(76, 76, 76)
+                        .addComponent(Cubo4C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo4C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo4C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(Cubo4C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addComponent(Cubo1C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(197, 197, 197)
+                        .addComponent(Cubo2C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(187, 187, 187)
+                        .addComponent(Cubo3C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(187, 187, 187)
+                        .addComponent(Cubo4C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(354, 354, 354)
+                        .addComponent(jugarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(genAleatorio)
+                .addGap(8, 8, 8)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel33)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel34)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel35)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel36)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel37)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel38))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
+                        .addComponent(Cubo1C1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo1C2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo1C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo1C4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo1C5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo1C6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel45)
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel46)
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel47)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel48)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel49)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel50))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(18, 18, 18)
+                        .addComponent(Cubo2C1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)
+                        .addComponent(Cubo2C2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(Cubo2C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo2C4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo2C5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo2C6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel21)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel22)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel23)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel24)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel25)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel26))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(18, 18, 18)
+                        .addComponent(Cubo3C1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)
+                        .addComponent(Cubo3C2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(Cubo3C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo3C4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo3C5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo3C6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel39)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel40)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel41)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel42)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel43)
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel44))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(18, 18, 18)
+                        .addComponent(Cubo4C1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo4C2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo4C3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo4C4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo4C5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(Cubo4C6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12))
+                .addGap(6, 6, 6)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Cubo1C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo2C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo3C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo4C3G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Cubo1C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo1C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo1C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo1C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo2C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo2C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo2C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo2C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo3C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo3C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo3C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo3C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo4C1G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo4C5G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo4C2G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo4C6G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(6, 6, 6)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Cubo1C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo2C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo3C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cubo4C4G, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(jugarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
+        );
 
         jTabbedPane1.addTab("Combinación", jPanel1);
 
@@ -1260,7 +1582,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(resolverBtn);
-        resolverBtn.setBounds(370, 260, 130, 30);
+        resolverBtn.setBounds(290, 260, 130, 30);
 
         Cubo4C3T.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C3T.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1782,18 +2104,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(antihorarioCubo4);
         antihorarioCubo4.setBounds(811, 188, 35, 25);
 
-        comprobarBtn.setBackground(new java.awt.Color(147, 157, 255));
-        comprobarBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        comprobarBtn.setForeground(new java.awt.Color(0, 0, 0));
-        comprobarBtn.setText("Comprobar");
-        comprobarBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comprobarBtnActionPerformed(evt);
-            }
-        });
-        jPanel2.add(comprobarBtn);
-        comprobarBtn.setBounds(220, 260, 130, 30);
-
         Cubo1C1J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Cubo1C1J.setForeground(new java.awt.Color(0, 0, 0));
@@ -1975,7 +2285,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(explicacionBtn);
-        explicacionBtn.setBounds(520, 260, 130, 30);
+        explicacionBtn.setBounds(440, 260, 130, 30);
 
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel2.add(jSeparator6);
@@ -2035,7 +2345,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         jTextArea1.setRows(2);
-        jTextArea1.setText("Por último, se interpretan ambos subgrafos de la siguiente forma:\n Solución Horizontal: (Grafo G1- recorrido horario)\n - Se localiza la arista 1 (cubo 1) y se observa que vértices conecta.\n - En el cubo 1 se colocan estos 2 colores, de izquierda a derecha. (por ejemplo, R-B)\n - Se observa en que vértice termina la arista 1, y a partir de ese vértice se observa la\n   siguiente arista y los vértices que conecta, así sucesivamente. Siempre en sentido\n   horario.                                                                                             ↓ Deslice hacia abajo ↓\n\nSolución Vertical: (Grafo G2- recorrido horario)\n - Se localiza la arista 1 (cubo 1) y se observa que vértices conecta.\n - En el cubo 1 se colocan estos 2 colores, de arriba hacia abajo. (por ejemplo, V-A)\n - Se observa en que vértice termina la arista 1, y a partir de ese vértice se observa la\n   siguiente arista y los vértices que conecta, así sucesivamente. Siempre en sentido\n   horario.");
+        jTextArea1.setText("Por último, se interpretan ambos subgrafos de la siguiente forma:\n Solución Horizontal: (Grafo G1- recorrido horario)\n - Se localiza la arista 1 (cubo 1) y se observa que vértices conecta.\n - En el cubo 1 se colocan estos 2 colores, de izquierda a derecha. (por ejemplo, R-B)\n - Se observa en que vértice termina la arista 1, y a partir de ese vértice se observa la\n   siguiente arista y los vértices que conecta, así sucesivamente. Siempre en sentido\n   horario.                                                                                     ↓ Deslice hacia abajo ↓\n\nSolución Vertical: (Grafo G2- recorrido horario)\n - Se localiza la arista 1 (cubo 1) y se observa que vértices conecta.\n - En el cubo 1 se colocan estos 2 colores, de arriba hacia abajo. (por ejemplo, V-A)\n - Se observa en que vértice termina la arista 1, y a partir de ese vértice se observa la\n   siguiente arista y los vértices que conecta, así sucesivamente. Siempre en sentido\n   horario.");
         jTextArea1.setBorder(null);
         jTextArea1.setFocusable(false);
         jScrollPane1.setViewportView(jTextArea1);
@@ -2048,7 +2358,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         jTextArea3.setRows(2);
-        jTextArea3.setText("Utilizando la teoría de Grafos, se construye un grafo Gl que represente a los 4 cubos \ncon las siguientes reglas:\n - El grafo tiene 4 vértices que representan los 4 colores posibles (R, B, V, A).\n - Las aristas representan caras opuestas de cada cubo, 3 aristas por cubo.\n - Las aristas se etiquetan con el número del cubo (1, 2, 3, 4).          ↓ Deslice hacia abajo ↓\n\nDespués, se construyen 2 subgrafos de Gl (si existen) que representan las soluciones \nhorizontal y vertical, se deben seguir las siguientes reglas:\n - Cada subgrafo debe tener los 4 vértices de Gl\n - Cada subgrafo debe tener únicamente 4 aristas, 1 arista por cubo. (etiquetas 1,2,3,4)\n - El grado de cada vértice debe ser igual a 2\n - Las aristas del 1er subgrafo no se deben repetir en el 2do subgrafo");
+        jTextArea3.setText("Utilizando la teoría de Grafos, se construye un grafo Gl que represente a los 4 cubos \ncon las siguientes reglas:\n - El grafo tiene 4 vértices que representan los 4 colores posibles (R, B, V, A).\n - Las aristas representan caras opuestas de cada cubo, 3 aristas por cubo.\n - Las aristas se etiquetan con el número del cubo (1, 2, 3, 4).    ↓ Deslice hacia abajo ↓\n\nDespués, se construyen 2 subgrafos de Gl (si existen) que representan las soluciones \nhorizontal y vertical, se deben seguir las siguientes reglas:\n - Cada subgrafo debe tener los 4 vértices de Gl\n - Cada subgrafo debe tener únicamente 4 aristas, 1 arista por cubo. (etiquetas 1,2,3,4)\n - El grado de cada vértice debe ser igual a 2\n - Las aristas del 1er subgrafo no se deben repetir en el 2do subgrafo");
         jTextArea3.setBorder(null);
         jTextArea3.setFocusable(false);
         jScrollPane3.setViewportView(jTextArea3);
@@ -2057,7 +2367,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         existeSolucion.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         existeSolucion.setForeground(new java.awt.Color(45, 160, 106));
-        existeSolucion.setText("Existe o NO Existe una solución");
+        existeSolucion.setText("Así se resuelve el juego : ");
         jPanel6.add(existeSolucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 574, -1));
 
         porLoTanto1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
@@ -2185,19 +2495,16 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
-        jLabel29.setFont(new java.awt.Font("Segoe UI Emoji", 2, 14)); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(102, 102, 102));
         jLabel29.setText("By Eduardo Lau");
-        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 110, -1));
+        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 130, -1));
         getContentPane().add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 750, 930, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
-    private void genCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genCubo1ActionPerformed
-        // TODO add your handling code here:
-
+    public void genCubo1() {
         Color C1 = null;
         if (Cubo1C1.getItemAt(Cubo1C1.getSelectedIndex()).equals("Rojo")) {
             C1 = new Color(155, 22, 57);
@@ -2354,54 +2661,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo1C6G.setBackground(C6);
         }
 
-        /*
-        1, 2, 3, 4 x
-        1, 2, 3, 5 x
-        1, 2, 3, 6 x
-        1, 2, 4, 5 x
-        1, 2, 4, 6 x
-        1, 2, 5, 6 x
-        1, 3, 4, 5 x
-        1, 3, 4, 6 x
-        1, 3, 5, 6 x
-        1, 4, 5, 6 x
-        2, 3, 4, 5 x
-        2, 3, 4, 6 x
-        2, 3, 5, 6 x
-        2, 4, 5, 6 x
-        3, 4, 5, 6
-         */
- /*if (((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C4))
-                && (!C2.equals(C3) && !C2.equals(C4)) && (!C3.equals(C4))) //
-                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C5))
-                && (!C2.equals(C3) && !C2.equals(C5)) && (!C3.equals(C5))) //
-                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C6))
-                && (!C2.equals(C3) && !C2.equals(C6)) && (!C3.equals(C6))) //
-                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C5))
-                && (!C2.equals(C4) && !C2.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C6))
-                && (!C2.equals(C4) && !C2.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C1.equals(C2) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C2.equals(C5) && !C2.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C5))
-                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C6))
-                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C1.equals(C3) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) // 
-                || ((!C1.equals(C4) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C5))
-                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C6))
-                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C2.equals(C3) && !C2.equals(C5) && !C2.equals(C6))
-                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C2.equals(C4) && !C2.equals(C5) && !C2.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) // 
-                || ((!C3.equals(C4) && !C3.equals(C5) && !C3.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6)))) {
-         */
         Cubo1C1G.setVisible(true);
         Cubo1C2G.setVisible(true);
         Cubo1C3G.setVisible(true);
@@ -2421,484 +2680,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo1.C6 = C6;
 
-        System.out.println("Colores generados");
+        System.out.println("Cubo 1 actualizado");
+    }
 
-        /*} else {
-            JOptionPane.showMessageDialog(null, "Es obligatorio que cada cubo tenga los 4 colores disponibles");
-        }
-         */
-
-    }//GEN-LAST:event_genCubo1ActionPerformed
-
-    private void genCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genCubo3ActionPerformed
-        // TODO add your handling code here:
-        Color C1 = null;
-        if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Rojo")) {
-            C1 = new Color(155, 22, 57);
-            Cubo3C1G.setText("R");
-            Cubo3.C1I = "R";
-            Cubo3C1G.setBackground(C1);
-
-        } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Blanco")) {
-            C1 = new Color(255, 255, 255);
-            Cubo3C1G.setText("B");
-            Cubo3.C1I = "B";
-            Cubo3C1G.setBackground(C1);
-
-        } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Verde")) {
-            C1 = new Color(16, 175, 107);
-            Cubo3C1G.setText("V");
-            Cubo3.C1I = "V";
-            Cubo3C1G.setBackground(C1);
-
-        } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Amarillo")) {
-            C1 = new Color(255, 234, 78);
-            Cubo3C1G.setText("A");
-            Cubo3.C1I = "A";
-            Cubo3C1G.setBackground(C1);
-        }
-
-        Color C2 = null;
-        if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Rojo")) {
-            C2 = new Color(155, 22, 57);
-            Cubo3C2G.setText("R");
-            Cubo3.C2I = "R";
-            Cubo3C2G.setBackground(C2);
-
-        } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Blanco")) {
-            C2 = new Color(255, 255, 255);
-            Cubo3C2G.setText("B");
-            Cubo3.C2I = "B";
-            Cubo3C2G.setBackground(C2);
-
-        } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Verde")) {
-            C2 = new Color(16, 175, 107);
-            Cubo3C2G.setText("V");
-            Cubo3.C2I = "V";
-            Cubo3C2G.setBackground(C2);
-
-        } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Amarillo")) {
-            C2 = new Color(255, 234, 78);
-            Cubo3C2G.setText("A");
-            Cubo3.C2I = "A";
-            Cubo3C2G.setBackground(C2);
-        }
-
-        Color C3 = null;
-        if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Rojo")) {
-            C3 = new Color(155, 22, 57);
-            Cubo3C3G.setText("R");
-            Cubo3.C3I = "R";
-            Cubo3C3G.setBackground(C3);
-
-        } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Blanco")) {
-            C3 = new Color(255, 255, 255);
-            Cubo3C3G.setText("B");
-            Cubo3.C3I = "B";
-            Cubo3C3G.setBackground(C3);
-
-        } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Verde")) {
-            C3 = new Color(16, 175, 107);
-            Cubo3C3G.setText("V");
-            Cubo3.C3I = "V";
-            Cubo3C3G.setBackground(C3);
-
-        } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Amarillo")) {
-            C3 = new Color(255, 234, 78);
-            Cubo3C3G.setText("A");
-            Cubo3.C3I = "A";
-            Cubo3C3G.setBackground(C3);
-        }
-
-        Color C4 = null;
-        if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Rojo")) {
-            C4 = new Color(155, 22, 57);
-            Cubo3C4G.setText("R");
-            Cubo3.C4I = "R";
-            Cubo3C4G.setBackground(C4);
-
-        } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Blanco")) {
-            C4 = new Color(255, 255, 255);
-            Cubo3C4G.setText("B");
-            Cubo3.C4I = "B";
-            Cubo3C4G.setBackground(C4);
-
-        } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Verde")) {
-            C4 = new Color(16, 175, 107);
-            Cubo3C4G.setText("V");
-            Cubo3.C4I = "V";
-            Cubo3C4G.setBackground(C4);
-
-        } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Amarillo")) {
-            C4 = new Color(255, 234, 78);
-            Cubo3C4G.setText("A");
-            Cubo3.C4I = "A";
-            Cubo3C4G.setBackground(C4);
-        }
-
-        Color C5 = null;
-        if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Rojo")) {
-            C5 = new Color(155, 22, 57);
-            Cubo3C5G.setText("R");
-            Cubo3.C5I = "R";
-            Cubo3C5G.setBackground(C5);
-
-        } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Blanco")) {
-            C5 = new Color(255, 255, 255);
-            Cubo3C5G.setText("B");
-            Cubo3.C5I = "B";
-            Cubo3C5G.setBackground(C5);
-
-        } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Verde")) {
-            C5 = new Color(16, 175, 107);
-            Cubo3C5G.setText("V");
-            Cubo3.C5I = "V";
-            Cubo3C5G.setBackground(C5);
-
-        } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Amarillo")) {
-            C5 = new Color(255, 234, 78);
-            Cubo3C5G.setText("A");
-            Cubo3.C5I = "A";
-            Cubo3C5G.setBackground(C5);
-        }
-
-        Color C6 = null;
-        if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Rojo")) {
-            C6 = new Color(155, 22, 57);
-            Cubo3C6G.setText("R");
-            Cubo3.C6I = "R";
-            Cubo3C6G.setBackground(C6);
-
-        } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Blanco")) {
-            C6 = new Color(255, 255, 255);
-            Cubo3C6G.setText("B");
-            Cubo3.C6I = "B";
-            Cubo3C6G.setBackground(C6);
-
-        } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Verde")) {
-            C6 = new Color(16, 175, 107);
-            Cubo3C6G.setText("V");
-            Cubo3.C6I = "V";
-            Cubo3C6G.setBackground(C6);
-
-        } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Amarillo")) {
-            C6 = new Color(255, 234, 78);
-            Cubo3C6G.setText("A");
-            Cubo3.C6I = "A";
-            Cubo3C6G.setBackground(C6);
-        }
-
-        /*
-        1, 2, 3, 4 x
-        1, 2, 3, 5 x
-        1, 2, 3, 6 x
-        1, 2, 4, 5 x
-        1, 2, 4, 6 x
-        1, 2, 5, 6 x
-        1, 3, 4, 5 x
-        1, 3, 4, 6 x
-        1, 3, 5, 6 x
-        1, 4, 5, 6 x
-        2, 3, 4, 5 x
-        2, 3, 4, 6 x
-        2, 3, 5, 6 x
-        2, 4, 5, 6 x
-        3, 4, 5, 6
-         */
- /* if (((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C4))
-                && (!C2.equals(C3) && !C2.equals(C4)) && (!C3.equals(C4))) //
-                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C5))
-                && (!C2.equals(C3) && !C2.equals(C5)) && (!C3.equals(C5))) //
-                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C6))
-                && (!C2.equals(C3) && !C2.equals(C6)) && (!C3.equals(C6))) //
-                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C5))
-                && (!C2.equals(C4) && !C2.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C6))
-                && (!C2.equals(C4) && !C2.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C1.equals(C2) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C2.equals(C5) && !C2.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C5))
-                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C6))
-                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C1.equals(C3) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) // 
-                || ((!C1.equals(C4) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C5))
-                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C6))
-                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C2.equals(C3) && !C2.equals(C5) && !C2.equals(C6))
-                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C2.equals(C4) && !C2.equals(C5) && !C2.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) // 
-                || ((!C3.equals(C4) && !C3.equals(C5) && !C3.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6)))) {
-         */
-        Cubo3C1G.setVisible(true);
-        Cubo3C2G.setVisible(true);
-        Cubo3C3G.setVisible(true);
-        Cubo3C4G.setVisible(true);
-        Cubo3C5G.setVisible(true);
-        Cubo3C6G.setVisible(true);
-
-        Cubo3.C1 = C1;
-
-        Cubo3.C2 = C2;
-
-        Cubo3.C3 = C3;
-
-        Cubo3.C4 = C4;
-
-        Cubo3.C5 = C5;
-
-        Cubo3.C6 = C6;
-
-        System.out.println("Colores generados");
-
-        /*} else {
-            JOptionPane.showMessageDialog(null, "Es obligatorio que cada cubo tenga los 4 colores disponibles");
-        }
-         */
-    }//GEN-LAST:event_genCubo3ActionPerformed
-
-    private void genCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genCubo4ActionPerformed
-        // TODO add your handling code here:
-        Color C1 = null;
-        if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Rojo")) {
-            C1 = new Color(155, 22, 57);
-            Cubo4C1G.setText("R");
-            Cubo4.C1I = "R";
-            Cubo4C1G.setBackground(C1);
-
-        } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Blanco")) {
-            C1 = new Color(255, 255, 255);
-            Cubo4C1G.setText("B");
-            Cubo4.C1I = "B";
-            Cubo4C1G.setBackground(C1);
-
-        } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Verde")) {
-            C1 = new Color(16, 175, 107);
-            Cubo4C1G.setText("V");
-            Cubo4.C1I = "V";
-            Cubo4C1G.setBackground(C1);
-
-        } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Amarillo")) {
-            C1 = new Color(255, 234, 78);
-            Cubo4C1G.setText("A");
-            Cubo4.C1I = "A";
-            Cubo4C1G.setBackground(C1);
-        }
-
-        Color C2 = null;
-        if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Rojo")) {
-            C2 = new Color(155, 22, 57);
-            Cubo4C2G.setText("R");
-            Cubo4.C2I = "R";
-            Cubo4C2G.setBackground(C2);
-
-        } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Blanco")) {
-            C2 = new Color(255, 255, 255);
-            Cubo4C2G.setText("B");
-            Cubo4.C2I = "B";
-            Cubo4C2G.setBackground(C2);
-
-        } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Verde")) {
-            C2 = new Color(16, 175, 107);
-            Cubo4C2G.setText("V");
-            Cubo4.C2I = "V";
-            Cubo4C2G.setBackground(C2);
-
-        } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Amarillo")) {
-            C2 = new Color(255, 234, 78);
-            Cubo4C2G.setText("A");
-            Cubo4.C2I = "A";
-            Cubo4C2G.setBackground(C2);
-        }
-
-        Color C3 = null;
-        if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Rojo")) {
-            C3 = new Color(155, 22, 57);
-            Cubo4C3G.setText("R");
-            Cubo4.C3I = "R";
-            Cubo4C3G.setBackground(C3);
-
-        } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Blanco")) {
-            C3 = new Color(255, 255, 255);
-            Cubo4C3G.setText("B");
-            Cubo4.C3I = "B";
-            Cubo4C3G.setBackground(C3);
-
-        } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Verde")) {
-            C3 = new Color(16, 175, 107);
-            Cubo4C3G.setText("V");
-            Cubo4.C3I = "V";
-            Cubo4C3G.setBackground(C3);
-
-        } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Amarillo")) {
-            C3 = new Color(255, 234, 78);
-            Cubo4C3G.setText("A");
-            Cubo4.C3I = "A";
-            Cubo4C3G.setBackground(C3);
-        }
-
-        Color C4 = null;
-        if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Rojo")) {
-            C4 = new Color(155, 22, 57);
-            Cubo4C4G.setText("R");
-            Cubo4.C4I = "R";
-            Cubo4C4G.setBackground(C4);
-
-        } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Blanco")) {
-            C4 = new Color(255, 255, 255);
-            Cubo4C4G.setText("B");
-            Cubo4.C4I = "B";
-            Cubo4C4G.setBackground(C4);
-
-        } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Verde")) {
-            C4 = new Color(16, 175, 107);
-            Cubo4C4G.setText("V");
-            Cubo4.C4I = "V";
-            Cubo4C4G.setBackground(C4);
-
-        } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Amarillo")) {
-            C4 = new Color(255, 234, 78);
-            Cubo4C4G.setText("A");
-            Cubo4.C4I = "A";
-            Cubo4C4G.setBackground(C4);
-        }
-
-        Color C5 = null;
-        if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Rojo")) {
-            C5 = new Color(155, 22, 57);
-            Cubo4C5G.setText("R");
-            Cubo4.C5I = "R";
-            Cubo4C5G.setBackground(C5);
-
-        } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Blanco")) {
-            C5 = new Color(255, 255, 255);
-            Cubo4C5G.setText("B");
-            Cubo4.C5I = "B";
-            Cubo4C5G.setBackground(C5);
-
-        } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Verde")) {
-            C5 = new Color(16, 175, 107);
-            Cubo4C5G.setText("V");
-            Cubo4.C5I = "V";
-            Cubo4C5G.setBackground(C5);
-
-        } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Amarillo")) {
-            C5 = new Color(255, 234, 78);
-            Cubo4C5G.setText("A");
-            Cubo4.C5I = "A";
-            Cubo4C5G.setBackground(C5);
-        }
-
-        Color C6 = null;
-        if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Rojo")) {
-            C6 = new Color(155, 22, 57);
-            Cubo4C6G.setText("R");
-            Cubo4.C6I = "R";
-            Cubo4C6G.setBackground(C6);
-
-        } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Blanco")) {
-            C6 = new Color(255, 255, 255);
-            Cubo4C6G.setText("B");
-            Cubo4.C6I = "B";
-            Cubo4C6G.setBackground(C6);
-
-        } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Verde")) {
-            C6 = new Color(16, 175, 107);
-            Cubo4C6G.setText("V");
-            Cubo4.C6I = "V";
-            Cubo4C6G.setBackground(C6);
-
-        } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Amarillo")) {
-            C6 = new Color(255, 234, 78);
-            Cubo4C6G.setText("A");
-            Cubo4.C6I = "A";
-            Cubo4C6G.setBackground(C6);
-        }
-
-        /*
-        1, 2, 3, 4 x
-        1, 2, 3, 5 x
-        1, 2, 3, 6 x
-        1, 2, 4, 5 x
-        1, 2, 4, 6 x
-        1, 2, 5, 6 x
-        1, 3, 4, 5 x
-        1, 3, 4, 6 x
-        1, 3, 5, 6 x
-        1, 4, 5, 6 x
-        2, 3, 4, 5 x
-        2, 3, 4, 6 x
-        2, 3, 5, 6 x
-        2, 4, 5, 6 x
-        3, 4, 5, 6
-         */
- /*if (((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C4))
-                && (!C2.equals(C3) && !C2.equals(C4)) && (!C3.equals(C4))) //
-                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C5))
-                && (!C2.equals(C3) && !C2.equals(C5)) && (!C3.equals(C5))) //
-                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C6))
-                && (!C2.equals(C3) && !C2.equals(C6)) && (!C3.equals(C6))) //
-                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C5))
-                && (!C2.equals(C4) && !C2.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C6))
-                && (!C2.equals(C4) && !C2.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C1.equals(C2) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C2.equals(C5) && !C2.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C5))
-                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C6))
-                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C1.equals(C3) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) // 
-                || ((!C1.equals(C4) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C5))
-                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C6))
-                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C2.equals(C3) && !C2.equals(C5) && !C2.equals(C6))
-                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C2.equals(C4) && !C2.equals(C5) && !C2.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) // 
-                || ((!C3.equals(C4) && !C3.equals(C5) && !C3.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6)))) {
-         */
-        Cubo4C1G.setVisible(true);
-        Cubo4C2G.setVisible(true);
-        Cubo4C3G.setVisible(true);
-        Cubo4C4G.setVisible(true);
-        Cubo4C5G.setVisible(true);
-        Cubo4C6G.setVisible(true);
-
-        Cubo4.C1 = C1;
-
-        Cubo4.C2 = C2;
-
-        Cubo4.C3 = C3;
-
-        Cubo4.C4 = C4;
-
-        Cubo4.C5 = C5;
-
-        Cubo4.C6 = C6;
-
-        System.out.println("Colores generados");
-
-        /*} else {
-            JOptionPane.showMessageDialog(null, "Es obligatorio que cada cubo tenga los 4 colores disponibles");
-        }
-         */
-    }//GEN-LAST:event_genCubo4ActionPerformed
-
-    private void genCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genCubo2ActionPerformed
-        // TODO add your handling code here:
-
+    public void genCubo2() {
         Color C1 = null;
         if (Cubo2C1.getItemAt(Cubo2C1.getSelectedIndex()).equals("Rojo")) {
             C1 = new Color(155, 22, 57);
@@ -3055,54 +2840,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo2C6G.setBackground(C6);
         }
 
-        /*
-        1, 2, 3, 4 x
-        1, 2, 3, 5 x
-        1, 2, 3, 6 x
-        1, 2, 4, 5 x
-        1, 2, 4, 6 x
-        1, 2, 5, 6 x
-        1, 3, 4, 5 x
-        1, 3, 4, 6 x
-        1, 3, 5, 6 x
-        1, 4, 5, 6 x
-        2, 3, 4, 5 x
-        2, 3, 4, 6 x
-        2, 3, 5, 6 x
-        2, 4, 5, 6 x
-        3, 4, 5, 6
-         */
- /*if (((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C4))
-                && (!C2.equals(C3) && !C2.equals(C4)) && (!C3.equals(C4))) //
-                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C5))
-                && (!C2.equals(C3) && !C2.equals(C5)) && (!C3.equals(C5))) //
-                || ((!C1.equals(C2) && !C1.equals(C3) && !C1.equals(C6))
-                && (!C2.equals(C3) && !C2.equals(C6)) && (!C3.equals(C6))) //
-                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C5))
-                && (!C2.equals(C4) && !C2.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C1.equals(C2) && !C1.equals(C4) && !C1.equals(C6))
-                && (!C2.equals(C4) && !C2.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C1.equals(C2) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C2.equals(C5) && !C2.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C5))
-                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C1.equals(C3) && !C1.equals(C4) && !C1.equals(C6))
-                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C1.equals(C3) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) // 
-                || ((!C1.equals(C4) && !C1.equals(C5) && !C1.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C5))
-                && (!C3.equals(C4) && !C3.equals(C5)) && (!C4.equals(C5))) //
-                || ((!C2.equals(C3) && !C2.equals(C4) && !C2.equals(C6))
-                && (!C3.equals(C4) && !C3.equals(C6)) && (!C4.equals(C6))) //
-                || ((!C2.equals(C3) && !C2.equals(C5) && !C2.equals(C6))
-                && (!C3.equals(C5) && !C3.equals(C6)) && (!C5.equals(C6))) //
-                || ((!C2.equals(C4) && !C2.equals(C5) && !C2.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6))) // 
-                || ((!C3.equals(C4) && !C3.equals(C5) && !C3.equals(C6))
-                && (!C4.equals(C5) && !C4.equals(C6)) && (!C5.equals(C6)))) {
-         */
         Cubo2C1G.setVisible(true);
         Cubo2C2G.setVisible(true);
         Cubo2C3G.setVisible(true);
@@ -3122,13 +2859,366 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Cubo2.C6 = C6;
 
-        System.out.println("Colores generados");
+        System.out.println("Cubo 2 actualizado");
+    }
 
-        /*} else {
-            JOptionPane.showMessageDialog(null, "Es obligatorio que cada cubo tenga los 4 colores disponibles");
+    public void genCubo3() {
+        Color C1 = null;
+        if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Rojo")) {
+            C1 = new Color(155, 22, 57);
+            Cubo3C1G.setText("R");
+            Cubo3.C1I = "R";
+            Cubo3C1G.setBackground(C1);
+
+        } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Blanco")) {
+            C1 = new Color(255, 255, 255);
+            Cubo3C1G.setText("B");
+            Cubo3.C1I = "B";
+            Cubo3C1G.setBackground(C1);
+
+        } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Verde")) {
+            C1 = new Color(16, 175, 107);
+            Cubo3C1G.setText("V");
+            Cubo3.C1I = "V";
+            Cubo3C1G.setBackground(C1);
+
+        } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Amarillo")) {
+            C1 = new Color(255, 234, 78);
+            Cubo3C1G.setText("A");
+            Cubo3.C1I = "A";
+            Cubo3C1G.setBackground(C1);
         }
-         */
-    }//GEN-LAST:event_genCubo2ActionPerformed
+
+        Color C2 = null;
+        if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Rojo")) {
+            C2 = new Color(155, 22, 57);
+            Cubo3C2G.setText("R");
+            Cubo3.C2I = "R";
+            Cubo3C2G.setBackground(C2);
+
+        } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Blanco")) {
+            C2 = new Color(255, 255, 255);
+            Cubo3C2G.setText("B");
+            Cubo3.C2I = "B";
+            Cubo3C2G.setBackground(C2);
+
+        } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Verde")) {
+            C2 = new Color(16, 175, 107);
+            Cubo3C2G.setText("V");
+            Cubo3.C2I = "V";
+            Cubo3C2G.setBackground(C2);
+
+        } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Amarillo")) {
+            C2 = new Color(255, 234, 78);
+            Cubo3C2G.setText("A");
+            Cubo3.C2I = "A";
+            Cubo3C2G.setBackground(C2);
+        }
+
+        Color C3 = null;
+        if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Rojo")) {
+            C3 = new Color(155, 22, 57);
+            Cubo3C3G.setText("R");
+            Cubo3.C3I = "R";
+            Cubo3C3G.setBackground(C3);
+
+        } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Blanco")) {
+            C3 = new Color(255, 255, 255);
+            Cubo3C3G.setText("B");
+            Cubo3.C3I = "B";
+            Cubo3C3G.setBackground(C3);
+
+        } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Verde")) {
+            C3 = new Color(16, 175, 107);
+            Cubo3C3G.setText("V");
+            Cubo3.C3I = "V";
+            Cubo3C3G.setBackground(C3);
+
+        } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Amarillo")) {
+            C3 = new Color(255, 234, 78);
+            Cubo3C3G.setText("A");
+            Cubo3.C3I = "A";
+            Cubo3C3G.setBackground(C3);
+        }
+
+        Color C4 = null;
+        if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Rojo")) {
+            C4 = new Color(155, 22, 57);
+            Cubo3C4G.setText("R");
+            Cubo3.C4I = "R";
+            Cubo3C4G.setBackground(C4);
+
+        } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Blanco")) {
+            C4 = new Color(255, 255, 255);
+            Cubo3C4G.setText("B");
+            Cubo3.C4I = "B";
+            Cubo3C4G.setBackground(C4);
+
+        } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Verde")) {
+            C4 = new Color(16, 175, 107);
+            Cubo3C4G.setText("V");
+            Cubo3.C4I = "V";
+            Cubo3C4G.setBackground(C4);
+
+        } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Amarillo")) {
+            C4 = new Color(255, 234, 78);
+            Cubo3C4G.setText("A");
+            Cubo3.C4I = "A";
+            Cubo3C4G.setBackground(C4);
+        }
+
+        Color C5 = null;
+        if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Rojo")) {
+            C5 = new Color(155, 22, 57);
+            Cubo3C5G.setText("R");
+            Cubo3.C5I = "R";
+            Cubo3C5G.setBackground(C5);
+
+        } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Blanco")) {
+            C5 = new Color(255, 255, 255);
+            Cubo3C5G.setText("B");
+            Cubo3.C5I = "B";
+            Cubo3C5G.setBackground(C5);
+
+        } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Verde")) {
+            C5 = new Color(16, 175, 107);
+            Cubo3C5G.setText("V");
+            Cubo3.C5I = "V";
+            Cubo3C5G.setBackground(C5);
+
+        } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Amarillo")) {
+            C5 = new Color(255, 234, 78);
+            Cubo3C5G.setText("A");
+            Cubo3.C5I = "A";
+            Cubo3C5G.setBackground(C5);
+        }
+
+        Color C6 = null;
+        if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Rojo")) {
+            C6 = new Color(155, 22, 57);
+            Cubo3C6G.setText("R");
+            Cubo3.C6I = "R";
+            Cubo3C6G.setBackground(C6);
+
+        } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Blanco")) {
+            C6 = new Color(255, 255, 255);
+            Cubo3C6G.setText("B");
+            Cubo3.C6I = "B";
+            Cubo3C6G.setBackground(C6);
+
+        } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Verde")) {
+            C6 = new Color(16, 175, 107);
+            Cubo3C6G.setText("V");
+            Cubo3.C6I = "V";
+            Cubo3C6G.setBackground(C6);
+
+        } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Amarillo")) {
+            C6 = new Color(255, 234, 78);
+            Cubo3C6G.setText("A");
+            Cubo3.C6I = "A";
+            Cubo3C6G.setBackground(C6);
+        }
+
+        Cubo3C1G.setVisible(true);
+        Cubo3C2G.setVisible(true);
+        Cubo3C3G.setVisible(true);
+        Cubo3C4G.setVisible(true);
+        Cubo3C5G.setVisible(true);
+        Cubo3C6G.setVisible(true);
+
+        Cubo3.C1 = C1;
+
+        Cubo3.C2 = C2;
+
+        Cubo3.C3 = C3;
+
+        Cubo3.C4 = C4;
+
+        Cubo3.C5 = C5;
+
+        Cubo3.C6 = C6;
+
+        System.out.println("Cubo 3 actualizado");
+    }
+
+    public void genCubo4() {
+        Color C1 = null;
+        if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Rojo")) {
+            C1 = new Color(155, 22, 57);
+            Cubo4C1G.setText("R");
+            Cubo4.C1I = "R";
+            Cubo4C1G.setBackground(C1);
+
+        } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Blanco")) {
+            C1 = new Color(255, 255, 255);
+            Cubo4C1G.setText("B");
+            Cubo4.C1I = "B";
+            Cubo4C1G.setBackground(C1);
+
+        } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Verde")) {
+            C1 = new Color(16, 175, 107);
+            Cubo4C1G.setText("V");
+            Cubo4.C1I = "V";
+            Cubo4C1G.setBackground(C1);
+
+        } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Amarillo")) {
+            C1 = new Color(255, 234, 78);
+            Cubo4C1G.setText("A");
+            Cubo4.C1I = "A";
+            Cubo4C1G.setBackground(C1);
+        }
+
+        Color C2 = null;
+        if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Rojo")) {
+            C2 = new Color(155, 22, 57);
+            Cubo4C2G.setText("R");
+            Cubo4.C2I = "R";
+            Cubo4C2G.setBackground(C2);
+
+        } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Blanco")) {
+            C2 = new Color(255, 255, 255);
+            Cubo4C2G.setText("B");
+            Cubo4.C2I = "B";
+            Cubo4C2G.setBackground(C2);
+
+        } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Verde")) {
+            C2 = new Color(16, 175, 107);
+            Cubo4C2G.setText("V");
+            Cubo4.C2I = "V";
+            Cubo4C2G.setBackground(C2);
+
+        } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Amarillo")) {
+            C2 = new Color(255, 234, 78);
+            Cubo4C2G.setText("A");
+            Cubo4.C2I = "A";
+            Cubo4C2G.setBackground(C2);
+        }
+
+        Color C3 = null;
+        if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Rojo")) {
+            C3 = new Color(155, 22, 57);
+            Cubo4C3G.setText("R");
+            Cubo4.C3I = "R";
+            Cubo4C3G.setBackground(C3);
+
+        } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Blanco")) {
+            C3 = new Color(255, 255, 255);
+            Cubo4C3G.setText("B");
+            Cubo4.C3I = "B";
+            Cubo4C3G.setBackground(C3);
+
+        } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Verde")) {
+            C3 = new Color(16, 175, 107);
+            Cubo4C3G.setText("V");
+            Cubo4.C3I = "V";
+            Cubo4C3G.setBackground(C3);
+
+        } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Amarillo")) {
+            C3 = new Color(255, 234, 78);
+            Cubo4C3G.setText("A");
+            Cubo4.C3I = "A";
+            Cubo4C3G.setBackground(C3);
+        }
+
+        Color C4 = null;
+        if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Rojo")) {
+            C4 = new Color(155, 22, 57);
+            Cubo4C4G.setText("R");
+            Cubo4.C4I = "R";
+            Cubo4C4G.setBackground(C4);
+
+        } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Blanco")) {
+            C4 = new Color(255, 255, 255);
+            Cubo4C4G.setText("B");
+            Cubo4.C4I = "B";
+            Cubo4C4G.setBackground(C4);
+
+        } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Verde")) {
+            C4 = new Color(16, 175, 107);
+            Cubo4C4G.setText("V");
+            Cubo4.C4I = "V";
+            Cubo4C4G.setBackground(C4);
+
+        } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Amarillo")) {
+            C4 = new Color(255, 234, 78);
+            Cubo4C4G.setText("A");
+            Cubo4.C4I = "A";
+            Cubo4C4G.setBackground(C4);
+        }
+
+        Color C5 = null;
+        if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Rojo")) {
+            C5 = new Color(155, 22, 57);
+            Cubo4C5G.setText("R");
+            Cubo4.C5I = "R";
+            Cubo4C5G.setBackground(C5);
+
+        } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Blanco")) {
+            C5 = new Color(255, 255, 255);
+            Cubo4C5G.setText("B");
+            Cubo4.C5I = "B";
+            Cubo4C5G.setBackground(C5);
+
+        } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Verde")) {
+            C5 = new Color(16, 175, 107);
+            Cubo4C5G.setText("V");
+            Cubo4.C5I = "V";
+            Cubo4C5G.setBackground(C5);
+
+        } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Amarillo")) {
+            C5 = new Color(255, 234, 78);
+            Cubo4C5G.setText("A");
+            Cubo4.C5I = "A";
+            Cubo4C5G.setBackground(C5);
+        }
+
+        Color C6 = null;
+        if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Rojo")) {
+            C6 = new Color(155, 22, 57);
+            Cubo4C6G.setText("R");
+            Cubo4.C6I = "R";
+            Cubo4C6G.setBackground(C6);
+
+        } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Blanco")) {
+            C6 = new Color(255, 255, 255);
+            Cubo4C6G.setText("B");
+            Cubo4.C6I = "B";
+            Cubo4C6G.setBackground(C6);
+
+        } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Verde")) {
+            C6 = new Color(16, 175, 107);
+            Cubo4C6G.setText("V");
+            Cubo4.C6I = "V";
+            Cubo4C6G.setBackground(C6);
+
+        } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Amarillo")) {
+            C6 = new Color(255, 234, 78);
+            Cubo4C6G.setText("A");
+            Cubo4.C6I = "A";
+            Cubo4C6G.setBackground(C6);
+        }
+
+        Cubo4C1G.setVisible(true);
+        Cubo4C2G.setVisible(true);
+        Cubo4C3G.setVisible(true);
+        Cubo4C4G.setVisible(true);
+        Cubo4C5G.setVisible(true);
+        Cubo4C6G.setVisible(true);
+
+        Cubo4.C1 = C1;
+
+        Cubo4.C2 = C2;
+
+        Cubo4.C3 = C3;
+
+        Cubo4.C4 = C4;
+
+        Cubo4.C5 = C5;
+
+        Cubo4.C6 = C6;
+
+        System.out.println("Cubo 4 actualizado");
+    }
 
     private void genAleatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genAleatorioActionPerformed
         // TODO add your handling code here:
@@ -3971,7 +4061,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
     }
 
-    public void BinariosIn() {
+    public final void BinariosIn() {
 
         try {
             // Crear un flujo de entrada de archivos binarios
@@ -4022,7 +4112,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo1C6J.setText(Cubo1Bin.Cubo1C6JN);
             Cubo1C6J.setBackground(Cubo1Bin.Cubo1C6JB);
 
-            if (Cubo1.C1I.equals("R")) {
+            /*if (Cubo1.C1I.equals("R")) {
                 Cubo1C1.setSelectedItem("Rojo");
                 Cubo1C1G.setText("R");
                 Cubo1C1G.setBackground(Cubo1.C1);
@@ -4129,7 +4219,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo1C6G.setText("A");
                 Cubo1C6G.setBackground(Cubo1.C6);
             }
-
+             */
             // Cubo 2
             Cubo2.C1 = Cubo2Bin.C1;
             Cubo2.C1I = Cubo2Bin.C1I;
@@ -4623,6 +4713,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             sigBtnPressed = true;
             resuelto = false;
+            resueltoLbl.setVisible(false);
             jTabbedPane1.setSelectedIndex(1);
 
             // Cubo 1
@@ -4706,10 +4797,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             //
 
             actualTorre();
-
         } else {
             sigBtnPressed = true;
             resuelto = false;
+            resueltoLbl.setVisible(false);
             jTabbedPane1.setSelectedIndex(1);
 
             // Cubo 1
@@ -4769,6 +4860,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C6J.setBackground(Cubo4Bin.Cubo4C6JB);
 
             actualTorre();
+
         }
 
 
@@ -4795,6 +4887,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C2J.setBackground(Cubo1C6B);
 
         actualTorre();
+        comprobar();
 
     }//GEN-LAST:event_izquierdaCubo1ActionPerformed
 
@@ -4819,6 +4912,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C1J.setBackground(Cubo1C4B);
 
         actualTorre();
+        comprobar();
 
     }//GEN-LAST:event_arribaCubo1ActionPerformed
 
@@ -4857,14 +4951,15 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             resuelto = true;
             JOptionPane.showMessageDialog(null, "FELICIDADES, EL JUEGO YA ESTÁ RESUELTO!");
             resueltoLbl.setVisible(true);
+            fondo.repaint();
 
         } else {
             Object[] options = {"Sí, Por Favor",
                 "No, seguiré intentando"};
             int yes = JOptionPane.showOptionDialog(null,
-                    "Deseas que el programa resuelva el juego por tí?\n"
+                    "Deseas que el programa RESUELVA el juego por tí?\n"
                     + " Podrás ver la explicación en la siguiente pestaña\n"
-                    + "(SOLO si existe)",
+                    + "(SOLO si existe solución)",
                     "Confirmación",
                     JOptionPane.YES_NO_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
@@ -4876,6 +4971,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 resuelto = true;
                 resolverJuego();
                 actualTorre();
+                fondo.repaint();
             } else {
                 resuelto = false;
             }
@@ -8303,6 +8399,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C1J.setBackground(Cubo1C6B);
 
         actualTorre();
+        comprobar();
 
     }//GEN-LAST:event_derechaCubo1ActionPerformed
 
@@ -8327,7 +8424,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C2J.setBackground(Cubo1C4B);
 
         actualTorre();
-
+        comprobar();
 
     }//GEN-LAST:event_abajoCubo1ActionPerformed
 
@@ -8352,6 +8449,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C6J.setBackground(Cubo1C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_horarioCubo1ActionPerformed
 
     private void antihorarioCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antihorarioCubo1ActionPerformed
@@ -8375,7 +8473,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1C5J.setBackground(Cubo1C4B);
 
         actualTorre();
-
+        comprobar();
     }//GEN-LAST:event_antihorarioCubo1ActionPerformed
 
     private void izquierdaCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_izquierdaCubo2ActionPerformed
@@ -8399,6 +8497,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C2J.setBackground(Cubo2C6B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_izquierdaCubo2ActionPerformed
 
     private void arribaCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arribaCubo2ActionPerformed
@@ -8422,6 +8521,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C1J.setBackground(Cubo2C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_arribaCubo2ActionPerformed
 
     private void derechaCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_derechaCubo2ActionPerformed
@@ -8445,6 +8545,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C1J.setBackground(Cubo2C6B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_derechaCubo2ActionPerformed
 
     private void abajoCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abajoCubo2ActionPerformed
@@ -8468,6 +8569,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C2J.setBackground(Cubo2C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_abajoCubo2ActionPerformed
 
     private void horarioCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horarioCubo2ActionPerformed
@@ -8491,6 +8593,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C6J.setBackground(Cubo2C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_horarioCubo2ActionPerformed
 
     private void antihorarioCubo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antihorarioCubo2ActionPerformed
@@ -8514,6 +8617,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C5J.setBackground(Cubo2C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_antihorarioCubo2ActionPerformed
 
     private void izquierdaCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_izquierdaCubo3ActionPerformed
@@ -8537,6 +8641,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C2J.setBackground(Cubo3C6B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_izquierdaCubo3ActionPerformed
 
     private void arribaCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arribaCubo3ActionPerformed
@@ -8560,6 +8665,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C1J.setBackground(Cubo3C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_arribaCubo3ActionPerformed
 
     private void derechaCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_derechaCubo3ActionPerformed
@@ -8583,6 +8689,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C1J.setBackground(Cubo3C6B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_derechaCubo3ActionPerformed
 
     private void abajoCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abajoCubo3ActionPerformed
@@ -8606,6 +8713,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C2J.setBackground(Cubo3C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_abajoCubo3ActionPerformed
 
     private void horarioCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horarioCubo3ActionPerformed
@@ -8629,6 +8737,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C6J.setBackground(Cubo3C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_horarioCubo3ActionPerformed
 
     private void antihorarioCubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_antihorarioCubo3ActionPerformed
@@ -8652,6 +8761,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C5J.setBackground(Cubo3C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_antihorarioCubo3ActionPerformed
 
     private void izquierdaCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_izquierdaCubo4ActionPerformed
@@ -8675,6 +8785,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C2J.setBackground(Cubo4C6B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_izquierdaCubo4ActionPerformed
 
     private void arribaCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arribaCubo4ActionPerformed
@@ -8698,6 +8809,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C1J.setBackground(Cubo4C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_arribaCubo4ActionPerformed
 
     private void derechaCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_derechaCubo4ActionPerformed
@@ -8721,6 +8833,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C1J.setBackground(Cubo4C6B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_derechaCubo4ActionPerformed
 
     private void abajoCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abajoCubo4ActionPerformed
@@ -8744,6 +8857,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C2J.setBackground(Cubo4C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_abajoCubo4ActionPerformed
 
     private void horarioCubo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_horarioCubo4ActionPerformed
@@ -8767,6 +8881,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C6J.setBackground(Cubo4C4B);
 
         actualTorre();
+        comprobar();
 
     }//GEN-LAST:event_horarioCubo4ActionPerformed
 
@@ -8791,10 +8906,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C5J.setBackground(Cubo4C4B);
 
         actualTorre();
+        comprobar();
     }//GEN-LAST:event_antihorarioCubo4ActionPerformed
 
-    private void comprobarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprobarBtnActionPerformed
-        // TODO add your handling code here:
+    public void comprobar() {
         boolean condicion1 = ((!Cubo1C3J.getBackground().equals(Cubo2C3J.getBackground())
                 && !Cubo1C3J.getBackground().equals(Cubo3C3J.getBackground())
                 && !Cubo1C3J.getBackground().equals(Cubo4C3J.getBackground()))
@@ -8824,7 +8939,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 && !Cubo3C6J.getBackground().equals(Cubo4C6J.getBackground()));
 
         if (condicion1 && condicion2 && condicion3 && condicion4) {
-            actualTorre();
+
             resueltoLbl.setVisible(true);
             resuelto = true;
             Object[] options = {"Sí, Por Favor",
@@ -8839,6 +8954,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                     options,
                     options[0]);
 
+            fondo.repaint();
             if (JOptionPane.YES_OPTION == yes) {
                 jTabbedPane1.setSelectedIndex(2);
                 grafoGL();
@@ -8846,22 +8962,15 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 grafoG2();
                 combinarSoluciones();
                 existeSolucion.setText("SI existe una solución");
-                existeSolucion.setForeground(new Color(0, 153, 0));
-            } else {
-
+                fondo.repaint();
             }
 
         } else {
-            actualTorre();
             resueltoLbl.setVisible(false);
             resuelto = false;
-            JOptionPane.showMessageDialog(null, "La combinación NO es válida, puedes seguir\n"
-                    + "intentando o presionar el botón 'Resolver'");
-
+            fondo.repaint();
         }
-
-
-    }//GEN-LAST:event_comprobarBtnActionPerformed
+    }
 
     public void actualTorre() {
         // Actualizar grafica de vistas laterales de la torre
@@ -8976,7 +9085,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo2C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y -= 4);
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y += 4);
@@ -9007,11 +9116,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo2C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo2C3T.getLocation().equals(posCubo1Abs) && Cubo1C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo2C3T = Cubo2C3T.getLocation();
@@ -9021,7 +9130,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo2C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y += 4);
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y -= 4);
@@ -9052,13 +9161,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo2C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
+
         if ((Cubo1C3T.getLocation().equals(posCubo1Abs) && Cubo3C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -9067,7 +9176,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y -= 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y += 4);
@@ -9098,11 +9207,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo3C3T.getLocation().equals(posCubo1Abs) && Cubo1C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
@@ -9112,7 +9221,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y += 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y -= 4);
@@ -9143,14 +9252,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
-        
+
         if ((Cubo1C3T.getLocation().equals(posCubo1Abs) && Cubo4C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -9159,7 +9267,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y -= 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y += 4);
@@ -9190,11 +9298,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo4C3T.getLocation().equals(posCubo1Abs) && Cubo1C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
@@ -9204,7 +9312,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y += 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y -= 4);
@@ -9235,14 +9343,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
 
-        
         if ((Cubo2C3T.getLocation().equals(posCubo1Abs) && Cubo3C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -9251,7 +9358,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y -= 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y += 4);
@@ -9282,11 +9389,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo3C3T.getLocation().equals(posCubo1Abs) && Cubo2C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
@@ -9296,7 +9403,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y += 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y -= 4);
@@ -9327,14 +9434,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
-        
+
         if ((Cubo2C3T.getLocation().equals(posCubo1Abs) && Cubo4C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -9343,7 +9449,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y -= 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y += 4);
@@ -9374,11 +9480,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo4C3T.getLocation().equals(posCubo1Abs) && Cubo2C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
@@ -9388,7 +9494,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y += 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y -= 4);
@@ -9419,14 +9525,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
-        
+
         if ((Cubo3C3T.getLocation().equals(posCubo1Abs) && Cubo4C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -9435,7 +9540,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo3C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y -= 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y += 4);
@@ -9466,11 +9571,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo3C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo4C3T.getLocation().equals(posCubo1Abs) && Cubo3C3T.getLocation().equals(posCubo2Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
@@ -9480,7 +9585,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo3C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y += 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y -= 4);
@@ -9512,12 +9617,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                     Cubo3C4T.repaint();
                     Cubo4C4T.repaint();
 
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
+
         }
-        
+
     }//GEN-LAST:event_InterCubo1_Cubo2ActionPerformed
 
     private void InterCubo2_Cubo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InterCubo2_Cubo3ActionPerformed
@@ -9530,7 +9637,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo2C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y -= 4);
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y += 4);
@@ -9561,11 +9668,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo2C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo2C3T.getLocation().equals(posCubo2Abs) && Cubo1C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo2C3T = Cubo2C3T.getLocation();
@@ -9575,7 +9682,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo2C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y += 4);
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y -= 4);
@@ -9606,13 +9713,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo2C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
+
         if ((Cubo1C3T.getLocation().equals(posCubo2Abs) && Cubo3C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -9621,7 +9728,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y -= 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y += 4);
@@ -9652,11 +9759,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo3C3T.getLocation().equals(posCubo2Abs) && Cubo1C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
@@ -9666,7 +9773,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y += 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y -= 4);
@@ -9697,14 +9804,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
-        
+
         if ((Cubo1C3T.getLocation().equals(posCubo2Abs) && Cubo4C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -9713,7 +9819,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y -= 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y += 4);
@@ -9744,11 +9850,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo4C3T.getLocation().equals(posCubo2Abs) && Cubo1C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
@@ -9758,7 +9864,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y += 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y -= 4);
@@ -9789,14 +9895,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
 
-        
         if ((Cubo2C3T.getLocation().equals(posCubo2Abs) && Cubo3C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -9805,7 +9910,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y -= 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y += 4);
@@ -9836,11 +9941,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo3C3T.getLocation().equals(posCubo2Abs) && Cubo2C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
@@ -9850,7 +9955,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y += 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y -= 4);
@@ -9881,14 +9986,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
-        
+
         if ((Cubo2C3T.getLocation().equals(posCubo2Abs) && Cubo4C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -9897,7 +10001,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y -= 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y += 4);
@@ -9928,11 +10032,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo4C3T.getLocation().equals(posCubo2Abs) && Cubo2C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
@@ -9942,7 +10046,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y += 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y -= 4);
@@ -9973,14 +10077,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
-        
+
         if ((Cubo3C3T.getLocation().equals(posCubo2Abs) && Cubo4C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -9989,7 +10092,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo3C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y -= 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y += 4);
@@ -10020,11 +10123,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo3C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo4C3T.getLocation().equals(posCubo2Abs) && Cubo3C3T.getLocation().equals(posCubo3Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
@@ -10034,7 +10137,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo3C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y += 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y -= 4);
@@ -10065,11 +10168,12 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo3C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
+
         }
     }//GEN-LAST:event_InterCubo2_Cubo3ActionPerformed
 
@@ -10083,7 +10187,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo2C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y -= 4);
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y += 4);
@@ -10114,11 +10218,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo2C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo2C3T.getLocation().equals(posCubo3Abs) && Cubo1C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo2C3T = Cubo2C3T.getLocation();
@@ -10128,7 +10232,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo2C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y += 4);
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y -= 4);
@@ -10159,13 +10263,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo2C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
+
         if ((Cubo1C3T.getLocation().equals(posCubo3Abs) && Cubo3C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -10174,7 +10278,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y -= 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y += 4);
@@ -10205,11 +10309,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo3C3T.getLocation().equals(posCubo3Abs) && Cubo1C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
@@ -10219,7 +10323,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y += 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y -= 4);
@@ -10250,14 +10354,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
-        
+
         if ((Cubo1C3T.getLocation().equals(posCubo3Abs) && Cubo4C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -10266,7 +10369,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y -= 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y += 4);
@@ -10297,11 +10400,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo4C3T.getLocation().equals(posCubo3Abs) && Cubo1C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
@@ -10311,7 +10414,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo1C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo1Lbl.setLocation(Cubo1Lbl.getLocation().x, Cubo1Lbl.getLocation().y += 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y -= 4);
@@ -10342,14 +10445,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo1C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
 
-        
         if ((Cubo2C3T.getLocation().equals(posCubo3Abs) && Cubo3C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -10358,7 +10460,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y -= 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y += 4);
@@ -10389,11 +10491,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo3C3T.getLocation().equals(posCubo3Abs) && Cubo2C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo3C3T = Cubo3C3T.getLocation();
@@ -10403,7 +10505,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo3C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y += 4);
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y -= 4);
@@ -10434,14 +10536,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo3C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
-        
+
         if ((Cubo2C3T.getLocation().equals(posCubo3Abs) && Cubo4C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -10450,7 +10551,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y -= 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y += 4);
@@ -10481,11 +10582,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo4C3T.getLocation().equals(posCubo3Abs) && Cubo2C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
@@ -10495,7 +10596,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo2C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo2Lbl.setLocation(Cubo2Lbl.getLocation().x, Cubo2Lbl.getLocation().y += 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y -= 4);
@@ -10526,14 +10627,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo2C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
-        
-        
+
         if ((Cubo3C3T.getLocation().equals(posCubo3Abs) && Cubo4C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
             ActionListener interC1_C2 = new ActionListener() {
@@ -10542,7 +10642,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo3C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y -= 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y += 4);
@@ -10573,11 +10673,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo3C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
         }
         if ((Cubo4C3T.getLocation().equals(posCubo3Abs) && Cubo3C3T.getLocation().equals(posCubo4Abs))) {
             Point posCubo4C3T = Cubo4C3T.getLocation();
@@ -10587,7 +10687,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     if (Cubo3C3T.getLocation().equals(posCubo4C3T)) {
                         // Si el cubo llega a la posicion deseada, se detiene
-                        timerC1.stop();
+                        timer.stop();
                     } else {
                         Cubo3Lbl.setLocation(Cubo3Lbl.getLocation().x, Cubo3Lbl.getLocation().y += 4);
                         Cubo4Lbl.setLocation(Cubo4Lbl.getLocation().x, Cubo4Lbl.getLocation().y -= 4);
@@ -10618,13 +10718,182 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                     Cubo3C4T.repaint();
                     Cubo4C4T.repaint();
-
+                    fondo.repaint();
                 }
             };
-            timerC1 = new Timer(2, interC1_C2);
-            timerC1.start();
+            timer = new Timer(2, interC1_C2);
+            timer.start();
+
         }
     }//GEN-LAST:event_InterCubo3_Cubo4ActionPerformed
+
+    private void Cubo1C1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo1C1ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo1();
+        }
+    }//GEN-LAST:event_Cubo1C1ActionPerformed
+
+    private void Cubo1C2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo1C2ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo1();
+        }
+    }//GEN-LAST:event_Cubo1C2ActionPerformed
+
+    private void Cubo1C3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo1C3ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo1();
+        }
+    }//GEN-LAST:event_Cubo1C3ActionPerformed
+
+    private void Cubo1C4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo1C4ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo1();
+        }
+    }//GEN-LAST:event_Cubo1C4ActionPerformed
+
+    private void Cubo1C5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo1C5ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo1();
+        }
+    }//GEN-LAST:event_Cubo1C5ActionPerformed
+
+    private void Cubo1C6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo1C6ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo1();
+        }
+    }//GEN-LAST:event_Cubo1C6ActionPerformed
+
+    private void Cubo2C1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo2C1ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo2();
+        }
+    }//GEN-LAST:event_Cubo2C1ActionPerformed
+
+    private void Cubo2C2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo2C2ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo2();
+        }
+    }//GEN-LAST:event_Cubo2C2ActionPerformed
+
+    private void Cubo2C3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo2C3ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo2();
+        }
+    }//GEN-LAST:event_Cubo2C3ActionPerformed
+
+    private void Cubo2C4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo2C4ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo2();
+        }
+    }//GEN-LAST:event_Cubo2C4ActionPerformed
+
+    private void Cubo2C5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo2C5ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo2();
+        }
+    }//GEN-LAST:event_Cubo2C5ActionPerformed
+
+    private void Cubo2C6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo2C6ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo2();
+        }
+    }//GEN-LAST:event_Cubo2C6ActionPerformed
+
+    private void Cubo3C1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo3C1ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo3();
+        }
+    }//GEN-LAST:event_Cubo3C1ActionPerformed
+
+    private void Cubo3C2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo3C2ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo3();
+        }
+    }//GEN-LAST:event_Cubo3C2ActionPerformed
+
+    private void Cubo3C3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo3C3ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo3();
+        }
+    }//GEN-LAST:event_Cubo3C3ActionPerformed
+
+    private void Cubo3C4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo3C4ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo3();
+        }
+    }//GEN-LAST:event_Cubo3C4ActionPerformed
+
+    private void Cubo3C5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo3C5ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo3();
+        }
+    }//GEN-LAST:event_Cubo3C5ActionPerformed
+
+    private void Cubo3C6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo3C6ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo3();
+        }
+    }//GEN-LAST:event_Cubo3C6ActionPerformed
+
+    private void Cubo4C1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo4C1ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo4();
+        }
+    }//GEN-LAST:event_Cubo4C1ActionPerformed
+
+    private void Cubo4C2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo4C2ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo4();
+        }
+    }//GEN-LAST:event_Cubo4C2ActionPerformed
+
+    private void Cubo4C3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo4C3ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo4();
+        }
+    }//GEN-LAST:event_Cubo4C3ActionPerformed
+
+    private void Cubo4C4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo4C4ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo4();
+        }
+    }//GEN-LAST:event_Cubo4C4ActionPerformed
+
+    private void Cubo4C5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo4C5ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo4();
+        }
+    }//GEN-LAST:event_Cubo4C5ActionPerformed
+
+    private void Cubo4C6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cubo4C6ActionPerformed
+        // TODO add your handling code here:
+        if (iniciado == true) {
+            genCubo4();
+        }
+    }//GEN-LAST:event_Cubo4C6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -10773,7 +11042,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JButton arribaCubo2;
     private javax.swing.JButton arribaCubo3;
     private javax.swing.JButton arribaCubo4;
-    private javax.swing.JButton comprobarBtn;
     private javax.swing.JButton derechaCubo1;
     private javax.swing.JButton derechaCubo2;
     private javax.swing.JButton derechaCubo3;
@@ -10781,11 +11049,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel existeSolucion;
     private javax.swing.JButton explicacionBtn;
     private javax.swing.Box.Filler filler1;
+    private javax.swing.JLabel fondo;
     private javax.swing.JButton genAleatorio;
-    private javax.swing.JButton genCubo1;
-    private javax.swing.JButton genCubo2;
-    private javax.swing.JButton genCubo3;
-    private javax.swing.JButton genCubo4;
     public static javax.swing.JPanel grafoG1;
     public static javax.swing.JPanel grafoG2;
     public static javax.swing.JPanel grafoGL;
@@ -10797,7 +11062,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JButton izquierdaCubo2;
     private javax.swing.JButton izquierdaCubo3;
     private javax.swing.JButton izquierdaCubo4;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
