@@ -1071,7 +1071,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         });
         jPanel1.add(Cubo4C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 290, 97, -1));
 
-        jugarBtn.setBackground(new java.awt.Color(119, 132, 255));
+        jugarBtn.setBackground(new java.awt.Color(135, 146, 255));
         jugarBtn.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jugarBtn.setForeground(new java.awt.Color(0, 0, 0));
         jugarBtn.setText("JUGAR");
@@ -1169,7 +1169,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         });
         jPanel1.add(Cubo2C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 97, -1));
 
-        genAleatorio.setBackground(new java.awt.Color(112, 23, 46));
+        genAleatorio.setBackground(new java.awt.Color(122, 37, 55));
         genAleatorio.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         genAleatorio.setForeground(new java.awt.Color(255, 255, 255));
         genAleatorio.setText("ALEATORIO");
@@ -1397,7 +1397,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jPanel2.setLayout(null);
 
-        resolverBtn.setBackground(new java.awt.Color(112, 23, 46));
+        resolverBtn.setBackground(new java.awt.Color(122, 37, 55));
         resolverBtn.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         resolverBtn.setForeground(new java.awt.Color(255, 255, 255));
         resolverBtn.setText("RESOLVER");
@@ -1420,7 +1420,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo4C3T);
         Cubo4C3T.setBounds(260, 360, 50, 50);
 
-        arribaCubo1.setBackground(new java.awt.Color(119, 132, 255));
+        arribaCubo1.setBackground(new java.awt.Color(135, 146, 255));
         arribaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         arribaCubo1.setForeground(new java.awt.Color(0, 0, 0));
         arribaCubo1.setText("▲");
@@ -1432,7 +1432,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(arribaCubo1);
         arribaCubo1.setBounds(90, 40, 25, 25);
 
-        izquierdaCubo1.setBackground(new java.awt.Color(119, 132, 255));
+        izquierdaCubo1.setBackground(new java.awt.Color(135, 146, 255));
         izquierdaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         izquierdaCubo1.setForeground(new java.awt.Color(0, 0, 0));
         izquierdaCubo1.setText("◄");
@@ -1480,7 +1480,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo1C3J);
         Cubo1C3J.setBounds(68, 69, 60, 9);
 
-        derechaCubo1.setBackground(new java.awt.Color(119, 132, 255));
+        derechaCubo1.setBackground(new java.awt.Color(135, 146, 255));
         derechaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         derechaCubo1.setForeground(new java.awt.Color(0, 0, 0));
         derechaCubo1.setText("►");
@@ -1492,7 +1492,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(derechaCubo1);
         derechaCubo1.setBounds(150, 100, 25, 25);
 
-        abajoCubo1.setBackground(new java.awt.Color(119, 132, 255));
+        abajoCubo1.setBackground(new java.awt.Color(135, 146, 255));
         abajoCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         abajoCubo1.setForeground(new java.awt.Color(0, 0, 0));
         abajoCubo1.setText("▼");
@@ -1518,7 +1518,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(jLabel13);
         jLabel13.setBounds(23, 44, 20, 19);
 
-        horarioCubo1.setBackground(new java.awt.Color(119, 132, 255));
+        horarioCubo1.setBackground(new java.awt.Color(135, 146, 255));
         horarioCubo1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         horarioCubo1.setForeground(new java.awt.Color(0, 0, 0));
         horarioCubo1.setText("↻");
@@ -1530,7 +1530,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(horarioCubo1);
         horarioCubo1.setBounds(27, 188, 35, 25);
 
-        antihorarioCubo1.setBackground(new java.awt.Color(119, 132, 255));
+        antihorarioCubo1.setBackground(new java.awt.Color(135, 146, 255));
         antihorarioCubo1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         antihorarioCubo1.setForeground(new java.awt.Color(0, 0, 0));
         antihorarioCubo1.setText("↺");
@@ -1551,7 +1551,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo2C1J);
         Cubo2C1J.setBounds(285, 82, 60, 60);
 
-        izquierdaCubo2.setBackground(new java.awt.Color(119, 132, 255));
+        izquierdaCubo2.setBackground(new java.awt.Color(135, 146, 255));
         izquierdaCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         izquierdaCubo2.setForeground(new java.awt.Color(0, 0, 0));
         izquierdaCubo2.setText("◄");
@@ -1599,7 +1599,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo2C3J);
         Cubo2C3J.setBounds(285, 69, 60, 9);
 
-        arribaCubo2.setBackground(new java.awt.Color(119, 132, 255));
+        arribaCubo2.setBackground(new java.awt.Color(135, 146, 255));
         arribaCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         arribaCubo2.setForeground(new java.awt.Color(0, 0, 0));
         arribaCubo2.setText("▲");
@@ -1625,7 +1625,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo2C2J);
         Cubo2C2J.setBounds(382, 42, 25, 25);
 
-        derechaCubo2.setBackground(new java.awt.Color(119, 132, 255));
+        derechaCubo2.setBackground(new java.awt.Color(135, 146, 255));
         derechaCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         derechaCubo2.setForeground(new java.awt.Color(0, 0, 0));
         derechaCubo2.setText("►");
@@ -1637,7 +1637,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(derechaCubo2);
         derechaCubo2.setBounds(365, 97, 25, 25);
 
-        abajoCubo2.setBackground(new java.awt.Color(119, 132, 255));
+        abajoCubo2.setBackground(new java.awt.Color(135, 146, 255));
         abajoCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         abajoCubo2.setForeground(new java.awt.Color(0, 0, 0));
         abajoCubo2.setText("▼");
@@ -1649,7 +1649,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(abajoCubo2);
         abajoCubo2.setBounds(303, 162, 25, 25);
 
-        horarioCubo2.setBackground(new java.awt.Color(119, 132, 255));
+        horarioCubo2.setBackground(new java.awt.Color(135, 146, 255));
         horarioCubo2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         horarioCubo2.setForeground(new java.awt.Color(0, 0, 0));
         horarioCubo2.setText("↻");
@@ -1661,7 +1661,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(horarioCubo2);
         horarioCubo2.setBounds(244, 188, 35, 25);
 
-        antihorarioCubo2.setBackground(new java.awt.Color(119, 132, 255));
+        antihorarioCubo2.setBackground(new java.awt.Color(135, 146, 255));
         antihorarioCubo2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         antihorarioCubo2.setForeground(new java.awt.Color(0, 0, 0));
         antihorarioCubo2.setText("↺");
@@ -1682,7 +1682,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo3C1J);
         Cubo3C1J.setBounds(514, 82, 60, 60);
 
-        izquierdaCubo3.setBackground(new java.awt.Color(119, 132, 255));
+        izquierdaCubo3.setBackground(new java.awt.Color(135, 146, 255));
         izquierdaCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         izquierdaCubo3.setForeground(new java.awt.Color(0, 0, 0));
         izquierdaCubo3.setText("◄");
@@ -1730,7 +1730,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo3C3J);
         Cubo3C3J.setBounds(514, 69, 60, 9);
 
-        arribaCubo3.setBackground(new java.awt.Color(119, 132, 255));
+        arribaCubo3.setBackground(new java.awt.Color(135, 146, 255));
         arribaCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         arribaCubo3.setForeground(new java.awt.Color(0, 0, 0));
         arribaCubo3.setText("▲");
@@ -1756,7 +1756,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo3C2J);
         Cubo3C2J.setBounds(611, 42, 25, 25);
 
-        derechaCubo3.setBackground(new java.awt.Color(119, 132, 255));
+        derechaCubo3.setBackground(new java.awt.Color(135, 146, 255));
         derechaCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         derechaCubo3.setForeground(new java.awt.Color(0, 0, 0));
         derechaCubo3.setText("►");
@@ -1768,7 +1768,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(derechaCubo3);
         derechaCubo3.setBounds(594, 97, 25, 25);
 
-        abajoCubo3.setBackground(new java.awt.Color(119, 132, 255));
+        abajoCubo3.setBackground(new java.awt.Color(135, 146, 255));
         abajoCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         abajoCubo3.setForeground(new java.awt.Color(0, 0, 0));
         abajoCubo3.setText("▼");
@@ -1780,7 +1780,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(abajoCubo3);
         abajoCubo3.setBounds(532, 162, 25, 25);
 
-        horarioCubo3.setBackground(new java.awt.Color(119, 132, 255));
+        horarioCubo3.setBackground(new java.awt.Color(135, 146, 255));
         horarioCubo3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         horarioCubo3.setForeground(new java.awt.Color(0, 0, 0));
         horarioCubo3.setText("↻");
@@ -1792,7 +1792,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(horarioCubo3);
         horarioCubo3.setBounds(473, 188, 35, 25);
 
-        antihorarioCubo3.setBackground(new java.awt.Color(119, 132, 255));
+        antihorarioCubo3.setBackground(new java.awt.Color(135, 146, 255));
         antihorarioCubo3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         antihorarioCubo3.setForeground(new java.awt.Color(0, 0, 0));
         antihorarioCubo3.setText("↺");
@@ -1813,7 +1813,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo4C1J);
         Cubo4C1J.setBounds(745, 82, 60, 60);
 
-        izquierdaCubo4.setBackground(new java.awt.Color(119, 132, 255));
+        izquierdaCubo4.setBackground(new java.awt.Color(135, 146, 255));
         izquierdaCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         izquierdaCubo4.setForeground(new java.awt.Color(0, 0, 0));
         izquierdaCubo4.setText("◄");
@@ -1861,7 +1861,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo4C3J);
         Cubo4C3J.setBounds(745, 69, 60, 9);
 
-        arribaCubo4.setBackground(new java.awt.Color(119, 132, 255));
+        arribaCubo4.setBackground(new java.awt.Color(135, 146, 255));
         arribaCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         arribaCubo4.setForeground(new java.awt.Color(0, 0, 0));
         arribaCubo4.setText("▲");
@@ -1887,7 +1887,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo4C2J);
         Cubo4C2J.setBounds(842, 42, 25, 25);
 
-        derechaCubo4.setBackground(new java.awt.Color(119, 132, 255));
+        derechaCubo4.setBackground(new java.awt.Color(135, 146, 255));
         derechaCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         derechaCubo4.setForeground(new java.awt.Color(0, 0, 0));
         derechaCubo4.setText("►");
@@ -1899,7 +1899,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(derechaCubo4);
         derechaCubo4.setBounds(825, 97, 25, 25);
 
-        abajoCubo4.setBackground(new java.awt.Color(119, 132, 255));
+        abajoCubo4.setBackground(new java.awt.Color(135, 146, 255));
         abajoCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         abajoCubo4.setForeground(new java.awt.Color(0, 0, 0));
         abajoCubo4.setText("▼");
@@ -1911,7 +1911,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(abajoCubo4);
         abajoCubo4.setBounds(763, 162, 25, 25);
 
-        horarioCubo4.setBackground(new java.awt.Color(119, 132, 255));
+        horarioCubo4.setBackground(new java.awt.Color(135, 146, 255));
         horarioCubo4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         horarioCubo4.setForeground(new java.awt.Color(0, 0, 0));
         horarioCubo4.setText("↻");
@@ -1923,7 +1923,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(horarioCubo4);
         horarioCubo4.setBounds(704, 188, 35, 25);
 
-        antihorarioCubo4.setBackground(new java.awt.Color(119, 132, 255));
+        antihorarioCubo4.setBackground(new java.awt.Color(135, 146, 255));
         antihorarioCubo4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         antihorarioCubo4.setForeground(new java.awt.Color(0, 0, 0));
         antihorarioCubo4.setText("↺");
@@ -2113,7 +2113,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(jLabel28);
         jLabel28.setBounds(270, 300, 320, 25);
 
-        explicacionBtn.setBackground(new java.awt.Color(119, 132, 255));
+        explicacionBtn.setBackground(new java.awt.Color(135, 146, 255));
         explicacionBtn.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         explicacionBtn.setForeground(new java.awt.Color(0, 0, 0));
         explicacionBtn.setText("EXPLICACIÓN");
@@ -2148,7 +2148,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(jSeparator8);
         jSeparator8.setBounds(427, 370, 3, 210);
 
-        InterCubo1_Cubo2.setBackground(new java.awt.Color(119, 132, 255));
+        InterCubo1_Cubo2.setBackground(new java.awt.Color(135, 146, 255));
         InterCubo1_Cubo2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         InterCubo1_Cubo2.setForeground(new java.awt.Color(0, 0, 0));
         InterCubo1_Cubo2.setText("⇅");
@@ -2160,7 +2160,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(InterCubo1_Cubo2);
         InterCubo1_Cubo2.setBounds(190, 520, 30, 30);
 
-        InterCubo2_Cubo3.setBackground(new java.awt.Color(119, 132, 255));
+        InterCubo2_Cubo3.setBackground(new java.awt.Color(135, 146, 255));
         InterCubo2_Cubo3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         InterCubo2_Cubo3.setForeground(new java.awt.Color(0, 0, 0));
         InterCubo2_Cubo3.setText("⇅");
@@ -2172,7 +2172,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(InterCubo2_Cubo3);
         InterCubo2_Cubo3.setBounds(190, 460, 30, 30);
 
-        InterCubo3_Cubo4.setBackground(new java.awt.Color(119, 132, 255));
+        InterCubo3_Cubo4.setBackground(new java.awt.Color(135, 146, 255));
         InterCubo3_Cubo4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         InterCubo3_Cubo4.setForeground(new java.awt.Color(0, 0, 0));
         InterCubo3_Cubo4.setText("⇅");

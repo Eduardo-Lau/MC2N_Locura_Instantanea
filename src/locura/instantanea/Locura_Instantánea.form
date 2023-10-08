@@ -873,7 +873,7 @@
             <Component class="javax.swing.JButton" name="jugarBtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Consolas" size="18" style="1"/>
@@ -1128,7 +1128,7 @@
             <Component class="javax.swing.JButton" name="genAleatorio">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="2e" green="17" red="70" type="rgb"/>
+                  <Color blue="37" green="25" red="7a" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Consolas" size="16" style="1"/>
@@ -1733,7 +1733,7 @@
             <Component class="javax.swing.JButton" name="resolverBtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="2e" green="17" red="70" type="rgb"/>
+                  <Color blue="37" green="25" red="7a" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Consolas" size="16" style="1"/>
@@ -1778,7 +1778,7 @@
             <Component class="javax.swing.JButton" name="arribaCubo1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -1800,7 +1800,7 @@
             <Component class="javax.swing.JButton" name="izquierdaCubo1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -1906,7 +1906,7 @@
             <Component class="javax.swing.JButton" name="derechaCubo1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -1928,7 +1928,7 @@
             <Component class="javax.swing.JButton" name="abajoCubo1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -1984,7 +1984,7 @@
             <Component class="javax.swing.JButton" name="horarioCubo1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
@@ -2006,7 +2006,7 @@
             <Component class="javax.swing.JButton" name="antihorarioCubo1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
@@ -2049,7 +2049,7 @@
             <Component class="javax.swing.JButton" name="izquierdaCubo2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2155,7 +2155,7 @@
             <Component class="javax.swing.JButton" name="arribaCubo2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2211,7 +2211,7 @@
             <Component class="javax.swing.JButton" name="derechaCubo2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2233,7 +2233,7 @@
             <Component class="javax.swing.JButton" name="abajoCubo2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2255,7 +2255,7 @@
             <Component class="javax.swing.JButton" name="horarioCubo2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
@@ -2277,7 +2277,7 @@
             <Component class="javax.swing.JButton" name="antihorarioCubo2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
@@ -2320,7 +2320,7 @@
             <Component class="javax.swing.JButton" name="izquierdaCubo3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2426,7 +2426,7 @@
             <Component class="javax.swing.JButton" name="arribaCubo3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2482,7 +2482,7 @@
             <Component class="javax.swing.JButton" name="derechaCubo3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2504,7 +2504,7 @@
             <Component class="javax.swing.JButton" name="abajoCubo3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2526,7 +2526,7 @@
             <Component class="javax.swing.JButton" name="horarioCubo3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
@@ -2548,7 +2548,7 @@
             <Component class="javax.swing.JButton" name="antihorarioCubo3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
@@ -2591,7 +2591,7 @@
             <Component class="javax.swing.JButton" name="izquierdaCubo4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2697,7 +2697,7 @@
             <Component class="javax.swing.JButton" name="arribaCubo4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2753,7 +2753,7 @@
             <Component class="javax.swing.JButton" name="derechaCubo4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2775,7 +2775,7 @@
             <Component class="javax.swing.JButton" name="abajoCubo4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
@@ -2797,7 +2797,7 @@
             <Component class="javax.swing.JButton" name="horarioCubo4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
@@ -2819,7 +2819,7 @@
             <Component class="javax.swing.JButton" name="antihorarioCubo4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
@@ -3261,7 +3261,7 @@
             <Component class="javax.swing.JButton" name="explicacionBtn">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Consolas" size="16" style="1"/>
@@ -3354,7 +3354,7 @@
             <Component class="javax.swing.JButton" name="InterCubo1_Cubo2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
@@ -3376,7 +3376,7 @@
             <Component class="javax.swing.JButton" name="InterCubo2_Cubo3">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
@@ -3398,7 +3398,7 @@
             <Component class="javax.swing.JButton" name="InterCubo3_Cubo4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="84" red="77" type="rgb"/>
+                  <Color blue="ff" green="92" red="87" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI Symbol" size="18" style="1"/>
