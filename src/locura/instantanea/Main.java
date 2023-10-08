@@ -5,6 +5,7 @@
 package locura.instantanea;
 
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+import java.awt.Color;
 import javax.swing.UIManager;
 
 /**
@@ -19,6 +20,7 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         try {
+            FlatMacDarkLaf.registerCustomDefaultsSource("style");
             UIManager.setLookAndFeel(new FlatMacDarkLaf());
             
         } catch (Exception e) {

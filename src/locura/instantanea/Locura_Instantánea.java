@@ -825,7 +825,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel33.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 60, -1));
 
-        Cubo1C1.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -840,7 +839,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel34.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 60, -1));
 
-        Cubo1C2.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -855,7 +853,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel35.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 60, -1));
 
-        Cubo1C3.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -870,7 +867,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel36.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 60, -1));
 
-        Cubo1C4.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -885,7 +881,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel37.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 60, -1));
 
-        Cubo1C5.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -900,7 +895,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel38.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 60, -1));
 
-        Cubo1C6.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -915,7 +909,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel21.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 60, -1));
 
-        Cubo3C1.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -930,7 +923,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel22.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 60, -1));
 
-        Cubo3C2.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -945,7 +937,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel23.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 60, -1));
 
-        Cubo3C3.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -960,7 +951,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel24.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 60, -1));
 
-        Cubo3C4.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -975,7 +965,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel25.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, 60, -1));
 
-        Cubo3C5.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -990,7 +979,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel26.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 60, -1));
 
-        Cubo3C6.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1005,7 +993,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel39.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, 60, -1));
 
-        Cubo4C1.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1020,7 +1007,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel40.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, 60, -1));
 
-        Cubo4C2.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1035,7 +1021,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel41.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, 60, -1));
 
-        Cubo4C3.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1050,7 +1035,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel42.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, 60, -1));
 
-        Cubo4C4.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1065,7 +1049,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel43.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 60, -1));
 
-        Cubo4C5.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1080,7 +1063,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel44.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 60, -1));
 
-        Cubo4C6.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1089,7 +1071,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         });
         jPanel1.add(Cubo4C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 290, 97, -1));
 
-        jugarBtn.setBackground(new java.awt.Color(147, 157, 255));
+        jugarBtn.setBackground(new java.awt.Color(119, 132, 255));
         jugarBtn.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jugarBtn.setForeground(new java.awt.Color(0, 0, 0));
         jugarBtn.setText("JUGAR");
@@ -1109,7 +1091,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel45.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 60, -1));
 
-        Cubo2C1.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1124,7 +1105,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel46.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 60, -1));
 
-        Cubo2C2.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1139,7 +1119,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel47.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 60, -1));
 
-        Cubo2C3.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1154,7 +1133,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel48.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 60, -1));
 
-        Cubo2C4.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1169,7 +1147,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel49.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 60, -1));
 
-        Cubo2C5.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1184,7 +1161,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel50.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 60, -1));
 
-        Cubo2C6.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1444,7 +1420,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo4C3T);
         Cubo4C3T.setBounds(260, 360, 50, 50);
 
-        arribaCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        arribaCubo1.setBackground(new java.awt.Color(119, 132, 255));
         arribaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         arribaCubo1.setForeground(new java.awt.Color(0, 0, 0));
         arribaCubo1.setText("▲");
@@ -1456,7 +1432,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(arribaCubo1);
         arribaCubo1.setBounds(90, 40, 25, 25);
 
-        izquierdaCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        izquierdaCubo1.setBackground(new java.awt.Color(119, 132, 255));
         izquierdaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         izquierdaCubo1.setForeground(new java.awt.Color(0, 0, 0));
         izquierdaCubo1.setText("◄");
@@ -1504,7 +1480,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo1C3J);
         Cubo1C3J.setBounds(68, 69, 60, 9);
 
-        derechaCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        derechaCubo1.setBackground(new java.awt.Color(119, 132, 255));
         derechaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         derechaCubo1.setForeground(new java.awt.Color(0, 0, 0));
         derechaCubo1.setText("►");
@@ -1514,9 +1490,9 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(derechaCubo1);
-        derechaCubo1.setBounds(148, 97, 25, 25);
+        derechaCubo1.setBounds(150, 100, 25, 25);
 
-        abajoCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        abajoCubo1.setBackground(new java.awt.Color(119, 132, 255));
         abajoCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         abajoCubo1.setForeground(new java.awt.Color(0, 0, 0));
         abajoCubo1.setText("▼");
@@ -1542,7 +1518,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(jLabel13);
         jLabel13.setBounds(23, 44, 20, 19);
 
-        horarioCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        horarioCubo1.setBackground(new java.awt.Color(119, 132, 255));
         horarioCubo1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         horarioCubo1.setForeground(new java.awt.Color(0, 0, 0));
         horarioCubo1.setText("↻");
@@ -1554,7 +1530,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(horarioCubo1);
         horarioCubo1.setBounds(27, 188, 35, 25);
 
-        antihorarioCubo1.setBackground(new java.awt.Color(147, 157, 255));
+        antihorarioCubo1.setBackground(new java.awt.Color(119, 132, 255));
         antihorarioCubo1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         antihorarioCubo1.setForeground(new java.awt.Color(0, 0, 0));
         antihorarioCubo1.setText("↺");
@@ -1575,7 +1551,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo2C1J);
         Cubo2C1J.setBounds(285, 82, 60, 60);
 
-        izquierdaCubo2.setBackground(new java.awt.Color(147, 157, 255));
+        izquierdaCubo2.setBackground(new java.awt.Color(119, 132, 255));
         izquierdaCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         izquierdaCubo2.setForeground(new java.awt.Color(0, 0, 0));
         izquierdaCubo2.setText("◄");
@@ -1623,7 +1599,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo2C3J);
         Cubo2C3J.setBounds(285, 69, 60, 9);
 
-        arribaCubo2.setBackground(new java.awt.Color(147, 157, 255));
+        arribaCubo2.setBackground(new java.awt.Color(119, 132, 255));
         arribaCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         arribaCubo2.setForeground(new java.awt.Color(0, 0, 0));
         arribaCubo2.setText("▲");
@@ -1649,7 +1625,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo2C2J);
         Cubo2C2J.setBounds(382, 42, 25, 25);
 
-        derechaCubo2.setBackground(new java.awt.Color(147, 157, 255));
+        derechaCubo2.setBackground(new java.awt.Color(119, 132, 255));
         derechaCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         derechaCubo2.setForeground(new java.awt.Color(0, 0, 0));
         derechaCubo2.setText("►");
@@ -1661,7 +1637,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(derechaCubo2);
         derechaCubo2.setBounds(365, 97, 25, 25);
 
-        abajoCubo2.setBackground(new java.awt.Color(147, 157, 255));
+        abajoCubo2.setBackground(new java.awt.Color(119, 132, 255));
         abajoCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         abajoCubo2.setForeground(new java.awt.Color(0, 0, 0));
         abajoCubo2.setText("▼");
@@ -1673,7 +1649,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(abajoCubo2);
         abajoCubo2.setBounds(303, 162, 25, 25);
 
-        horarioCubo2.setBackground(new java.awt.Color(147, 157, 255));
+        horarioCubo2.setBackground(new java.awt.Color(119, 132, 255));
         horarioCubo2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         horarioCubo2.setForeground(new java.awt.Color(0, 0, 0));
         horarioCubo2.setText("↻");
@@ -1685,7 +1661,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(horarioCubo2);
         horarioCubo2.setBounds(244, 188, 35, 25);
 
-        antihorarioCubo2.setBackground(new java.awt.Color(147, 157, 255));
+        antihorarioCubo2.setBackground(new java.awt.Color(119, 132, 255));
         antihorarioCubo2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         antihorarioCubo2.setForeground(new java.awt.Color(0, 0, 0));
         antihorarioCubo2.setText("↺");
@@ -1706,7 +1682,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo3C1J);
         Cubo3C1J.setBounds(514, 82, 60, 60);
 
-        izquierdaCubo3.setBackground(new java.awt.Color(147, 157, 255));
+        izquierdaCubo3.setBackground(new java.awt.Color(119, 132, 255));
         izquierdaCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         izquierdaCubo3.setForeground(new java.awt.Color(0, 0, 0));
         izquierdaCubo3.setText("◄");
@@ -1754,7 +1730,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo3C3J);
         Cubo3C3J.setBounds(514, 69, 60, 9);
 
-        arribaCubo3.setBackground(new java.awt.Color(147, 157, 255));
+        arribaCubo3.setBackground(new java.awt.Color(119, 132, 255));
         arribaCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         arribaCubo3.setForeground(new java.awt.Color(0, 0, 0));
         arribaCubo3.setText("▲");
@@ -1780,7 +1756,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo3C2J);
         Cubo3C2J.setBounds(611, 42, 25, 25);
 
-        derechaCubo3.setBackground(new java.awt.Color(147, 157, 255));
+        derechaCubo3.setBackground(new java.awt.Color(119, 132, 255));
         derechaCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         derechaCubo3.setForeground(new java.awt.Color(0, 0, 0));
         derechaCubo3.setText("►");
@@ -1792,7 +1768,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(derechaCubo3);
         derechaCubo3.setBounds(594, 97, 25, 25);
 
-        abajoCubo3.setBackground(new java.awt.Color(147, 157, 255));
+        abajoCubo3.setBackground(new java.awt.Color(119, 132, 255));
         abajoCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         abajoCubo3.setForeground(new java.awt.Color(0, 0, 0));
         abajoCubo3.setText("▼");
@@ -1804,7 +1780,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(abajoCubo3);
         abajoCubo3.setBounds(532, 162, 25, 25);
 
-        horarioCubo3.setBackground(new java.awt.Color(147, 157, 255));
+        horarioCubo3.setBackground(new java.awt.Color(119, 132, 255));
         horarioCubo3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         horarioCubo3.setForeground(new java.awt.Color(0, 0, 0));
         horarioCubo3.setText("↻");
@@ -1816,7 +1792,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(horarioCubo3);
         horarioCubo3.setBounds(473, 188, 35, 25);
 
-        antihorarioCubo3.setBackground(new java.awt.Color(147, 157, 255));
+        antihorarioCubo3.setBackground(new java.awt.Color(119, 132, 255));
         antihorarioCubo3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         antihorarioCubo3.setForeground(new java.awt.Color(0, 0, 0));
         antihorarioCubo3.setText("↺");
@@ -1837,7 +1813,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo4C1J);
         Cubo4C1J.setBounds(745, 82, 60, 60);
 
-        izquierdaCubo4.setBackground(new java.awt.Color(147, 157, 255));
+        izquierdaCubo4.setBackground(new java.awt.Color(119, 132, 255));
         izquierdaCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         izquierdaCubo4.setForeground(new java.awt.Color(0, 0, 0));
         izquierdaCubo4.setText("◄");
@@ -1885,7 +1861,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo4C3J);
         Cubo4C3J.setBounds(745, 69, 60, 9);
 
-        arribaCubo4.setBackground(new java.awt.Color(147, 157, 255));
+        arribaCubo4.setBackground(new java.awt.Color(119, 132, 255));
         arribaCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         arribaCubo4.setForeground(new java.awt.Color(0, 0, 0));
         arribaCubo4.setText("▲");
@@ -1911,7 +1887,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(Cubo4C2J);
         Cubo4C2J.setBounds(842, 42, 25, 25);
 
-        derechaCubo4.setBackground(new java.awt.Color(147, 157, 255));
+        derechaCubo4.setBackground(new java.awt.Color(119, 132, 255));
         derechaCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         derechaCubo4.setForeground(new java.awt.Color(0, 0, 0));
         derechaCubo4.setText("►");
@@ -1923,7 +1899,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(derechaCubo4);
         derechaCubo4.setBounds(825, 97, 25, 25);
 
-        abajoCubo4.setBackground(new java.awt.Color(147, 157, 255));
+        abajoCubo4.setBackground(new java.awt.Color(119, 132, 255));
         abajoCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         abajoCubo4.setForeground(new java.awt.Color(0, 0, 0));
         abajoCubo4.setText("▼");
@@ -1935,7 +1911,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(abajoCubo4);
         abajoCubo4.setBounds(763, 162, 25, 25);
 
-        horarioCubo4.setBackground(new java.awt.Color(147, 157, 255));
+        horarioCubo4.setBackground(new java.awt.Color(119, 132, 255));
         horarioCubo4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         horarioCubo4.setForeground(new java.awt.Color(0, 0, 0));
         horarioCubo4.setText("↻");
@@ -1947,7 +1923,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(horarioCubo4);
         horarioCubo4.setBounds(704, 188, 35, 25);
 
-        antihorarioCubo4.setBackground(new java.awt.Color(147, 157, 255));
+        antihorarioCubo4.setBackground(new java.awt.Color(119, 132, 255));
         antihorarioCubo4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         antihorarioCubo4.setForeground(new java.awt.Color(0, 0, 0));
         antihorarioCubo4.setText("↺");
@@ -2137,7 +2113,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(jLabel28);
         jLabel28.setBounds(270, 300, 320, 25);
 
-        explicacionBtn.setBackground(new java.awt.Color(147, 157, 255));
+        explicacionBtn.setBackground(new java.awt.Color(119, 132, 255));
         explicacionBtn.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         explicacionBtn.setForeground(new java.awt.Color(0, 0, 0));
         explicacionBtn.setText("EXPLICACIÓN");
@@ -2172,7 +2148,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(jSeparator8);
         jSeparator8.setBounds(427, 370, 3, 210);
 
-        InterCubo1_Cubo2.setBackground(new java.awt.Color(147, 157, 255));
+        InterCubo1_Cubo2.setBackground(new java.awt.Color(119, 132, 255));
         InterCubo1_Cubo2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         InterCubo1_Cubo2.setForeground(new java.awt.Color(0, 0, 0));
         InterCubo1_Cubo2.setText("⇅");
@@ -2184,7 +2160,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(InterCubo1_Cubo2);
         InterCubo1_Cubo2.setBounds(190, 520, 30, 30);
 
-        InterCubo2_Cubo3.setBackground(new java.awt.Color(147, 157, 255));
+        InterCubo2_Cubo3.setBackground(new java.awt.Color(119, 132, 255));
         InterCubo2_Cubo3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         InterCubo2_Cubo3.setForeground(new java.awt.Color(0, 0, 0));
         InterCubo2_Cubo3.setText("⇅");
@@ -2196,7 +2172,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel2.add(InterCubo2_Cubo3);
         InterCubo2_Cubo3.setBounds(190, 460, 30, 30);
 
-        InterCubo3_Cubo4.setBackground(new java.awt.Color(147, 157, 255));
+        InterCubo3_Cubo4.setBackground(new java.awt.Color(119, 132, 255));
         InterCubo3_Cubo4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
         InterCubo3_Cubo4.setForeground(new java.awt.Color(0, 0, 0));
         InterCubo3_Cubo4.setText("⇅");
@@ -2253,7 +2229,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         porLoTanto2.setText("Las soluciones fueron aplicadas en la pestaña de \"Juego\"");
         jPanel6.add(porLoTanto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 575, 590, -1));
 
-        Cubo1C1E.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C1E.setBackground(new java.awt.Color(42, 44, 48));
         Cubo1C1E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Cubo1C1E.setForeground(new java.awt.Color(255, 255, 255));
         Cubo1C1E.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2293,7 +2269,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2C4E.setText("R");
         jPanel6.add(Cubo2C4E, new org.netbeans.lib.awtextra.AbsoluteConstraints(271, 543, -1, -1));
 
-        Cubo2C1E.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C1E.setBackground(new java.awt.Color(42, 44, 48));
         Cubo2C1E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Cubo2C1E.setForeground(new java.awt.Color(255, 255, 255));
         Cubo2C1E.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2317,7 +2293,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3C4E.setText("R");
         jPanel6.add(Cubo3C4E, new org.netbeans.lib.awtextra.AbsoluteConstraints(443, 543, -1, -1));
 
-        Cubo3C1E.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C1E.setBackground(new java.awt.Color(42, 44, 48));
         Cubo3C1E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Cubo3C1E.setForeground(new java.awt.Color(255, 255, 255));
         Cubo3C1E.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2341,7 +2317,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C4E.setText("R");
         jPanel6.add(Cubo4C4E, new org.netbeans.lib.awtextra.AbsoluteConstraints(618, 543, -1, -1));
 
-        Cubo4C1E.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C1E.setBackground(new java.awt.Color(42, 44, 48));
         Cubo4C1E.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Cubo4C1E.setForeground(new java.awt.Color(255, 255, 255));
         Cubo4C1E.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
