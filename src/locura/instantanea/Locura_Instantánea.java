@@ -775,7 +775,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo2.png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 930, 770));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 930, -1));
 
         jLabel2.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(127, 27, 53));
@@ -2324,17 +2324,17 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C1E.setText("4");
         Cubo4C1E.setOpaque(true);
         jPanel6.add(Cubo4C1E, new org.netbeans.lib.awtextra.AbsoluteConstraints(578, 463, 80, 80));
-        jPanel6.add(grafoGL, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 14, 190, 160));
+        jPanel6.add(grafoGL, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 14, 200, 190));
         jPanel6.add(grafoG2, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 410, 190, 170));
-        jPanel6.add(grafoG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(707, 210, 190, 170));
+        jPanel6.add(grafoG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 220, 190, 170));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel17.setText("GL");
-        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 180, -1, -1));
+        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 200, -1, -1));
 
         jLabel30.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel30.setText("G1 : Horizontal");
-        jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 380, -1, -1));
+        jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 390, -1, -1));
 
         jLabel31.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabel31.setText("G2 : Vertical");
@@ -7338,8 +7338,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         graphGL.getModel().beginUpdate();
         try {
-            Object R = graphGL.insertVertex(parent, "a", "R", 35, 20, 20, 20, "fontColor=#000000");
-            Object B = graphGL.insertVertex(parent, null, "B", 120, 20, 20, 20, "fontColor=#000000");
+            Object R = graphGL.insertVertex(parent, "a", "R", 35, 30, 20, 20, "fontColor=#000000");
+            Object B = graphGL.insertVertex(parent, null, "B", 120, 30, 20, 20, "fontColor=#000000");
             Object V = graphGL.insertVertex(parent, null, "V", 35, 115, 20, 20, "fontColor=#000000");
             Object A = graphGL.insertVertex(parent, null, "A", 120, 115, 20, 20, "fontColor=#000000");
 
