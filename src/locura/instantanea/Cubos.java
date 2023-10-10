@@ -12,7 +12,7 @@ import javax.swing.JPanel;
  *
  * @author carlo
  */
-public class Cubos {
+public class Cubos implements Serializable {
 
     Color C1;
     String C1I;

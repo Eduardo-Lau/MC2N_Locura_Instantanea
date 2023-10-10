@@ -15,6 +15,12 @@ public class Binarios implements Serializable {
 
     private static final long serialVersionUID = -113674211845889252L;
 
+    public Cubos Cubo1 = new Cubos();
+    public Cubos Cubo2 = new Cubos();
+    public Cubos Cubo3 = new Cubos();
+    public Cubos Cubo4 = new Cubos();
+    boolean solucion;
+
     // General para los 4 cubos
     Color C1;
     String C1I;
@@ -86,6 +92,14 @@ public class Binarios implements Serializable {
     Color Cubo4C6JB;
 
     public Binarios() {
+    }
+    
+    public Binarios(Cubos Cubo1, Cubos Cubo2, Cubos Cubo3, Cubos Cubo4, boolean solucion) {
+        this.Cubo1 = Cubo1;
+        this.Cubo2 = Cubo2;
+        this.Cubo3 = Cubo3;
+        this.Cubo4 = Cubo4;
+        this.solucion = solucion;
     }
 
 }

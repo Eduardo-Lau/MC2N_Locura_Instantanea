@@ -16,10 +16,15 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.view.mxGraph;
+import java.awt.Component;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import javax.swing.DefaultListCellRenderer;
 import javax.swing.ImageIcon;
+import javax.swing.JList;
+import javax.swing.ListCellRenderer;
 import javax.swing.Timer;
 
 /**
@@ -32,11 +37,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     public static Cubos Cubo2 = new Cubos();
     public static Cubos Cubo3 = new Cubos();
     public static Cubos Cubo4 = new Cubos();
+    public ArrayList<Partidas> partidas = new ArrayList<>();
     // Binarios
     public static Binarios Cubo1Bin = new Binarios();
     public static Binarios Cubo2Bin = new Binarios();
     public static Binarios Cubo3Bin = new Binarios();
     public static Binarios Cubo4Bin = new Binarios();
+    public static ArrayList<Binarios> partidasBin = new ArrayList<>();
 
     //BIN Cubos
     // Guardar
@@ -47,6 +54,16 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     public static FileInputStream F_binCubosIn;
     public static String binCubosNIn = "Binarios\\Cubos.bin";
     public static ObjectInputStream O_binCubosIn;
+
+    //BIN Partidas
+    // Guardar
+    public static FileOutputStream F_binPartidasOut;
+    public static String binPartidasNOut = "Binarios\\Partidas.bin";
+    public static ObjectOutputStream O_binPartidasOut;
+    // Cargar
+    public static FileInputStream F_binPartidasIn;
+    public static String binPartidasNIn = "Binarios\\Partidas.bin";
+    public static ObjectInputStream O_binPartidasIn;
 
     boolean iniciado = false;
     boolean sigBtnPressed = false;
@@ -59,6 +76,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     Point posCubo4Abs = new Point(260, 360);
 
     public Timer timer;
+    public int iPartida;
 
     public Locura_Instantánea() {
         System.out.println("Inicio");
@@ -763,6 +781,98 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel17 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        solucionLbl = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jSeparator9 = new javax.swing.JSeparator();
+        jSeparator10 = new javax.swing.JSeparator();
+        jSeparator11 = new javax.swing.JSeparator();
+        jSeparator12 = new javax.swing.JSeparator();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        aplicarBtn = new javax.swing.JButton();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        Cubo1C5G1 = new javax.swing.JLabel();
+        Cubo1C3G1 = new javax.swing.JLabel();
+        Cubo1C1G1 = new javax.swing.JLabel();
+        Cubo1C2G1 = new javax.swing.JLabel();
+        Cubo1C6G1 = new javax.swing.JLabel();
+        Cubo1C4G1 = new javax.swing.JLabel();
+        Cubo2C1G1 = new javax.swing.JLabel();
+        Cubo2C3G1 = new javax.swing.JLabel();
+        Cubo2C5G1 = new javax.swing.JLabel();
+        Cubo2C2G1 = new javax.swing.JLabel();
+        Cubo2C6G1 = new javax.swing.JLabel();
+        Cubo2C4G1 = new javax.swing.JLabel();
+        Cubo3C1G1 = new javax.swing.JLabel();
+        Cubo3C3G1 = new javax.swing.JLabel();
+        Cubo3C5G1 = new javax.swing.JLabel();
+        Cubo3C2G1 = new javax.swing.JLabel();
+        Cubo3C6G1 = new javax.swing.JLabel();
+        Cubo3C4G1 = new javax.swing.JLabel();
+        Cubo4C1G1 = new javax.swing.JLabel();
+        Cubo4C3G1 = new javax.swing.JLabel();
+        Cubo4C5G1 = new javax.swing.JLabel();
+        Cubo4C2G1 = new javax.swing.JLabel();
+        Cubo4C6G1 = new javax.swing.JLabel();
+        Cubo4C4G1 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jSeparator13 = new javax.swing.JSeparator();
+        noPartida = new javax.swing.JComboBox<>();
+        jLabel78 = new javax.swing.JLabel();
+        jSeparator14 = new javax.swing.JSeparator();
+        Cubo1C1H = new javax.swing.JLabel();
+        Cubo1C2H = new javax.swing.JLabel();
+        Cubo1C3H = new javax.swing.JLabel();
+        Cubo1C4H = new javax.swing.JLabel();
+        Cubo1C5H = new javax.swing.JLabel();
+        Cubo1C6H = new javax.swing.JLabel();
+        Cubo2C1H = new javax.swing.JLabel();
+        Cubo2C2H = new javax.swing.JLabel();
+        Cubo2C3H = new javax.swing.JLabel();
+        Cubo2C4H = new javax.swing.JLabel();
+        Cubo2C5H = new javax.swing.JLabel();
+        Cubo2C6H = new javax.swing.JLabel();
+        Cubo3C1H = new javax.swing.JLabel();
+        Cubo3C2H = new javax.swing.JLabel();
+        Cubo3C3H = new javax.swing.JLabel();
+        Cubo3C4H = new javax.swing.JLabel();
+        Cubo3C5H = new javax.swing.JLabel();
+        Cubo3C6H = new javax.swing.JLabel();
+        Cubo4C1H = new javax.swing.JLabel();
+        Cubo4C2H = new javax.swing.JLabel();
+        Cubo4C3H = new javax.swing.JLabel();
+        Cubo4C4H = new javax.swing.JLabel();
+        Cubo4C5H = new javax.swing.JLabel();
+        Cubo4C6H = new javax.swing.JLabel();
+        checkLbl = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
 
@@ -774,8 +884,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo2.png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 930, -1));
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo.png"))); // NOI18N
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 930, 770));
 
         jLabel2.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(127, 27, 53));
@@ -808,7 +918,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, 74, -1));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 12, 260));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 12, 260));
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 10, 260));
@@ -2342,7 +2452,620 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jTabbedPane1.addTab("Explicación", jPanel6);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        solucionLbl.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        solucionLbl.setText("SI tiene solución");
+        jPanel4.add(solucionLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 16, 190, -1));
+
+        jLabel19.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jLabel19.setText("Cubo 2");
+        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 74, -1));
+
+        jLabel20.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jLabel20.setText("Cubo 3");
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 74, -1));
+
+        jLabel27.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jLabel27.setText("Cubo 4");
+        jPanel4.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 60, 74, -1));
+
+        jSeparator9.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel4.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 12, 260));
+
+        jSeparator10.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel4.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 10, 260));
+
+        jSeparator11.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel4.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, 10, 260));
+
+        jSeparator12.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel4.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 70, 10, 260));
+
+        jLabel51.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel51.setText("Cara 1");
+        jLabel51.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel51.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 60, -1));
+
+        jLabel52.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel52.setText("Cara 2");
+        jLabel52.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel52.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 60, -1));
+
+        jLabel53.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel53.setText("Cara 3");
+        jLabel53.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel53.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 60, -1));
+
+        jLabel54.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel54.setText("Cara 4");
+        jLabel54.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel54.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 60, -1));
+
+        jLabel55.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel55.setText("Cara 5");
+        jLabel55.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel55.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 60, -1));
+
+        jLabel56.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel56.setText("Cara 6");
+        jLabel56.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel56.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 60, -1));
+
+        jLabel32.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel32.setText("Cara 1");
+        jLabel32.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel32.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 60, -1));
+
+        jLabel57.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel57.setText("Cara 2");
+        jLabel57.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel57.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 60, -1));
+
+        jLabel58.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel58.setText("Cara 3");
+        jLabel58.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel58.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 60, -1));
+
+        jLabel59.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel59.setText("Cara 4");
+        jLabel59.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel59.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 60, -1));
+
+        jLabel60.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel60.setText("Cara 5");
+        jLabel60.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel60.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, 60, -1));
+
+        jLabel61.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel61.setText("Cara 6");
+        jLabel61.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel61.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 60, -1));
+
+        jLabel62.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel62.setText("Cara 1");
+        jLabel62.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel62.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, 60, -1));
+
+        jLabel63.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel63.setText("Cara 2");
+        jLabel63.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel63.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, 60, -1));
+
+        jLabel64.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel64.setText("Cara 3");
+        jLabel64.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel64.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, 60, -1));
+
+        jLabel65.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel65.setText("Cara 4");
+        jLabel65.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel65.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, 60, -1));
+
+        jLabel66.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel66.setText("Cara 5");
+        jLabel66.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel66.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 60, -1));
+
+        jLabel67.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel67.setText("Cara 6");
+        jLabel67.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel67.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 60, -1));
+
+        aplicarBtn.setBackground(new java.awt.Color(135, 146, 255));
+        aplicarBtn.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        aplicarBtn.setForeground(new java.awt.Color(0, 0, 0));
+        aplicarBtn.setText("APLICAR");
+        aplicarBtn.setAlignmentX(jTabbedPane1.getAlignmentX());
+        aplicarBtn.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        aplicarBtn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        aplicarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aplicarBtnActionPerformed(evt);
+            }
+        });
+        jPanel4.add(aplicarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 547, 180, 36));
+
+        jLabel68.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel68.setText("Cara 1");
+        jLabel68.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel68.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 60, -1));
+
+        jLabel69.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel69.setText("Cara 2");
+        jLabel69.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel69.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 60, -1));
+
+        jLabel70.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel70.setText("Cara 3");
+        jLabel70.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel70.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 60, -1));
+
+        jLabel71.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel71.setText("Cara 4");
+        jLabel71.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel71.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 60, -1));
+
+        jLabel72.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel72.setText("Cara 5");
+        jLabel72.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel72.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 60, -1));
+
+        jLabel73.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        jLabel73.setText("Cara 6");
+        jLabel73.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel73.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 60, -1));
+
+        Cubo1C5G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C5G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C5G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C5G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C5G1.setText("5");
+        Cubo1C5G1.setOpaque(true);
+        jPanel4.add(Cubo1C5G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 431, 31, 31));
+
+        Cubo1C3G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C3G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C3G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C3G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C3G1.setText("3");
+        Cubo1C3G1.setOpaque(true);
+        jPanel4.add(Cubo1C3G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 394, 31, 31));
+
+        Cubo1C1G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C1G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C1G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C1G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C1G1.setText("1");
+        Cubo1C1G1.setOpaque(true);
+        jPanel4.add(Cubo1C1G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 431, 31, 31));
+
+        Cubo1C2G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C2G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C2G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C2G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C2G1.setText("2");
+        Cubo1C2G1.setOpaque(true);
+        jPanel4.add(Cubo1C2G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 431, 31, 31));
+
+        Cubo1C6G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C6G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C6G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C6G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C6G1.setText("6");
+        Cubo1C6G1.setOpaque(true);
+        jPanel4.add(Cubo1C6G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 431, 31, 31));
+
+        Cubo1C4G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo1C4G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo1C4G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo1C4G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo1C4G1.setText("4");
+        Cubo1C4G1.setOpaque(true);
+        jPanel4.add(Cubo1C4G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 468, 31, 31));
+
+        Cubo2C1G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C1G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C1G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C1G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C1G1.setText("1");
+        Cubo2C1G1.setOpaque(true);
+        jPanel4.add(Cubo2C1G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 431, 31, 31));
+
+        Cubo2C3G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C3G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C3G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C3G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C3G1.setText("3");
+        Cubo2C3G1.setOpaque(true);
+        jPanel4.add(Cubo2C3G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 394, 31, 31));
+
+        Cubo2C5G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C5G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C5G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C5G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C5G1.setText("5");
+        Cubo2C5G1.setOpaque(true);
+        jPanel4.add(Cubo2C5G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 431, 31, 31));
+
+        Cubo2C2G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C2G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C2G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C2G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C2G1.setText("2");
+        Cubo2C2G1.setOpaque(true);
+        jPanel4.add(Cubo2C2G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 431, 31, 31));
+
+        Cubo2C6G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C6G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C6G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C6G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C6G1.setText("6");
+        Cubo2C6G1.setOpaque(true);
+        jPanel4.add(Cubo2C6G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 431, 31, 31));
+
+        Cubo2C4G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo2C4G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo2C4G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo2C4G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo2C4G1.setText("4");
+        Cubo2C4G1.setOpaque(true);
+        jPanel4.add(Cubo2C4G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 468, 31, 31));
+
+        Cubo3C1G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C1G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C1G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C1G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C1G1.setText("1");
+        Cubo3C1G1.setOpaque(true);
+        jPanel4.add(Cubo3C1G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 431, 31, 31));
+
+        Cubo3C3G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C3G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C3G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C3G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C3G1.setText("3");
+        Cubo3C3G1.setOpaque(true);
+        jPanel4.add(Cubo3C3G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 394, 31, 31));
+
+        Cubo3C5G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C5G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C5G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C5G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C5G1.setText("5");
+        Cubo3C5G1.setOpaque(true);
+        jPanel4.add(Cubo3C5G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 431, 31, 31));
+
+        Cubo3C2G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C2G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C2G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C2G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C2G1.setText("2");
+        Cubo3C2G1.setOpaque(true);
+        jPanel4.add(Cubo3C2G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 431, 31, 31));
+
+        Cubo3C6G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C6G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C6G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C6G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C6G1.setText("6");
+        Cubo3C6G1.setOpaque(true);
+        jPanel4.add(Cubo3C6G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(585, 431, 31, 31));
+
+        Cubo3C4G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo3C4G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo3C4G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo3C4G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo3C4G1.setText("4");
+        Cubo3C4G1.setOpaque(true);
+        jPanel4.add(Cubo3C4G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(511, 468, 31, 31));
+
+        Cubo4C1G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C1G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C1G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C1G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C1G1.setText("1");
+        Cubo4C1G1.setOpaque(true);
+        jPanel4.add(Cubo4C1G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 431, 31, 31));
+
+        Cubo4C3G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C3G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C3G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C3G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C3G1.setText("3");
+        Cubo4C3G1.setOpaque(true);
+        jPanel4.add(Cubo4C3G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 394, 31, 31));
+
+        Cubo4C5G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C5G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C5G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C5G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C5G1.setText("5");
+        Cubo4C5G1.setOpaque(true);
+        jPanel4.add(Cubo4C5G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 431, 31, 31));
+
+        Cubo4C2G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C2G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C2G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C2G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C2G1.setText("2");
+        Cubo4C2G1.setOpaque(true);
+        jPanel4.add(Cubo4C2G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 431, 31, 31));
+
+        Cubo4C6G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C6G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C6G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C6G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C6G1.setText("6");
+        Cubo4C6G1.setOpaque(true);
+        jPanel4.add(Cubo4C6G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(803, 431, 31, 31));
+
+        Cubo4C4G1.setBackground(new java.awt.Color(51, 51, 51));
+        Cubo4C4G1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Cubo4C4G1.setForeground(new java.awt.Color(0, 0, 0));
+        Cubo4C4G1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Cubo4C4G1.setText("4");
+        Cubo4C4G1.setOpaque(true);
+        jPanel4.add(Cubo4C4G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(729, 468, 31, 31));
+
+        jLabel74.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
+        jLabel74.setText("1)");
+        jPanel4.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 368, 30, -1));
+
+        jLabel75.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
+        jLabel75.setText("2)");
+        jPanel4.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(256, 368, 30, -1));
+
+        jLabel76.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
+        jLabel76.setText("3)");
+        jPanel4.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(474, 368, 30, -1));
+
+        jLabel77.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
+        jLabel77.setText("4)");
+        jPanel4.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 368, 30, -1));
+
+        jSeparator13.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel4.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 10, 260));
+
+        noPartida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                noPartidaActionPerformed(evt);
+            }
+        });
+        jPanel4.add(noPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 180, -1));
+
+        jLabel78.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jLabel78.setText("Cubo 1");
+        jPanel4.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 74, -1));
+        jPanel4.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 45, 890, 10));
+
+        Cubo1C1H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo1C1H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo1C1H.setText("Cara 1");
+        Cubo1C1H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo1C1H.setOpaque(true);
+        Cubo1C1H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo1C1H, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 80, -1));
+
+        Cubo1C2H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo1C2H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo1C2H.setText("Cara 2");
+        Cubo1C2H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo1C2H.setOpaque(true);
+        Cubo1C2H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo1C2H, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 80, -1));
+
+        Cubo1C3H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo1C3H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo1C3H.setText("Cara 3");
+        Cubo1C3H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo1C3H.setOpaque(true);
+        Cubo1C3H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo1C3H, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 80, -1));
+
+        Cubo1C4H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo1C4H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo1C4H.setText("Cara 4");
+        Cubo1C4H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo1C4H.setOpaque(true);
+        Cubo1C4H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo1C4H, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 80, -1));
+
+        Cubo1C5H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo1C5H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo1C5H.setText("Cara 5");
+        Cubo1C5H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo1C5H.setOpaque(true);
+        Cubo1C5H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo1C5H, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 80, -1));
+
+        Cubo1C6H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo1C6H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo1C6H.setText("Cara 6");
+        Cubo1C6H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo1C6H.setOpaque(true);
+        Cubo1C6H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo1C6H, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 80, -1));
+
+        Cubo2C1H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo2C1H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo2C1H.setText("Cara 1");
+        Cubo2C1H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo2C1H.setOpaque(true);
+        Cubo2C1H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo2C1H, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, 80, -1));
+
+        Cubo2C2H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo2C2H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo2C2H.setText("Cara 2");
+        Cubo2C2H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo2C2H.setOpaque(true);
+        Cubo2C2H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo2C2H, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 80, -1));
+
+        Cubo2C3H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo2C3H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo2C3H.setText("Cara 3");
+        Cubo2C3H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo2C3H.setOpaque(true);
+        Cubo2C3H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo2C3H, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 80, -1));
+
+        Cubo2C4H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo2C4H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo2C4H.setText("Cara 4");
+        Cubo2C4H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo2C4H.setOpaque(true);
+        Cubo2C4H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo2C4H, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 220, 80, -1));
+
+        Cubo2C5H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo2C5H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo2C5H.setText("Cara 5");
+        Cubo2C5H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo2C5H.setOpaque(true);
+        Cubo2C5H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo2C5H, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 80, -1));
+
+        Cubo2C6H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo2C6H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo2C6H.setText("Cara 6");
+        Cubo2C6H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo2C6H.setOpaque(true);
+        Cubo2C6H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo2C6H, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 300, 80, -1));
+
+        Cubo3C1H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo3C1H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo3C1H.setText("Cara 1");
+        Cubo3C1H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo3C1H.setOpaque(true);
+        Cubo3C1H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo3C1H, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 100, 80, -1));
+
+        Cubo3C2H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo3C2H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo3C2H.setText("Cara 2");
+        Cubo3C2H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo3C2H.setOpaque(true);
+        Cubo3C2H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo3C2H, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, 80, -1));
+
+        Cubo3C3H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo3C3H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo3C3H.setText("Cara 3");
+        Cubo3C3H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo3C3H.setOpaque(true);
+        Cubo3C3H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo3C3H, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, 80, -1));
+
+        Cubo3C4H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo3C4H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo3C4H.setText("Cara 4");
+        Cubo3C4H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo3C4H.setOpaque(true);
+        Cubo3C4H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo3C4H, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 220, 80, -1));
+
+        Cubo3C5H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo3C5H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo3C5H.setText("Cara 5");
+        Cubo3C5H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo3C5H.setOpaque(true);
+        Cubo3C5H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo3C5H, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 260, 80, -1));
+
+        Cubo3C6H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo3C6H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo3C6H.setText("Cara 6");
+        Cubo3C6H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo3C6H.setOpaque(true);
+        Cubo3C6H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo3C6H, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 300, 80, -1));
+
+        Cubo4C1H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo4C1H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo4C1H.setText("Cara 1");
+        Cubo4C1H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo4C1H.setOpaque(true);
+        Cubo4C1H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo4C1H, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 100, 80, -1));
+
+        Cubo4C2H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo4C2H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo4C2H.setText("Cara 2");
+        Cubo4C2H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo4C2H.setOpaque(true);
+        Cubo4C2H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo4C2H, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 140, 80, -1));
+
+        Cubo4C3H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo4C3H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo4C3H.setText("Cara 3");
+        Cubo4C3H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo4C3H.setOpaque(true);
+        Cubo4C3H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo4C3H, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 180, 80, -1));
+
+        Cubo4C4H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo4C4H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo4C4H.setText("Cara 4");
+        Cubo4C4H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo4C4H.setOpaque(true);
+        Cubo4C4H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo4C4H, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 220, 80, -1));
+
+        Cubo4C5H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo4C5H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo4C5H.setText("Cara 5");
+        Cubo4C5H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo4C5H.setOpaque(true);
+        Cubo4C5H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo4C5H, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 260, 80, -1));
+
+        Cubo4C6H.setBackground(new java.awt.Color(45, 46, 51));
+        Cubo4C6H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
+        Cubo4C6H.setText("Cara 6");
+        Cubo4C6H.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        Cubo4C6H.setOpaque(true);
+        Cubo4C6H.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jPanel4.add(Cubo4C6H, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 300, 80, -1));
+
+        checkLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        checkLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/check.png"))); // NOI18N
+        jPanel4.add(checkLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 30, 30));
+
+        jLabel79.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jLabel79.setText("Número de Partida:");
+        jPanel4.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 16, 190, -1));
+
+        jTabbedPane1.addTab("Historial", jPanel4);
+
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
         jLabel29.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(102, 102, 102));
@@ -2359,6 +3082,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             C1 = new Color(155, 22, 57);
             Cubo1C1G.setText("R");
             Cubo1.C1I = "R";
+
             Cubo1C1G.setBackground(C1);
 
         } else if (Cubo1C1.getItemAt(Cubo1C1.getSelectedIndex()).equals("Blanco")) {
@@ -3886,6 +4610,74 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4Bin.Cubo4C6JN = Cubo4C6J.getText();
         Cubo4Bin.Cubo4C6JB = Cubo4C6J.getBackground();
 
+        // Partidas
+        partidasBin = new ArrayList<>();
+        for (int i = 0; i < iPartida; i++) {
+            Cubos cubo1temp = new Cubos();
+            cubo1temp.C1 = partidas.get(i).Cubo1.C1;
+            cubo1temp.C2 = partidas.get(i).Cubo1.C2;
+            cubo1temp.C3 = partidas.get(i).Cubo1.C3;
+            cubo1temp.C4 = partidas.get(i).Cubo1.C4;
+            cubo1temp.C5 = partidas.get(i).Cubo1.C5;
+            cubo1temp.C6 = partidas.get(i).Cubo1.C6;
+
+            cubo1temp.C1I = partidas.get(i).Cubo1.C1I;
+            cubo1temp.C2I = partidas.get(i).Cubo1.C2I;
+            cubo1temp.C3I = partidas.get(i).Cubo1.C3I;
+            cubo1temp.C4I = partidas.get(i).Cubo1.C4I;
+            cubo1temp.C5I = partidas.get(i).Cubo1.C5I;
+            cubo1temp.C6I = partidas.get(i).Cubo1.C6I;
+
+            Cubos cubo2temp = new Cubos();
+            cubo2temp.C1 = partidas.get(i).Cubo2.C1;
+            cubo2temp.C2 = partidas.get(i).Cubo2.C2;
+            cubo2temp.C3 = partidas.get(i).Cubo2.C3;
+            cubo2temp.C4 = partidas.get(i).Cubo2.C4;
+            cubo2temp.C5 = partidas.get(i).Cubo2.C5;
+            cubo2temp.C6 = partidas.get(i).Cubo2.C6;
+
+            cubo2temp.C1I = partidas.get(i).Cubo2.C1I;
+            cubo2temp.C2I = partidas.get(i).Cubo2.C2I;
+            cubo2temp.C3I = partidas.get(i).Cubo2.C3I;
+            cubo2temp.C4I = partidas.get(i).Cubo2.C4I;
+            cubo2temp.C5I = partidas.get(i).Cubo2.C5I;
+            cubo2temp.C6I = partidas.get(i).Cubo2.C6I;
+
+            Cubos cubo3temp = new Cubos();
+            cubo3temp.C1 = partidas.get(i).Cubo3.C1;
+            cubo3temp.C2 = partidas.get(i).Cubo3.C2;
+            cubo3temp.C3 = partidas.get(i).Cubo3.C3;
+            cubo3temp.C4 = partidas.get(i).Cubo3.C4;
+            cubo3temp.C5 = partidas.get(i).Cubo3.C5;
+            cubo3temp.C6 = partidas.get(i).Cubo3.C6;
+
+            cubo3temp.C1I = partidas.get(i).Cubo3.C1I;
+            cubo3temp.C2I = partidas.get(i).Cubo3.C2I;
+            cubo3temp.C3I = partidas.get(i).Cubo3.C3I;
+            cubo3temp.C4I = partidas.get(i).Cubo3.C4I;
+            cubo3temp.C5I = partidas.get(i).Cubo3.C5I;
+            cubo3temp.C6I = partidas.get(i).Cubo3.C6I;
+
+            Cubos cubo4temp = new Cubos();
+            cubo4temp.C1 = partidas.get(i).Cubo4.C1;
+            cubo4temp.C2 = partidas.get(i).Cubo4.C2;
+            cubo4temp.C3 = partidas.get(i).Cubo4.C3;
+            cubo4temp.C4 = partidas.get(i).Cubo4.C4;
+            cubo4temp.C5 = partidas.get(i).Cubo4.C5;
+            cubo4temp.C6 = partidas.get(i).Cubo4.C6;
+
+            cubo4temp.C1I = partidas.get(i).Cubo4.C1I;
+            cubo4temp.C2I = partidas.get(i).Cubo4.C2I;
+            cubo4temp.C3I = partidas.get(i).Cubo4.C3I;
+            cubo4temp.C4I = partidas.get(i).Cubo4.C4I;
+            cubo4temp.C5I = partidas.get(i).Cubo4.C5I;
+            cubo4temp.C6I = partidas.get(i).Cubo4.C6I;
+
+            boolean solucion = partidas.get(i).solucion;
+            partidasBin.add(new Binarios(cubo1temp, cubo2temp, cubo3temp, cubo4temp, solucion));
+            System.out.println("partidas Bin: " + partidasBin.size());
+        }
+
         try {
             // Crear un flujo de salida de archivos binarios
             F_binCubosOut = new FileOutputStream(binCubosNOut);
@@ -3904,6 +4696,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             F_binCubosOut.close();
 
             System.out.println("Cubos.bin ha sido guardado con éxito");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            // Crear un flujo de salida de archivos binarios
+            F_binPartidasOut = new FileOutputStream(binPartidasNOut);
+
+            // Crear un ObjectOutputStream para escribir objetos en el archivo binario
+            O_binPartidasOut = new ObjectOutputStream(F_binPartidasOut);
+
+            // Escribir la lista en el archivo binario
+            O_binPartidasOut.writeObject(partidasBin);
+
+            // Cerrar los flujos
+            O_binPartidasOut.close();
+            F_binPartidasOut.close();
+
+            System.out.println("Partidas.bin ha sido guardado con éxito");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -3961,114 +4772,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo1C6J.setText(Cubo1Bin.Cubo1C6JN);
             Cubo1C6J.setBackground(Cubo1Bin.Cubo1C6JB);
 
-            /*if (Cubo1.C1I.equals("R")) {
-                Cubo1C1.setSelectedItem("Rojo");
-                Cubo1C1G.setText("R");
-                Cubo1C1G.setBackground(Cubo1.C1);
-            } else if (Cubo1.C1I.equals("B")) {
-                Cubo1C1.setSelectedItem("Blanco");
-                Cubo1C1G.setText("B");
-                Cubo1C1G.setBackground(Cubo1.C1);
-            } else if (Cubo1.C1I.equals("V")) {
-                Cubo1C1.setSelectedItem("Verde");
-                Cubo1C1G.setText("V");
-                Cubo1C1G.setBackground(Cubo1.C1);
-            } else if (Cubo1.C1I.equals("A")) {
-                Cubo1C1.setSelectedItem("Amarillo");
-                Cubo1C1G.setText("A");
-                Cubo1C1G.setBackground(Cubo1.C1);
-            }
-
-            if (Cubo1.C2I.equals("R")) {
-                Cubo1C2.setSelectedItem("Rojo");
-                Cubo1C2G.setText("R");
-                Cubo1C2G.setBackground(Cubo1.C2);
-            } else if (Cubo1.C2I.equals("B")) {
-                Cubo1C2.setSelectedItem("Blanco");
-                Cubo1C2G.setText("B");
-                Cubo1C2G.setBackground(Cubo1.C2);
-            } else if (Cubo1.C2I.equals("V")) {
-                Cubo1C2.setSelectedItem("Verde");
-                Cubo1C2G.setText("V");
-                Cubo1C2G.setBackground(Cubo1.C2);
-            } else if (Cubo1.C2I.equals("A")) {
-                Cubo1C2.setSelectedItem("Amarillo");
-                Cubo1C2G.setText("A");
-                Cubo1C2G.setBackground(Cubo1.C2);
-            }
-
-            if (Cubo1.C3I.equals("R")) {
-                Cubo1C3.setSelectedItem("Rojo");
-                Cubo1C3G.setText("R");
-                Cubo1C3G.setBackground(Cubo1.C3);
-            } else if (Cubo1.C3I.equals("B")) {
-                Cubo1C3.setSelectedItem("Blanco");
-                Cubo1C3G.setText("B");
-                Cubo1C3G.setBackground(Cubo1.C3);
-            } else if (Cubo1.C3I.equals("V")) {
-                Cubo1C3.setSelectedItem("Verde");
-                Cubo1C3G.setText("V");
-                Cubo1C3G.setBackground(Cubo1.C3);
-            } else if (Cubo1.C3I.equals("A")) {
-                Cubo1C3.setSelectedItem("Amarillo");
-                Cubo1C3G.setText("A");
-                Cubo1C3G.setBackground(Cubo1.C3);
-            }
-
-            if (Cubo1.C4I.equals("R")) {
-                Cubo1C4.setSelectedItem("Rojo");
-                Cubo1C4G.setText("R");
-                Cubo1C4G.setBackground(Cubo1.C4);
-            } else if (Cubo1.C4I.equals("B")) {
-                Cubo1C4.setSelectedItem("Blanco");
-                Cubo1C4G.setText("B");
-                Cubo1C4G.setBackground(Cubo1.C4);
-            } else if (Cubo1.C4I.equals("V")) {
-                Cubo1C4.setSelectedItem("Verde");
-                Cubo1C4G.setText("V");
-                Cubo1C4G.setBackground(Cubo1.C4);
-            } else if (Cubo1.C4I.equals("A")) {
-                Cubo1C4.setSelectedItem("Amarillo");
-                Cubo1C4G.setText("A");
-                Cubo1C4G.setBackground(Cubo1.C4);
-            }
-
-            if (Cubo1.C5I.equals("R")) {
-                Cubo1C5.setSelectedItem("Rojo");
-                Cubo1C5G.setText("R");
-                Cubo1C5G.setBackground(Cubo1.C5);
-            } else if (Cubo1.C5I.equals("B")) {
-                Cubo1C5.setSelectedItem("Blanco");
-                Cubo1C5G.setText("B");
-                Cubo1C5G.setBackground(Cubo1.C5);
-            } else if (Cubo1.C5I.equals("V")) {
-                Cubo1C5.setSelectedItem("Verde");
-                Cubo1C5G.setText("V");
-                Cubo1C5G.setBackground(Cubo1.C5);
-            } else if (Cubo1.C5I.equals("A")) {
-                Cubo1C5.setSelectedItem("Amarillo");
-                Cubo1C5G.setText("A");
-                Cubo1C5G.setBackground(Cubo1.C5);
-            }
-
-            if (Cubo1.C6I.equals("R")) {
-                Cubo1C6.setSelectedItem("Rojo");
-                Cubo1C6G.setText("R");
-                Cubo1C6G.setBackground(Cubo1.C6);
-            } else if (Cubo1.C6I.equals("B")) {
-                Cubo1C6.setSelectedItem("Blanco");
-                Cubo1C6G.setText("B");
-                Cubo1C6G.setBackground(Cubo1.C6);
-            } else if (Cubo1.C6I.equals("V")) {
-                Cubo1C6.setSelectedItem("Verde");
-                Cubo1C6G.setText("V");
-                Cubo1C6G.setBackground(Cubo1.C6);
-            } else if (Cubo1.C6I.equals("A")) {
-                Cubo1C6.setSelectedItem("Amarillo");
-                Cubo1C6G.setText("A");
-                Cubo1C6G.setBackground(Cubo1.C6);
-            }
-             */
             // Cubo 2
             Cubo2.C1 = Cubo2Bin.C1;
             Cubo2.C1I = Cubo2Bin.C1I;
@@ -4099,114 +4802,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo2.C6I = Cubo2Bin.C6I;
             Cubo2C6J.setText(Cubo2Bin.Cubo2C6JN);
             Cubo2C6J.setBackground(Cubo2Bin.Cubo2C6JB);
-
-            if (Cubo2.C1I.equals("R")) {
-                Cubo2C1.setSelectedItem("Rojo");
-                Cubo2C1G.setText("R");
-                Cubo2C1G.setBackground(Cubo2.C1);
-            } else if (Cubo2.C1I.equals("B")) {
-                Cubo2C1.setSelectedItem("Blanco");
-                Cubo2C1G.setText("B");
-                Cubo2C1G.setBackground(Cubo2.C1);
-            } else if (Cubo2.C1I.equals("V")) {
-                Cubo2C1.setSelectedItem("Verde");
-                Cubo2C1G.setText("V");
-                Cubo2C1G.setBackground(Cubo2.C1);
-            } else if (Cubo2.C1I.equals("A")) {
-                Cubo2C1.setSelectedItem("Amarillo");
-                Cubo2C1G.setText("A");
-                Cubo2C1G.setBackground(Cubo2.C1);
-            }
-
-            if (Cubo2.C2I.equals("R")) {
-                Cubo2C2.setSelectedItem("Rojo");
-                Cubo2C2G.setText("R");
-                Cubo2C2G.setBackground(Cubo2.C2);
-            } else if (Cubo2.C2I.equals("B")) {
-                Cubo2C2.setSelectedItem("Blanco");
-                Cubo2C2G.setText("B");
-                Cubo2C2G.setBackground(Cubo2.C2);
-            } else if (Cubo2.C2I.equals("V")) {
-                Cubo2C2.setSelectedItem("Verde");
-                Cubo2C2G.setText("V");
-                Cubo2C2G.setBackground(Cubo2.C2);
-            } else if (Cubo2.C2I.equals("A")) {
-                Cubo2C2.setSelectedItem("Amarillo");
-                Cubo2C2G.setText("A");
-                Cubo2C2G.setBackground(Cubo2.C2);
-            }
-
-            if (Cubo2.C3I.equals("R")) {
-                Cubo2C3.setSelectedItem("Rojo");
-                Cubo2C3G.setText("R");
-                Cubo2C3G.setBackground(Cubo2.C3);
-            } else if (Cubo2.C3I.equals("B")) {
-                Cubo2C3.setSelectedItem("Blanco");
-                Cubo2C3G.setText("B");
-                Cubo2C3G.setBackground(Cubo2.C3);
-            } else if (Cubo2.C3I.equals("V")) {
-                Cubo2C3.setSelectedItem("Verde");
-                Cubo2C3G.setText("V");
-                Cubo2C3G.setBackground(Cubo2.C3);
-            } else if (Cubo2.C3I.equals("A")) {
-                Cubo2C3.setSelectedItem("Amarillo");
-                Cubo2C3G.setText("A");
-                Cubo2C3G.setBackground(Cubo2.C3);
-            }
-
-            if (Cubo2.C4I.equals("R")) {
-                Cubo2C4.setSelectedItem("Rojo");
-                Cubo2C4G.setText("R");
-                Cubo2C4G.setBackground(Cubo2.C4);
-            } else if (Cubo2.C4I.equals("B")) {
-                Cubo2C4.setSelectedItem("Blanco");
-                Cubo2C4G.setText("B");
-                Cubo2C4G.setBackground(Cubo2.C4);
-            } else if (Cubo2.C4I.equals("V")) {
-                Cubo2C4.setSelectedItem("Verde");
-                Cubo2C4G.setText("V");
-                Cubo2C4G.setBackground(Cubo2.C4);
-            } else if (Cubo2.C4I.equals("A")) {
-                Cubo2C4.setSelectedItem("Amarillo");
-                Cubo2C4G.setText("A");
-                Cubo2C4G.setBackground(Cubo2.C4);
-            }
-
-            if (Cubo2.C5I.equals("R")) {
-                Cubo2C5.setSelectedItem("Rojo");
-                Cubo2C5G.setText("R");
-                Cubo2C5G.setBackground(Cubo2.C5);
-            } else if (Cubo2.C5I.equals("B")) {
-                Cubo2C5.setSelectedItem("Blanco");
-                Cubo2C5G.setText("B");
-                Cubo2C5G.setBackground(Cubo2.C5);
-            } else if (Cubo2.C5I.equals("V")) {
-                Cubo2C5.setSelectedItem("Verde");
-                Cubo2C5G.setText("V");
-                Cubo2C5G.setBackground(Cubo2.C5);
-            } else if (Cubo2.C5I.equals("A")) {
-                Cubo2C5.setSelectedItem("Amarillo");
-                Cubo2C5G.setText("A");
-                Cubo2C5G.setBackground(Cubo2.C5);
-            }
-
-            if (Cubo2.C6I.equals("R")) {
-                Cubo2C6.setSelectedItem("Rojo");
-                Cubo2C6G.setText("R");
-                Cubo2C6G.setBackground(Cubo2.C6);
-            } else if (Cubo2.C6I.equals("B")) {
-                Cubo2C6.setSelectedItem("Blanco");
-                Cubo2C6G.setText("B");
-                Cubo2C6G.setBackground(Cubo2.C6);
-            } else if (Cubo2.C6I.equals("V")) {
-                Cubo2C6.setSelectedItem("Verde");
-                Cubo2C6G.setText("V");
-                Cubo2C6G.setBackground(Cubo2.C6);
-            } else if (Cubo2.C6I.equals("A")) {
-                Cubo2C6.setSelectedItem("Amarillo");
-                Cubo2C6G.setText("A");
-                Cubo2C6G.setBackground(Cubo2.C6);
-            }
 
             // Cubo 3
             Cubo3.C1 = Cubo3Bin.C1;
@@ -4239,114 +4834,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo3C6J.setText(Cubo3Bin.Cubo3C6JN);
             Cubo3C6J.setBackground(Cubo3Bin.Cubo3C6JB);
 
-            if (Cubo3.C1I.equals("R")) {
-                Cubo3C1.setSelectedItem("Rojo");
-                Cubo3C1G.setText("R");
-                Cubo3C1G.setBackground(Cubo3.C1);
-            } else if (Cubo3.C1I.equals("B")) {
-                Cubo3C1.setSelectedItem("Blanco");
-                Cubo3C1G.setText("B");
-                Cubo3C1G.setBackground(Cubo3.C1);
-            } else if (Cubo3.C1I.equals("V")) {
-                Cubo3C1.setSelectedItem("Verde");
-                Cubo3C1G.setText("V");
-                Cubo3C1G.setBackground(Cubo3.C1);
-            } else if (Cubo3.C1I.equals("A")) {
-                Cubo3C1.setSelectedItem("Amarillo");
-                Cubo3C1G.setText("A");
-                Cubo3C1G.setBackground(Cubo3.C1);
-            }
-
-            if (Cubo3.C2I.equals("R")) {
-                Cubo3C2.setSelectedItem("Rojo");
-                Cubo3C2G.setText("R");
-                Cubo3C2G.setBackground(Cubo3.C2);
-            } else if (Cubo3.C2I.equals("B")) {
-                Cubo3C2.setSelectedItem("Blanco");
-                Cubo3C2G.setText("B");
-                Cubo3C2G.setBackground(Cubo3.C2);
-            } else if (Cubo3.C2I.equals("V")) {
-                Cubo3C2.setSelectedItem("Verde");
-                Cubo3C2G.setText("V");
-                Cubo3C2G.setBackground(Cubo3.C2);
-            } else if (Cubo3.C2I.equals("A")) {
-                Cubo3C2.setSelectedItem("Amarillo");
-                Cubo3C2G.setText("A");
-                Cubo3C2G.setBackground(Cubo3.C2);
-            }
-
-            if (Cubo3.C3I.equals("R")) {
-                Cubo3C3.setSelectedItem("Rojo");
-                Cubo3C3G.setText("R");
-                Cubo3C3G.setBackground(Cubo3.C3);
-            } else if (Cubo3.C3I.equals("B")) {
-                Cubo3C3.setSelectedItem("Blanco");
-                Cubo3C3G.setText("B");
-                Cubo3C3G.setBackground(Cubo3.C3);
-            } else if (Cubo3.C3I.equals("V")) {
-                Cubo3C3.setSelectedItem("Verde");
-                Cubo3C3G.setText("V");
-                Cubo3C3G.setBackground(Cubo3.C3);
-            } else if (Cubo3.C3I.equals("A")) {
-                Cubo3C3.setSelectedItem("Amarillo");
-                Cubo3C3G.setText("A");
-                Cubo3C3G.setBackground(Cubo3.C3);
-            }
-
-            if (Cubo3.C4I.equals("R")) {
-                Cubo3C4.setSelectedItem("Rojo");
-                Cubo3C4G.setText("R");
-                Cubo3C4G.setBackground(Cubo3.C4);
-            } else if (Cubo3.C4I.equals("B")) {
-                Cubo3C4.setSelectedItem("Blanco");
-                Cubo3C4G.setText("B");
-                Cubo3C4G.setBackground(Cubo3.C4);
-            } else if (Cubo3.C4I.equals("V")) {
-                Cubo3C4.setSelectedItem("Verde");
-                Cubo3C4G.setText("V");
-                Cubo3C4G.setBackground(Cubo3.C4);
-            } else if (Cubo3.C4I.equals("A")) {
-                Cubo3C4.setSelectedItem("Amarillo");
-                Cubo3C4G.setText("A");
-                Cubo3C4G.setBackground(Cubo3.C4);
-            }
-
-            if (Cubo3.C5I.equals("R")) {
-                Cubo3C5.setSelectedItem("Rojo");
-                Cubo3C5G.setText("R");
-                Cubo3C5G.setBackground(Cubo3.C5);
-            } else if (Cubo3.C5I.equals("B")) {
-                Cubo3C5.setSelectedItem("Blanco");
-                Cubo3C5G.setText("B");
-                Cubo3C5G.setBackground(Cubo3.C5);
-            } else if (Cubo3.C5I.equals("V")) {
-                Cubo3C5.setSelectedItem("Verde");
-                Cubo3C5G.setText("V");
-                Cubo3C5G.setBackground(Cubo3.C5);
-            } else if (Cubo3.C5I.equals("A")) {
-                Cubo3C5.setSelectedItem("Amarillo");
-                Cubo3C5G.setText("A");
-                Cubo3C5G.setBackground(Cubo3.C5);
-            }
-
-            if (Cubo3.C6I.equals("R")) {
-                Cubo3C6.setSelectedItem("Rojo");
-                Cubo3C6G.setText("R");
-                Cubo3C6G.setBackground(Cubo3.C6);
-            } else if (Cubo3.C6I.equals("B")) {
-                Cubo3C6.setSelectedItem("Blanco");
-                Cubo3C6G.setText("B");
-                Cubo3C6G.setBackground(Cubo3.C6);
-            } else if (Cubo3.C6I.equals("V")) {
-                Cubo3C6.setSelectedItem("Verde");
-                Cubo3C6G.setText("V");
-                Cubo3C6G.setBackground(Cubo3.C6);
-            } else if (Cubo3.C6I.equals("A")) {
-                Cubo3C6.setSelectedItem("Amarillo");
-                Cubo3C6G.setText("A");
-                Cubo3C6G.setBackground(Cubo3.C6);
-            }
-
             // Cubo 4
             Cubo4.C1 = Cubo4Bin.C1;
             Cubo4.C1I = Cubo4Bin.C1I;
@@ -4378,115 +4865,99 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C6J.setText(Cubo4Bin.Cubo4C6JN);
             Cubo4C6J.setBackground(Cubo4Bin.Cubo4C6JB);
 
-            if (Cubo4.C1I.equals("R")) {
-                Cubo4C1.setSelectedItem("Rojo");
-                Cubo4C1G.setText("R");
-                Cubo4C1G.setBackground(Cubo4.C1);
-            } else if (Cubo4.C1I.equals("B")) {
-                Cubo4C1.setSelectedItem("Blanco");
-                Cubo4C1G.setText("B");
-                Cubo4C1G.setBackground(Cubo4.C1);
-            } else if (Cubo4.C1I.equals("V")) {
-                Cubo4C1.setSelectedItem("Verde");
-                Cubo4C1G.setText("V");
-                Cubo4C1G.setBackground(Cubo4.C1);
-            } else if (Cubo4.C1I.equals("A")) {
-                Cubo4C1.setSelectedItem("Amarillo");
-                Cubo4C1G.setText("A");
-                Cubo4C1G.setBackground(Cubo4.C1);
-            }
-
-            if (Cubo4.C2I.equals("R")) {
-                Cubo4C2.setSelectedItem("Rojo");
-                Cubo4C2G.setText("R");
-                Cubo4C2G.setBackground(Cubo4.C2);
-            } else if (Cubo4.C2I.equals("B")) {
-                Cubo4C2.setSelectedItem("Blanco");
-                Cubo4C2G.setText("B");
-                Cubo4C2G.setBackground(Cubo4.C2);
-            } else if (Cubo4.C2I.equals("V")) {
-                Cubo4C2.setSelectedItem("Verde");
-                Cubo4C2G.setText("V");
-                Cubo4C2G.setBackground(Cubo4.C2);
-            } else if (Cubo4.C2I.equals("A")) {
-                Cubo4C2.setSelectedItem("Amarillo");
-                Cubo4C2G.setText("A");
-                Cubo4C2G.setBackground(Cubo4.C2);
-            }
-
-            if (Cubo4.C3I.equals("R")) {
-                Cubo4C3.setSelectedItem("Rojo");
-                Cubo4C3G.setText("R");
-                Cubo4C3G.setBackground(Cubo4.C3);
-            } else if (Cubo4.C3I.equals("B")) {
-                Cubo4C3.setSelectedItem("Blanco");
-                Cubo4C3G.setText("B");
-                Cubo4C3G.setBackground(Cubo4.C3);
-            } else if (Cubo4.C3I.equals("V")) {
-                Cubo4C3.setSelectedItem("Verde");
-                Cubo4C3G.setText("V");
-                Cubo4C3G.setBackground(Cubo4.C3);
-            } else if (Cubo4.C3I.equals("A")) {
-                Cubo4C3.setSelectedItem("Amarillo");
-                Cubo4C3G.setText("A");
-                Cubo4C3G.setBackground(Cubo4.C3);
-            }
-
-            if (Cubo4.C4I.equals("R")) {
-                Cubo4C4.setSelectedItem("Rojo");
-                Cubo4C4G.setText("R");
-                Cubo4C4G.setBackground(Cubo4.C4);
-            } else if (Cubo4.C4I.equals("B")) {
-                Cubo4C4.setSelectedItem("Blanco");
-                Cubo4C4G.setText("B");
-                Cubo4C4G.setBackground(Cubo4.C4);
-            } else if (Cubo4.C4I.equals("V")) {
-                Cubo4C4.setSelectedItem("Verde");
-                Cubo4C4G.setText("V");
-                Cubo4C4G.setBackground(Cubo4.C4);
-            } else if (Cubo4.C4I.equals("A")) {
-                Cubo4C4.setSelectedItem("Amarillo");
-                Cubo4C4G.setText("A");
-                Cubo4C4G.setBackground(Cubo4.C4);
-            }
-
-            if (Cubo4.C5I.equals("R")) {
-                Cubo4C5.setSelectedItem("Rojo");
-                Cubo4C5G.setText("R");
-                Cubo4C5G.setBackground(Cubo4.C5);
-            } else if (Cubo4.C5I.equals("B")) {
-                Cubo4C5.setSelectedItem("Blanco");
-                Cubo4C5G.setText("B");
-                Cubo4C5G.setBackground(Cubo4.C5);
-            } else if (Cubo4.C5I.equals("V")) {
-                Cubo4C5.setSelectedItem("Verde");
-                Cubo4C5G.setText("V");
-                Cubo4C5G.setBackground(Cubo4.C5);
-            } else if (Cubo4.C5I.equals("A")) {
-                Cubo4C5.setSelectedItem("Amarillo");
-                Cubo4C5G.setText("A");
-                Cubo4C5G.setBackground(Cubo4.C5);
-            }
-
-            if (Cubo4.C6I.equals("R")) {
-                Cubo4C6.setSelectedItem("Rojo");
-                Cubo4C6G.setText("R");
-                Cubo4C6G.setBackground(Cubo4.C6);
-            } else if (Cubo4.C6I.equals("B")) {
-                Cubo4C6.setSelectedItem("Blanco");
-                Cubo4C6G.setText("B");
-                Cubo4C6G.setBackground(Cubo4.C6);
-            } else if (Cubo4.C6I.equals("V")) {
-                Cubo4C6.setSelectedItem("Verde");
-                Cubo4C6G.setText("V");
-                Cubo4C6G.setBackground(Cubo4.C6);
-            } else if (Cubo4.C6I.equals("A")) {
-                Cubo4C6.setSelectedItem("Amarillo");
-                Cubo4C6G.setText("A");
-                Cubo4C6G.setBackground(Cubo4.C6);
-            }
-
             System.out.println("Cubos.bin ha sido cargado con éxito");
+
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            // Crear un flujo de entrada de archivos binarios
+            F_binPartidasIn = new FileInputStream(binPartidasNIn);
+
+            // Crear un ObjectInputStream para leer objetos desde el archivo binario
+            O_binPartidasIn = new ObjectInputStream(F_binPartidasIn);
+
+            // Leer el arreglo desde el archivo
+            partidasBin = (ArrayList<Binarios>) O_binPartidasIn.readObject();
+
+            // Cerrar los flujos
+            O_binPartidasIn.close();
+            F_binPartidasIn.close();
+
+            // Utilizar la lista
+            System.out.println("partidas Bin: " + partidasBin.size());
+            iPartida = 0;
+            for (int i = 0; i < partidasBin.size(); i++) {
+                Cubos cubo1temp = new Cubos();
+                cubo1temp.C1 = partidasBin.get(i).Cubo1.C1;
+                cubo1temp.C2 = partidasBin.get(i).Cubo1.C2;
+                cubo1temp.C3 = partidasBin.get(i).Cubo1.C3;
+                cubo1temp.C4 = partidasBin.get(i).Cubo1.C4;
+                cubo1temp.C5 = partidasBin.get(i).Cubo1.C5;
+                cubo1temp.C6 = partidasBin.get(i).Cubo1.C6;
+
+                cubo1temp.C1I = partidasBin.get(i).Cubo1.C1I;
+                cubo1temp.C2I = partidasBin.get(i).Cubo1.C2I;
+                cubo1temp.C3I = partidasBin.get(i).Cubo1.C3I;
+                cubo1temp.C4I = partidasBin.get(i).Cubo1.C4I;
+                cubo1temp.C5I = partidasBin.get(i).Cubo1.C5I;
+                cubo1temp.C6I = partidasBin.get(i).Cubo1.C6I;
+
+                Cubos cubo2temp = new Cubos();
+                cubo2temp.C1 = partidasBin.get(i).Cubo2.C1;
+                cubo2temp.C2 = partidasBin.get(i).Cubo2.C2;
+                cubo2temp.C3 = partidasBin.get(i).Cubo2.C3;
+                cubo2temp.C4 = partidasBin.get(i).Cubo2.C4;
+                cubo2temp.C5 = partidasBin.get(i).Cubo2.C5;
+                cubo2temp.C6 = partidasBin.get(i).Cubo2.C6;
+
+                cubo2temp.C1I = partidasBin.get(i).Cubo2.C1I;
+                cubo2temp.C2I = partidasBin.get(i).Cubo2.C2I;
+                cubo2temp.C3I = partidasBin.get(i).Cubo2.C3I;
+                cubo2temp.C4I = partidasBin.get(i).Cubo2.C4I;
+                cubo2temp.C5I = partidasBin.get(i).Cubo2.C5I;
+                cubo2temp.C6I = partidasBin.get(i).Cubo2.C6I;
+
+                Cubos cubo3temp = new Cubos();
+                cubo3temp.C1 = partidasBin.get(i).Cubo3.C1;
+                cubo3temp.C2 = partidasBin.get(i).Cubo3.C2;
+                cubo3temp.C3 = partidasBin.get(i).Cubo3.C3;
+                cubo3temp.C4 = partidasBin.get(i).Cubo3.C4;
+                cubo3temp.C5 = partidasBin.get(i).Cubo3.C5;
+                cubo3temp.C6 = partidasBin.get(i).Cubo3.C6;
+
+                cubo3temp.C1I = partidasBin.get(i).Cubo3.C1I;
+                cubo3temp.C2I = partidasBin.get(i).Cubo3.C2I;
+                cubo3temp.C3I = partidasBin.get(i).Cubo3.C3I;
+                cubo3temp.C4I = partidasBin.get(i).Cubo3.C4I;
+                cubo3temp.C5I = partidasBin.get(i).Cubo3.C5I;
+                cubo3temp.C6I = partidasBin.get(i).Cubo3.C6I;
+
+                Cubos cubo4temp = new Cubos();
+                cubo4temp.C1 = partidasBin.get(i).Cubo4.C1;
+                cubo4temp.C2 = partidasBin.get(i).Cubo4.C2;
+                cubo4temp.C3 = partidasBin.get(i).Cubo4.C3;
+                cubo4temp.C4 = partidasBin.get(i).Cubo4.C4;
+                cubo4temp.C5 = partidasBin.get(i).Cubo4.C5;
+                cubo4temp.C6 = partidasBin.get(i).Cubo4.C6;
+
+                cubo4temp.C1I = partidasBin.get(i).Cubo4.C1I;
+                cubo4temp.C2I = partidasBin.get(i).Cubo4.C2I;
+                cubo4temp.C3I = partidasBin.get(i).Cubo4.C3I;
+                cubo4temp.C4I = partidasBin.get(i).Cubo4.C4I;
+                cubo4temp.C5I = partidasBin.get(i).Cubo4.C5I;
+                cubo4temp.C6I = partidasBin.get(i).Cubo4.C6I;
+
+                boolean solucion = partidasBin.get(i).solucion;
+
+                partidas.add(i, new Partidas(cubo1temp, cubo2temp, cubo3temp, cubo4temp, solucion));
+
+                iPartida = i + 1;
+                System.out.println(iPartida);
+                noPartida.addItem(String.valueOf(iPartida));
+
+            }
 
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
@@ -4497,11 +4968,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         // TODO add your handling code here:
         Object[] options = {"Sí",
-            "No", "Cancelar"};
+            "No"};
         int option = JOptionPane.showOptionDialog(null,
-                "Deseas guardar los cambios antes de salir?",
-                "Guardar cambios",
-                JOptionPane.YES_NO_CANCEL_OPTION,
+                "Estás seguro que deseas salir del Juego?",
+                "Confirmación",
+                JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
                 null,
                 options,
@@ -4510,10 +4981,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         if (JOptionPane.YES_OPTION == option) {
             BinariosOut();
             System.exit(0);
-        } else if (JOptionPane.NO_OPTION == option) {
-            System.exit(0);
         } else {
-
+            
         }
     }//GEN-LAST:event_formWindowClosing
 
@@ -4540,6 +5009,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                         + "(SOLO si existe una solución)");
             }
         }
+
+        if (jTabbedPane1.getSelectedIndex() == 3 && iPartida < 1) {
+            jTabbedPane1.setSelectedIndex(0);
+            JOptionPane.showMessageDialog(null, "Aún no has jugado ninguna partida,\n"
+                    + "escoge una combinación y presiona 'JUGAR'");
+
+        }
     }//GEN-LAST:event_jTabbedPane1StateChanged
 
     private void jugarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jugarBtnActionPerformed
@@ -4547,6 +5023,195 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         if (Cubo1.C1 == null || Cubo2.C1 == null || Cubo3.C1 == null || Cubo4.C1 == null) {
             JOptionPane.showMessageDialog(null, "Aún no ha generado los 4 cubos");
+        } else if (Cubo1Bin.C1 == null) {
+            sigBtnPressed = true;
+
+            jTabbedPane1.setSelectedIndex(1);
+
+            // Cubo 1
+            Cubo1C1J.setText(Cubo1.C1I);
+            Cubo1C1J.setBackground(Cubo1.C1);
+
+            Cubo1C2J.setText(Cubo1.C2I);
+            Cubo1C2J.setBackground(Cubo1.C2);
+
+            Cubo1C3J.setText(Cubo1.C3I);
+            Cubo1C3J.setBackground(Cubo1.C3);
+
+            Cubo1C4J.setText(Cubo1.C4I);
+            Cubo1C4J.setBackground(Cubo1.C4);
+
+            Cubo1C5J.setText(Cubo1.C5I);
+            Cubo1C5J.setBackground(Cubo1.C5);
+
+            Cubo1C6J.setText(Cubo1.C6I);
+            Cubo1C6J.setBackground(Cubo1.C6);
+            //
+
+            // Cubo 2
+            Cubo2C1J.setText(Cubo2.C1I);
+            Cubo2C1J.setBackground(Cubo2.C1);
+
+            Cubo2C2J.setText(Cubo2.C2I);
+            Cubo2C2J.setBackground(Cubo2.C2);
+
+            Cubo2C3J.setText(Cubo2.C3I);
+            Cubo2C3J.setBackground(Cubo2.C3);
+
+            Cubo2C4J.setText(Cubo2.C4I);
+            Cubo2C4J.setBackground(Cubo2.C4);
+
+            Cubo2C5J.setText(Cubo2.C5I);
+            Cubo2C5J.setBackground(Cubo2.C5);
+
+            Cubo2C6J.setText(Cubo2.C6I);
+            Cubo2C6J.setBackground(Cubo2.C6);
+            //
+
+            // Cubo 3
+            Cubo3C1J.setText(Cubo3.C1I);
+            Cubo3C1J.setBackground(Cubo3.C1);
+
+            Cubo3C2J.setText(Cubo3.C2I);
+            Cubo3C2J.setBackground(Cubo3.C2);
+
+            Cubo3C3J.setText(Cubo3.C3I);
+            Cubo3C3J.setBackground(Cubo3.C3);
+
+            Cubo3C4J.setText(Cubo3.C4I);
+            Cubo3C4J.setBackground(Cubo3.C4);
+
+            Cubo3C5J.setText(Cubo3.C5I);
+            Cubo3C5J.setBackground(Cubo3.C5);
+
+            Cubo3C6J.setText(Cubo3.C6I);
+            Cubo3C6J.setBackground(Cubo3.C6);
+            //
+
+            // Cubo 4
+            Cubo4C1J.setText(Cubo4.C1I);
+            Cubo4C1J.setBackground(Cubo4.C1);
+
+            Cubo4C2J.setText(Cubo4.C2I);
+            Cubo4C2J.setBackground(Cubo4.C2);
+
+            Cubo4C3J.setText(Cubo4.C3I);
+            Cubo4C3J.setBackground(Cubo4.C3);
+
+            Cubo4C4J.setText(Cubo4.C4I);
+            Cubo4C4J.setBackground(Cubo4.C4);
+
+            Cubo4C5J.setText(Cubo4.C5I);
+            Cubo4C5J.setBackground(Cubo4.C5);
+
+            Cubo4C6J.setText(Cubo4.C6I);
+            Cubo4C6J.setBackground(Cubo4.C6);
+            //
+            Cubos cubo1temp = new Cubos();
+            cubo1temp.C1 = Cubo1.C1;
+            cubo1temp.C2 = Cubo1.C2;
+            cubo1temp.C3 = Cubo1.C3;
+            cubo1temp.C4 = Cubo1.C4;
+            cubo1temp.C5 = Cubo1.C5;
+            cubo1temp.C6 = Cubo1.C6;
+
+            cubo1temp.C1I = Cubo1.C1I;
+            cubo1temp.C2I = Cubo1.C2I;
+            cubo1temp.C3I = Cubo1.C3I;
+            cubo1temp.C4I = Cubo1.C4I;
+            cubo1temp.C5I = Cubo1.C5I;
+            cubo1temp.C6I = Cubo1.C6I;
+
+            Cubos cubo2temp = new Cubos();
+            cubo2temp.C1 = Cubo2.C1;
+            cubo2temp.C2 = Cubo2.C2;
+            cubo2temp.C3 = Cubo2.C3;
+            cubo2temp.C4 = Cubo2.C4;
+            cubo2temp.C5 = Cubo2.C5;
+            cubo2temp.C6 = Cubo2.C6;
+
+            cubo2temp.C1I = Cubo2.C1I;
+            cubo2temp.C2I = Cubo2.C2I;
+            cubo2temp.C3I = Cubo2.C3I;
+            cubo2temp.C4I = Cubo2.C4I;
+            cubo2temp.C5I = Cubo2.C5I;
+            cubo2temp.C6I = Cubo2.C6I;
+
+            Cubos cubo3temp = new Cubos();
+            cubo3temp.C1 = Cubo3.C1;
+            cubo3temp.C2 = Cubo3.C2;
+            cubo3temp.C3 = Cubo3.C3;
+            cubo3temp.C4 = Cubo3.C4;
+            cubo3temp.C5 = Cubo3.C5;
+            cubo3temp.C6 = Cubo3.C6;
+
+            cubo3temp.C1I = Cubo3.C1I;
+            cubo3temp.C2I = Cubo3.C2I;
+            cubo3temp.C3I = Cubo3.C3I;
+            cubo3temp.C4I = Cubo3.C4I;
+            cubo3temp.C5I = Cubo3.C5I;
+            cubo3temp.C6I = Cubo3.C6I;
+
+            Cubos cubo4temp = new Cubos();
+            cubo4temp.C1 = Cubo4.C1;
+            cubo4temp.C2 = Cubo4.C2;
+            cubo4temp.C3 = Cubo4.C3;
+            cubo4temp.C4 = Cubo4.C4;
+            cubo4temp.C5 = Cubo4.C5;
+            cubo4temp.C6 = Cubo4.C6;
+
+            cubo4temp.C1I = Cubo4.C1I;
+            cubo4temp.C2I = Cubo4.C2I;
+            cubo4temp.C3I = Cubo4.C3I;
+            cubo4temp.C4I = Cubo4.C4I;
+            cubo4temp.C5I = Cubo4.C5I;
+            cubo4temp.C6I = Cubo4.C6I;
+
+            boolean solucion = resolverJuegoSilent();
+
+            partidas.add(new Partidas(cubo1temp, cubo2temp, cubo3temp, cubo4temp, solucion));
+            System.out.println(partidas.get(iPartida).solucion);
+
+            iPartida++;
+            noPartida.addItem(String.valueOf(iPartida));
+            actualTorre();
+
+            boolean condicion1 = ((!Cubo1C3J.getBackground().equals(Cubo2C3J.getBackground())
+                    && !Cubo1C3J.getBackground().equals(Cubo3C3J.getBackground())
+                    && !Cubo1C3J.getBackground().equals(Cubo4C3J.getBackground()))
+                    && (!Cubo2C3J.getBackground().equals(Cubo3C3J.getBackground())
+                    && !Cubo2C3J.getBackground().equals(Cubo4C3J.getBackground()))
+                    && !Cubo3C3J.getBackground().equals(Cubo4C3J.getBackground()));
+
+            boolean condicion2 = ((!Cubo1C5J.getBackground().equals(Cubo2C5J.getBackground())
+                    && !Cubo1C5J.getBackground().equals(Cubo3C5J.getBackground())
+                    && !Cubo1C5J.getBackground().equals(Cubo4C5J.getBackground()))
+                    && (!Cubo2C5J.getBackground().equals(Cubo3C5J.getBackground())
+                    && !Cubo2C5J.getBackground().equals(Cubo4C5J.getBackground()))
+                    && !Cubo3C5J.getBackground().equals(Cubo4C5J.getBackground()));
+
+            boolean condicion3 = ((!Cubo1C4J.getBackground().equals(Cubo2C4J.getBackground())
+                    && !Cubo1C4J.getBackground().equals(Cubo3C4J.getBackground())
+                    && !Cubo1C4J.getBackground().equals(Cubo4C4J.getBackground()))
+                    && (!Cubo2C4J.getBackground().equals(Cubo3C4J.getBackground())
+                    && !Cubo2C4J.getBackground().equals(Cubo4C4J.getBackground()))
+                    && !Cubo3C4J.getBackground().equals(Cubo4C4J.getBackground()));
+
+            boolean condicion4 = ((!Cubo1C6J.getBackground().equals(Cubo2C6J.getBackground())
+                    && !Cubo1C6J.getBackground().equals(Cubo3C6J.getBackground())
+                    && !Cubo1C6J.getBackground().equals(Cubo4C6J.getBackground()))
+                    && (!Cubo2C6J.getBackground().equals(Cubo3C6J.getBackground())
+                    && !Cubo2C6J.getBackground().equals(Cubo4C6J.getBackground()))
+                    && !Cubo3C6J.getBackground().equals(Cubo4C6J.getBackground()));
+
+            if (condicion1 && condicion2 && condicion3 && condicion4) {
+
+                resueltoLbl.setVisible(true);
+                resuelto = true;
+            } else {
+                resueltoLbl.setVisible(false);
+                resuelto = false;
+            }
         } else if ((!Cubo1Bin.C1.equals(Cubo1.C1) || !Cubo1Bin.C2.equals(Cubo1.C2)
                 || !Cubo1Bin.C3.equals(Cubo1.C3) || !Cubo1Bin.C4.equals(Cubo1.C4)
                 || !Cubo1Bin.C5.equals(Cubo1.C5) || !Cubo1Bin.C6.equals(Cubo1.C6))
@@ -4643,7 +5308,72 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C6J.setText(Cubo4.C6I);
             Cubo4C6J.setBackground(Cubo4.C6);
             //
+            Cubos cubo1temp = new Cubos();
+            cubo1temp.C1 = Cubo1.C1;
+            cubo1temp.C2 = Cubo1.C2;
+            cubo1temp.C3 = Cubo1.C3;
+            cubo1temp.C4 = Cubo1.C4;
+            cubo1temp.C5 = Cubo1.C5;
+            cubo1temp.C6 = Cubo1.C6;
 
+            cubo1temp.C1I = Cubo1.C1I;
+            cubo1temp.C2I = Cubo1.C2I;
+            cubo1temp.C3I = Cubo1.C3I;
+            cubo1temp.C4I = Cubo1.C4I;
+            cubo1temp.C5I = Cubo1.C5I;
+            cubo1temp.C6I = Cubo1.C6I;
+
+            Cubos cubo2temp = new Cubos();
+            cubo2temp.C1 = Cubo2.C1;
+            cubo2temp.C2 = Cubo2.C2;
+            cubo2temp.C3 = Cubo2.C3;
+            cubo2temp.C4 = Cubo2.C4;
+            cubo2temp.C5 = Cubo2.C5;
+            cubo2temp.C6 = Cubo2.C6;
+
+            cubo2temp.C1I = Cubo2.C1I;
+            cubo2temp.C2I = Cubo2.C2I;
+            cubo2temp.C3I = Cubo2.C3I;
+            cubo2temp.C4I = Cubo2.C4I;
+            cubo2temp.C5I = Cubo2.C5I;
+            cubo2temp.C6I = Cubo2.C6I;
+
+            Cubos cubo3temp = new Cubos();
+            cubo3temp.C1 = Cubo3.C1;
+            cubo3temp.C2 = Cubo3.C2;
+            cubo3temp.C3 = Cubo3.C3;
+            cubo3temp.C4 = Cubo3.C4;
+            cubo3temp.C5 = Cubo3.C5;
+            cubo3temp.C6 = Cubo3.C6;
+
+            cubo3temp.C1I = Cubo3.C1I;
+            cubo3temp.C2I = Cubo3.C2I;
+            cubo3temp.C3I = Cubo3.C3I;
+            cubo3temp.C4I = Cubo3.C4I;
+            cubo3temp.C5I = Cubo3.C5I;
+            cubo3temp.C6I = Cubo3.C6I;
+
+            Cubos cubo4temp = new Cubos();
+            cubo4temp.C1 = Cubo4.C1;
+            cubo4temp.C2 = Cubo4.C2;
+            cubo4temp.C3 = Cubo4.C3;
+            cubo4temp.C4 = Cubo4.C4;
+            cubo4temp.C5 = Cubo4.C5;
+            cubo4temp.C6 = Cubo4.C6;
+
+            cubo4temp.C1I = Cubo4.C1I;
+            cubo4temp.C2I = Cubo4.C2I;
+            cubo4temp.C3I = Cubo4.C3I;
+            cubo4temp.C4I = Cubo4.C4I;
+            cubo4temp.C5I = Cubo4.C5I;
+            cubo4temp.C6I = Cubo4.C6I;
+
+            boolean solucion = resolverJuegoSilent();
+            partidas.add(iPartida, new Partidas(cubo1temp, cubo2temp, cubo3temp, cubo4temp, solucion));
+            System.out.println(partidas.get(iPartida).solucion);
+
+            iPartida++;
+            noPartida.addItem(String.valueOf(iPartida));
             actualTorre();
 
             boolean condicion1 = ((!Cubo1C3J.getBackground().equals(Cubo2C3J.getBackground())
@@ -4682,7 +5412,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 resueltoLbl.setVisible(false);
                 resuelto = false;
             }
-            
+
         } else {
             sigBtnPressed = true;
             resuelto = false;
@@ -4783,11 +5513,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 resueltoLbl.setVisible(false);
                 resuelto = false;
             }
-            
+
+
         }
 
 
     }//GEN-LAST:event_jugarBtnActionPerformed
+
 
     private void izquierdaCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_izquierdaCubo1ActionPerformed
         // TODO add your handling code here:
@@ -10818,6 +11550,1528 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         }
     }//GEN-LAST:event_Cubo4C6ActionPerformed
 
+    private void aplicarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aplicarBtnActionPerformed
+        // TODO add your handling code here:
+        Object[] options = {"Sí",
+            "No"};
+        int yes = JOptionPane.showOptionDialog(null,
+                "Esto borrará los datos actuales y restablecerá\n"
+                + "los datos de la partida seleccionada.\n"
+                + "Deseas continuar?",
+                "Confirmación",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[0]);
+
+        if (JOptionPane.YES_OPTION == yes) {
+            resuelto = false;
+            jTabbedPane1.setSelectedIndex(0);
+            // Cubo 1
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("R")) {
+                Cubo1C1.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("B")) {
+                Cubo1C1.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("V")) {
+                Cubo1C1.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("A")) {
+                Cubo1C1.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("R")) {
+                Cubo1C2.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("B")) {
+                Cubo1C2.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("V")) {
+                Cubo1C2.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("A")) {
+                Cubo1C2.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("R")) {
+                Cubo1C3.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("B")) {
+                Cubo1C3.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("V")) {
+                Cubo1C3.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("A")) {
+                Cubo1C3.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("R")) {
+                Cubo1C4.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("B")) {
+                Cubo1C4.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("V")) {
+                Cubo1C4.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("A")) {
+                Cubo1C4.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("R")) {
+                Cubo1C5.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("B")) {
+                Cubo1C5.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("V")) {
+                Cubo1C5.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("A")) {
+                Cubo1C5.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("R")) {
+                Cubo1C6.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("B")) {
+                Cubo1C6.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("V")) {
+                Cubo1C6.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("A")) {
+                Cubo1C6.setSelectedItem("Amarillo");
+            }
+
+            // Cubo 2
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("R")) {
+                Cubo2C1.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("B")) {
+                Cubo2C1.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("V")) {
+                Cubo2C1.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("A")) {
+                Cubo2C1.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("R")) {
+                Cubo2C2.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("B")) {
+                Cubo2C2.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("V")) {
+                Cubo2C2.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("A")) {
+                Cubo2C2.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("R")) {
+                Cubo2C3.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("B")) {
+                Cubo2C3.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("V")) {
+                Cubo2C3.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("A")) {
+                Cubo2C3.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("R")) {
+                Cubo2C4.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("B")) {
+                Cubo2C4.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("V")) {
+                Cubo2C4.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("A")) {
+                Cubo2C4.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("R")) {
+                Cubo2C5.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("B")) {
+                Cubo2C5.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("V")) {
+                Cubo2C5.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("A")) {
+                Cubo2C5.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("R")) {
+                Cubo2C6.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("B")) {
+                Cubo2C6.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("V")) {
+                Cubo2C6.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("A")) {
+                Cubo2C6.setSelectedItem("Amarillo");
+            }
+
+            // Cubo 3
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("R")) {
+                Cubo3C1.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("B")) {
+                Cubo3C1.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("V")) {
+                Cubo3C1.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("A")) {
+                Cubo3C1.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("R")) {
+                Cubo3C2.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("B")) {
+                Cubo3C2.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("V")) {
+                Cubo3C2.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("A")) {
+                Cubo3C2.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("R")) {
+                Cubo3C3.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("B")) {
+                Cubo3C3.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("V")) {
+                Cubo3C3.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("A")) {
+                Cubo3C3.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("R")) {
+                Cubo3C4.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("B")) {
+                Cubo3C4.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("V")) {
+                Cubo3C4.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("A")) {
+                Cubo3C4.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("R")) {
+                Cubo3C5.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("B")) {
+                Cubo3C5.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("V")) {
+                Cubo3C5.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("A")) {
+                Cubo3C5.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("R")) {
+                Cubo3C6.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("B")) {
+                Cubo3C6.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("V")) {
+                Cubo3C6.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("A")) {
+                Cubo3C6.setSelectedItem("Amarillo");
+            }
+
+            // Cubo 4
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("R")) {
+                Cubo4C1.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("B")) {
+                Cubo4C1.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("V")) {
+                Cubo4C1.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("A")) {
+                Cubo4C1.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("R")) {
+                Cubo4C2.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("B")) {
+                Cubo4C2.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("V")) {
+                Cubo4C2.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("A")) {
+                Cubo4C2.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("R")) {
+                Cubo4C3.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("B")) {
+                Cubo4C3.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("V")) {
+                Cubo4C3.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("A")) {
+                Cubo4C3.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("R")) {
+                Cubo4C4.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("B")) {
+                Cubo4C4.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("V")) {
+                Cubo4C4.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("A")) {
+                Cubo4C4.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("R")) {
+                Cubo4C5.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("B")) {
+                Cubo4C5.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("V")) {
+                Cubo4C5.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("A")) {
+                Cubo4C5.setSelectedItem("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("R")) {
+                Cubo4C6.setSelectedItem("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("B")) {
+                Cubo4C6.setSelectedItem("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("V")) {
+                Cubo4C6.setSelectedItem("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("A")) {
+                Cubo4C6.setSelectedItem("Amarillo");
+            }
+
+        } else {
+
+        }
+    }//GEN-LAST:event_aplicarBtnActionPerformed
+
+    public boolean resolverJuegoSilent() {
+        boolean G1Encontrado = false;
+        boolean G2Encontrado = false;
+        // Grafo Gl 
+        // Cubo 1
+        String Cubo1arista1I;
+        String Cubo1arista1F;
+
+        String Cubo1arista2I;
+        String Cubo1arista2F;
+
+        String Cubo1arista3I;
+        String Cubo1arista3F;
+
+        Cubo1arista1I = Cubo1.C1I;
+        Cubo1arista1F = Cubo1.C2I;
+
+        Cubo1arista2I = Cubo1.C3I;
+        Cubo1arista2F = Cubo1.C4I;
+
+        Cubo1arista3I = Cubo1.C5I;
+        Cubo1arista3F = Cubo1.C6I;
+
+        System.out.println("Cubo 1");
+        System.out.println(Cubo1arista1I + "-" + Cubo1arista1F);
+        System.out.println(Cubo1arista2I + "-" + Cubo1arista2F);
+        System.out.println(Cubo1arista3I + "-" + Cubo1arista3F);
+
+        // Cubo 2
+        String Cubo2arista1I;
+        String Cubo2arista1F;
+        String Cubo2arista2I;
+        String Cubo2arista2F;
+        String Cubo2arista3I;
+        String Cubo2arista3F;
+
+        Cubo2arista1I = Cubo2.C1I;
+        Cubo2arista1F = Cubo2.C2I;
+
+        Cubo2arista2I = Cubo2.C3I;
+        Cubo2arista2F = Cubo2.C4I;
+
+        Cubo2arista3I = Cubo2.C5I;
+        Cubo2arista3F = Cubo2.C6I;
+
+        System.out.println("Cubo 2");
+        System.out.println(Cubo2arista1I + "-" + Cubo2arista1F);
+        System.out.println(Cubo2arista2I + "-" + Cubo2arista2F);
+        System.out.println(Cubo2arista3I + "-" + Cubo2arista3F);
+
+        // Cubo 3
+        String Cubo3arista1I;
+        String Cubo3arista1F;
+        String Cubo3arista2I;
+        String Cubo3arista2F;
+        String Cubo3arista3I;
+        String Cubo3arista3F;
+
+        Cubo3arista1I = Cubo3.C1I;
+        Cubo3arista1F = Cubo3.C2I;
+
+        Cubo3arista2I = Cubo3.C3I;
+        Cubo3arista2F = Cubo3.C4I;
+
+        Cubo3arista3I = Cubo3.C5I;
+        Cubo3arista3F = Cubo3.C6I;
+
+        System.out.println("Cubo 3");
+        System.out.println(Cubo3arista1I + "-" + Cubo3arista1F);
+        System.out.println(Cubo3arista2I + "-" + Cubo3arista2F);
+        System.out.println(Cubo3arista3I + "-" + Cubo3arista3F);
+
+        // Cubo 4
+        String Cubo4arista1I;
+        String Cubo4arista1F;
+        String Cubo4arista2I;
+        String Cubo4arista2F;
+        String Cubo4arista3I;
+        String Cubo4arista3F;
+
+        Cubo4arista1I = Cubo4.C1I;
+        Cubo4arista1F = Cubo4.C2I;
+
+        Cubo4arista2I = Cubo4.C3I;
+        Cubo4arista2F = Cubo4.C4I;
+
+        Cubo4arista3I = Cubo4.C5I;
+        Cubo4arista3F = Cubo4.C6I;
+
+        System.out.println("Cubo 4");
+        System.out.println(Cubo4arista1I + "-" + Cubo4arista1F);
+        System.out.println(Cubo4arista2I + "-" + Cubo4arista2F);
+        System.out.println(Cubo4arista3I + "-" + Cubo4arista3F);
+
+        // Grafo G1: Solución Horizontal
+        String Cubo1aristaG1I = null;
+        String Cubo1aristaG1F = null;
+
+        String Cubo2aristaG1I = null;
+        String Cubo2aristaG1F = null;
+
+        String Cubo3aristaG1I = null;
+        String Cubo3aristaG1F = null;
+
+        String Cubo4aristaG1I = null;
+        String Cubo4aristaG1F = null;
+
+        int gradoVerticeR = 0;
+        int gradoVerticeB = 0;
+        int gradoVerticeV = 0;
+        int gradoVerticeA = 0;
+
+        String[] verticesCubo1 = {Cubo1arista1I, Cubo1arista1F, Cubo1arista2I, Cubo1arista2F, Cubo1arista3I, Cubo1arista3F};
+        String[] verticesCubo2 = {Cubo2arista1I, Cubo2arista1F, Cubo2arista2I, Cubo2arista2F, Cubo2arista3I, Cubo2arista3F};
+        String[] verticesCubo3 = {Cubo3arista1I, Cubo3arista1F, Cubo3arista2I, Cubo3arista2F, Cubo3arista3I, Cubo3arista3F};
+        String[] verticesCubo4 = {Cubo4arista1I, Cubo4arista1F, Cubo4arista2I, Cubo4arista2F, Cubo4arista3I, Cubo4arista3F};
+
+        for (int i = 0; i < 5; i += 2) {
+            for (int c = 0; c < 5; c += 2) {
+                for (int w = 0; w < 5; w += 2) {
+                    for (int r = 0; r < 5; r += 2) {
+                        gradoVerticeR = 0;
+                        gradoVerticeB = 0;
+                        gradoVerticeV = 0;
+                        gradoVerticeA = 0;
+                        // Cubo1
+                        if (verticesCubo1[i].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo1[i].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo1[i].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo1[i].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        if (verticesCubo1[i + 1].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo1[i + 1].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo1[i + 1].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo1[i + 1].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        // Cubo2
+                        if (verticesCubo2[c].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo2[c].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo2[c].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo2[c].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        if (verticesCubo2[c + 1].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo2[c + 1].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo2[c + 1].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo2[c + 1].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        // Cubo3
+                        if (verticesCubo3[w].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo3[w].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo3[w].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo3[w].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        if (verticesCubo3[w + 1].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo3[w + 1].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo3[w + 1].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo3[w + 1].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        // Cubo4
+                        if (verticesCubo4[r].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo4[r].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo4[r].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo4[r].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        if (verticesCubo4[r + 1].equals("R")) {
+                            gradoVerticeR++;
+                        } else if (verticesCubo4[r + 1].equals("B")) {
+                            gradoVerticeB++;
+                        } else if (verticesCubo4[r + 1].equals("V")) {
+                            gradoVerticeV++;
+                        } else if (verticesCubo4[r + 1].equals("A")) {
+                            gradoVerticeA++;
+                        }
+
+                        if (gradoVerticeR == 2 && gradoVerticeB == 2 && gradoVerticeV == 2 && gradoVerticeA == 2) {
+
+                            System.out.println("Grafo G1: Horizontal - Encontrado");
+                            G1Encontrado = true;
+                            Cubo1aristaG1I = verticesCubo1[i];
+                            Cubo1aristaG1F = verticesCubo1[i + 1];
+
+                            Cubo2aristaG1I = verticesCubo2[c];
+                            Cubo2aristaG1F = verticesCubo2[c + 1];
+
+                            Cubo3aristaG1I = verticesCubo3[w];
+                            Cubo3aristaG1F = verticesCubo3[w + 1];
+
+                            Cubo4aristaG1I = verticesCubo4[r];
+                            Cubo4aristaG1F = verticesCubo4[r + 1];
+
+                            System.out.println("Cubo 1 arista: " + Cubo1aristaG1I + "-" + Cubo1aristaG1F);
+                            System.out.println("Cubo 2 arista: " + Cubo2aristaG1I + "-" + Cubo2aristaG1F);
+                            System.out.println("Cubo 3 arista: " + Cubo3aristaG1I + "-" + Cubo3aristaG1F);
+                            System.out.println("Cubo 4 arista: " + Cubo4aristaG1I + "-" + Cubo4aristaG1F);
+                            System.out.println("grado R: " + gradoVerticeR);
+                            System.out.println("grado B: " + gradoVerticeB);
+                            System.out.println("grado V: " + gradoVerticeV);
+                            System.out.println("grado A: " + gradoVerticeA);
+                            break;
+                        }
+
+                    }
+                    if (G1Encontrado == true) {
+                        break;
+                    }
+                }
+                if (G1Encontrado == true) {
+                    break;
+                }
+            }
+            if (G1Encontrado == true) {
+                break;
+            }
+        }
+
+        if (G1Encontrado == true) {
+
+            // Grafo G2: Solución Vertical
+            String Cubo1aristaG2I = null;
+            String Cubo1aristaG2F = null;
+
+            String Cubo2aristaG2I = null;
+            String Cubo2aristaG2F = null;
+
+            String Cubo3aristaG2I = null;
+            String Cubo3aristaG2F = null;
+
+            String Cubo4aristaG2I = null;
+            String Cubo4aristaG2F = null;
+
+            gradoVerticeR = 0;
+            gradoVerticeB = 0;
+            gradoVerticeV = 0;
+            gradoVerticeA = 0;
+
+            for (int i = 0; i < 5; i += 2) {
+                for (int c = 0; c < 5; c += 2) {
+                    for (int w = 0; w < 5; w += 2) {
+                        for (int r = 0; r < 5; r += 2) {
+                            gradoVerticeR = 0;
+                            gradoVerticeB = 0;
+                            gradoVerticeV = 0;
+                            gradoVerticeA = 0;
+                            // Cubo1
+                            if (verticesCubo1[i].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo1[i].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo1[i].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo1[i].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            if (verticesCubo1[i + 1].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo1[i + 1].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo1[i + 1].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo1[i + 1].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            // Cubo2
+                            if (verticesCubo2[c].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo2[c].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo2[c].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo2[c].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            if (verticesCubo2[c + 1].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo2[c + 1].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo2[c + 1].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo2[c + 1].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            // Cubo3
+                            if (verticesCubo3[w].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo3[w].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo3[w].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo3[w].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            if (verticesCubo3[w + 1].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo3[w + 1].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo3[w + 1].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo3[w + 1].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            // Cubo4
+                            if (verticesCubo4[r].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo4[r].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo4[r].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo4[r].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            if (verticesCubo4[r + 1].equals("R")) {
+                                gradoVerticeR++;
+                            } else if (verticesCubo4[r + 1].equals("B")) {
+                                gradoVerticeB++;
+                            } else if (verticesCubo4[r + 1].equals("V")) {
+                                gradoVerticeV++;
+                            } else if (verticesCubo4[r + 1].equals("A")) {
+                                gradoVerticeA++;
+                            }
+
+                            if (gradoVerticeR == 2 && gradoVerticeB == 2 && gradoVerticeV == 2 && gradoVerticeA == 2) {
+
+                                Cubo1aristaG2I = verticesCubo1[i];
+                                Cubo1aristaG2F = verticesCubo1[i + 1];
+
+                                Cubo2aristaG2I = verticesCubo2[c];
+                                Cubo2aristaG2F = verticesCubo2[c + 1];
+
+                                Cubo3aristaG2I = verticesCubo3[w];
+                                Cubo3aristaG2F = verticesCubo3[w + 1];
+
+                                Cubo4aristaG2I = verticesCubo4[r];
+                                Cubo4aristaG2F = verticesCubo4[r + 1];
+
+                                if (!(Cubo1aristaG2I + Cubo1aristaG2F).equals(Cubo1aristaG1I + Cubo1aristaG1F)
+                                        && !(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2aristaG1I + Cubo2aristaG1F)
+                                        && !(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3aristaG1I + Cubo3aristaG1F)
+                                        && !(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4aristaG1I + Cubo4aristaG1F)) {
+
+                                    System.out.println("Grafo G2: Vertical - Encontrado");
+                                    G2Encontrado = true;
+                                    System.out.println("Cubo 1 arista: " + Cubo1aristaG2I + "-" + Cubo1aristaG2F);
+                                    System.out.println("Cubo 2 arista: " + Cubo2aristaG2I + "-" + Cubo2aristaG2F);
+                                    System.out.println("Cubo 3 arista: " + Cubo3aristaG2I + "-" + Cubo3aristaG2F);
+                                    System.out.println("Cubo 4 arista: " + Cubo4aristaG2I + "-" + Cubo4aristaG2F);
+                                    System.out.println("grado R: " + gradoVerticeR);
+                                    System.out.println("grado B: " + gradoVerticeB);
+                                    System.out.println("grado V: " + gradoVerticeV);
+                                    System.out.println("grado A: " + gradoVerticeA);
+                                    break;
+                                }
+                            }
+
+                        }
+                        if (G2Encontrado == true) {
+                            break;
+                        }
+
+                    }
+                    if (G2Encontrado == true) {
+                        break;
+                    }
+
+                }
+                if (G2Encontrado == true) {
+                    break;
+                }
+
+            }
+
+        }
+        if (G1Encontrado == true && G2Encontrado == true) {
+            System.out.println("true");
+            return true;
+        } else {
+            System.out.println("false");
+            return false;
+        }
+    }
+
+    private void noPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noPartidaActionPerformed
+        // TODO add your handling code here:
+        noPartida.setRenderer(new DefaultListCellRenderer() {
+            @Override
+            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                Component component = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+
+                for (int i = 0; i < iPartida; i++) {
+                    if (index == i && partidas.get(i).solucion == false) {
+                        component.setForeground(Color.RED);
+                    } else if (index == i && partidas.get(i).solucion == true) {
+                        component.setForeground(Color.GREEN);
+                    }
+                }
+                return component;
+
+            }
+        });
+
+        if (partidas.get(noPartida.getSelectedIndex()).solucion == false) {
+            ImageIcon uncheck = new ImageIcon("Binarios\\uncheck.png");
+            checkLbl.setIcon(uncheck);
+            solucionLbl.setText("NO tiene solución");
+            solucionLbl.setForeground(new Color(255,58,84));
+        } else {
+            ImageIcon check = new ImageIcon("Binarios\\check.png");
+            checkLbl.setIcon(check);
+            solucionLbl.setText("SI tiene solución");
+            solucionLbl.setForeground(Color.GREEN);
+        }
+
+        // Cubo 1
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("R")) {
+            Cubo1C1H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("B")) {
+            Cubo1C1H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("V")) {
+            Cubo1C1H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("A")) {
+            Cubo1C1H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("R")) {
+            Cubo1C2H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("B")) {
+            Cubo1C2H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("V")) {
+            Cubo1C2H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("A")) {
+            Cubo1C2H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("R")) {
+            Cubo1C3H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("B")) {
+            Cubo1C3H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("V")) {
+            Cubo1C3H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("A")) {
+            Cubo1C3H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("R")) {
+            Cubo1C4H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("B")) {
+            Cubo1C4H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("V")) {
+            Cubo1C4H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("A")) {
+            Cubo1C4H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("R")) {
+            Cubo1C5H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("B")) {
+            Cubo1C5H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("V")) {
+            Cubo1C5H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("A")) {
+            Cubo1C5H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("R")) {
+            Cubo1C6H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("B")) {
+            Cubo1C6H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("V")) {
+            Cubo1C6H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("A")) {
+            Cubo1C6H.setText("Amarillo");
+        }
+
+        // Cubo 2
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("R")) {
+            Cubo2C1H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("B")) {
+            Cubo2C1H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("V")) {
+            Cubo2C1H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("A")) {
+            Cubo2C1H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("R")) {
+            Cubo2C2H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("B")) {
+            Cubo2C2H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("V")) {
+            Cubo2C2H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("A")) {
+            Cubo2C2H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("R")) {
+            Cubo2C3H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("B")) {
+            Cubo2C3H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("V")) {
+            Cubo2C3H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("A")) {
+            Cubo2C3H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("R")) {
+            Cubo2C4H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("B")) {
+            Cubo2C4H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("V")) {
+            Cubo2C4H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("A")) {
+            Cubo2C4H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("R")) {
+            Cubo2C5H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("B")) {
+            Cubo2C5H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("V")) {
+            Cubo2C5H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("A")) {
+            Cubo2C5H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("R")) {
+            Cubo2C6H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("B")) {
+            Cubo2C6H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("V")) {
+            Cubo2C6H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("A")) {
+            Cubo2C6H.setText("Amarillo");
+        }
+
+        // Cubo 3
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("R")) {
+            Cubo3C1H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("B")) {
+            Cubo3C1H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("V")) {
+            Cubo3C1H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("A")) {
+            Cubo3C1H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("R")) {
+            Cubo3C2H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("B")) {
+            Cubo3C2H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("V")) {
+            Cubo3C2H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("A")) {
+            Cubo3C2H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("R")) {
+            Cubo3C3H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("B")) {
+            Cubo3C3H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("V")) {
+            Cubo3C3H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("A")) {
+            Cubo3C3H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("R")) {
+            Cubo3C4H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("B")) {
+            Cubo3C4H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("V")) {
+            Cubo3C4H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("A")) {
+            Cubo3C4H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("R")) {
+            Cubo3C5H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("B")) {
+            Cubo3C5H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("V")) {
+            Cubo3C5H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("A")) {
+            Cubo3C5H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("R")) {
+            Cubo3C6H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("B")) {
+            Cubo3C6H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("V")) {
+            Cubo3C6H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("A")) {
+            Cubo3C6H.setText("Amarillo");
+        }
+
+        // Cubo 4
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("R")) {
+            Cubo4C1H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("B")) {
+            Cubo4C1H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("V")) {
+            Cubo4C1H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("A")) {
+            Cubo4C1H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("R")) {
+            Cubo4C2H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("B")) {
+            Cubo4C2H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("V")) {
+            Cubo4C2H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("A")) {
+            Cubo4C2H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("R")) {
+            Cubo4C3H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("B")) {
+            Cubo4C3H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("V")) {
+            Cubo4C3H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("A")) {
+            Cubo4C3H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("R")) {
+            Cubo4C4H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("B")) {
+            Cubo4C4H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("V")) {
+            Cubo4C4H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("A")) {
+            Cubo4C4H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("R")) {
+            Cubo4C5H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("B")) {
+            Cubo4C5H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("V")) {
+            Cubo4C5H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("A")) {
+            Cubo4C5H.setText("Amarillo");
+        }
+
+        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("R")) {
+            Cubo4C6H.setText("Rojo");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("B")) {
+            Cubo4C6H.setText("Blanco");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("V")) {
+            Cubo4C6H.setText("Verde");
+        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("A")) {
+            Cubo4C6H.setText("Amarillo");
+        }
+
+        //Aplicar colores en pestaña de Historial
+        //Cubo 1
+        Color C1 = null;
+        if (Cubo1C1H.getText().equals("Rojo")) {
+            C1 = new Color(155, 22, 57);
+            Cubo1C1G1.setText("R");
+            Cubo1C1G1.setBackground(C1);
+
+        } else if (Cubo1C1H.getText().equals("Blanco")) {
+            C1 = new Color(255, 255, 255);
+            Cubo1C1G1.setText("B");
+            Cubo1C1G1.setBackground(C1);
+
+        } else if (Cubo1C1H.getText().equals("Verde")) {
+            C1 = new Color(16, 175, 107);
+            Cubo1C1G1.setText("V");
+            Cubo1C1G1.setBackground(C1);
+
+        } else if (Cubo1C1H.getText().equals("Amarillo")) {
+            C1 = new Color(255, 234, 78);
+            Cubo1C1G1.setText("A");
+            Cubo1C1G1.setBackground(C1);
+
+        }
+
+        Color C2 = null;
+        if (Cubo1C2H.getText().equals("Rojo")) {
+            C2 = new Color(155, 22, 57);
+            Cubo1C2G1.setText("R");
+            Cubo1C2G1.setBackground(C2);
+
+        } else if (Cubo1C2H.getText().equals("Blanco")) {
+            C2 = new Color(255, 255, 255);
+            Cubo1C2G1.setText("B");
+            Cubo1C2G1.setBackground(C2);
+
+        } else if (Cubo1C2H.getText().equals("Verde")) {
+            C2 = new Color(16, 175, 107);
+            Cubo1C2G1.setText("V");
+            Cubo1C2G1.setBackground(C2);
+
+        } else if (Cubo1C2H.getText().equals("Amarillo")) {
+            C2 = new Color(255, 234, 78);
+            Cubo1C2G1.setText("A");
+            Cubo1C2G1.setBackground(C2);
+
+        }
+
+        Color C3 = null;
+        if (Cubo1C3H.getText().equals("Rojo")) {
+            C3 = new Color(155, 22, 57);
+            Cubo1C3G1.setText("R");
+            Cubo1C3G1.setBackground(C3);
+
+        } else if (Cubo1C3H.getText().equals("Blanco")) {
+            C3 = new Color(255, 255, 255);
+            Cubo1C3G1.setText("B");
+            Cubo1C3G1.setBackground(C3);
+
+        } else if (Cubo1C3H.getText().equals("Verde")) {
+            C3 = new Color(16, 175, 107);
+            Cubo1C3G1.setText("V");
+            Cubo1C3G1.setBackground(C3);
+
+        } else if (Cubo1C3H.getText().equals("Amarillo")) {
+            C3 = new Color(255, 234, 78);
+            Cubo1C3G1.setText("A");
+            Cubo1C3G1.setBackground(C3);
+
+        }
+
+        Color C4 = null;
+        if (Cubo1C4H.getText().equals("Rojo")) {
+            C4 = new Color(155, 22, 57);
+            Cubo1C4G1.setText("R");
+            Cubo1C4G1.setBackground(C4);
+
+        } else if (Cubo1C4H.getText().equals("Blanco")) {
+            C4 = new Color(255, 255, 255);
+            Cubo1C4G1.setText("B");
+            Cubo1C4G1.setBackground(C4);
+
+        } else if (Cubo1C4H.getText().equals("Verde")) {
+            C4 = new Color(16, 175, 107);
+            Cubo1C4G1.setText("V");
+            Cubo1C4G1.setBackground(C4);
+
+        } else if (Cubo1C4H.getText().equals("Amarillo")) {
+            C4 = new Color(255, 234, 78);
+            Cubo1C4G1.setText("A");
+            Cubo1C4G1.setBackground(C4);
+
+        }
+
+        Color C5 = null;
+        if (Cubo1C5H.getText().equals("Rojo")) {
+            C5 = new Color(155, 22, 57);
+            Cubo1C5G1.setText("R");
+            Cubo1C5G1.setBackground(C5);
+
+        } else if (Cubo1C5H.getText().equals("Blanco")) {
+            C5 = new Color(255, 255, 255);
+            Cubo1C5G1.setText("B");
+            Cubo1C5G1.setBackground(C5);
+
+        } else if (Cubo1C5H.getText().equals("Verde")) {
+            C5 = new Color(16, 175, 107);
+            Cubo1C5G1.setText("V");
+            Cubo1C5G1.setBackground(C5);
+
+        } else if (Cubo1C5H.getText().equals("Amarillo")) {
+            C5 = new Color(255, 234, 78);
+            Cubo1C5G1.setText("A");
+            Cubo1C5G1.setBackground(C5);
+
+        }
+
+        Color C6 = null;
+        if (Cubo1C6H.getText().equals("Rojo")) {
+            C6 = new Color(155, 22, 57);
+            Cubo1C6G1.setText("R");
+            Cubo1C6G1.setBackground(C6);
+
+        } else if (Cubo1C6H.getText().equals("Blanco")) {
+            C6 = new Color(255, 255, 255);
+            Cubo1C6G1.setText("B");
+            Cubo1C6G1.setBackground(C6);
+
+        } else if (Cubo1C6H.getText().equals("Verde")) {
+            C6 = new Color(16, 175, 107);
+            Cubo1C6G1.setText("V");
+            Cubo1C6G1.setBackground(C6);
+
+        } else if (Cubo1C6H.getText().equals("Amarillo")) {
+            C6 = new Color(255, 234, 78);
+            Cubo1C6G1.setText("A");
+            Cubo1C6G1.setBackground(C6);
+
+        }
+
+        //Cubo 2
+        C1 = null;
+        if (Cubo2C1H.getText().equals("Rojo")) {
+            C1 = new Color(155, 22, 57);
+            Cubo2C1G1.setText("R");
+            Cubo2C1G1.setBackground(C1);
+
+        } else if (Cubo2C1H.getText().equals("Blanco")) {
+            C1 = new Color(255, 255, 255);
+            Cubo2C1G1.setText("B");
+            Cubo2C1G1.setBackground(C1);
+
+        } else if (Cubo2C1H.getText().equals("Verde")) {
+            C1 = new Color(16, 175, 107);
+            Cubo2C1G1.setText("V");
+            Cubo2C1G1.setBackground(C1);
+
+        } else if (Cubo2C1H.getText().equals("Amarillo")) {
+            C1 = new Color(255, 234, 78);
+            Cubo2C1G1.setText("A");
+            Cubo2C1G1.setBackground(C1);
+
+        }
+
+        C2 = null;
+        if (Cubo2C2H.getText().equals("Rojo")) {
+            C2 = new Color(155, 22, 57);
+            Cubo2C2G1.setText("R");
+            Cubo2C2G1.setBackground(C2);
+
+        } else if (Cubo2C2H.getText().equals("Blanco")) {
+            C2 = new Color(255, 255, 255);
+            Cubo2C2G1.setText("B");
+            Cubo2C2G1.setBackground(C2);
+
+        } else if (Cubo2C2H.getText().equals("Verde")) {
+            C2 = new Color(16, 175, 107);
+            Cubo2C2G1.setText("V");
+            Cubo2C2G1.setBackground(C2);
+
+        } else if (Cubo2C2H.getText().equals("Amarillo")) {
+            C2 = new Color(255, 234, 78);
+            Cubo2C2G1.setText("A");
+            Cubo2C2G1.setBackground(C2);
+
+        }
+
+        C3 = null;
+        if (Cubo2C3H.getText().equals("Rojo")) {
+            C3 = new Color(155, 22, 57);
+            Cubo2C3G1.setText("R");
+            Cubo2C3G1.setBackground(C3);
+
+        } else if (Cubo2C3H.getText().equals("Blanco")) {
+            C3 = new Color(255, 255, 255);
+            Cubo2C3G1.setText("B");
+            Cubo2C3G1.setBackground(C3);
+
+        } else if (Cubo2C3H.getText().equals("Verde")) {
+            C3 = new Color(16, 175, 107);
+            Cubo2C3G1.setText("V");
+            Cubo2C3G1.setBackground(C3);
+
+        } else if (Cubo2C3H.getText().equals("Amarillo")) {
+            C3 = new Color(255, 234, 78);
+            Cubo2C3G1.setText("A");
+            Cubo2C3G1.setBackground(C3);
+
+        }
+
+        C4 = null;
+        if (Cubo2C4H.getText().equals("Rojo")) {
+            C4 = new Color(155, 22, 57);
+            Cubo2C4G1.setText("R");
+            Cubo2C4G1.setBackground(C4);
+
+        } else if (Cubo2C4H.getText().equals("Blanco")) {
+            C4 = new Color(255, 255, 255);
+            Cubo2C4G1.setText("B");
+            Cubo2C4G1.setBackground(C4);
+
+        } else if (Cubo2C4H.getText().equals("Verde")) {
+            C4 = new Color(16, 175, 107);
+            Cubo2C4G1.setText("V");
+            Cubo2C4G1.setBackground(C4);
+
+        } else if (Cubo2C4H.getText().equals("Amarillo")) {
+            C4 = new Color(255, 234, 78);
+            Cubo2C4G1.setText("A");
+            Cubo2C4G1.setBackground(C4);
+
+        }
+
+        C5 = null;
+        if (Cubo2C5H.getText().equals("Rojo")) {
+            C5 = new Color(155, 22, 57);
+            Cubo2C5G1.setText("R");
+            Cubo2C5G1.setBackground(C5);
+
+        } else if (Cubo2C5H.getText().equals("Blanco")) {
+            C5 = new Color(255, 255, 255);
+            Cubo2C5G1.setText("B");
+            Cubo2C5G1.setBackground(C5);
+
+        } else if (Cubo2C5H.getText().equals("Verde")) {
+            C5 = new Color(16, 175, 107);
+            Cubo2C5G1.setText("V");
+            Cubo2C5G1.setBackground(C5);
+
+        } else if (Cubo2C5H.getText().equals("Amarillo")) {
+            C5 = new Color(255, 234, 78);
+            Cubo2C5G1.setText("A");
+            Cubo2C5G1.setBackground(C5);
+
+        }
+
+        C6 = null;
+        if (Cubo2C6H.getText().equals("Rojo")) {
+            C6 = new Color(155, 22, 57);
+            Cubo2C6G1.setText("R");
+            Cubo2C6G1.setBackground(C6);
+
+        } else if (Cubo2C6H.getText().equals("Blanco")) {
+            C6 = new Color(255, 255, 255);
+            Cubo2C6G1.setText("B");
+            Cubo2C6G1.setBackground(C6);
+
+        } else if (Cubo2C6H.getText().equals("Verde")) {
+            C6 = new Color(16, 175, 107);
+            Cubo2C6G1.setText("V");
+            Cubo2C6G1.setBackground(C6);
+
+        } else if (Cubo2C6H.getText().equals("Amarillo")) {
+            C6 = new Color(255, 234, 78);
+            Cubo2C6G1.setText("A");
+            Cubo2C6G1.setBackground(C6);
+
+        }
+
+        //Cubo 3
+        C1 = null;
+        if (Cubo3C1H.getText().equals("Rojo")) {
+            C1 = new Color(155, 22, 57);
+            Cubo3C1G1.setText("R");
+            Cubo3C1G1.setBackground(C1);
+
+        } else if (Cubo3C1H.getText().equals("Blanco")) {
+            C1 = new Color(255, 255, 255);
+            Cubo3C1G1.setText("B");
+            Cubo3C1G1.setBackground(C1);
+
+        } else if (Cubo3C1H.getText().equals("Verde")) {
+            C1 = new Color(16, 175, 107);
+            Cubo3C1G1.setText("V");
+            Cubo3C1G1.setBackground(C1);
+
+        } else if (Cubo3C1H.getText().equals("Amarillo")) {
+            C1 = new Color(255, 234, 78);
+            Cubo3C1G1.setText("A");
+            Cubo3C1G1.setBackground(C1);
+
+        }
+
+        C2 = null;
+        if (Cubo3C2H.getText().equals("Rojo")) {
+            C2 = new Color(155, 22, 57);
+            Cubo3C2G1.setText("R");
+            Cubo3C2G1.setBackground(C2);
+
+        } else if (Cubo3C2H.getText().equals("Blanco")) {
+            C2 = new Color(255, 255, 255);
+            Cubo3C2G1.setText("B");
+            Cubo3C2G1.setBackground(C2);
+
+        } else if (Cubo3C2H.getText().equals("Verde")) {
+            C2 = new Color(16, 175, 107);
+            Cubo3C2G1.setText("V");
+            Cubo3C2G1.setBackground(C2);
+
+        } else if (Cubo3C2H.getText().equals("Amarillo")) {
+            C2 = new Color(255, 234, 78);
+            Cubo3C2G1.setText("A");
+            Cubo3C2G1.setBackground(C2);
+
+        }
+
+        C3 = null;
+        if (Cubo3C3H.getText().equals("Rojo")) {
+            C3 = new Color(155, 22, 57);
+            Cubo3C3G1.setText("R");
+            Cubo3C3G1.setBackground(C3);
+
+        } else if (Cubo3C3H.getText().equals("Blanco")) {
+            C3 = new Color(255, 255, 255);
+            Cubo3C3G1.setText("B");
+            Cubo3C3G1.setBackground(C3);
+
+        } else if (Cubo3C3H.getText().equals("Verde")) {
+            C3 = new Color(16, 175, 107);
+            Cubo3C3G1.setText("V");
+            Cubo3C3G1.setBackground(C3);
+
+        } else if (Cubo3C3H.getText().equals("Amarillo")) {
+            C3 = new Color(255, 234, 78);
+            Cubo3C3G1.setText("A");
+            Cubo3C3G1.setBackground(C3);
+
+        }
+
+        C4 = null;
+        if (Cubo3C4H.getText().equals("Rojo")) {
+            C4 = new Color(155, 22, 57);
+            Cubo3C4G1.setText("R");
+            Cubo3C4G1.setBackground(C4);
+
+        } else if (Cubo3C4H.getText().equals("Blanco")) {
+            C4 = new Color(255, 255, 255);
+            Cubo3C4G1.setText("B");
+            Cubo3C4G1.setBackground(C4);
+
+        } else if (Cubo3C4H.getText().equals("Verde")) {
+            C4 = new Color(16, 175, 107);
+            Cubo3C4G1.setText("V");
+            Cubo3C4G1.setBackground(C4);
+
+        } else if (Cubo3C4H.getText().equals("Amarillo")) {
+            C4 = new Color(255, 234, 78);
+            Cubo3C4G1.setText("A");
+            Cubo3C4G1.setBackground(C4);
+
+        }
+
+        C5 = null;
+        if (Cubo3C5H.getText().equals("Rojo")) {
+            C5 = new Color(155, 22, 57);
+            Cubo3C5G1.setText("R");
+            Cubo3C5G1.setBackground(C5);
+
+        } else if (Cubo3C5H.getText().equals("Blanco")) {
+            C5 = new Color(255, 255, 255);
+            Cubo3C5G1.setText("B");
+            Cubo3C5G1.setBackground(C5);
+
+        } else if (Cubo3C5H.getText().equals("Verde")) {
+            C5 = new Color(16, 175, 107);
+            Cubo3C5G1.setText("V");
+            Cubo3C5G1.setBackground(C5);
+
+        } else if (Cubo3C5H.getText().equals("Amarillo")) {
+            C5 = new Color(255, 234, 78);
+            Cubo3C5G1.setText("A");
+            Cubo3C5G1.setBackground(C5);
+
+        }
+
+        C6 = null;
+        if (Cubo3C6H.getText().equals("Rojo")) {
+            C6 = new Color(155, 22, 57);
+            Cubo3C6G1.setText("R");
+            Cubo3C6G1.setBackground(C6);
+
+        } else if (Cubo3C6H.getText().equals("Blanco")) {
+            C6 = new Color(255, 255, 255);
+            Cubo3C6G1.setText("B");
+            Cubo3C6G1.setBackground(C6);
+
+        } else if (Cubo3C6H.getText().equals("Verde")) {
+            C6 = new Color(16, 175, 107);
+            Cubo3C6G1.setText("V");
+            Cubo3C6G1.setBackground(C6);
+
+        } else if (Cubo3C6H.getText().equals("Amarillo")) {
+            C6 = new Color(255, 234, 78);
+            Cubo3C6G1.setText("A");
+            Cubo3C6G1.setBackground(C6);
+
+        }
+
+        //Cubo 4
+        C1 = null;
+        if (Cubo4C1H.getText().equals("Rojo")) {
+            C1 = new Color(155, 22, 57);
+            Cubo4C1G1.setText("R");
+            Cubo4C1G1.setBackground(C1);
+
+        } else if (Cubo4C1H.getText().equals("Blanco")) {
+            C1 = new Color(255, 255, 255);
+            Cubo4C1G1.setText("B");
+            Cubo4C1G1.setBackground(C1);
+
+        } else if (Cubo4C1H.getText().equals("Verde")) {
+            C1 = new Color(16, 175, 107);
+            Cubo4C1G1.setText("V");
+            Cubo4C1G1.setBackground(C1);
+
+        } else if (Cubo4C1H.getText().equals("Amarillo")) {
+            C1 = new Color(255, 234, 78);
+            Cubo4C1G1.setText("A");
+            Cubo4C1G1.setBackground(C1);
+
+        }
+
+        C2 = null;
+        if (Cubo4C2H.getText().equals("Rojo")) {
+            C2 = new Color(155, 22, 57);
+            Cubo4C2G1.setText("R");
+            Cubo4C2G1.setBackground(C2);
+
+        } else if (Cubo4C2H.getText().equals("Blanco")) {
+            C2 = new Color(255, 255, 255);
+            Cubo4C2G1.setText("B");
+            Cubo4C2G1.setBackground(C2);
+
+        } else if (Cubo4C2H.getText().equals("Verde")) {
+            C2 = new Color(16, 175, 107);
+            Cubo4C2G1.setText("V");
+            Cubo4C2G1.setBackground(C2);
+
+        } else if (Cubo4C2H.getText().equals("Amarillo")) {
+            C2 = new Color(255, 234, 78);
+            Cubo4C2G1.setText("A");
+            Cubo4C2G1.setBackground(C2);
+
+        }
+
+        C3 = null;
+        if (Cubo4C3H.getText().equals("Rojo")) {
+            C3 = new Color(155, 22, 57);
+            Cubo4C3G1.setText("R");
+            Cubo4C3G1.setBackground(C3);
+
+        } else if (Cubo4C3H.getText().equals("Blanco")) {
+            C3 = new Color(255, 255, 255);
+            Cubo4C3G1.setText("B");
+            Cubo4C3G1.setBackground(C3);
+
+        } else if (Cubo4C3H.getText().equals("Verde")) {
+            C3 = new Color(16, 175, 107);
+            Cubo4C3G1.setText("V");
+            Cubo4C3G1.setBackground(C3);
+
+        } else if (Cubo4C3H.getText().equals("Amarillo")) {
+            C3 = new Color(255, 234, 78);
+            Cubo4C3G1.setText("A");
+            Cubo4C3G1.setBackground(C3);
+
+        }
+
+        C4 = null;
+        if (Cubo4C4H.getText().equals("Rojo")) {
+            C4 = new Color(155, 22, 57);
+            Cubo4C4G1.setText("R");
+            Cubo4C4G1.setBackground(C4);
+
+        } else if (Cubo4C4H.getText().equals("Blanco")) {
+            C4 = new Color(255, 255, 255);
+            Cubo4C4G1.setText("B");
+            Cubo4C4G1.setBackground(C4);
+
+        } else if (Cubo4C4H.getText().equals("Verde")) {
+            C4 = new Color(16, 175, 107);
+            Cubo4C4G1.setText("V");
+            Cubo4C4G1.setBackground(C4);
+
+        } else if (Cubo4C4H.getText().equals("Amarillo")) {
+            C4 = new Color(255, 234, 78);
+            Cubo4C4G1.setText("A");
+            Cubo4C4G1.setBackground(C4);
+
+        }
+
+        C5 = null;
+        if (Cubo4C5H.getText().equals("Rojo")) {
+            C5 = new Color(155, 22, 57);
+            Cubo4C5G1.setText("R");
+            Cubo4C5G1.setBackground(C5);
+
+        } else if (Cubo4C5H.getText().equals("Blanco")) {
+            C5 = new Color(255, 255, 255);
+            Cubo4C5G1.setText("B");
+            Cubo4C5G1.setBackground(C5);
+
+        } else if (Cubo4C5H.getText().equals("Verde")) {
+            C5 = new Color(16, 175, 107);
+            Cubo4C5G1.setText("V");
+            Cubo4C5G1.setBackground(C5);
+
+        } else if (Cubo4C5H.getText().equals("Amarillo")) {
+            C5 = new Color(255, 234, 78);
+            Cubo4C5G1.setText("A");
+            Cubo4C5G1.setBackground(C5);
+
+        }
+
+        C6 = null;
+        if (Cubo4C6H.getText().equals("Rojo")) {
+            C6 = new Color(155, 22, 57);
+            Cubo4C6G1.setText("R");
+            Cubo4C6G1.setBackground(C6);
+
+        } else if (Cubo4C6H.getText().equals("Blanco")) {
+            C6 = new Color(255, 255, 255);
+            Cubo4C6G1.setText("B");
+            Cubo4C6G1.setBackground(C6);
+
+        } else if (Cubo4C6H.getText().equals("Verde")) {
+            C6 = new Color(16, 175, 107);
+            Cubo4C6G1.setText("V");
+            Cubo4C6G1.setBackground(C6);
+
+        } else if (Cubo4C6H.getText().equals("Amarillo")) {
+            C6 = new Color(255, 234, 78);
+            Cubo4C6G1.setText("A");
+            Cubo4C6G1.setBackground(C6);
+
+        }
+    }//GEN-LAST:event_noPartidaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -10841,112 +13095,160 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JComboBox<String> Cubo1C1;
     private javax.swing.JLabel Cubo1C1E;
     private javax.swing.JLabel Cubo1C1G;
+    private javax.swing.JLabel Cubo1C1G1;
+    private javax.swing.JLabel Cubo1C1H;
     private javax.swing.JLabel Cubo1C1J;
     private javax.swing.JComboBox<String> Cubo1C2;
     private javax.swing.JLabel Cubo1C2G;
+    private javax.swing.JLabel Cubo1C2G1;
+    private javax.swing.JLabel Cubo1C2H;
     private javax.swing.JLabel Cubo1C2J;
     private javax.swing.JComboBox<String> Cubo1C3;
     private javax.swing.JLabel Cubo1C3E;
     private javax.swing.JLabel Cubo1C3G;
+    private javax.swing.JLabel Cubo1C3G1;
+    private javax.swing.JLabel Cubo1C3H;
     private javax.swing.JLabel Cubo1C3J;
     private javax.swing.JLabel Cubo1C3T;
     private javax.swing.JComboBox<String> Cubo1C4;
     private javax.swing.JLabel Cubo1C4E;
     private javax.swing.JLabel Cubo1C4G;
+    private javax.swing.JLabel Cubo1C4G1;
+    private javax.swing.JLabel Cubo1C4H;
     private javax.swing.JLabel Cubo1C4J;
     private javax.swing.JLabel Cubo1C4T;
     private javax.swing.JComboBox<String> Cubo1C5;
     private javax.swing.JLabel Cubo1C5E;
     private javax.swing.JLabel Cubo1C5G;
+    private javax.swing.JLabel Cubo1C5G1;
+    private javax.swing.JLabel Cubo1C5H;
     private javax.swing.JLabel Cubo1C5J;
     private javax.swing.JLabel Cubo1C5T;
     private javax.swing.JComboBox<String> Cubo1C6;
     private javax.swing.JLabel Cubo1C6E;
     private javax.swing.JLabel Cubo1C6G;
+    private javax.swing.JLabel Cubo1C6G1;
+    private javax.swing.JLabel Cubo1C6H;
     private javax.swing.JLabel Cubo1C6J;
     private javax.swing.JLabel Cubo1C6T;
     private javax.swing.JLabel Cubo1Lbl;
     private javax.swing.JComboBox<String> Cubo2C1;
     private javax.swing.JLabel Cubo2C1E;
     private javax.swing.JLabel Cubo2C1G;
+    private javax.swing.JLabel Cubo2C1G1;
+    private javax.swing.JLabel Cubo2C1H;
     private javax.swing.JLabel Cubo2C1J;
     private javax.swing.JComboBox<String> Cubo2C2;
     private javax.swing.JLabel Cubo2C2G;
+    private javax.swing.JLabel Cubo2C2G1;
+    private javax.swing.JLabel Cubo2C2H;
     private javax.swing.JLabel Cubo2C2J;
     private javax.swing.JComboBox<String> Cubo2C3;
     private javax.swing.JLabel Cubo2C3E;
     private javax.swing.JLabel Cubo2C3G;
+    private javax.swing.JLabel Cubo2C3G1;
+    private javax.swing.JLabel Cubo2C3H;
     private javax.swing.JLabel Cubo2C3J;
     private javax.swing.JLabel Cubo2C3T;
     private javax.swing.JComboBox<String> Cubo2C4;
     private javax.swing.JLabel Cubo2C4E;
     private javax.swing.JLabel Cubo2C4G;
+    private javax.swing.JLabel Cubo2C4G1;
+    private javax.swing.JLabel Cubo2C4H;
     private javax.swing.JLabel Cubo2C4J;
     private javax.swing.JLabel Cubo2C4T;
     private javax.swing.JComboBox<String> Cubo2C5;
     private javax.swing.JLabel Cubo2C5E;
     private javax.swing.JLabel Cubo2C5G;
+    private javax.swing.JLabel Cubo2C5G1;
+    private javax.swing.JLabel Cubo2C5H;
     private javax.swing.JLabel Cubo2C5J;
     private javax.swing.JLabel Cubo2C5T;
     private javax.swing.JComboBox<String> Cubo2C6;
     private javax.swing.JLabel Cubo2C6E;
     private javax.swing.JLabel Cubo2C6G;
+    private javax.swing.JLabel Cubo2C6G1;
+    private javax.swing.JLabel Cubo2C6H;
     private javax.swing.JLabel Cubo2C6J;
     private javax.swing.JLabel Cubo2C6T;
     private javax.swing.JLabel Cubo2Lbl;
     private javax.swing.JComboBox<String> Cubo3C1;
     private javax.swing.JLabel Cubo3C1E;
     private javax.swing.JLabel Cubo3C1G;
+    private javax.swing.JLabel Cubo3C1G1;
+    private javax.swing.JLabel Cubo3C1H;
     private javax.swing.JLabel Cubo3C1J;
     private javax.swing.JComboBox<String> Cubo3C2;
     private javax.swing.JLabel Cubo3C2G;
+    private javax.swing.JLabel Cubo3C2G1;
+    private javax.swing.JLabel Cubo3C2H;
     private javax.swing.JLabel Cubo3C2J;
     private javax.swing.JComboBox<String> Cubo3C3;
     private javax.swing.JLabel Cubo3C3E;
     private javax.swing.JLabel Cubo3C3G;
+    private javax.swing.JLabel Cubo3C3G1;
+    private javax.swing.JLabel Cubo3C3H;
     private javax.swing.JLabel Cubo3C3J;
     private javax.swing.JLabel Cubo3C3T;
     private javax.swing.JComboBox<String> Cubo3C4;
     private javax.swing.JLabel Cubo3C4E;
     private javax.swing.JLabel Cubo3C4G;
+    private javax.swing.JLabel Cubo3C4G1;
+    private javax.swing.JLabel Cubo3C4H;
     private javax.swing.JLabel Cubo3C4J;
     private javax.swing.JLabel Cubo3C4T;
     private javax.swing.JComboBox<String> Cubo3C5;
     private javax.swing.JLabel Cubo3C5E;
     private javax.swing.JLabel Cubo3C5G;
+    private javax.swing.JLabel Cubo3C5G1;
+    private javax.swing.JLabel Cubo3C5H;
     private javax.swing.JLabel Cubo3C5J;
     private javax.swing.JLabel Cubo3C5T;
     private javax.swing.JComboBox<String> Cubo3C6;
     private javax.swing.JLabel Cubo3C6E;
     private javax.swing.JLabel Cubo3C6G;
+    private javax.swing.JLabel Cubo3C6G1;
+    private javax.swing.JLabel Cubo3C6H;
     private javax.swing.JLabel Cubo3C6J;
     private javax.swing.JLabel Cubo3C6T;
     private javax.swing.JLabel Cubo3Lbl;
     private javax.swing.JComboBox<String> Cubo4C1;
     private javax.swing.JLabel Cubo4C1E;
     private javax.swing.JLabel Cubo4C1G;
+    private javax.swing.JLabel Cubo4C1G1;
+    private javax.swing.JLabel Cubo4C1H;
     private javax.swing.JLabel Cubo4C1J;
     private javax.swing.JComboBox<String> Cubo4C2;
     private javax.swing.JLabel Cubo4C2G;
+    private javax.swing.JLabel Cubo4C2G1;
+    private javax.swing.JLabel Cubo4C2H;
     private javax.swing.JLabel Cubo4C2J;
     private javax.swing.JComboBox<String> Cubo4C3;
     private javax.swing.JLabel Cubo4C3E;
     private javax.swing.JLabel Cubo4C3G;
+    private javax.swing.JLabel Cubo4C3G1;
+    private javax.swing.JLabel Cubo4C3H;
     private javax.swing.JLabel Cubo4C3J;
     private javax.swing.JLabel Cubo4C3T;
     private javax.swing.JComboBox<String> Cubo4C4;
     private javax.swing.JLabel Cubo4C4E;
     private javax.swing.JLabel Cubo4C4G;
+    private javax.swing.JLabel Cubo4C4G1;
+    private javax.swing.JLabel Cubo4C4H;
     private javax.swing.JLabel Cubo4C4J;
     private javax.swing.JLabel Cubo4C4T;
     private javax.swing.JComboBox<String> Cubo4C5;
     private javax.swing.JLabel Cubo4C5E;
     private javax.swing.JLabel Cubo4C5G;
+    private javax.swing.JLabel Cubo4C5G1;
+    private javax.swing.JLabel Cubo4C5H;
     private javax.swing.JLabel Cubo4C5J;
     private javax.swing.JLabel Cubo4C5T;
     private javax.swing.JComboBox<String> Cubo4C6;
     private javax.swing.JLabel Cubo4C6E;
     private javax.swing.JLabel Cubo4C6G;
+    private javax.swing.JLabel Cubo4C6G1;
+    private javax.swing.JLabel Cubo4C6H;
     private javax.swing.JLabel Cubo4C6J;
     private javax.swing.JLabel Cubo4C6T;
     private javax.swing.JLabel Cubo4Lbl;
@@ -10961,10 +13263,12 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JButton antihorarioCubo2;
     private javax.swing.JButton antihorarioCubo3;
     private javax.swing.JButton antihorarioCubo4;
+    private javax.swing.JButton aplicarBtn;
     private javax.swing.JButton arribaCubo1;
     private javax.swing.JButton arribaCubo2;
     private javax.swing.JButton arribaCubo3;
     private javax.swing.JButton arribaCubo4;
+    private javax.swing.JLabel checkLbl;
     private javax.swing.JButton derechaCubo1;
     private javax.swing.JButton derechaCubo2;
     private javax.swing.JButton derechaCubo3;
@@ -10993,17 +13297,21 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
@@ -11023,16 +13331,51 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
+    private javax.swing.JSeparator jSeparator12;
+    private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -11040,13 +13383,16 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JButton jugarBtn;
+    private javax.swing.JComboBox<String> noPartida;
     private javax.swing.JLabel porLoTanto1;
     private javax.swing.JLabel porLoTanto2;
     private javax.swing.JButton resolverBtn;
     private javax.swing.JLabel resueltoLbl;
+    private javax.swing.JLabel solucionLbl;
     // End of variables declaration//GEN-END:variables
 }
