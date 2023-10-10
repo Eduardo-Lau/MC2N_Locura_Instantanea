@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.ImageIcon;
 import javax.swing.JList;
-import javax.swing.ListCellRenderer;
 import javax.swing.Timer;
 
 /**
@@ -921,7 +920,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 12, 260));
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 10, 260));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 10, 260));
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, 10, 260));
@@ -935,13 +934,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel33.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 60, -1));
 
+        Cubo1C1.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo1C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C1ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo1C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 97, -1));
+        jPanel1.add(Cubo1C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 120, -1));
 
         jLabel34.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel34.setText("Cara 2");
@@ -949,13 +949,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel34.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 60, -1));
 
+        Cubo1C2.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo1C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C2ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo1C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 97, -1));
+        jPanel1.add(Cubo1C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 120, -1));
 
         jLabel35.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel35.setText("Cara 3");
@@ -963,13 +964,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel35.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 60, -1));
 
+        Cubo1C3.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo1C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C3ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo1C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 97, -1));
+        jPanel1.add(Cubo1C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 120, -1));
 
         jLabel36.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel36.setText("Cara 4");
@@ -977,13 +979,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel36.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 60, -1));
 
+        Cubo1C4.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo1C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C4ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo1C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 97, -1));
+        jPanel1.add(Cubo1C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 120, -1));
 
         jLabel37.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel37.setText("Cara 5");
@@ -991,13 +994,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel37.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 60, -1));
 
+        Cubo1C5.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo1C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C5ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo1C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 97, -1));
+        jPanel1.add(Cubo1C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 120, -1));
 
         jLabel38.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel38.setText("Cara 6");
@@ -1005,13 +1009,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel38.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 60, -1));
 
+        Cubo1C6.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo1C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo1C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo1C6ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo1C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 97, -1));
+        jPanel1.add(Cubo1C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 120, -1));
 
         jLabel21.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel21.setText("Cara 1");
@@ -1019,13 +1024,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel21.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 60, -1));
 
+        Cubo3C1.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo3C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C1ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo3C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, 97, -1));
+        jPanel1.add(Cubo3C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 120, -1));
 
         jLabel22.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel22.setText("Cara 2");
@@ -1033,13 +1039,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel22.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 60, -1));
 
+        Cubo3C2.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo3C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C2ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo3C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, 97, -1));
+        jPanel1.add(Cubo3C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 120, -1));
 
         jLabel23.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel23.setText("Cara 3");
@@ -1047,13 +1054,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel23.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 60, -1));
 
+        Cubo3C3.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo3C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C3ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo3C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 97, -1));
+        jPanel1.add(Cubo3C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 170, 120, -1));
 
         jLabel24.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel24.setText("Cara 4");
@@ -1061,13 +1069,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel24.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 60, -1));
 
+        Cubo3C4.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo3C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C4ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo3C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 210, 97, -1));
+        jPanel1.add(Cubo3C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 120, -1));
 
         jLabel25.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel25.setText("Cara 5");
@@ -1075,13 +1084,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel25.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, 60, -1));
 
+        Cubo3C5.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo3C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C5ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo3C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 97, -1));
+        jPanel1.add(Cubo3C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 250, 120, -1));
 
         jLabel26.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel26.setText("Cara 6");
@@ -1089,13 +1099,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel26.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, 60, -1));
 
+        Cubo3C6.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo3C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo3C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo3C6ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo3C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 290, 97, -1));
+        jPanel1.add(Cubo3C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 120, -1));
 
         jLabel39.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel39.setText("Cara 1");
@@ -1103,13 +1114,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel39.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, 60, -1));
 
+        Cubo4C1.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo4C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C1ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo4C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 90, 97, -1));
+        jPanel1.add(Cubo4C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 90, 120, -1));
 
         jLabel40.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel40.setText("Cara 2");
@@ -1117,13 +1129,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel40.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 140, 60, -1));
 
+        Cubo4C2.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo4C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C2ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo4C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 130, 97, -1));
+        jPanel1.add(Cubo4C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 130, 120, -1));
 
         jLabel41.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel41.setText("Cara 3");
@@ -1131,13 +1144,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel41.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, 60, -1));
 
+        Cubo4C3.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo4C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C3ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo4C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 170, 97, -1));
+        jPanel1.add(Cubo4C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 170, 120, -1));
 
         jLabel42.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel42.setText("Cara 4");
@@ -1145,13 +1159,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel42.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, 60, -1));
 
+        Cubo4C4.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo4C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C4ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo4C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 210, 97, -1));
+        jPanel1.add(Cubo4C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 210, 120, -1));
 
         jLabel43.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel43.setText("Cara 5");
@@ -1159,13 +1174,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel43.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 60, -1));
 
+        Cubo4C5.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo4C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C5ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo4C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 250, 97, -1));
+        jPanel1.add(Cubo4C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 250, 120, -1));
 
         jLabel44.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel44.setText("Cara 6");
@@ -1173,13 +1189,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel44.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 60, -1));
 
+        Cubo4C6.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo4C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo4C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo4C6ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo4C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 290, 97, -1));
+        jPanel1.add(Cubo4C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 290, 120, -1));
 
         jugarBtn.setBackground(new java.awt.Color(135, 146, 255));
         jugarBtn.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
@@ -1201,13 +1218,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel45.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 60, -1));
 
+        Cubo2C1.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo2C1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C1ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo2C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 97, -1));
+        jPanel1.add(Cubo2C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 120, -1));
 
         jLabel46.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel46.setText("Cara 2");
@@ -1215,13 +1233,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel46.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 60, -1));
 
+        Cubo2C2.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo2C2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C2ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo2C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 97, -1));
+        jPanel1.add(Cubo2C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 120, -1));
 
         jLabel47.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel47.setText("Cara 3");
@@ -1229,13 +1248,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel47.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 60, -1));
 
+        Cubo2C3.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo2C3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C3ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo2C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 97, -1));
+        jPanel1.add(Cubo2C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 120, -1));
 
         jLabel48.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel48.setText("Cara 4");
@@ -1243,13 +1263,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel48.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 60, -1));
 
+        Cubo2C4.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo2C4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C4ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo2C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 97, -1));
+        jPanel1.add(Cubo2C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 120, -1));
 
         jLabel49.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel49.setText("Cara 5");
@@ -1257,13 +1278,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel49.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 60, -1));
 
+        Cubo2C5.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo2C5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C5ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo2C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 97, -1));
+        jPanel1.add(Cubo2C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 120, -1));
 
         jLabel50.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel50.setText("Cara 6");
@@ -1271,13 +1293,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel50.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel1.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 60, -1));
 
+        Cubo2C6.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         Cubo2C6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Blanco", "Verde", "Amarillo" }));
         Cubo2C6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cubo2C6ActionPerformed(evt);
             }
         });
-        jPanel1.add(Cubo2C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 97, -1));
+        jPanel1.add(Cubo2C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 120, -1));
 
         genAleatorio.setBackground(new java.awt.Color(122, 37, 55));
         genAleatorio.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
@@ -8610,10 +8633,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         }
 
         mxGraphComponent graphComponentL = new mxGraphComponent(graphGL);
-
+        graphComponentL.setEnabled(false);
+        
         grafoGL.removeAll();
         grafoGL.add(graphComponentL);
-        graphComponentL.refresh();
         grafoGL.repaint();
 
         System.out.println("grafo GL actualizado");
@@ -8819,10 +8842,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         }
 
         mxGraphComponent graphComponent = new mxGraphComponent(graphG1);
-
+        graphComponent.setEnabled(false);
+        
         grafoG1.removeAll();
         grafoG1.add(graphComponent);
-        graphComponent.refresh();
         grafoG1.repaint();
 
         System.out.println("grafo G1 actualizado");
@@ -9026,6 +9049,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         }
 
         mxGraphComponent graphComponent = new mxGraphComponent(graphG2);
+        graphComponent.setEnabled(false);
+        
         grafoG2.removeAll();
         grafoG2.add(graphComponent);
 
