@@ -67,6 +67,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     boolean iniciado = false;
     boolean sigBtnPressed = false;
     boolean resuelto = false;
+    boolean reset = false;
     ImageIcon icono = new ImageIcon("Binarios\\logo.png");
 
     Point posCubo1Abs = new Point(260, 540);
@@ -872,6 +873,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C6H = new javax.swing.JLabel();
         checkLbl = new javax.swing.JLabel();
         jLabel79 = new javax.swing.JLabel();
+        borrarHistorial = new javax.swing.JButton();
         jLabel29 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
 
@@ -902,15 +904,15 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jLabel5.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel5.setText("Cubo 1");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 74, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 74, -1));
 
         jLabel6.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel6.setText("Cubo 2");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 74, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 74, -1));
 
         jLabel7.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel7.setText("Cubo 3");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 74, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 74, -1));
 
         jLabel8.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel8.setText("Cubo 4");
@@ -2479,15 +2481,15 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         solucionLbl.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         solucionLbl.setText("SI tiene solución");
-        jPanel4.add(solucionLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 16, 190, -1));
+        jPanel4.add(solucionLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(712, 16, 190, -1));
 
         jLabel19.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel19.setText("Cubo 2");
-        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 74, -1));
+        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 74, -1));
 
         jLabel20.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel20.setText("Cubo 3");
-        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 74, -1));
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 60, 74, -1));
 
         jLabel27.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel27.setText("Cubo 4");
@@ -2879,11 +2881,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 noPartidaActionPerformed(evt);
             }
         });
-        jPanel4.add(noPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 180, -1));
+        jPanel4.add(noPartida, new org.netbeans.lib.awtextra.AbsoluteConstraints(467, 10, 180, -1));
 
         jLabel78.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel78.setText("Cubo 1");
-        jPanel4.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 74, -1));
+        jPanel4.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 74, -1));
         jPanel4.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 45, 890, 10));
 
         Cubo1C1H.setBackground(new java.awt.Color(45, 46, 51));
@@ -3080,11 +3082,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         checkLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/check.png"))); // NOI18N
-        jPanel4.add(checkLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 30, 30));
+        jPanel4.add(checkLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 10, 30, 30));
 
         jLabel79.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel79.setText("Número de Partida:");
-        jPanel4.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 16, 190, -1));
+        jPanel4.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 16, 190, -1));
+
+        borrarHistorial.setBackground(new java.awt.Color(122, 37, 55));
+        borrarHistorial.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
+        borrarHistorial.setText("BORRAR HISTORIAL");
+        borrarHistorial.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        borrarHistorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                borrarHistorialActionPerformed(evt);
+            }
+        });
+        jPanel4.add(borrarHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 8, -1, 32));
 
         jTabbedPane1.addTab("Historial", jPanel4);
 
@@ -5005,7 +5018,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             BinariosOut();
             System.exit(0);
         } else {
-            
+
         }
     }//GEN-LAST:event_formWindowClosing
 
@@ -5393,7 +5406,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             boolean solucion = resolverJuegoSilent();
             partidas.add(iPartida, new Partidas(cubo1temp, cubo2temp, cubo3temp, cubo4temp, solucion));
-            System.out.println(partidas.get(iPartida).solucion);
 
             iPartida++;
             noPartida.addItem(String.valueOf(iPartida));
@@ -5438,8 +5450,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         } else {
             sigBtnPressed = true;
-            resuelto = false;
-            resueltoLbl.setVisible(false);
             jTabbedPane1.setSelectedIndex(1);
 
             // Cubo 1
@@ -5498,6 +5508,73 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C6J.setText(Cubo4Bin.Cubo4C6JN);
             Cubo4C6J.setBackground(Cubo4Bin.Cubo4C6JB);
 
+            if (reset == true || iPartida == 0) {
+                Cubos cubo1temp = new Cubos();
+                cubo1temp.C1 = Cubo1.C1;
+                cubo1temp.C2 = Cubo1.C2;
+                cubo1temp.C3 = Cubo1.C3;
+                cubo1temp.C4 = Cubo1.C4;
+                cubo1temp.C5 = Cubo1.C5;
+                cubo1temp.C6 = Cubo1.C6;
+
+                cubo1temp.C1I = Cubo1.C1I;
+                cubo1temp.C2I = Cubo1.C2I;
+                cubo1temp.C3I = Cubo1.C3I;
+                cubo1temp.C4I = Cubo1.C4I;
+                cubo1temp.C5I = Cubo1.C5I;
+                cubo1temp.C6I = Cubo1.C6I;
+
+                Cubos cubo2temp = new Cubos();
+                cubo2temp.C1 = Cubo2.C1;
+                cubo2temp.C2 = Cubo2.C2;
+                cubo2temp.C3 = Cubo2.C3;
+                cubo2temp.C4 = Cubo2.C4;
+                cubo2temp.C5 = Cubo2.C5;
+                cubo2temp.C6 = Cubo2.C6;
+
+                cubo2temp.C1I = Cubo2.C1I;
+                cubo2temp.C2I = Cubo2.C2I;
+                cubo2temp.C3I = Cubo2.C3I;
+                cubo2temp.C4I = Cubo2.C4I;
+                cubo2temp.C5I = Cubo2.C5I;
+                cubo2temp.C6I = Cubo2.C6I;
+
+                Cubos cubo3temp = new Cubos();
+                cubo3temp.C1 = Cubo3.C1;
+                cubo3temp.C2 = Cubo3.C2;
+                cubo3temp.C3 = Cubo3.C3;
+                cubo3temp.C4 = Cubo3.C4;
+                cubo3temp.C5 = Cubo3.C5;
+                cubo3temp.C6 = Cubo3.C6;
+
+                cubo3temp.C1I = Cubo3.C1I;
+                cubo3temp.C2I = Cubo3.C2I;
+                cubo3temp.C3I = Cubo3.C3I;
+                cubo3temp.C4I = Cubo3.C4I;
+                cubo3temp.C5I = Cubo3.C5I;
+                cubo3temp.C6I = Cubo3.C6I;
+
+                Cubos cubo4temp = new Cubos();
+                cubo4temp.C1 = Cubo4.C1;
+                cubo4temp.C2 = Cubo4.C2;
+                cubo4temp.C3 = Cubo4.C3;
+                cubo4temp.C4 = Cubo4.C4;
+                cubo4temp.C5 = Cubo4.C5;
+                cubo4temp.C6 = Cubo4.C6;
+
+                cubo4temp.C1I = Cubo4.C1I;
+                cubo4temp.C2I = Cubo4.C2I;
+                cubo4temp.C3I = Cubo4.C3I;
+                cubo4temp.C4I = Cubo4.C4I;
+                cubo4temp.C5I = Cubo4.C5I;
+                cubo4temp.C6I = Cubo4.C6I;
+
+                boolean solucion = resolverJuegoSilent();
+                partidas.add(iPartida, new Partidas(cubo1temp, cubo2temp, cubo3temp, cubo4temp, solucion));
+
+                iPartida++;
+                noPartida.addItem(String.valueOf(iPartida));
+            }
             actualTorre();
 
             boolean condicion1 = ((!Cubo1C3J.getBackground().equals(Cubo2C3J.getBackground())
@@ -5536,7 +5613,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 resueltoLbl.setVisible(false);
                 resuelto = false;
             }
-
 
         }
 
@@ -8634,7 +8710,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         mxGraphComponent graphComponentL = new mxGraphComponent(graphGL);
         graphComponentL.setEnabled(false);
-        
+
         grafoGL.removeAll();
         grafoGL.add(graphComponentL);
         grafoGL.repaint();
@@ -8843,7 +8919,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         mxGraphComponent graphComponent = new mxGraphComponent(graphG1);
         graphComponent.setEnabled(false);
-        
+
         grafoG1.removeAll();
         grafoG1.add(graphComponent);
         grafoG1.repaint();
@@ -9050,7 +9126,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         mxGraphComponent graphComponent = new mxGraphComponent(graphG2);
         graphComponent.setEnabled(false);
-        
+
         grafoG2.removeAll();
         grafoG2.add(graphComponent);
 
@@ -12266,836 +12342,870 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
     private void noPartidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noPartidaActionPerformed
         // TODO add your handling code here:
-        noPartida.setRenderer(new DefaultListCellRenderer() {
-            @Override
-            public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-                Component component = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+        if (iPartida > 0) {
+            noPartida.setRenderer(new DefaultListCellRenderer() {
+                @Override
+                public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+                    Component component = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
 
-                for (int i = 0; i < iPartida; i++) {
-                    if (index == i && partidas.get(i).solucion == false) {
-                        component.setForeground(Color.RED);
-                    } else if (index == i && partidas.get(i).solucion == true) {
-                        component.setForeground(Color.GREEN);
+                    for (int i = 0; i < iPartida; i++) {
+                        if (index == i && partidas.get(i).solucion == false) {
+                            component.setForeground(Color.RED);
+                        } else if (index == i && partidas.get(i).solucion == true) {
+                            component.setForeground(Color.GREEN);
+                        }
                     }
+                    return component;
+
                 }
-                return component;
+            });
+
+            if (partidas.get(noPartida.getSelectedIndex()).solucion == false) {
+                ImageIcon uncheck = new ImageIcon("Binarios\\uncheck.png");
+                checkLbl.setIcon(uncheck);
+                solucionLbl.setText("NO tiene solución");
+                solucionLbl.setForeground(new Color(255, 58, 84));
+            } else {
+                ImageIcon check = new ImageIcon("Binarios\\check.png");
+                checkLbl.setIcon(check);
+                solucionLbl.setText("SI tiene solución");
+                solucionLbl.setForeground(Color.GREEN);
+            }
+
+            // Cubo 1
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("R")) {
+                Cubo1C1H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("B")) {
+                Cubo1C1H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("V")) {
+                Cubo1C1H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("A")) {
+                Cubo1C1H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("R")) {
+                Cubo1C2H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("B")) {
+                Cubo1C2H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("V")) {
+                Cubo1C2H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("A")) {
+                Cubo1C2H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("R")) {
+                Cubo1C3H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("B")) {
+                Cubo1C3H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("V")) {
+                Cubo1C3H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("A")) {
+                Cubo1C3H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("R")) {
+                Cubo1C4H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("B")) {
+                Cubo1C4H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("V")) {
+                Cubo1C4H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("A")) {
+                Cubo1C4H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("R")) {
+                Cubo1C5H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("B")) {
+                Cubo1C5H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("V")) {
+                Cubo1C5H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("A")) {
+                Cubo1C5H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("R")) {
+                Cubo1C6H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("B")) {
+                Cubo1C6H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("V")) {
+                Cubo1C6H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("A")) {
+                Cubo1C6H.setText("Amarillo");
+            }
+
+            // Cubo 2
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("R")) {
+                Cubo2C1H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("B")) {
+                Cubo2C1H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("V")) {
+                Cubo2C1H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("A")) {
+                Cubo2C1H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("R")) {
+                Cubo2C2H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("B")) {
+                Cubo2C2H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("V")) {
+                Cubo2C2H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("A")) {
+                Cubo2C2H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("R")) {
+                Cubo2C3H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("B")) {
+                Cubo2C3H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("V")) {
+                Cubo2C3H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("A")) {
+                Cubo2C3H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("R")) {
+                Cubo2C4H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("B")) {
+                Cubo2C4H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("V")) {
+                Cubo2C4H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("A")) {
+                Cubo2C4H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("R")) {
+                Cubo2C5H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("B")) {
+                Cubo2C5H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("V")) {
+                Cubo2C5H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("A")) {
+                Cubo2C5H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("R")) {
+                Cubo2C6H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("B")) {
+                Cubo2C6H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("V")) {
+                Cubo2C6H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("A")) {
+                Cubo2C6H.setText("Amarillo");
+            }
+
+            // Cubo 3
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("R")) {
+                Cubo3C1H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("B")) {
+                Cubo3C1H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("V")) {
+                Cubo3C1H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("A")) {
+                Cubo3C1H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("R")) {
+                Cubo3C2H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("B")) {
+                Cubo3C2H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("V")) {
+                Cubo3C2H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("A")) {
+                Cubo3C2H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("R")) {
+                Cubo3C3H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("B")) {
+                Cubo3C3H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("V")) {
+                Cubo3C3H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("A")) {
+                Cubo3C3H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("R")) {
+                Cubo3C4H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("B")) {
+                Cubo3C4H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("V")) {
+                Cubo3C4H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("A")) {
+                Cubo3C4H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("R")) {
+                Cubo3C5H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("B")) {
+                Cubo3C5H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("V")) {
+                Cubo3C5H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("A")) {
+                Cubo3C5H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("R")) {
+                Cubo3C6H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("B")) {
+                Cubo3C6H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("V")) {
+                Cubo3C6H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("A")) {
+                Cubo3C6H.setText("Amarillo");
+            }
+
+            // Cubo 4
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("R")) {
+                Cubo4C1H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("B")) {
+                Cubo4C1H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("V")) {
+                Cubo4C1H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("A")) {
+                Cubo4C1H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("R")) {
+                Cubo4C2H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("B")) {
+                Cubo4C2H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("V")) {
+                Cubo4C2H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("A")) {
+                Cubo4C2H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("R")) {
+                Cubo4C3H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("B")) {
+                Cubo4C3H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("V")) {
+                Cubo4C3H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("A")) {
+                Cubo4C3H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("R")) {
+                Cubo4C4H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("B")) {
+                Cubo4C4H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("V")) {
+                Cubo4C4H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("A")) {
+                Cubo4C4H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("R")) {
+                Cubo4C5H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("B")) {
+                Cubo4C5H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("V")) {
+                Cubo4C5H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("A")) {
+                Cubo4C5H.setText("Amarillo");
+            }
+
+            if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("R")) {
+                Cubo4C6H.setText("Rojo");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("B")) {
+                Cubo4C6H.setText("Blanco");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("V")) {
+                Cubo4C6H.setText("Verde");
+            } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("A")) {
+                Cubo4C6H.setText("Amarillo");
+            }
+
+            //Aplicar colores en pestaña de Historial
+            //Cubo 1
+            Color C1 = null;
+            if (Cubo1C1H.getText().equals("Rojo")) {
+                C1 = new Color(155, 22, 57);
+                Cubo1C1G1.setText("R");
+                Cubo1C1G1.setBackground(C1);
+
+            } else if (Cubo1C1H.getText().equals("Blanco")) {
+                C1 = new Color(255, 255, 255);
+                Cubo1C1G1.setText("B");
+                Cubo1C1G1.setBackground(C1);
+
+            } else if (Cubo1C1H.getText().equals("Verde")) {
+                C1 = new Color(16, 175, 107);
+                Cubo1C1G1.setText("V");
+                Cubo1C1G1.setBackground(C1);
+
+            } else if (Cubo1C1H.getText().equals("Amarillo")) {
+                C1 = new Color(255, 234, 78);
+                Cubo1C1G1.setText("A");
+                Cubo1C1G1.setBackground(C1);
 
             }
-        });
-
-        if (partidas.get(noPartida.getSelectedIndex()).solucion == false) {
-            ImageIcon uncheck = new ImageIcon("Binarios\\uncheck.png");
-            checkLbl.setIcon(uncheck);
-            solucionLbl.setText("NO tiene solución");
-            solucionLbl.setForeground(new Color(255,58,84));
-        } else {
-            ImageIcon check = new ImageIcon("Binarios\\check.png");
-            checkLbl.setIcon(check);
-            solucionLbl.setText("SI tiene solución");
-            solucionLbl.setForeground(Color.GREEN);
-        }
-
-        // Cubo 1
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("R")) {
-            Cubo1C1H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("B")) {
-            Cubo1C1H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("V")) {
-            Cubo1C1H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C1I.equals("A")) {
-            Cubo1C1H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("R")) {
-            Cubo1C2H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("B")) {
-            Cubo1C2H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("V")) {
-            Cubo1C2H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C2I.equals("A")) {
-            Cubo1C2H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("R")) {
-            Cubo1C3H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("B")) {
-            Cubo1C3H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("V")) {
-            Cubo1C3H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C3I.equals("A")) {
-            Cubo1C3H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("R")) {
-            Cubo1C4H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("B")) {
-            Cubo1C4H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("V")) {
-            Cubo1C4H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C4I.equals("A")) {
-            Cubo1C4H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("R")) {
-            Cubo1C5H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("B")) {
-            Cubo1C5H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("V")) {
-            Cubo1C5H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C5I.equals("A")) {
-            Cubo1C5H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("R")) {
-            Cubo1C6H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("B")) {
-            Cubo1C6H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("V")) {
-            Cubo1C6H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo1.C6I.equals("A")) {
-            Cubo1C6H.setText("Amarillo");
-        }
-
-        // Cubo 2
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("R")) {
-            Cubo2C1H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("B")) {
-            Cubo2C1H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("V")) {
-            Cubo2C1H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C1I.equals("A")) {
-            Cubo2C1H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("R")) {
-            Cubo2C2H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("B")) {
-            Cubo2C2H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("V")) {
-            Cubo2C2H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C2I.equals("A")) {
-            Cubo2C2H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("R")) {
-            Cubo2C3H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("B")) {
-            Cubo2C3H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("V")) {
-            Cubo2C3H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C3I.equals("A")) {
-            Cubo2C3H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("R")) {
-            Cubo2C4H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("B")) {
-            Cubo2C4H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("V")) {
-            Cubo2C4H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C4I.equals("A")) {
-            Cubo2C4H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("R")) {
-            Cubo2C5H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("B")) {
-            Cubo2C5H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("V")) {
-            Cubo2C5H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C5I.equals("A")) {
-            Cubo2C5H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("R")) {
-            Cubo2C6H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("B")) {
-            Cubo2C6H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("V")) {
-            Cubo2C6H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo2.C6I.equals("A")) {
-            Cubo2C6H.setText("Amarillo");
-        }
-
-        // Cubo 3
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("R")) {
-            Cubo3C1H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("B")) {
-            Cubo3C1H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("V")) {
-            Cubo3C1H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C1I.equals("A")) {
-            Cubo3C1H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("R")) {
-            Cubo3C2H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("B")) {
-            Cubo3C2H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("V")) {
-            Cubo3C2H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C2I.equals("A")) {
-            Cubo3C2H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("R")) {
-            Cubo3C3H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("B")) {
-            Cubo3C3H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("V")) {
-            Cubo3C3H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C3I.equals("A")) {
-            Cubo3C3H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("R")) {
-            Cubo3C4H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("B")) {
-            Cubo3C4H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("V")) {
-            Cubo3C4H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C4I.equals("A")) {
-            Cubo3C4H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("R")) {
-            Cubo3C5H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("B")) {
-            Cubo3C5H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("V")) {
-            Cubo3C5H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C5I.equals("A")) {
-            Cubo3C5H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("R")) {
-            Cubo3C6H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("B")) {
-            Cubo3C6H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("V")) {
-            Cubo3C6H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo3.C6I.equals("A")) {
-            Cubo3C6H.setText("Amarillo");
-        }
-
-        // Cubo 4
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("R")) {
-            Cubo4C1H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("B")) {
-            Cubo4C1H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("V")) {
-            Cubo4C1H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C1I.equals("A")) {
-            Cubo4C1H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("R")) {
-            Cubo4C2H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("B")) {
-            Cubo4C2H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("V")) {
-            Cubo4C2H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C2I.equals("A")) {
-            Cubo4C2H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("R")) {
-            Cubo4C3H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("B")) {
-            Cubo4C3H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("V")) {
-            Cubo4C3H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C3I.equals("A")) {
-            Cubo4C3H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("R")) {
-            Cubo4C4H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("B")) {
-            Cubo4C4H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("V")) {
-            Cubo4C4H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C4I.equals("A")) {
-            Cubo4C4H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("R")) {
-            Cubo4C5H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("B")) {
-            Cubo4C5H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("V")) {
-            Cubo4C5H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C5I.equals("A")) {
-            Cubo4C5H.setText("Amarillo");
-        }
-
-        if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("R")) {
-            Cubo4C6H.setText("Rojo");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("B")) {
-            Cubo4C6H.setText("Blanco");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("V")) {
-            Cubo4C6H.setText("Verde");
-        } else if (partidas.get(noPartida.getSelectedIndex()).Cubo4.C6I.equals("A")) {
-            Cubo4C6H.setText("Amarillo");
-        }
-
-        //Aplicar colores en pestaña de Historial
-        //Cubo 1
-        Color C1 = null;
-        if (Cubo1C1H.getText().equals("Rojo")) {
-            C1 = new Color(155, 22, 57);
-            Cubo1C1G1.setText("R");
-            Cubo1C1G1.setBackground(C1);
-
-        } else if (Cubo1C1H.getText().equals("Blanco")) {
-            C1 = new Color(255, 255, 255);
-            Cubo1C1G1.setText("B");
-            Cubo1C1G1.setBackground(C1);
-
-        } else if (Cubo1C1H.getText().equals("Verde")) {
-            C1 = new Color(16, 175, 107);
-            Cubo1C1G1.setText("V");
-            Cubo1C1G1.setBackground(C1);
-
-        } else if (Cubo1C1H.getText().equals("Amarillo")) {
-            C1 = new Color(255, 234, 78);
-            Cubo1C1G1.setText("A");
-            Cubo1C1G1.setBackground(C1);
-
-        }
-
-        Color C2 = null;
-        if (Cubo1C2H.getText().equals("Rojo")) {
-            C2 = new Color(155, 22, 57);
-            Cubo1C2G1.setText("R");
-            Cubo1C2G1.setBackground(C2);
-
-        } else if (Cubo1C2H.getText().equals("Blanco")) {
-            C2 = new Color(255, 255, 255);
-            Cubo1C2G1.setText("B");
-            Cubo1C2G1.setBackground(C2);
-
-        } else if (Cubo1C2H.getText().equals("Verde")) {
-            C2 = new Color(16, 175, 107);
-            Cubo1C2G1.setText("V");
-            Cubo1C2G1.setBackground(C2);
-
-        } else if (Cubo1C2H.getText().equals("Amarillo")) {
-            C2 = new Color(255, 234, 78);
-            Cubo1C2G1.setText("A");
-            Cubo1C2G1.setBackground(C2);
-
-        }
-
-        Color C3 = null;
-        if (Cubo1C3H.getText().equals("Rojo")) {
-            C3 = new Color(155, 22, 57);
-            Cubo1C3G1.setText("R");
-            Cubo1C3G1.setBackground(C3);
-
-        } else if (Cubo1C3H.getText().equals("Blanco")) {
-            C3 = new Color(255, 255, 255);
-            Cubo1C3G1.setText("B");
-            Cubo1C3G1.setBackground(C3);
-
-        } else if (Cubo1C3H.getText().equals("Verde")) {
-            C3 = new Color(16, 175, 107);
-            Cubo1C3G1.setText("V");
-            Cubo1C3G1.setBackground(C3);
-
-        } else if (Cubo1C3H.getText().equals("Amarillo")) {
-            C3 = new Color(255, 234, 78);
-            Cubo1C3G1.setText("A");
-            Cubo1C3G1.setBackground(C3);
-
-        }
-
-        Color C4 = null;
-        if (Cubo1C4H.getText().equals("Rojo")) {
-            C4 = new Color(155, 22, 57);
-            Cubo1C4G1.setText("R");
-            Cubo1C4G1.setBackground(C4);
-
-        } else if (Cubo1C4H.getText().equals("Blanco")) {
-            C4 = new Color(255, 255, 255);
-            Cubo1C4G1.setText("B");
-            Cubo1C4G1.setBackground(C4);
-
-        } else if (Cubo1C4H.getText().equals("Verde")) {
-            C4 = new Color(16, 175, 107);
-            Cubo1C4G1.setText("V");
-            Cubo1C4G1.setBackground(C4);
-
-        } else if (Cubo1C4H.getText().equals("Amarillo")) {
-            C4 = new Color(255, 234, 78);
-            Cubo1C4G1.setText("A");
-            Cubo1C4G1.setBackground(C4);
-
-        }
-
-        Color C5 = null;
-        if (Cubo1C5H.getText().equals("Rojo")) {
-            C5 = new Color(155, 22, 57);
-            Cubo1C5G1.setText("R");
-            Cubo1C5G1.setBackground(C5);
-
-        } else if (Cubo1C5H.getText().equals("Blanco")) {
-            C5 = new Color(255, 255, 255);
-            Cubo1C5G1.setText("B");
-            Cubo1C5G1.setBackground(C5);
-
-        } else if (Cubo1C5H.getText().equals("Verde")) {
-            C5 = new Color(16, 175, 107);
-            Cubo1C5G1.setText("V");
-            Cubo1C5G1.setBackground(C5);
-
-        } else if (Cubo1C5H.getText().equals("Amarillo")) {
-            C5 = new Color(255, 234, 78);
-            Cubo1C5G1.setText("A");
-            Cubo1C5G1.setBackground(C5);
-
-        }
-
-        Color C6 = null;
-        if (Cubo1C6H.getText().equals("Rojo")) {
-            C6 = new Color(155, 22, 57);
-            Cubo1C6G1.setText("R");
-            Cubo1C6G1.setBackground(C6);
-
-        } else if (Cubo1C6H.getText().equals("Blanco")) {
-            C6 = new Color(255, 255, 255);
-            Cubo1C6G1.setText("B");
-            Cubo1C6G1.setBackground(C6);
-
-        } else if (Cubo1C6H.getText().equals("Verde")) {
-            C6 = new Color(16, 175, 107);
-            Cubo1C6G1.setText("V");
-            Cubo1C6G1.setBackground(C6);
-
-        } else if (Cubo1C6H.getText().equals("Amarillo")) {
-            C6 = new Color(255, 234, 78);
-            Cubo1C6G1.setText("A");
-            Cubo1C6G1.setBackground(C6);
-
-        }
-
-        //Cubo 2
-        C1 = null;
-        if (Cubo2C1H.getText().equals("Rojo")) {
-            C1 = new Color(155, 22, 57);
-            Cubo2C1G1.setText("R");
-            Cubo2C1G1.setBackground(C1);
-
-        } else if (Cubo2C1H.getText().equals("Blanco")) {
-            C1 = new Color(255, 255, 255);
-            Cubo2C1G1.setText("B");
-            Cubo2C1G1.setBackground(C1);
-
-        } else if (Cubo2C1H.getText().equals("Verde")) {
-            C1 = new Color(16, 175, 107);
-            Cubo2C1G1.setText("V");
-            Cubo2C1G1.setBackground(C1);
-
-        } else if (Cubo2C1H.getText().equals("Amarillo")) {
-            C1 = new Color(255, 234, 78);
-            Cubo2C1G1.setText("A");
-            Cubo2C1G1.setBackground(C1);
-
-        }
-
-        C2 = null;
-        if (Cubo2C2H.getText().equals("Rojo")) {
-            C2 = new Color(155, 22, 57);
-            Cubo2C2G1.setText("R");
-            Cubo2C2G1.setBackground(C2);
-
-        } else if (Cubo2C2H.getText().equals("Blanco")) {
-            C2 = new Color(255, 255, 255);
-            Cubo2C2G1.setText("B");
-            Cubo2C2G1.setBackground(C2);
-
-        } else if (Cubo2C2H.getText().equals("Verde")) {
-            C2 = new Color(16, 175, 107);
-            Cubo2C2G1.setText("V");
-            Cubo2C2G1.setBackground(C2);
-
-        } else if (Cubo2C2H.getText().equals("Amarillo")) {
-            C2 = new Color(255, 234, 78);
-            Cubo2C2G1.setText("A");
-            Cubo2C2G1.setBackground(C2);
-
-        }
-
-        C3 = null;
-        if (Cubo2C3H.getText().equals("Rojo")) {
-            C3 = new Color(155, 22, 57);
-            Cubo2C3G1.setText("R");
-            Cubo2C3G1.setBackground(C3);
-
-        } else if (Cubo2C3H.getText().equals("Blanco")) {
-            C3 = new Color(255, 255, 255);
-            Cubo2C3G1.setText("B");
-            Cubo2C3G1.setBackground(C3);
-
-        } else if (Cubo2C3H.getText().equals("Verde")) {
-            C3 = new Color(16, 175, 107);
-            Cubo2C3G1.setText("V");
-            Cubo2C3G1.setBackground(C3);
-
-        } else if (Cubo2C3H.getText().equals("Amarillo")) {
-            C3 = new Color(255, 234, 78);
-            Cubo2C3G1.setText("A");
-            Cubo2C3G1.setBackground(C3);
-
-        }
-
-        C4 = null;
-        if (Cubo2C4H.getText().equals("Rojo")) {
-            C4 = new Color(155, 22, 57);
-            Cubo2C4G1.setText("R");
-            Cubo2C4G1.setBackground(C4);
-
-        } else if (Cubo2C4H.getText().equals("Blanco")) {
-            C4 = new Color(255, 255, 255);
-            Cubo2C4G1.setText("B");
-            Cubo2C4G1.setBackground(C4);
-
-        } else if (Cubo2C4H.getText().equals("Verde")) {
-            C4 = new Color(16, 175, 107);
-            Cubo2C4G1.setText("V");
-            Cubo2C4G1.setBackground(C4);
-
-        } else if (Cubo2C4H.getText().equals("Amarillo")) {
-            C4 = new Color(255, 234, 78);
-            Cubo2C4G1.setText("A");
-            Cubo2C4G1.setBackground(C4);
-
-        }
-
-        C5 = null;
-        if (Cubo2C5H.getText().equals("Rojo")) {
-            C5 = new Color(155, 22, 57);
-            Cubo2C5G1.setText("R");
-            Cubo2C5G1.setBackground(C5);
-
-        } else if (Cubo2C5H.getText().equals("Blanco")) {
-            C5 = new Color(255, 255, 255);
-            Cubo2C5G1.setText("B");
-            Cubo2C5G1.setBackground(C5);
-
-        } else if (Cubo2C5H.getText().equals("Verde")) {
-            C5 = new Color(16, 175, 107);
-            Cubo2C5G1.setText("V");
-            Cubo2C5G1.setBackground(C5);
-
-        } else if (Cubo2C5H.getText().equals("Amarillo")) {
-            C5 = new Color(255, 234, 78);
-            Cubo2C5G1.setText("A");
-            Cubo2C5G1.setBackground(C5);
-
-        }
-
-        C6 = null;
-        if (Cubo2C6H.getText().equals("Rojo")) {
-            C6 = new Color(155, 22, 57);
-            Cubo2C6G1.setText("R");
-            Cubo2C6G1.setBackground(C6);
-
-        } else if (Cubo2C6H.getText().equals("Blanco")) {
-            C6 = new Color(255, 255, 255);
-            Cubo2C6G1.setText("B");
-            Cubo2C6G1.setBackground(C6);
-
-        } else if (Cubo2C6H.getText().equals("Verde")) {
-            C6 = new Color(16, 175, 107);
-            Cubo2C6G1.setText("V");
-            Cubo2C6G1.setBackground(C6);
-
-        } else if (Cubo2C6H.getText().equals("Amarillo")) {
-            C6 = new Color(255, 234, 78);
-            Cubo2C6G1.setText("A");
-            Cubo2C6G1.setBackground(C6);
-
-        }
-
-        //Cubo 3
-        C1 = null;
-        if (Cubo3C1H.getText().equals("Rojo")) {
-            C1 = new Color(155, 22, 57);
-            Cubo3C1G1.setText("R");
-            Cubo3C1G1.setBackground(C1);
-
-        } else if (Cubo3C1H.getText().equals("Blanco")) {
-            C1 = new Color(255, 255, 255);
-            Cubo3C1G1.setText("B");
-            Cubo3C1G1.setBackground(C1);
-
-        } else if (Cubo3C1H.getText().equals("Verde")) {
-            C1 = new Color(16, 175, 107);
-            Cubo3C1G1.setText("V");
-            Cubo3C1G1.setBackground(C1);
-
-        } else if (Cubo3C1H.getText().equals("Amarillo")) {
-            C1 = new Color(255, 234, 78);
-            Cubo3C1G1.setText("A");
-            Cubo3C1G1.setBackground(C1);
-
-        }
-
-        C2 = null;
-        if (Cubo3C2H.getText().equals("Rojo")) {
-            C2 = new Color(155, 22, 57);
-            Cubo3C2G1.setText("R");
-            Cubo3C2G1.setBackground(C2);
-
-        } else if (Cubo3C2H.getText().equals("Blanco")) {
-            C2 = new Color(255, 255, 255);
-            Cubo3C2G1.setText("B");
-            Cubo3C2G1.setBackground(C2);
-
-        } else if (Cubo3C2H.getText().equals("Verde")) {
-            C2 = new Color(16, 175, 107);
-            Cubo3C2G1.setText("V");
-            Cubo3C2G1.setBackground(C2);
-
-        } else if (Cubo3C2H.getText().equals("Amarillo")) {
-            C2 = new Color(255, 234, 78);
-            Cubo3C2G1.setText("A");
-            Cubo3C2G1.setBackground(C2);
-
-        }
-
-        C3 = null;
-        if (Cubo3C3H.getText().equals("Rojo")) {
-            C3 = new Color(155, 22, 57);
-            Cubo3C3G1.setText("R");
-            Cubo3C3G1.setBackground(C3);
-
-        } else if (Cubo3C3H.getText().equals("Blanco")) {
-            C3 = new Color(255, 255, 255);
-            Cubo3C3G1.setText("B");
-            Cubo3C3G1.setBackground(C3);
-
-        } else if (Cubo3C3H.getText().equals("Verde")) {
-            C3 = new Color(16, 175, 107);
-            Cubo3C3G1.setText("V");
-            Cubo3C3G1.setBackground(C3);
-
-        } else if (Cubo3C3H.getText().equals("Amarillo")) {
-            C3 = new Color(255, 234, 78);
-            Cubo3C3G1.setText("A");
-            Cubo3C3G1.setBackground(C3);
-
-        }
-
-        C4 = null;
-        if (Cubo3C4H.getText().equals("Rojo")) {
-            C4 = new Color(155, 22, 57);
-            Cubo3C4G1.setText("R");
-            Cubo3C4G1.setBackground(C4);
-
-        } else if (Cubo3C4H.getText().equals("Blanco")) {
-            C4 = new Color(255, 255, 255);
-            Cubo3C4G1.setText("B");
-            Cubo3C4G1.setBackground(C4);
-
-        } else if (Cubo3C4H.getText().equals("Verde")) {
-            C4 = new Color(16, 175, 107);
-            Cubo3C4G1.setText("V");
-            Cubo3C4G1.setBackground(C4);
-
-        } else if (Cubo3C4H.getText().equals("Amarillo")) {
-            C4 = new Color(255, 234, 78);
-            Cubo3C4G1.setText("A");
-            Cubo3C4G1.setBackground(C4);
-
-        }
-
-        C5 = null;
-        if (Cubo3C5H.getText().equals("Rojo")) {
-            C5 = new Color(155, 22, 57);
-            Cubo3C5G1.setText("R");
-            Cubo3C5G1.setBackground(C5);
-
-        } else if (Cubo3C5H.getText().equals("Blanco")) {
-            C5 = new Color(255, 255, 255);
-            Cubo3C5G1.setText("B");
-            Cubo3C5G1.setBackground(C5);
-
-        } else if (Cubo3C5H.getText().equals("Verde")) {
-            C5 = new Color(16, 175, 107);
-            Cubo3C5G1.setText("V");
-            Cubo3C5G1.setBackground(C5);
-
-        } else if (Cubo3C5H.getText().equals("Amarillo")) {
-            C5 = new Color(255, 234, 78);
-            Cubo3C5G1.setText("A");
-            Cubo3C5G1.setBackground(C5);
-
-        }
-
-        C6 = null;
-        if (Cubo3C6H.getText().equals("Rojo")) {
-            C6 = new Color(155, 22, 57);
-            Cubo3C6G1.setText("R");
-            Cubo3C6G1.setBackground(C6);
-
-        } else if (Cubo3C6H.getText().equals("Blanco")) {
-            C6 = new Color(255, 255, 255);
-            Cubo3C6G1.setText("B");
-            Cubo3C6G1.setBackground(C6);
-
-        } else if (Cubo3C6H.getText().equals("Verde")) {
-            C6 = new Color(16, 175, 107);
-            Cubo3C6G1.setText("V");
-            Cubo3C6G1.setBackground(C6);
-
-        } else if (Cubo3C6H.getText().equals("Amarillo")) {
-            C6 = new Color(255, 234, 78);
-            Cubo3C6G1.setText("A");
-            Cubo3C6G1.setBackground(C6);
-
-        }
-
-        //Cubo 4
-        C1 = null;
-        if (Cubo4C1H.getText().equals("Rojo")) {
-            C1 = new Color(155, 22, 57);
-            Cubo4C1G1.setText("R");
-            Cubo4C1G1.setBackground(C1);
-
-        } else if (Cubo4C1H.getText().equals("Blanco")) {
-            C1 = new Color(255, 255, 255);
-            Cubo4C1G1.setText("B");
-            Cubo4C1G1.setBackground(C1);
-
-        } else if (Cubo4C1H.getText().equals("Verde")) {
-            C1 = new Color(16, 175, 107);
-            Cubo4C1G1.setText("V");
-            Cubo4C1G1.setBackground(C1);
-
-        } else if (Cubo4C1H.getText().equals("Amarillo")) {
-            C1 = new Color(255, 234, 78);
-            Cubo4C1G1.setText("A");
-            Cubo4C1G1.setBackground(C1);
-
-        }
-
-        C2 = null;
-        if (Cubo4C2H.getText().equals("Rojo")) {
-            C2 = new Color(155, 22, 57);
-            Cubo4C2G1.setText("R");
-            Cubo4C2G1.setBackground(C2);
-
-        } else if (Cubo4C2H.getText().equals("Blanco")) {
-            C2 = new Color(255, 255, 255);
-            Cubo4C2G1.setText("B");
-            Cubo4C2G1.setBackground(C2);
-
-        } else if (Cubo4C2H.getText().equals("Verde")) {
-            C2 = new Color(16, 175, 107);
-            Cubo4C2G1.setText("V");
-            Cubo4C2G1.setBackground(C2);
-
-        } else if (Cubo4C2H.getText().equals("Amarillo")) {
-            C2 = new Color(255, 234, 78);
-            Cubo4C2G1.setText("A");
-            Cubo4C2G1.setBackground(C2);
-
-        }
-
-        C3 = null;
-        if (Cubo4C3H.getText().equals("Rojo")) {
-            C3 = new Color(155, 22, 57);
-            Cubo4C3G1.setText("R");
-            Cubo4C3G1.setBackground(C3);
-
-        } else if (Cubo4C3H.getText().equals("Blanco")) {
-            C3 = new Color(255, 255, 255);
-            Cubo4C3G1.setText("B");
-            Cubo4C3G1.setBackground(C3);
-
-        } else if (Cubo4C3H.getText().equals("Verde")) {
-            C3 = new Color(16, 175, 107);
-            Cubo4C3G1.setText("V");
-            Cubo4C3G1.setBackground(C3);
-
-        } else if (Cubo4C3H.getText().equals("Amarillo")) {
-            C3 = new Color(255, 234, 78);
-            Cubo4C3G1.setText("A");
-            Cubo4C3G1.setBackground(C3);
-
-        }
-
-        C4 = null;
-        if (Cubo4C4H.getText().equals("Rojo")) {
-            C4 = new Color(155, 22, 57);
-            Cubo4C4G1.setText("R");
-            Cubo4C4G1.setBackground(C4);
-
-        } else if (Cubo4C4H.getText().equals("Blanco")) {
-            C4 = new Color(255, 255, 255);
-            Cubo4C4G1.setText("B");
-            Cubo4C4G1.setBackground(C4);
-
-        } else if (Cubo4C4H.getText().equals("Verde")) {
-            C4 = new Color(16, 175, 107);
-            Cubo4C4G1.setText("V");
-            Cubo4C4G1.setBackground(C4);
-
-        } else if (Cubo4C4H.getText().equals("Amarillo")) {
-            C4 = new Color(255, 234, 78);
-            Cubo4C4G1.setText("A");
-            Cubo4C4G1.setBackground(C4);
-
-        }
-
-        C5 = null;
-        if (Cubo4C5H.getText().equals("Rojo")) {
-            C5 = new Color(155, 22, 57);
-            Cubo4C5G1.setText("R");
-            Cubo4C5G1.setBackground(C5);
-
-        } else if (Cubo4C5H.getText().equals("Blanco")) {
-            C5 = new Color(255, 255, 255);
-            Cubo4C5G1.setText("B");
-            Cubo4C5G1.setBackground(C5);
-
-        } else if (Cubo4C5H.getText().equals("Verde")) {
-            C5 = new Color(16, 175, 107);
-            Cubo4C5G1.setText("V");
-            Cubo4C5G1.setBackground(C5);
-
-        } else if (Cubo4C5H.getText().equals("Amarillo")) {
-            C5 = new Color(255, 234, 78);
-            Cubo4C5G1.setText("A");
-            Cubo4C5G1.setBackground(C5);
-
-        }
-
-        C6 = null;
-        if (Cubo4C6H.getText().equals("Rojo")) {
-            C6 = new Color(155, 22, 57);
-            Cubo4C6G1.setText("R");
-            Cubo4C6G1.setBackground(C6);
-
-        } else if (Cubo4C6H.getText().equals("Blanco")) {
-            C6 = new Color(255, 255, 255);
-            Cubo4C6G1.setText("B");
-            Cubo4C6G1.setBackground(C6);
-
-        } else if (Cubo4C6H.getText().equals("Verde")) {
-            C6 = new Color(16, 175, 107);
-            Cubo4C6G1.setText("V");
-            Cubo4C6G1.setBackground(C6);
-
-        } else if (Cubo4C6H.getText().equals("Amarillo")) {
-            C6 = new Color(255, 234, 78);
-            Cubo4C6G1.setText("A");
-            Cubo4C6G1.setBackground(C6);
 
+            Color C2 = null;
+            if (Cubo1C2H.getText().equals("Rojo")) {
+                C2 = new Color(155, 22, 57);
+                Cubo1C2G1.setText("R");
+                Cubo1C2G1.setBackground(C2);
+
+            } else if (Cubo1C2H.getText().equals("Blanco")) {
+                C2 = new Color(255, 255, 255);
+                Cubo1C2G1.setText("B");
+                Cubo1C2G1.setBackground(C2);
+
+            } else if (Cubo1C2H.getText().equals("Verde")) {
+                C2 = new Color(16, 175, 107);
+                Cubo1C2G1.setText("V");
+                Cubo1C2G1.setBackground(C2);
+
+            } else if (Cubo1C2H.getText().equals("Amarillo")) {
+                C2 = new Color(255, 234, 78);
+                Cubo1C2G1.setText("A");
+                Cubo1C2G1.setBackground(C2);
+
+            }
+
+            Color C3 = null;
+            if (Cubo1C3H.getText().equals("Rojo")) {
+                C3 = new Color(155, 22, 57);
+                Cubo1C3G1.setText("R");
+                Cubo1C3G1.setBackground(C3);
+
+            } else if (Cubo1C3H.getText().equals("Blanco")) {
+                C3 = new Color(255, 255, 255);
+                Cubo1C3G1.setText("B");
+                Cubo1C3G1.setBackground(C3);
+
+            } else if (Cubo1C3H.getText().equals("Verde")) {
+                C3 = new Color(16, 175, 107);
+                Cubo1C3G1.setText("V");
+                Cubo1C3G1.setBackground(C3);
+
+            } else if (Cubo1C3H.getText().equals("Amarillo")) {
+                C3 = new Color(255, 234, 78);
+                Cubo1C3G1.setText("A");
+                Cubo1C3G1.setBackground(C3);
+
+            }
+
+            Color C4 = null;
+            if (Cubo1C4H.getText().equals("Rojo")) {
+                C4 = new Color(155, 22, 57);
+                Cubo1C4G1.setText("R");
+                Cubo1C4G1.setBackground(C4);
+
+            } else if (Cubo1C4H.getText().equals("Blanco")) {
+                C4 = new Color(255, 255, 255);
+                Cubo1C4G1.setText("B");
+                Cubo1C4G1.setBackground(C4);
+
+            } else if (Cubo1C4H.getText().equals("Verde")) {
+                C4 = new Color(16, 175, 107);
+                Cubo1C4G1.setText("V");
+                Cubo1C4G1.setBackground(C4);
+
+            } else if (Cubo1C4H.getText().equals("Amarillo")) {
+                C4 = new Color(255, 234, 78);
+                Cubo1C4G1.setText("A");
+                Cubo1C4G1.setBackground(C4);
+
+            }
+
+            Color C5 = null;
+            if (Cubo1C5H.getText().equals("Rojo")) {
+                C5 = new Color(155, 22, 57);
+                Cubo1C5G1.setText("R");
+                Cubo1C5G1.setBackground(C5);
+
+            } else if (Cubo1C5H.getText().equals("Blanco")) {
+                C5 = new Color(255, 255, 255);
+                Cubo1C5G1.setText("B");
+                Cubo1C5G1.setBackground(C5);
+
+            } else if (Cubo1C5H.getText().equals("Verde")) {
+                C5 = new Color(16, 175, 107);
+                Cubo1C5G1.setText("V");
+                Cubo1C5G1.setBackground(C5);
+
+            } else if (Cubo1C5H.getText().equals("Amarillo")) {
+                C5 = new Color(255, 234, 78);
+                Cubo1C5G1.setText("A");
+                Cubo1C5G1.setBackground(C5);
+
+            }
+
+            Color C6 = null;
+            if (Cubo1C6H.getText().equals("Rojo")) {
+                C6 = new Color(155, 22, 57);
+                Cubo1C6G1.setText("R");
+                Cubo1C6G1.setBackground(C6);
+
+            } else if (Cubo1C6H.getText().equals("Blanco")) {
+                C6 = new Color(255, 255, 255);
+                Cubo1C6G1.setText("B");
+                Cubo1C6G1.setBackground(C6);
+
+            } else if (Cubo1C6H.getText().equals("Verde")) {
+                C6 = new Color(16, 175, 107);
+                Cubo1C6G1.setText("V");
+                Cubo1C6G1.setBackground(C6);
+
+            } else if (Cubo1C6H.getText().equals("Amarillo")) {
+                C6 = new Color(255, 234, 78);
+                Cubo1C6G1.setText("A");
+                Cubo1C6G1.setBackground(C6);
+
+            }
+
+            //Cubo 2
+            C1 = null;
+            if (Cubo2C1H.getText().equals("Rojo")) {
+                C1 = new Color(155, 22, 57);
+                Cubo2C1G1.setText("R");
+                Cubo2C1G1.setBackground(C1);
+
+            } else if (Cubo2C1H.getText().equals("Blanco")) {
+                C1 = new Color(255, 255, 255);
+                Cubo2C1G1.setText("B");
+                Cubo2C1G1.setBackground(C1);
+
+            } else if (Cubo2C1H.getText().equals("Verde")) {
+                C1 = new Color(16, 175, 107);
+                Cubo2C1G1.setText("V");
+                Cubo2C1G1.setBackground(C1);
+
+            } else if (Cubo2C1H.getText().equals("Amarillo")) {
+                C1 = new Color(255, 234, 78);
+                Cubo2C1G1.setText("A");
+                Cubo2C1G1.setBackground(C1);
+
+            }
+
+            C2 = null;
+            if (Cubo2C2H.getText().equals("Rojo")) {
+                C2 = new Color(155, 22, 57);
+                Cubo2C2G1.setText("R");
+                Cubo2C2G1.setBackground(C2);
+
+            } else if (Cubo2C2H.getText().equals("Blanco")) {
+                C2 = new Color(255, 255, 255);
+                Cubo2C2G1.setText("B");
+                Cubo2C2G1.setBackground(C2);
+
+            } else if (Cubo2C2H.getText().equals("Verde")) {
+                C2 = new Color(16, 175, 107);
+                Cubo2C2G1.setText("V");
+                Cubo2C2G1.setBackground(C2);
+
+            } else if (Cubo2C2H.getText().equals("Amarillo")) {
+                C2 = new Color(255, 234, 78);
+                Cubo2C2G1.setText("A");
+                Cubo2C2G1.setBackground(C2);
+
+            }
+
+            C3 = null;
+            if (Cubo2C3H.getText().equals("Rojo")) {
+                C3 = new Color(155, 22, 57);
+                Cubo2C3G1.setText("R");
+                Cubo2C3G1.setBackground(C3);
+
+            } else if (Cubo2C3H.getText().equals("Blanco")) {
+                C3 = new Color(255, 255, 255);
+                Cubo2C3G1.setText("B");
+                Cubo2C3G1.setBackground(C3);
+
+            } else if (Cubo2C3H.getText().equals("Verde")) {
+                C3 = new Color(16, 175, 107);
+                Cubo2C3G1.setText("V");
+                Cubo2C3G1.setBackground(C3);
+
+            } else if (Cubo2C3H.getText().equals("Amarillo")) {
+                C3 = new Color(255, 234, 78);
+                Cubo2C3G1.setText("A");
+                Cubo2C3G1.setBackground(C3);
+
+            }
+
+            C4 = null;
+            if (Cubo2C4H.getText().equals("Rojo")) {
+                C4 = new Color(155, 22, 57);
+                Cubo2C4G1.setText("R");
+                Cubo2C4G1.setBackground(C4);
+
+            } else if (Cubo2C4H.getText().equals("Blanco")) {
+                C4 = new Color(255, 255, 255);
+                Cubo2C4G1.setText("B");
+                Cubo2C4G1.setBackground(C4);
+
+            } else if (Cubo2C4H.getText().equals("Verde")) {
+                C4 = new Color(16, 175, 107);
+                Cubo2C4G1.setText("V");
+                Cubo2C4G1.setBackground(C4);
+
+            } else if (Cubo2C4H.getText().equals("Amarillo")) {
+                C4 = new Color(255, 234, 78);
+                Cubo2C4G1.setText("A");
+                Cubo2C4G1.setBackground(C4);
+
+            }
+
+            C5 = null;
+            if (Cubo2C5H.getText().equals("Rojo")) {
+                C5 = new Color(155, 22, 57);
+                Cubo2C5G1.setText("R");
+                Cubo2C5G1.setBackground(C5);
+
+            } else if (Cubo2C5H.getText().equals("Blanco")) {
+                C5 = new Color(255, 255, 255);
+                Cubo2C5G1.setText("B");
+                Cubo2C5G1.setBackground(C5);
+
+            } else if (Cubo2C5H.getText().equals("Verde")) {
+                C5 = new Color(16, 175, 107);
+                Cubo2C5G1.setText("V");
+                Cubo2C5G1.setBackground(C5);
+
+            } else if (Cubo2C5H.getText().equals("Amarillo")) {
+                C5 = new Color(255, 234, 78);
+                Cubo2C5G1.setText("A");
+                Cubo2C5G1.setBackground(C5);
+
+            }
+
+            C6 = null;
+            if (Cubo2C6H.getText().equals("Rojo")) {
+                C6 = new Color(155, 22, 57);
+                Cubo2C6G1.setText("R");
+                Cubo2C6G1.setBackground(C6);
+
+            } else if (Cubo2C6H.getText().equals("Blanco")) {
+                C6 = new Color(255, 255, 255);
+                Cubo2C6G1.setText("B");
+                Cubo2C6G1.setBackground(C6);
+
+            } else if (Cubo2C6H.getText().equals("Verde")) {
+                C6 = new Color(16, 175, 107);
+                Cubo2C6G1.setText("V");
+                Cubo2C6G1.setBackground(C6);
+
+            } else if (Cubo2C6H.getText().equals("Amarillo")) {
+                C6 = new Color(255, 234, 78);
+                Cubo2C6G1.setText("A");
+                Cubo2C6G1.setBackground(C6);
+
+            }
+
+            //Cubo 3
+            C1 = null;
+            if (Cubo3C1H.getText().equals("Rojo")) {
+                C1 = new Color(155, 22, 57);
+                Cubo3C1G1.setText("R");
+                Cubo3C1G1.setBackground(C1);
+
+            } else if (Cubo3C1H.getText().equals("Blanco")) {
+                C1 = new Color(255, 255, 255);
+                Cubo3C1G1.setText("B");
+                Cubo3C1G1.setBackground(C1);
+
+            } else if (Cubo3C1H.getText().equals("Verde")) {
+                C1 = new Color(16, 175, 107);
+                Cubo3C1G1.setText("V");
+                Cubo3C1G1.setBackground(C1);
+
+            } else if (Cubo3C1H.getText().equals("Amarillo")) {
+                C1 = new Color(255, 234, 78);
+                Cubo3C1G1.setText("A");
+                Cubo3C1G1.setBackground(C1);
+
+            }
+
+            C2 = null;
+            if (Cubo3C2H.getText().equals("Rojo")) {
+                C2 = new Color(155, 22, 57);
+                Cubo3C2G1.setText("R");
+                Cubo3C2G1.setBackground(C2);
+
+            } else if (Cubo3C2H.getText().equals("Blanco")) {
+                C2 = new Color(255, 255, 255);
+                Cubo3C2G1.setText("B");
+                Cubo3C2G1.setBackground(C2);
+
+            } else if (Cubo3C2H.getText().equals("Verde")) {
+                C2 = new Color(16, 175, 107);
+                Cubo3C2G1.setText("V");
+                Cubo3C2G1.setBackground(C2);
+
+            } else if (Cubo3C2H.getText().equals("Amarillo")) {
+                C2 = new Color(255, 234, 78);
+                Cubo3C2G1.setText("A");
+                Cubo3C2G1.setBackground(C2);
+
+            }
+
+            C3 = null;
+            if (Cubo3C3H.getText().equals("Rojo")) {
+                C3 = new Color(155, 22, 57);
+                Cubo3C3G1.setText("R");
+                Cubo3C3G1.setBackground(C3);
+
+            } else if (Cubo3C3H.getText().equals("Blanco")) {
+                C3 = new Color(255, 255, 255);
+                Cubo3C3G1.setText("B");
+                Cubo3C3G1.setBackground(C3);
+
+            } else if (Cubo3C3H.getText().equals("Verde")) {
+                C3 = new Color(16, 175, 107);
+                Cubo3C3G1.setText("V");
+                Cubo3C3G1.setBackground(C3);
+
+            } else if (Cubo3C3H.getText().equals("Amarillo")) {
+                C3 = new Color(255, 234, 78);
+                Cubo3C3G1.setText("A");
+                Cubo3C3G1.setBackground(C3);
+
+            }
+
+            C4 = null;
+            if (Cubo3C4H.getText().equals("Rojo")) {
+                C4 = new Color(155, 22, 57);
+                Cubo3C4G1.setText("R");
+                Cubo3C4G1.setBackground(C4);
+
+            } else if (Cubo3C4H.getText().equals("Blanco")) {
+                C4 = new Color(255, 255, 255);
+                Cubo3C4G1.setText("B");
+                Cubo3C4G1.setBackground(C4);
+
+            } else if (Cubo3C4H.getText().equals("Verde")) {
+                C4 = new Color(16, 175, 107);
+                Cubo3C4G1.setText("V");
+                Cubo3C4G1.setBackground(C4);
+
+            } else if (Cubo3C4H.getText().equals("Amarillo")) {
+                C4 = new Color(255, 234, 78);
+                Cubo3C4G1.setText("A");
+                Cubo3C4G1.setBackground(C4);
+
+            }
+
+            C5 = null;
+            if (Cubo3C5H.getText().equals("Rojo")) {
+                C5 = new Color(155, 22, 57);
+                Cubo3C5G1.setText("R");
+                Cubo3C5G1.setBackground(C5);
+
+            } else if (Cubo3C5H.getText().equals("Blanco")) {
+                C5 = new Color(255, 255, 255);
+                Cubo3C5G1.setText("B");
+                Cubo3C5G1.setBackground(C5);
+
+            } else if (Cubo3C5H.getText().equals("Verde")) {
+                C5 = new Color(16, 175, 107);
+                Cubo3C5G1.setText("V");
+                Cubo3C5G1.setBackground(C5);
+
+            } else if (Cubo3C5H.getText().equals("Amarillo")) {
+                C5 = new Color(255, 234, 78);
+                Cubo3C5G1.setText("A");
+                Cubo3C5G1.setBackground(C5);
+
+            }
+
+            C6 = null;
+            if (Cubo3C6H.getText().equals("Rojo")) {
+                C6 = new Color(155, 22, 57);
+                Cubo3C6G1.setText("R");
+                Cubo3C6G1.setBackground(C6);
+
+            } else if (Cubo3C6H.getText().equals("Blanco")) {
+                C6 = new Color(255, 255, 255);
+                Cubo3C6G1.setText("B");
+                Cubo3C6G1.setBackground(C6);
+
+            } else if (Cubo3C6H.getText().equals("Verde")) {
+                C6 = new Color(16, 175, 107);
+                Cubo3C6G1.setText("V");
+                Cubo3C6G1.setBackground(C6);
+
+            } else if (Cubo3C6H.getText().equals("Amarillo")) {
+                C6 = new Color(255, 234, 78);
+                Cubo3C6G1.setText("A");
+                Cubo3C6G1.setBackground(C6);
+
+            }
+
+            //Cubo 4
+            C1 = null;
+            if (Cubo4C1H.getText().equals("Rojo")) {
+                C1 = new Color(155, 22, 57);
+                Cubo4C1G1.setText("R");
+                Cubo4C1G1.setBackground(C1);
+
+            } else if (Cubo4C1H.getText().equals("Blanco")) {
+                C1 = new Color(255, 255, 255);
+                Cubo4C1G1.setText("B");
+                Cubo4C1G1.setBackground(C1);
+
+            } else if (Cubo4C1H.getText().equals("Verde")) {
+                C1 = new Color(16, 175, 107);
+                Cubo4C1G1.setText("V");
+                Cubo4C1G1.setBackground(C1);
+
+            } else if (Cubo4C1H.getText().equals("Amarillo")) {
+                C1 = new Color(255, 234, 78);
+                Cubo4C1G1.setText("A");
+                Cubo4C1G1.setBackground(C1);
+
+            }
+
+            C2 = null;
+            if (Cubo4C2H.getText().equals("Rojo")) {
+                C2 = new Color(155, 22, 57);
+                Cubo4C2G1.setText("R");
+                Cubo4C2G1.setBackground(C2);
+
+            } else if (Cubo4C2H.getText().equals("Blanco")) {
+                C2 = new Color(255, 255, 255);
+                Cubo4C2G1.setText("B");
+                Cubo4C2G1.setBackground(C2);
+
+            } else if (Cubo4C2H.getText().equals("Verde")) {
+                C2 = new Color(16, 175, 107);
+                Cubo4C2G1.setText("V");
+                Cubo4C2G1.setBackground(C2);
+
+            } else if (Cubo4C2H.getText().equals("Amarillo")) {
+                C2 = new Color(255, 234, 78);
+                Cubo4C2G1.setText("A");
+                Cubo4C2G1.setBackground(C2);
+
+            }
+
+            C3 = null;
+            if (Cubo4C3H.getText().equals("Rojo")) {
+                C3 = new Color(155, 22, 57);
+                Cubo4C3G1.setText("R");
+                Cubo4C3G1.setBackground(C3);
+
+            } else if (Cubo4C3H.getText().equals("Blanco")) {
+                C3 = new Color(255, 255, 255);
+                Cubo4C3G1.setText("B");
+                Cubo4C3G1.setBackground(C3);
+
+            } else if (Cubo4C3H.getText().equals("Verde")) {
+                C3 = new Color(16, 175, 107);
+                Cubo4C3G1.setText("V");
+                Cubo4C3G1.setBackground(C3);
+
+            } else if (Cubo4C3H.getText().equals("Amarillo")) {
+                C3 = new Color(255, 234, 78);
+                Cubo4C3G1.setText("A");
+                Cubo4C3G1.setBackground(C3);
+
+            }
+
+            C4 = null;
+            if (Cubo4C4H.getText().equals("Rojo")) {
+                C4 = new Color(155, 22, 57);
+                Cubo4C4G1.setText("R");
+                Cubo4C4G1.setBackground(C4);
+
+            } else if (Cubo4C4H.getText().equals("Blanco")) {
+                C4 = new Color(255, 255, 255);
+                Cubo4C4G1.setText("B");
+                Cubo4C4G1.setBackground(C4);
+
+            } else if (Cubo4C4H.getText().equals("Verde")) {
+                C4 = new Color(16, 175, 107);
+                Cubo4C4G1.setText("V");
+                Cubo4C4G1.setBackground(C4);
+
+            } else if (Cubo4C4H.getText().equals("Amarillo")) {
+                C4 = new Color(255, 234, 78);
+                Cubo4C4G1.setText("A");
+                Cubo4C4G1.setBackground(C4);
+
+            }
+
+            C5 = null;
+            if (Cubo4C5H.getText().equals("Rojo")) {
+                C5 = new Color(155, 22, 57);
+                Cubo4C5G1.setText("R");
+                Cubo4C5G1.setBackground(C5);
+
+            } else if (Cubo4C5H.getText().equals("Blanco")) {
+                C5 = new Color(255, 255, 255);
+                Cubo4C5G1.setText("B");
+                Cubo4C5G1.setBackground(C5);
+
+            } else if (Cubo4C5H.getText().equals("Verde")) {
+                C5 = new Color(16, 175, 107);
+                Cubo4C5G1.setText("V");
+                Cubo4C5G1.setBackground(C5);
+
+            } else if (Cubo4C5H.getText().equals("Amarillo")) {
+                C5 = new Color(255, 234, 78);
+                Cubo4C5G1.setText("A");
+                Cubo4C5G1.setBackground(C5);
+
+            }
+
+            C6 = null;
+            if (Cubo4C6H.getText().equals("Rojo")) {
+                C6 = new Color(155, 22, 57);
+                Cubo4C6G1.setText("R");
+                Cubo4C6G1.setBackground(C6);
+
+            } else if (Cubo4C6H.getText().equals("Blanco")) {
+                C6 = new Color(255, 255, 255);
+                Cubo4C6G1.setText("B");
+                Cubo4C6G1.setBackground(C6);
+
+            } else if (Cubo4C6H.getText().equals("Verde")) {
+                C6 = new Color(16, 175, 107);
+                Cubo4C6G1.setText("V");
+                Cubo4C6G1.setBackground(C6);
+
+            } else if (Cubo4C6H.getText().equals("Amarillo")) {
+                C6 = new Color(255, 234, 78);
+                Cubo4C6G1.setText("A");
+                Cubo4C6G1.setBackground(C6);
+
+            }
         }
     }//GEN-LAST:event_noPartidaActionPerformed
+
+    private void borrarHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarHistorialActionPerformed
+        // TODO add your handling code here:
+        Object[] options = {"Sí",
+            "No"};
+        int yes = JOptionPane.showOptionDialog(null,
+                "Esto borrará el registro de todas las\n"
+                + "partidas, esta acción NO ES REVERSIBLE.\n"
+                + "Deseas continuar?",
+                "Borrar Registros",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[0]);
+
+        if (JOptionPane.YES_OPTION == yes) {
+            borrarPartidas();
+            
+        } else {
+
+        }
+    }//GEN-LAST:event_borrarHistorialActionPerformed
+
+    public void borrarPartidas() {
+        partidas = new ArrayList<>();
+        iPartida = 0;
+        noPartida.removeAllItems();
+        noPartida.repaint();
+        reset = true;
+        jTabbedPane1.setSelectedIndex(0);
+    }
 
     /**
      * @param args the command line arguments
@@ -13293,6 +13403,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JButton arribaCubo2;
     private javax.swing.JButton arribaCubo3;
     private javax.swing.JButton arribaCubo4;
+    private javax.swing.JButton borrarHistorial;
     private javax.swing.JLabel checkLbl;
     private javax.swing.JButton derechaCubo1;
     private javax.swing.JButton derechaCubo2;
