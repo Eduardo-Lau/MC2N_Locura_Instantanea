@@ -5736,6 +5736,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         boolean G1Encontrado = false;
         boolean G2Encontrado = false;
+
+        int posI = 0;
+        int posC = 0;
+        int posW = 0;
+        int posR = 0;
         // Grafo Gl 
         // Cubo 1
         String Cubo1arista1I;
@@ -5944,6 +5949,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                         if (gradoVerticeR == 2 && gradoVerticeB == 2 && gradoVerticeV == 2 && gradoVerticeA == 2) {
 
+                            posI = i;
+                            posC = c;
+                            posW = w;
+                            posR = r;
+                            
                             System.out.println("Grafo G1: Horizontal - Encontrado");
                             G1Encontrado = true;
                             Cubo1aristaG1I = verticesCubo1[i];
@@ -6109,10 +6119,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                                 Cubo4aristaG2I = verticesCubo4[r];
                                 Cubo4aristaG2F = verticesCubo4[r + 1];
 
-                                if (!(Cubo1aristaG2I + Cubo1aristaG2F).equals(Cubo1aristaG1I + Cubo1aristaG1F)
-                                        && !(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2aristaG1I + Cubo2aristaG1F)
-                                        && !(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3aristaG1I + Cubo3aristaG1F)
-                                        && !(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4aristaG1I + Cubo4aristaG1F)) {
+                                if ((!(Cubo1aristaG2I + Cubo1aristaG2F).equals(Cubo1aristaG1I + Cubo1aristaG1F) || i != posI)
+                                        && (!(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2aristaG1I + Cubo2aristaG1F) || i != posC)
+                                        && (!(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3aristaG1I + Cubo3aristaG1F) || i != posW)
+                                        && (!(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4aristaG1I + Cubo4aristaG1F) || i != posR)) {
 
                                     System.out.println("Grafo G2: Vertical - Encontrado");
                                     G2Encontrado = true;
@@ -13192,7 +13202,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         if (JOptionPane.YES_OPTION == yes) {
             borrarPartidas();
-            
+
         } else {
 
         }
