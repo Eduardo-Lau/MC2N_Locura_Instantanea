@@ -3290,6 +3290,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo1.C6 = C6;
 
         System.out.println("Cubo 1 actualizado");
+        actualJuego();
     }
 
     public void genCubo2() {
@@ -3469,6 +3470,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo2.C6 = C6;
 
         System.out.println("Cubo 2 actualizado");
+        actualJuego();
     }
 
     public void genCubo3() {
@@ -3648,6 +3650,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo3.C6 = C6;
 
         System.out.println("Cubo 3 actualizado");
+        actualJuego();
     }
 
     public void genCubo4() {
@@ -3827,6 +3830,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4.C6 = C6;
 
         System.out.println("Cubo 4 actualizado");
+        actualJuego();
     }
 
     private void genAleatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genAleatorioActionPerformed
@@ -5061,88 +5065,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             JOptionPane.showMessageDialog(null, "Aún no ha generado los 4 cubos");
         } else if (Cubo1Bin.C1 == null) {
             sigBtnPressed = true;
-
             jTabbedPane1.setSelectedIndex(1);
-
-            // Cubo 1
-            Cubo1C1J.setText(Cubo1.C1I);
-            Cubo1C1J.setBackground(Cubo1.C1);
-
-            Cubo1C2J.setText(Cubo1.C2I);
-            Cubo1C2J.setBackground(Cubo1.C2);
-
-            Cubo1C3J.setText(Cubo1.C3I);
-            Cubo1C3J.setBackground(Cubo1.C3);
-
-            Cubo1C4J.setText(Cubo1.C4I);
-            Cubo1C4J.setBackground(Cubo1.C4);
-
-            Cubo1C5J.setText(Cubo1.C5I);
-            Cubo1C5J.setBackground(Cubo1.C5);
-
-            Cubo1C6J.setText(Cubo1.C6I);
-            Cubo1C6J.setBackground(Cubo1.C6);
-            //
-
-            // Cubo 2
-            Cubo2C1J.setText(Cubo2.C1I);
-            Cubo2C1J.setBackground(Cubo2.C1);
-
-            Cubo2C2J.setText(Cubo2.C2I);
-            Cubo2C2J.setBackground(Cubo2.C2);
-
-            Cubo2C3J.setText(Cubo2.C3I);
-            Cubo2C3J.setBackground(Cubo2.C3);
-
-            Cubo2C4J.setText(Cubo2.C4I);
-            Cubo2C4J.setBackground(Cubo2.C4);
-
-            Cubo2C5J.setText(Cubo2.C5I);
-            Cubo2C5J.setBackground(Cubo2.C5);
-
-            Cubo2C6J.setText(Cubo2.C6I);
-            Cubo2C6J.setBackground(Cubo2.C6);
-            //
-
-            // Cubo 3
-            Cubo3C1J.setText(Cubo3.C1I);
-            Cubo3C1J.setBackground(Cubo3.C1);
-
-            Cubo3C2J.setText(Cubo3.C2I);
-            Cubo3C2J.setBackground(Cubo3.C2);
-
-            Cubo3C3J.setText(Cubo3.C3I);
-            Cubo3C3J.setBackground(Cubo3.C3);
-
-            Cubo3C4J.setText(Cubo3.C4I);
-            Cubo3C4J.setBackground(Cubo3.C4);
-
-            Cubo3C5J.setText(Cubo3.C5I);
-            Cubo3C5J.setBackground(Cubo3.C5);
-
-            Cubo3C6J.setText(Cubo3.C6I);
-            Cubo3C6J.setBackground(Cubo3.C6);
-            //
-
-            // Cubo 4
-            Cubo4C1J.setText(Cubo4.C1I);
-            Cubo4C1J.setBackground(Cubo4.C1);
-
-            Cubo4C2J.setText(Cubo4.C2I);
-            Cubo4C2J.setBackground(Cubo4.C2);
-
-            Cubo4C3J.setText(Cubo4.C3I);
-            Cubo4C3J.setBackground(Cubo4.C3);
-
-            Cubo4C4J.setText(Cubo4.C4I);
-            Cubo4C4J.setBackground(Cubo4.C4);
-
-            Cubo4C5J.setText(Cubo4.C5I);
-            Cubo4C5J.setBackground(Cubo4.C5);
-
-            Cubo4C6J.setText(Cubo4.C6I);
-            Cubo4C6J.setBackground(Cubo4.C6);
-            //
+            
             Cubos cubo1temp = new Cubos();
             cubo1temp.C1 = Cubo1.C1;
             cubo1temp.C2 = Cubo1.C2;
@@ -5260,90 +5184,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 || (!Cubo4Bin.C1.equals(Cubo4.C1) || !Cubo4Bin.C2.equals(Cubo4.C2)
                 || !Cubo4Bin.C3.equals(Cubo4.C3) || !Cubo4Bin.C4.equals(Cubo4.C4)
                 || !Cubo4Bin.C5.equals(Cubo4.C5) || !Cubo4Bin.C6.equals(Cubo4.C6))) {
-
+            
             sigBtnPressed = true;
-
             jTabbedPane1.setSelectedIndex(1);
-
-            // Cubo 1
-            Cubo1C1J.setText(Cubo1.C1I);
-            Cubo1C1J.setBackground(Cubo1.C1);
-
-            Cubo1C2J.setText(Cubo1.C2I);
-            Cubo1C2J.setBackground(Cubo1.C2);
-
-            Cubo1C3J.setText(Cubo1.C3I);
-            Cubo1C3J.setBackground(Cubo1.C3);
-
-            Cubo1C4J.setText(Cubo1.C4I);
-            Cubo1C4J.setBackground(Cubo1.C4);
-
-            Cubo1C5J.setText(Cubo1.C5I);
-            Cubo1C5J.setBackground(Cubo1.C5);
-
-            Cubo1C6J.setText(Cubo1.C6I);
-            Cubo1C6J.setBackground(Cubo1.C6);
-            //
-
-            // Cubo 2
-            Cubo2C1J.setText(Cubo2.C1I);
-            Cubo2C1J.setBackground(Cubo2.C1);
-
-            Cubo2C2J.setText(Cubo2.C2I);
-            Cubo2C2J.setBackground(Cubo2.C2);
-
-            Cubo2C3J.setText(Cubo2.C3I);
-            Cubo2C3J.setBackground(Cubo2.C3);
-
-            Cubo2C4J.setText(Cubo2.C4I);
-            Cubo2C4J.setBackground(Cubo2.C4);
-
-            Cubo2C5J.setText(Cubo2.C5I);
-            Cubo2C5J.setBackground(Cubo2.C5);
-
-            Cubo2C6J.setText(Cubo2.C6I);
-            Cubo2C6J.setBackground(Cubo2.C6);
-            //
-
-            // Cubo 3
-            Cubo3C1J.setText(Cubo3.C1I);
-            Cubo3C1J.setBackground(Cubo3.C1);
-
-            Cubo3C2J.setText(Cubo3.C2I);
-            Cubo3C2J.setBackground(Cubo3.C2);
-
-            Cubo3C3J.setText(Cubo3.C3I);
-            Cubo3C3J.setBackground(Cubo3.C3);
-
-            Cubo3C4J.setText(Cubo3.C4I);
-            Cubo3C4J.setBackground(Cubo3.C4);
-
-            Cubo3C5J.setText(Cubo3.C5I);
-            Cubo3C5J.setBackground(Cubo3.C5);
-
-            Cubo3C6J.setText(Cubo3.C6I);
-            Cubo3C6J.setBackground(Cubo3.C6);
-            //
-
-            // Cubo 4
-            Cubo4C1J.setText(Cubo4.C1I);
-            Cubo4C1J.setBackground(Cubo4.C1);
-
-            Cubo4C2J.setText(Cubo4.C2I);
-            Cubo4C2J.setBackground(Cubo4.C2);
-
-            Cubo4C3J.setText(Cubo4.C3I);
-            Cubo4C3J.setBackground(Cubo4.C3);
-
-            Cubo4C4J.setText(Cubo4.C4I);
-            Cubo4C4J.setBackground(Cubo4.C4);
-
-            Cubo4C5J.setText(Cubo4.C5I);
-            Cubo4C5J.setBackground(Cubo4.C5);
-
-            Cubo4C6J.setText(Cubo4.C6I);
-            Cubo4C6J.setBackground(Cubo4.C6);
-            //
+            
             Cubos cubo1temp = new Cubos();
             cubo1temp.C1 = Cubo1.C1;
             cubo1temp.C2 = Cubo1.C2;
@@ -5405,7 +5249,9 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             cubo4temp.C6I = Cubo4.C6I;
 
             boolean solucion = resolverJuegoSilent();
-            partidas.add(iPartida, new Partidas(cubo1temp, cubo2temp, cubo3temp, cubo4temp, solucion));
+
+            partidas.add(new Partidas(cubo1temp, cubo2temp, cubo3temp, cubo4temp, solucion));
+            System.out.println(partidas.get(iPartida).solucion);
 
             iPartida++;
             noPartida.addItem(String.valueOf(iPartida));
@@ -5447,67 +5293,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 resueltoLbl.setVisible(false);
                 resuelto = false;
             }
-
         } else {
             sigBtnPressed = true;
             jTabbedPane1.setSelectedIndex(1);
-
-            // Cubo 1
-            Cubo1C1J.setText(Cubo1Bin.Cubo1C1JN);
-            Cubo1C1J.setBackground(Cubo1Bin.Cubo1C1JB);
-            Cubo1C2J.setText(Cubo1Bin.Cubo1C2JN);
-            Cubo1C2J.setBackground(Cubo1Bin.Cubo1C2JB);
-            Cubo1C3J.setText(Cubo1Bin.Cubo1C3JN);
-            Cubo1C3J.setBackground(Cubo1Bin.Cubo1C3JB);
-            Cubo1C4J.setText(Cubo1Bin.Cubo1C4JN);
-            Cubo1C4J.setBackground(Cubo1Bin.Cubo1C4JB);
-            Cubo1C5J.setText(Cubo1Bin.Cubo1C5JN);
-            Cubo1C5J.setBackground(Cubo1Bin.Cubo1C5JB);
-            Cubo1C6J.setText(Cubo1Bin.Cubo1C6JN);
-            Cubo1C6J.setBackground(Cubo1Bin.Cubo1C6JB);
-
-            // Cubo 2
-            Cubo2C1J.setText(Cubo2Bin.Cubo2C1JN);
-            Cubo2C1J.setBackground(Cubo2Bin.Cubo2C1JB);
-            Cubo2C2J.setText(Cubo2Bin.Cubo2C2JN);
-            Cubo2C2J.setBackground(Cubo2Bin.Cubo2C2JB);
-            Cubo2C3J.setText(Cubo2Bin.Cubo2C3JN);
-            Cubo2C3J.setBackground(Cubo2Bin.Cubo2C3JB);
-            Cubo2C4J.setText(Cubo2Bin.Cubo2C4JN);
-            Cubo2C4J.setBackground(Cubo2Bin.Cubo2C4JB);
-            Cubo2C5J.setText(Cubo2Bin.Cubo2C5JN);
-            Cubo2C5J.setBackground(Cubo2Bin.Cubo2C5JB);
-            Cubo2C6J.setText(Cubo2Bin.Cubo2C6JN);
-            Cubo2C6J.setBackground(Cubo2Bin.Cubo2C6JB);
-
-            // Cubo 3
-            Cubo3C1J.setText(Cubo3Bin.Cubo3C1JN);
-            Cubo3C1J.setBackground(Cubo3Bin.Cubo3C1JB);
-            Cubo3C2J.setText(Cubo3Bin.Cubo3C2JN);
-            Cubo3C2J.setBackground(Cubo3Bin.Cubo3C2JB);
-            Cubo3C3J.setText(Cubo3Bin.Cubo3C3JN);
-            Cubo3C3J.setBackground(Cubo3Bin.Cubo3C3JB);
-            Cubo3C4J.setText(Cubo3Bin.Cubo3C4JN);
-            Cubo3C4J.setBackground(Cubo3Bin.Cubo3C4JB);
-            Cubo3C5J.setText(Cubo3Bin.Cubo3C5JN);
-            Cubo3C5J.setBackground(Cubo3Bin.Cubo3C5JB);
-            Cubo3C6J.setText(Cubo3Bin.Cubo3C6JN);
-            Cubo3C6J.setBackground(Cubo3Bin.Cubo3C6JB);
-
-            // Cubo 4
-            Cubo4C1J.setText(Cubo4Bin.Cubo4C1JN);
-            Cubo4C1J.setBackground(Cubo4Bin.Cubo4C1JB);
-            Cubo4C2J.setText(Cubo4Bin.Cubo4C2JN);
-            Cubo4C2J.setBackground(Cubo4Bin.Cubo4C2JB);
-            Cubo4C3J.setText(Cubo4Bin.Cubo4C3JN);
-            Cubo4C3J.setBackground(Cubo4Bin.Cubo4C3JB);
-            Cubo4C4J.setText(Cubo4Bin.Cubo4C4JN);
-            Cubo4C4J.setBackground(Cubo4Bin.Cubo4C4JB);
-            Cubo4C5J.setText(Cubo4Bin.Cubo4C5JN);
-            Cubo4C5J.setBackground(Cubo4Bin.Cubo4C5JB);
-            Cubo4C6J.setText(Cubo4Bin.Cubo4C6JN);
-            Cubo4C6J.setBackground(Cubo4Bin.Cubo4C6JB);
-
+            
             if (reset == true || iPartida == 0) {
                 Cubos cubo1temp = new Cubos();
                 cubo1temp.C1 = Cubo1.C1;
@@ -5613,12 +5402,249 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 resueltoLbl.setVisible(false);
                 resuelto = false;
             }
-
+            
+            resolverJuegoSilent();
         }
-
 
     }//GEN-LAST:event_jugarBtnActionPerformed
 
+    public void actualJuego() {
+        if (Cubo1Bin.C1 == null) {
+
+            // Cubo 1
+            Cubo1C1J.setText(Cubo1.C1I);
+            Cubo1C1J.setBackground(Cubo1.C1);
+
+            Cubo1C2J.setText(Cubo1.C2I);
+            Cubo1C2J.setBackground(Cubo1.C2);
+
+            Cubo1C3J.setText(Cubo1.C3I);
+            Cubo1C3J.setBackground(Cubo1.C3);
+
+            Cubo1C4J.setText(Cubo1.C4I);
+            Cubo1C4J.setBackground(Cubo1.C4);
+
+            Cubo1C5J.setText(Cubo1.C5I);
+            Cubo1C5J.setBackground(Cubo1.C5);
+
+            Cubo1C6J.setText(Cubo1.C6I);
+            Cubo1C6J.setBackground(Cubo1.C6);
+            //
+
+            // Cubo 2
+            Cubo2C1J.setText(Cubo2.C1I);
+            Cubo2C1J.setBackground(Cubo2.C1);
+
+            Cubo2C2J.setText(Cubo2.C2I);
+            Cubo2C2J.setBackground(Cubo2.C2);
+
+            Cubo2C3J.setText(Cubo2.C3I);
+            Cubo2C3J.setBackground(Cubo2.C3);
+
+            Cubo2C4J.setText(Cubo2.C4I);
+            Cubo2C4J.setBackground(Cubo2.C4);
+
+            Cubo2C5J.setText(Cubo2.C5I);
+            Cubo2C5J.setBackground(Cubo2.C5);
+
+            Cubo2C6J.setText(Cubo2.C6I);
+            Cubo2C6J.setBackground(Cubo2.C6);
+            //
+
+            // Cubo 3
+            Cubo3C1J.setText(Cubo3.C1I);
+            Cubo3C1J.setBackground(Cubo3.C1);
+
+            Cubo3C2J.setText(Cubo3.C2I);
+            Cubo3C2J.setBackground(Cubo3.C2);
+
+            Cubo3C3J.setText(Cubo3.C3I);
+            Cubo3C3J.setBackground(Cubo3.C3);
+
+            Cubo3C4J.setText(Cubo3.C4I);
+            Cubo3C4J.setBackground(Cubo3.C4);
+
+            Cubo3C5J.setText(Cubo3.C5I);
+            Cubo3C5J.setBackground(Cubo3.C5);
+
+            Cubo3C6J.setText(Cubo3.C6I);
+            Cubo3C6J.setBackground(Cubo3.C6);
+            //
+
+            // Cubo 4
+            Cubo4C1J.setText(Cubo4.C1I);
+            Cubo4C1J.setBackground(Cubo4.C1);
+
+            Cubo4C2J.setText(Cubo4.C2I);
+            Cubo4C2J.setBackground(Cubo4.C2);
+
+            Cubo4C3J.setText(Cubo4.C3I);
+            Cubo4C3J.setBackground(Cubo4.C3);
+
+            Cubo4C4J.setText(Cubo4.C4I);
+            Cubo4C4J.setBackground(Cubo4.C4);
+
+            Cubo4C5J.setText(Cubo4.C5I);
+            Cubo4C5J.setBackground(Cubo4.C5);
+
+            Cubo4C6J.setText(Cubo4.C6I);
+            Cubo4C6J.setBackground(Cubo4.C6);
+            //
+            
+        } else if ((!Cubo1Bin.C1.equals(Cubo1.C1) || !Cubo1Bin.C2.equals(Cubo1.C2)
+                || !Cubo1Bin.C3.equals(Cubo1.C3) || !Cubo1Bin.C4.equals(Cubo1.C4)
+                || !Cubo1Bin.C5.equals(Cubo1.C5) || !Cubo1Bin.C6.equals(Cubo1.C6))
+                || (!Cubo2Bin.C1.equals(Cubo2.C1) || !Cubo2Bin.C2.equals(Cubo2.C2)
+                || !Cubo2Bin.C3.equals(Cubo2.C3) || !Cubo2Bin.C4.equals(Cubo2.C4)
+                || !Cubo2Bin.C5.equals(Cubo2.C5) || !Cubo2Bin.C6.equals(Cubo2.C6))
+                || (!Cubo3Bin.C1.equals(Cubo3.C1) || !Cubo3Bin.C2.equals(Cubo3.C2)
+                || !Cubo3Bin.C3.equals(Cubo3.C3) || !Cubo3Bin.C4.equals(Cubo3.C4)
+                || !Cubo3Bin.C5.equals(Cubo3.C5) || !Cubo3Bin.C6.equals(Cubo3.C6))
+                || (!Cubo4Bin.C1.equals(Cubo4.C1) || !Cubo4Bin.C2.equals(Cubo4.C2)
+                || !Cubo4Bin.C3.equals(Cubo4.C3) || !Cubo4Bin.C4.equals(Cubo4.C4)
+                || !Cubo4Bin.C5.equals(Cubo4.C5) || !Cubo4Bin.C6.equals(Cubo4.C6))) {
+
+
+            // Cubo 1
+            Cubo1C1J.setText(Cubo1.C1I);
+            Cubo1C1J.setBackground(Cubo1.C1);
+
+            Cubo1C2J.setText(Cubo1.C2I);
+            Cubo1C2J.setBackground(Cubo1.C2);
+
+            Cubo1C3J.setText(Cubo1.C3I);
+            Cubo1C3J.setBackground(Cubo1.C3);
+
+            Cubo1C4J.setText(Cubo1.C4I);
+            Cubo1C4J.setBackground(Cubo1.C4);
+
+            Cubo1C5J.setText(Cubo1.C5I);
+            Cubo1C5J.setBackground(Cubo1.C5);
+
+            Cubo1C6J.setText(Cubo1.C6I);
+            Cubo1C6J.setBackground(Cubo1.C6);
+            //
+
+            // Cubo 2
+            Cubo2C1J.setText(Cubo2.C1I);
+            Cubo2C1J.setBackground(Cubo2.C1);
+
+            Cubo2C2J.setText(Cubo2.C2I);
+            Cubo2C2J.setBackground(Cubo2.C2);
+
+            Cubo2C3J.setText(Cubo2.C3I);
+            Cubo2C3J.setBackground(Cubo2.C3);
+
+            Cubo2C4J.setText(Cubo2.C4I);
+            Cubo2C4J.setBackground(Cubo2.C4);
+
+            Cubo2C5J.setText(Cubo2.C5I);
+            Cubo2C5J.setBackground(Cubo2.C5);
+
+            Cubo2C6J.setText(Cubo2.C6I);
+            Cubo2C6J.setBackground(Cubo2.C6);
+            //
+
+            // Cubo 3
+            Cubo3C1J.setText(Cubo3.C1I);
+            Cubo3C1J.setBackground(Cubo3.C1);
+
+            Cubo3C2J.setText(Cubo3.C2I);
+            Cubo3C2J.setBackground(Cubo3.C2);
+
+            Cubo3C3J.setText(Cubo3.C3I);
+            Cubo3C3J.setBackground(Cubo3.C3);
+
+            Cubo3C4J.setText(Cubo3.C4I);
+            Cubo3C4J.setBackground(Cubo3.C4);
+
+            Cubo3C5J.setText(Cubo3.C5I);
+            Cubo3C5J.setBackground(Cubo3.C5);
+
+            Cubo3C6J.setText(Cubo3.C6I);
+            Cubo3C6J.setBackground(Cubo3.C6);
+            //
+
+            // Cubo 4
+            Cubo4C1J.setText(Cubo4.C1I);
+            Cubo4C1J.setBackground(Cubo4.C1);
+
+            Cubo4C2J.setText(Cubo4.C2I);
+            Cubo4C2J.setBackground(Cubo4.C2);
+
+            Cubo4C3J.setText(Cubo4.C3I);
+            Cubo4C3J.setBackground(Cubo4.C3);
+
+            Cubo4C4J.setText(Cubo4.C4I);
+            Cubo4C4J.setBackground(Cubo4.C4);
+
+            Cubo4C5J.setText(Cubo4.C5I);
+            Cubo4C5J.setBackground(Cubo4.C5);
+
+            Cubo4C6J.setText(Cubo4.C6I);
+            Cubo4C6J.setBackground(Cubo4.C6);
+            //
+            
+
+        } else {
+            // Cubo 1
+            Cubo1C1J.setText(Cubo1Bin.Cubo1C1JN);
+            Cubo1C1J.setBackground(Cubo1Bin.Cubo1C1JB);
+            Cubo1C2J.setText(Cubo1Bin.Cubo1C2JN);
+            Cubo1C2J.setBackground(Cubo1Bin.Cubo1C2JB);
+            Cubo1C3J.setText(Cubo1Bin.Cubo1C3JN);
+            Cubo1C3J.setBackground(Cubo1Bin.Cubo1C3JB);
+            Cubo1C4J.setText(Cubo1Bin.Cubo1C4JN);
+            Cubo1C4J.setBackground(Cubo1Bin.Cubo1C4JB);
+            Cubo1C5J.setText(Cubo1Bin.Cubo1C5JN);
+            Cubo1C5J.setBackground(Cubo1Bin.Cubo1C5JB);
+            Cubo1C6J.setText(Cubo1Bin.Cubo1C6JN);
+            Cubo1C6J.setBackground(Cubo1Bin.Cubo1C6JB);
+
+            // Cubo 2
+            Cubo2C1J.setText(Cubo2Bin.Cubo2C1JN);
+            Cubo2C1J.setBackground(Cubo2Bin.Cubo2C1JB);
+            Cubo2C2J.setText(Cubo2Bin.Cubo2C2JN);
+            Cubo2C2J.setBackground(Cubo2Bin.Cubo2C2JB);
+            Cubo2C3J.setText(Cubo2Bin.Cubo2C3JN);
+            Cubo2C3J.setBackground(Cubo2Bin.Cubo2C3JB);
+            Cubo2C4J.setText(Cubo2Bin.Cubo2C4JN);
+            Cubo2C4J.setBackground(Cubo2Bin.Cubo2C4JB);
+            Cubo2C5J.setText(Cubo2Bin.Cubo2C5JN);
+            Cubo2C5J.setBackground(Cubo2Bin.Cubo2C5JB);
+            Cubo2C6J.setText(Cubo2Bin.Cubo2C6JN);
+            Cubo2C6J.setBackground(Cubo2Bin.Cubo2C6JB);
+
+            // Cubo 3
+            Cubo3C1J.setText(Cubo3Bin.Cubo3C1JN);
+            Cubo3C1J.setBackground(Cubo3Bin.Cubo3C1JB);
+            Cubo3C2J.setText(Cubo3Bin.Cubo3C2JN);
+            Cubo3C2J.setBackground(Cubo3Bin.Cubo3C2JB);
+            Cubo3C3J.setText(Cubo3Bin.Cubo3C3JN);
+            Cubo3C3J.setBackground(Cubo3Bin.Cubo3C3JB);
+            Cubo3C4J.setText(Cubo3Bin.Cubo3C4JN);
+            Cubo3C4J.setBackground(Cubo3Bin.Cubo3C4JB);
+            Cubo3C5J.setText(Cubo3Bin.Cubo3C5JN);
+            Cubo3C5J.setBackground(Cubo3Bin.Cubo3C5JB);
+            Cubo3C6J.setText(Cubo3Bin.Cubo3C6JN);
+            Cubo3C6J.setBackground(Cubo3Bin.Cubo3C6JB);
+
+            // Cubo 4
+            Cubo4C1J.setText(Cubo4Bin.Cubo4C1JN);
+            Cubo4C1J.setBackground(Cubo4Bin.Cubo4C1JB);
+            Cubo4C2J.setText(Cubo4Bin.Cubo4C2JN);
+            Cubo4C2J.setBackground(Cubo4Bin.Cubo4C2JB);
+            Cubo4C3J.setText(Cubo4Bin.Cubo4C3JN);
+            Cubo4C3J.setBackground(Cubo4Bin.Cubo4C3JB);
+            Cubo4C4J.setText(Cubo4Bin.Cubo4C4JN);
+            Cubo4C4J.setBackground(Cubo4Bin.Cubo4C4JB);
+            Cubo4C5J.setText(Cubo4Bin.Cubo4C5JN);
+            Cubo4C5J.setBackground(Cubo4Bin.Cubo4C5JB);
+            Cubo4C6J.setText(Cubo4Bin.Cubo4C6JN);
+            Cubo4C6J.setBackground(Cubo4Bin.Cubo4C6JB);
+
+        }
+    }
 
     private void izquierdaCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_izquierdaCubo1ActionPerformed
         // TODO add your handling code here:
@@ -5953,7 +5979,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                             posC = c;
                             posW = w;
                             posR = r;
-                            
+
                             System.out.println("Grafo G1: Horizontal - Encontrado");
                             G1Encontrado = true;
                             Cubo1aristaG1I = verticesCubo1[i];
@@ -11935,7 +11961,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         int posC = 0;
         int posW = 0;
         int posR = 0;
-        
+
         // Grafo Gl 
         // Cubo 1
         String Cubo1arista1I;
@@ -12144,6 +12170,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                         if (gradoVerticeR == 2 && gradoVerticeB == 2 && gradoVerticeV == 2 && gradoVerticeA == 2) {
 
+                            posI = i;
+                            posC = c;
+                            posW = w;
+                            posR = r;
+                            
                             System.out.println("Grafo G1: Horizontal - Encontrado");
                             G1Encontrado = true;
                             Cubo1aristaG1I = verticesCubo1[i];
