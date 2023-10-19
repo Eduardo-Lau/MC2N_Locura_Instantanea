@@ -1565,7 +1565,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(arribaCubo1);
-        arribaCubo1.setBounds(90, 40, 25, 25);
+        arribaCubo1.setBounds(86, 40, 25, 25);
 
         izquierdaCubo1.setBackground(new java.awt.Color(135, 146, 255));
         izquierdaCubo1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1744,7 +1744,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(arribaCubo2);
-        arribaCubo2.setBounds(306, 38, 25, 25);
+        arribaCubo2.setBounds(303, 38, 25, 25);
 
         jLabel14.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jLabel14.setText("2)");
@@ -1770,7 +1770,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(derechaCubo2);
-        derechaCubo2.setBounds(365, 97, 25, 25);
+        derechaCubo2.setBounds(365, 100, 25, 25);
 
         abajoCubo2.setBackground(new java.awt.Color(135, 146, 255));
         abajoCubo2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1875,7 +1875,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(arribaCubo3);
-        arribaCubo3.setBounds(533, 38, 25, 25);
+        arribaCubo3.setBounds(532, 38, 25, 25);
 
         jLabel15.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
         jLabel15.setText("3)");
@@ -1901,7 +1901,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(derechaCubo3);
-        derechaCubo3.setBounds(594, 97, 25, 25);
+        derechaCubo3.setBounds(594, 100, 25, 25);
 
         abajoCubo3.setBackground(new java.awt.Color(135, 146, 255));
         abajoCubo3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2032,7 +2032,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(derechaCubo4);
-        derechaCubo4.setBounds(825, 97, 25, 25);
+        derechaCubo4.setBounds(825, 100, 25, 25);
 
         abajoCubo4.setBackground(new java.awt.Color(135, 146, 255));
         abajoCubo4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -6146,9 +6146,9 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                                 Cubo4aristaG2F = verticesCubo4[r + 1];
 
                                 if ((!(Cubo1aristaG2I + Cubo1aristaG2F).equals(Cubo1aristaG1I + Cubo1aristaG1F) || i != posI)
-                                        && (!(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2aristaG1I + Cubo2aristaG1F) || i != posC)
-                                        && (!(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3aristaG1I + Cubo3aristaG1F) || i != posW)
-                                        && (!(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4aristaG1I + Cubo4aristaG1F) || i != posR)) {
+                                        && (!(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2aristaG1I + Cubo2aristaG1F) || c != posC)
+                                        && (!(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3aristaG1I + Cubo3aristaG1F) || w != posW)
+                                        && (!(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4aristaG1I + Cubo4aristaG1F) || r != posR)) {
 
                                     System.out.println("Grafo G2: Vertical - Encontrado");
                                     G2Encontrado = true;
@@ -12341,9 +12341,9 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                                 Cubo4aristaG2F = verticesCubo4[r + 1];
 
                                 if ((!(Cubo1aristaG2I + Cubo1aristaG2F).equals(Cubo1aristaG1I + Cubo1aristaG1F) || i != posI)
-                                        && (!(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2aristaG1I + Cubo2aristaG1F) || i != posC)
-                                        && (!(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3aristaG1I + Cubo3aristaG1F) || i != posW)
-                                        && (!(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4aristaG1I + Cubo4aristaG1F) || i != posR)) {
+                                        && (!(Cubo2aristaG2I + Cubo2aristaG2F).equals(Cubo2aristaG1I + Cubo2aristaG1F) || c != posC)
+                                        && (!(Cubo3aristaG2I + Cubo3aristaG2F).equals(Cubo3aristaG1I + Cubo3aristaG1F) || w != posW)
+                                        && (!(Cubo4aristaG2I + Cubo4aristaG2F).equals(Cubo4aristaG1I + Cubo4aristaG1F) || r != posR)) {
 
                                     System.out.println("Grafo G2: Vertical - Encontrado");
                                     G2Encontrado = true;

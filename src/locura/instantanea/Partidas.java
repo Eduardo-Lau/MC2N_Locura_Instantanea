@@ -17,6 +17,7 @@ public class Partidas implements Serializable {
     public Cubos Cubo3 = new Cubos();
     public Cubos Cubo4 = new Cubos();
     boolean solucion;
+    int iSoluciones;
     
     public Partidas(Cubos Cubo1, Cubos Cubo2, Cubos Cubo3, Cubos Cubo4, boolean solucion) {
         this.Cubo1 = Cubo1;
