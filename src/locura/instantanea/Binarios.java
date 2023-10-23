@@ -6,6 +6,7 @@ package locura.instantanea;
 
 import java.awt.Color;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,6 +21,8 @@ public class Binarios implements Serializable {
     public Cubos Cubo3 = new Cubos();
     public Cubos Cubo4 = new Cubos();
     boolean solucion;
+    public ArrayList<Soluciones> soluciones = new ArrayList<>();
+    int solucionAplicada;
 
     // General para los 4 cubos
     Color C1;
@@ -94,12 +97,13 @@ public class Binarios implements Serializable {
     public Binarios() {
     }
     
-    public Binarios(Cubos Cubo1, Cubos Cubo2, Cubos Cubo3, Cubos Cubo4, boolean solucion) {
+    public Binarios(Cubos Cubo1, Cubos Cubo2, Cubos Cubo3, Cubos Cubo4, boolean solucion, ArrayList<Soluciones> soluciones) {
         this.Cubo1 = Cubo1;
         this.Cubo2 = Cubo2;
         this.Cubo3 = Cubo3;
         this.Cubo4 = Cubo4;
         this.solucion = solucion;
+        this.soluciones = soluciones;
     }
 
 }

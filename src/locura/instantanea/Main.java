@@ -5,7 +5,7 @@
 package locura.instantanea;
 
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
-import java.awt.Color;
+import java.awt.Font;
 import javax.swing.UIManager;
 
 /**
@@ -22,6 +22,8 @@ public class Main {
         try {
             FlatMacDarkLaf.registerCustomDefaultsSource("style");
             UIManager.setLookAndFeel(new FlatMacDarkLaf());
+            UIManager.put("Label.font", new Font("Consolas", Font.PLAIN, 16));
+            UIManager.put("Button.font", new Font("Consolas", Font.BOLD, 16));
             
         } catch (Exception e) {
             e.printStackTrace();
