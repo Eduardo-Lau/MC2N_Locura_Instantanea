@@ -149,40 +149,68 @@
             <Component class="javax.swing.JSeparator" name="jSeparator2">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="220" y="70" width="12" height="260"/>
+                  <AbsoluteConstraints x="220" y="70" width="3" height="260"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator3">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="450" y="70" width="10" height="260"/>
+                  <AbsoluteConstraints x="450" y="70" width="3" height="260"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator4">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="670" y="70" width="10" height="260"/>
+                  <AbsoluteConstraints x="670" y="70" width="3" height="260"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator5">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="890" y="70" width="10" height="260"/>
+                  <AbsoluteConstraints x="890" y="70" width="3" height="260"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -1780,10 +1808,17 @@
             <Component class="javax.swing.JSeparator" name="jSeparator1">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="70" width="10" height="260"/>
+                  <AbsoluteConstraints x="0" y="70" width="3" height="260"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -3362,8 +3397,8 @@
                 <Property name="orientation" type="int" value="1"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="33" green="33" red="33" type="rgb"/>
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
                     </LineBorder>
                   </Border>
                 </Property>
@@ -3373,7 +3408,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="530" y="370" width="-1" height="210"/>
+                  <AbsoluteConstraints x="530" y="370" width="3" height="210"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -3385,8 +3420,8 @@
                 <Property name="orientation" type="int" value="1"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="33" green="33" red="33" type="rgb"/>
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
                     </LineBorder>
                   </Border>
                 </Property>
@@ -3396,7 +3431,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="330" y="370" width="-1" height="210"/>
+                  <AbsoluteConstraints x="330" y="370" width="3" height="210"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -3408,8 +3443,8 @@
                 <Property name="orientation" type="int" value="1"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="33" green="33" red="33" type="rgb"/>
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
                     </LineBorder>
                   </Border>
                 </Property>
@@ -3419,7 +3454,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="427" y="370" width="-1" height="210"/>
+                  <AbsoluteConstraints x="427" y="370" width="3" height="210"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -3574,7 +3609,7 @@
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="40" width="900" height="150"/>
+                  <AbsoluteConstraints x="0" y="30" width="900" height="130"/>
                 </Constraint>
               </Constraints>
 
@@ -3588,7 +3623,7 @@
                       <Font name="Consolas" size="17" style="0"/>
                     </Property>
                     <Property name="rows" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="Utilizando la teor&#xed;a de Grafos, se construye un grafo Gl que represente a los 4 cubos &#xa;con las siguientes reglas:&#xa; - El grafo tiene 4 v&#xe9;rtices que representan los 4 colores posibles (R, B, V, A).&#xa; - Las aristas representan caras opuestas de cada cubo, 3 aristas por cubo.&#xa; - Las aristas se etiquetan con el n&#xfa;mero del cubo (1, 2, 3, 4).    &#x2193; Deslice hacia abajo &#x2193;&#xa;&#xa;Despu&#xe9;s, se construyen 2 subgrafos de Gl (si existen) que representan las soluciones &#xa;horizontal y vertical, se deben seguir las siguientes reglas:&#xa; - Cada subgrafo debe tener los 4 v&#xe9;rtices de Gl&#xa; - Cada subgrafo debe tener &#xfa;nicamente 4 aristas, 1 arista por cubo. (etiquetas 1,2,3,4)&#xa; - El grado de cada v&#xe9;rtice debe ser igual a 2&#xa; - Las aristas del 1er subgrafo no se deben repetir en el 2do subgrafo&#xa;&#xa;Interpretaci&#xf3;n de subgrafos G1 y G2 :&#xa;&#xa;Por &#xfa;ltimo, se interpretan ambos subgrafos de la siguiente forma:&#xa; Soluci&#xf3;n Horizontal: (Grafo G1- recorrido horario)&#xa; - Se localiza la arista 1 (cubo 1) y se observa que v&#xe9;rtices conecta.&#xa; - En el cubo 1 se colocan estos 2 colores, de izquierda a derecha. (por ejemplo, R-B)&#xa; - Se observa en que v&#xe9;rtice termina la arista 1, y a partir de ese v&#xe9;rtice se observa la&#xa;   siguiente arista y los v&#xe9;rtices que conecta, as&#xed; sucesivamente. Siempre en sentido&#xa;   horario.                                                                                     &#x2193; Deslice hacia abajo &#x2193;&#xa;&#xa;Soluci&#xf3;n Vertical: (Grafo G2- recorrido horario)&#xa; - Se localiza la arista 1 (cubo 1) y se observa que v&#xe9;rtices conecta.&#xa; - En el cubo 1 se colocan estos 2 colores, de arriba hacia abajo. (por ejemplo, V-A)&#xa; - Se observa en que v&#xe9;rtice termina la arista 1, y a partir de ese v&#xe9;rtice se observa la&#xa;   siguiente arista y los v&#xe9;rtices que conecta, as&#xed; sucesivamente. Siempre en sentido&#xa;   horario."/>
+                    <Property name="text" type="java.lang.String" value="Utilizando la teor&#xed;a de Grafos, se construye un grafo Gl que represente a los 4 cubos &#xa;con las siguientes reglas:&#xa; - El grafo tiene 4 v&#xe9;rtices que representan los 4 colores posibles (R, B, V, A).&#xa; - Las aristas representan caras opuestas de cada cubo, 3 aristas por cubo.&#xa; - Las aristas se etiquetan con el n&#xfa;mero del cubo (1, 2, 3, 4).    &#x2193; Deslice hacia abajo &#x2193;&#xa;&#xa;Despu&#xe9;s, se construyen 2 subgrafos de Gl (si existen) que representan las soluciones &#xa;horizontal y vertical, se deben seguir las siguientes reglas:&#xa; - Cada subgrafo debe tener los 4 v&#xe9;rtices de Gl&#xa; - Cada subgrafo debe tener &#xfa;nicamente 4 aristas, 1 arista por cubo. (etiquetas 1,2,3,4)&#xa; - El grado de cada v&#xe9;rtice debe ser igual a 2&#xa; - Las aristas del 1er subgrafo no se deben repetir en el 2do subgrafo&#xa;&#xa;Interpretaci&#xf3;n de subgrafos G1 y G2 :&#xa;&#xa;Por &#xfa;ltimo, se interpretan ambos subgrafos de la siguiente forma:&#xa; Soluci&#xf3;n Horizontal: (Grafo G1- recorrido horario)&#xa; - Se localiza la arista 1 (cubo 1) y se observa que v&#xe9;rtices conecta.&#xa; - En el cubo 1 se colocan estos 2 colores, de izquierda a derecha. (por ejemplo, R-B)&#xa; - Se observa en que v&#xe9;rtice termina la arista 1, y a partir de ese v&#xe9;rtice se observa la&#xa;   siguiente arista y los v&#xe9;rtices que conecta, as&#xed; sucesivamente. Siempre en sentido&#xa;   horario.                                                          Deslice hacia abajo &#x2193;&#xa;&#xa;Soluci&#xf3;n Vertical: (Grafo G2- recorrido horario)&#xa; - Se localiza la arista 1 (cubo 1) y se observa que v&#xe9;rtices conecta.&#xa; - En el cubo 1 se colocan estos 2 colores, de arriba hacia abajo. (por ejemplo, V-A)&#xa; - Se observa en que v&#xe9;rtice termina la arista 1, y a partir de ese v&#xe9;rtice se observa la&#xa;   siguiente arista y los v&#xe9;rtices que conecta, as&#xed; sucesivamente. Siempre en sentido&#xa;   horario."/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -3993,6 +4028,102 @@
                 </Constraint>
               </Constraints>
             </Component>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Consolas" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="66" red="33" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="4"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="490" y="165" width="20" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Consolas" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="400" y="165" width="20" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="cc" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Consolas" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="2"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="430" y="165" width="20" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel18">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="ff" red="99" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Consolas" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="ff" red="66" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="3"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="460" y="165" width="20" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JSeparator" name="jSeparator15">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="40" y="190" width="830" height="3"/>
+                </Constraint>
+              </Constraints>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel4">
@@ -4066,40 +4197,68 @@
             <Component class="javax.swing.JSeparator" name="jSeparator9">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="220" y="70" width="12" height="260"/>
+                  <AbsoluteConstraints x="220" y="70" width="3" height="260"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator10">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="440" y="70" width="10" height="260"/>
+                  <AbsoluteConstraints x="440" y="70" width="3" height="260"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator11">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="670" y="70" width="10" height="260"/>
+                  <AbsoluteConstraints x="670" y="70" width="3" height="260"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator12">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="890" y="70" width="10" height="260"/>
+                  <AbsoluteConstraints x="890" y="70" width="3" height="260"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -5049,10 +5208,17 @@
             <Component class="javax.swing.JSeparator" name="jSeparator13">
               <Properties>
                 <Property name="orientation" type="int" value="1"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="70" width="10" height="260"/>
+                  <AbsoluteConstraints x="0" y="70" width="3" height="260"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -5091,9 +5257,18 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator14">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder roundedCorners="true" thickness="2">
+                      <Color PropertyName="color" blue="3d" green="3a" red="39" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
+              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="45" width="900" height="10"/>
+                  <AbsoluteConstraints x="0" y="45" width="900" height="3"/>
                 </Constraint>
               </Constraints>
             </Component>

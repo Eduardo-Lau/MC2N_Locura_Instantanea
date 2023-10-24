@@ -786,6 +786,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel17 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jSeparator15 = new javax.swing.JSeparator();
         jPanel4 = new javax.swing.JPanel();
         solucionLbl = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -924,16 +929,20 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 50, 74, -1));
 
         jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 12, 260));
+        jSeparator2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 3, 260));
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 10, 260));
+        jSeparator3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 3, 260));
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, 10, 260));
+        jSeparator4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 70, 3, 260));
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 70, 10, 260));
+        jSeparator5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 70, 3, 260));
 
         jLabel33.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel33.setText("Cara 1");
@@ -1531,7 +1540,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(692, 368, 30, -1));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 10, 260));
+        jSeparator1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 3, 260));
 
         jTabbedPane1.addTab("Combinación", jPanel1);
 
@@ -2269,21 +2279,21 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jSeparator6.setBackground(new java.awt.Color(51, 51, 51));
         jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jSeparator6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        jSeparator6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
         jSeparator6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel2.add(jSeparator6);
         jSeparator6.setBounds(530, 370, 3, 210);
 
         jSeparator7.setBackground(new java.awt.Color(51, 51, 51));
         jSeparator7.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jSeparator7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        jSeparator7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
         jSeparator7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel2.add(jSeparator7);
         jSeparator7.setBounds(330, 370, 3, 210);
 
         jSeparator8.setBackground(new java.awt.Color(51, 51, 51));
         jSeparator8.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        jSeparator8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        jSeparator8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
         jSeparator8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jPanel2.add(jSeparator8);
         jSeparator8.setBounds(427, 370, 3, 210);
@@ -2365,12 +2375,12 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Consolas", 0, 17)); // NOI18N
         jTextArea3.setRows(2);
-        jTextArea3.setText("Utilizando la teoría de Grafos, se construye un grafo Gl que represente a los 4 cubos \ncon las siguientes reglas:\n - El grafo tiene 4 vértices que representan los 4 colores posibles (R, B, V, A).\n - Las aristas representan caras opuestas de cada cubo, 3 aristas por cubo.\n - Las aristas se etiquetan con el número del cubo (1, 2, 3, 4).    ↓ Deslice hacia abajo ↓\n\nDespués, se construyen 2 subgrafos de Gl (si existen) que representan las soluciones \nhorizontal y vertical, se deben seguir las siguientes reglas:\n - Cada subgrafo debe tener los 4 vértices de Gl\n - Cada subgrafo debe tener únicamente 4 aristas, 1 arista por cubo. (etiquetas 1,2,3,4)\n - El grado de cada vértice debe ser igual a 2\n - Las aristas del 1er subgrafo no se deben repetir en el 2do subgrafo\n\nInterpretación de subgrafos G1 y G2 :\n\nPor último, se interpretan ambos subgrafos de la siguiente forma:\n Solución Horizontal: (Grafo G1- recorrido horario)\n - Se localiza la arista 1 (cubo 1) y se observa que vértices conecta.\n - En el cubo 1 se colocan estos 2 colores, de izquierda a derecha. (por ejemplo, R-B)\n - Se observa en que vértice termina la arista 1, y a partir de ese vértice se observa la\n   siguiente arista y los vértices que conecta, así sucesivamente. Siempre en sentido\n   horario.                                                                                     ↓ Deslice hacia abajo ↓\n\nSolución Vertical: (Grafo G2- recorrido horario)\n - Se localiza la arista 1 (cubo 1) y se observa que vértices conecta.\n - En el cubo 1 se colocan estos 2 colores, de arriba hacia abajo. (por ejemplo, V-A)\n - Se observa en que vértice termina la arista 1, y a partir de ese vértice se observa la\n   siguiente arista y los vértices que conecta, así sucesivamente. Siempre en sentido\n   horario.");
+        jTextArea3.setText("Utilizando la teoría de Grafos, se construye un grafo Gl que represente a los 4 cubos \ncon las siguientes reglas:\n - El grafo tiene 4 vértices que representan los 4 colores posibles (R, B, V, A).\n - Las aristas representan caras opuestas de cada cubo, 3 aristas por cubo.\n - Las aristas se etiquetan con el número del cubo (1, 2, 3, 4).    ↓ Deslice hacia abajo ↓\n\nDespués, se construyen 2 subgrafos de Gl (si existen) que representan las soluciones \nhorizontal y vertical, se deben seguir las siguientes reglas:\n - Cada subgrafo debe tener los 4 vértices de Gl\n - Cada subgrafo debe tener únicamente 4 aristas, 1 arista por cubo. (etiquetas 1,2,3,4)\n - El grado de cada vértice debe ser igual a 2\n - Las aristas del 1er subgrafo no se deben repetir en el 2do subgrafo\n\nInterpretación de subgrafos G1 y G2 :\n\nPor último, se interpretan ambos subgrafos de la siguiente forma:\n Solución Horizontal: (Grafo G1- recorrido horario)\n - Se localiza la arista 1 (cubo 1) y se observa que vértices conecta.\n - En el cubo 1 se colocan estos 2 colores, de izquierda a derecha. (por ejemplo, R-B)\n - Se observa en que vértice termina la arista 1, y a partir de ese vértice se observa la\n   siguiente arista y los vértices que conecta, así sucesivamente. Siempre en sentido\n   horario.                                                          Deslice hacia abajo ↓\n\nSolución Vertical: (Grafo G2- recorrido horario)\n - Se localiza la arista 1 (cubo 1) y se observa que vértices conecta.\n - En el cubo 1 se colocan estos 2 colores, de arriba hacia abajo. (por ejemplo, V-A)\n - Se observa en que vértice termina la arista 1, y a partir de ese vértice se observa la\n   siguiente arista y los vértices que conecta, así sucesivamente. Siempre en sentido\n   horario.");
         jTextArea3.setBorder(null);
         jTextArea3.setFocusable(false);
         jScrollPane3.setViewportView(jTextArea3);
 
-        jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 900, 150));
+        jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 900, 130));
 
         existeSolucion.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         existeSolucion.setForeground(new java.awt.Color(45, 160, 106));
@@ -2495,6 +2505,37 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel31.setText("G2 : Vertical");
         jPanel6.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(702, 430, 160, -1));
 
+        jLabel1.setBackground(new java.awt.Color(51, 51, 255));
+        jLabel1.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("4");
+        jPanel6.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 165, 20, -1));
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("1");
+        jPanel6.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 165, 20, -1));
+
+        jLabel4.setBackground(new java.awt.Color(204, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("2");
+        jPanel6.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 165, 20, -1));
+
+        jLabel18.setBackground(new java.awt.Color(153, 255, 0));
+        jLabel18.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(102, 255, 51));
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("3");
+        jPanel6.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 165, 20, -1));
+
+        jSeparator15.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
+        jPanel6.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 830, 3));
+
         jTabbedPane1.addTab("Explicación", jPanel6);
 
         jPanel4.setLayout(null);
@@ -2520,20 +2561,24 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel27.setBounds(750, 60, 74, 22);
 
         jSeparator9.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
         jPanel4.add(jSeparator9);
-        jSeparator9.setBounds(220, 70, 12, 260);
+        jSeparator9.setBounds(220, 70, 3, 260);
 
         jSeparator10.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
         jPanel4.add(jSeparator10);
-        jSeparator10.setBounds(440, 70, 10, 260);
+        jSeparator10.setBounds(440, 70, 3, 260);
 
         jSeparator11.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
         jPanel4.add(jSeparator11);
-        jSeparator11.setBounds(670, 70, 10, 260);
+        jSeparator11.setBounds(670, 70, 3, 260);
 
         jSeparator12.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
         jPanel4.add(jSeparator12);
-        jSeparator12.setBounds(890, 70, 10, 260);
+        jSeparator12.setBounds(890, 70, 3, 260);
 
         jLabel51.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         jLabel51.setText("Cara 1");
@@ -2955,8 +3000,9 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel77.setBounds(692, 368, 30, 19);
 
         jSeparator13.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator13.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
         jPanel4.add(jSeparator13);
-        jSeparator13.setBounds(0, 70, 10, 260);
+        jSeparator13.setBounds(0, 70, 3, 260);
 
         noPartida.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
         noPartida.addActionListener(new java.awt.event.ActionListener() {
@@ -2971,8 +3017,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel78.setText("Cubo 1");
         jPanel4.add(jLabel78);
         jLabel78.setBounds(80, 60, 74, 22);
+
+        jSeparator14.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(57, 58, 61), 2, true));
         jPanel4.add(jSeparator14);
-        jSeparator14.setBounds(0, 45, 900, 10);
+        jSeparator14.setBounds(0, 45, 900, 3);
 
         Cubo1C1H.setBackground(new java.awt.Color(45, 46, 51));
         Cubo1C1H.setFont(new java.awt.Font("Consolas", 0, 16)); // NOI18N
@@ -15997,6 +16045,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JButton izquierdaCubo2;
     private javax.swing.JButton izquierdaCubo3;
     private javax.swing.JButton izquierdaCubo4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -16005,6 +16054,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -16017,6 +16067,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -16027,6 +16078,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -16083,6 +16135,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator14;
+    private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
