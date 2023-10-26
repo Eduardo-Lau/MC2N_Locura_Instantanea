@@ -37,6 +37,11 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     public static Cubos Cubo2 = new Cubos();
     public static Cubos Cubo3 = new Cubos();
     public static Cubos Cubo4 = new Cubos();
+    Color Rojo  = new Color(155, 22, 57);
+    Color Blanco  = new Color(255, 255, 255);
+    Color Verde  = new Color(16, 175, 107);
+    Color Amarillo  = new Color(255, 234, 78);
+
     public ArrayList<Partidas> partidas = new ArrayList<>();
     public ArrayList<Soluciones> soluciones = new ArrayList<>();
     // Binarios
@@ -3276,26 +3281,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     public void genCubo1() {
         Color C1 = null;
         if (Cubo1C1.getItemAt(Cubo1C1.getSelectedIndex()).equals("Rojo")) {
-            C1 = new Color(155, 22, 57);
+            C1 = Rojo;
             Cubo1C1G.setText("R");
             Cubo1.C1I = "R";
 
             Cubo1C1G.setBackground(C1);
 
         } else if (Cubo1C1.getItemAt(Cubo1C1.getSelectedIndex()).equals("Blanco")) {
-            C1 = new Color(255, 255, 255);
+            C1 = Blanco;
             Cubo1C1G.setText("B");
             Cubo1.C1I = "B";
             Cubo1C1G.setBackground(C1);
 
         } else if (Cubo1C1.getItemAt(Cubo1C1.getSelectedIndex()).equals("Verde")) {
-            C1 = new Color(16, 175, 107);
+            C1 = Verde;
             Cubo1C1G.setText("V");
             Cubo1.C1I = "V";
             Cubo1C1G.setBackground(C1);
 
         } else if (Cubo1C1.getItemAt(Cubo1C1.getSelectedIndex()).equals("Amarillo")) {
-            C1 = new Color(255, 234, 78);
+            C1 = Amarillo;
             Cubo1C1G.setText("A");
             Cubo1.C1I = "A";
             Cubo1C1G.setBackground(C1);
@@ -3303,25 +3308,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C2 = null;
         if (Cubo1C2.getItemAt(Cubo1C2.getSelectedIndex()).equals("Rojo")) {
-            C2 = new Color(155, 22, 57);
+            C2 = Rojo;
             Cubo1C2G.setText("R");
             Cubo1.C2I = "R";
             Cubo1C2G.setBackground(C2);
 
         } else if (Cubo1C2.getItemAt(Cubo1C2.getSelectedIndex()).equals("Blanco")) {
-            C2 = new Color(255, 255, 255);
+            C2 = Blanco;
             Cubo1C2G.setText("B");
             Cubo1.C2I = "B";
             Cubo1C2G.setBackground(C2);
 
         } else if (Cubo1C2.getItemAt(Cubo1C2.getSelectedIndex()).equals("Verde")) {
-            C2 = new Color(16, 175, 107);
+            C2 = Verde;
             Cubo1C2G.setText("V");
             Cubo1.C2I = "V";
             Cubo1C2G.setBackground(C2);
 
         } else if (Cubo1C2.getItemAt(Cubo1C2.getSelectedIndex()).equals("Amarillo")) {
-            C2 = new Color(255, 234, 78);
+            C2 = Amarillo;
             Cubo1C2G.setText("A");
             Cubo1.C2I = "A";
             Cubo1C2G.setBackground(C2);
@@ -3329,25 +3334,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C3 = null;
         if (Cubo1C3.getItemAt(Cubo1C3.getSelectedIndex()).equals("Rojo")) {
-            C3 = new Color(155, 22, 57);
+            C3 = Rojo;
             Cubo1C3G.setText("R");
             Cubo1.C3I = "R";
             Cubo1C3G.setBackground(C3);
 
         } else if (Cubo1C3.getItemAt(Cubo1C3.getSelectedIndex()).equals("Blanco")) {
-            C3 = new Color(255, 255, 255);
+            C3 = Blanco;
             Cubo1C3G.setText("B");
             Cubo1.C3I = "B";
             Cubo1C3G.setBackground(C3);
 
         } else if (Cubo1C3.getItemAt(Cubo1C3.getSelectedIndex()).equals("Verde")) {
-            C3 = new Color(16, 175, 107);
+            C3 = Verde;
             Cubo1C3G.setText("V");
             Cubo1.C3I = "V";
             Cubo1C3G.setBackground(C3);
 
         } else if (Cubo1C3.getItemAt(Cubo1C3.getSelectedIndex()).equals("Amarillo")) {
-            C3 = new Color(255, 234, 78);
+            C3 = Amarillo;
             Cubo1C3G.setText("A");
             Cubo1.C3I = "A";
             Cubo1C3G.setBackground(C3);
@@ -3355,25 +3360,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C4 = null;
         if (Cubo1C4.getItemAt(Cubo1C4.getSelectedIndex()).equals("Rojo")) {
-            C4 = new Color(155, 22, 57);
+            C4 = Rojo;
             Cubo1C4G.setText("R");
             Cubo1.C4I = "R";
             Cubo1C4G.setBackground(C4);
 
         } else if (Cubo1C4.getItemAt(Cubo1C4.getSelectedIndex()).equals("Blanco")) {
-            C4 = new Color(255, 255, 255);
+            C4 = Blanco;
             Cubo1C4G.setText("B");
             Cubo1.C4I = "B";
             Cubo1C4G.setBackground(C4);
 
         } else if (Cubo1C4.getItemAt(Cubo1C4.getSelectedIndex()).equals("Verde")) {
-            C4 = new Color(16, 175, 107);
+            C4 = Verde;
             Cubo1C4G.setText("V");
             Cubo1.C4I = "V";
             Cubo1C4G.setBackground(C4);
 
         } else if (Cubo1C4.getItemAt(Cubo1C4.getSelectedIndex()).equals("Amarillo")) {
-            C4 = new Color(255, 234, 78);
+            C4 = Amarillo;
             Cubo1C4G.setText("A");
             Cubo1.C4I = "A";
             Cubo1C4G.setBackground(C4);
@@ -3381,25 +3386,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C5 = null;
         if (Cubo1C5.getItemAt(Cubo1C5.getSelectedIndex()).equals("Rojo")) {
-            C5 = new Color(155, 22, 57);
+            C5 = Rojo;
             Cubo1C5G.setText("R");
             Cubo1.C5I = "R";
             Cubo1C5G.setBackground(C5);
 
         } else if (Cubo1C5.getItemAt(Cubo1C5.getSelectedIndex()).equals("Blanco")) {
-            C5 = new Color(255, 255, 255);
+            C5 = Blanco;
             Cubo1C5G.setText("B");
             Cubo1.C5I = "B";
             Cubo1C5G.setBackground(C5);
 
         } else if (Cubo1C5.getItemAt(Cubo1C5.getSelectedIndex()).equals("Verde")) {
-            C5 = new Color(16, 175, 107);
+            C5 = Verde;
             Cubo1C5G.setText("V");
             Cubo1.C5I = "V";
             Cubo1C5G.setBackground(C5);
 
         } else if (Cubo1C5.getItemAt(Cubo1C5.getSelectedIndex()).equals("Amarillo")) {
-            C5 = new Color(255, 234, 78);
+            C5 = Amarillo;
             Cubo1C5G.setText("A");
             Cubo1.C5I = "A";
             Cubo1C5G.setBackground(C5);
@@ -3407,25 +3412,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C6 = null;
         if (Cubo1C6.getItemAt(Cubo1C6.getSelectedIndex()).equals("Rojo")) {
-            C6 = new Color(155, 22, 57);
+            C6 = Rojo;
             Cubo1C6G.setText("R");
             Cubo1.C6I = "R";
             Cubo1C6G.setBackground(C6);
 
         } else if (Cubo1C6.getItemAt(Cubo1C6.getSelectedIndex()).equals("Blanco")) {
-            C6 = new Color(255, 255, 255);
+            C6 = Blanco;
             Cubo1C6G.setText("B");
             Cubo1.C6I = "B";
             Cubo1C6G.setBackground(C6);
 
         } else if (Cubo1C6.getItemAt(Cubo1C6.getSelectedIndex()).equals("Verde")) {
-            C6 = new Color(16, 175, 107);
+            C6 = Verde;
             Cubo1C6G.setText("V");
             Cubo1.C6I = "V";
             Cubo1C6G.setBackground(C6);
 
         } else if (Cubo1C6.getItemAt(Cubo1C6.getSelectedIndex()).equals("Amarillo")) {
-            C6 = new Color(255, 234, 78);
+            C6 = Amarillo;
             Cubo1C6G.setText("A");
             Cubo1.C6I = "A";
             Cubo1C6G.setBackground(C6);
@@ -3455,31 +3460,32 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         sigBtnPressed = false;
         resolverBtnClicked = false;
         fondo.repaint();
+        ;
     }
 
     public void genCubo2() {
         sigBtnPressed = false;
         Color C1 = null;
         if (Cubo2C1.getItemAt(Cubo2C1.getSelectedIndex()).equals("Rojo")) {
-            C1 = new Color(155, 22, 57);
+            C1 = Rojo;
             Cubo2C1G.setText("R");
             Cubo2.C1I = "R";
             Cubo2C1G.setBackground(C1);
 
         } else if (Cubo2C1.getItemAt(Cubo2C1.getSelectedIndex()).equals("Blanco")) {
-            C1 = new Color(255, 255, 255);
+            C1 = Blanco;
             Cubo2C1G.setText("B");
             Cubo2.C1I = "B";
             Cubo2C1G.setBackground(C1);
 
         } else if (Cubo2C1.getItemAt(Cubo2C1.getSelectedIndex()).equals("Verde")) {
-            C1 = new Color(16, 175, 107);
+            C1 = Verde;
             Cubo2C1G.setText("V");
             Cubo2.C1I = "V";
             Cubo2C1G.setBackground(C1);
 
         } else if (Cubo2C1.getItemAt(Cubo2C1.getSelectedIndex()).equals("Amarillo")) {
-            C1 = new Color(255, 234, 78);
+            C1 = Amarillo;
             Cubo2C1G.setText("A");
             Cubo2.C1I = "A";
             Cubo2C1G.setBackground(C1);
@@ -3487,25 +3493,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C2 = null;
         if (Cubo2C2.getItemAt(Cubo2C2.getSelectedIndex()).equals("Rojo")) {
-            C2 = new Color(155, 22, 57);
+            C2 = Rojo;
             Cubo2C2G.setText("R");
             Cubo2.C2I = "R";
             Cubo2C2G.setBackground(C2);
 
         } else if (Cubo2C2.getItemAt(Cubo2C2.getSelectedIndex()).equals("Blanco")) {
-            C2 = new Color(255, 255, 255);
+            C2 = Blanco;
             Cubo2C2G.setText("B");
             Cubo2.C2I = "B";
             Cubo2C2G.setBackground(C2);
 
         } else if (Cubo2C2.getItemAt(Cubo2C2.getSelectedIndex()).equals("Verde")) {
-            C2 = new Color(16, 175, 107);
+            C2 = Verde;
             Cubo2C2G.setText("V");
             Cubo2.C2I = "V";
             Cubo2C2G.setBackground(C2);
 
         } else if (Cubo2C2.getItemAt(Cubo2C2.getSelectedIndex()).equals("Amarillo")) {
-            C2 = new Color(255, 234, 78);
+            C2 = Amarillo;
             Cubo2C2G.setText("A");
             Cubo2.C2I = "A";
             Cubo2C2G.setBackground(C2);
@@ -3513,25 +3519,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C3 = null;
         if (Cubo2C3.getItemAt(Cubo2C3.getSelectedIndex()).equals("Rojo")) {
-            C3 = new Color(155, 22, 57);
+            C3 = Rojo;
             Cubo2C3G.setText("R");
             Cubo2.C3I = "R";
             Cubo2C3G.setBackground(C3);
 
         } else if (Cubo2C3.getItemAt(Cubo2C3.getSelectedIndex()).equals("Blanco")) {
-            C3 = new Color(255, 255, 255);
+            C3 = Blanco;
             Cubo2C3G.setText("B");
             Cubo2.C3I = "B";
             Cubo2C3G.setBackground(C3);
 
         } else if (Cubo2C3.getItemAt(Cubo2C3.getSelectedIndex()).equals("Verde")) {
-            C3 = new Color(16, 175, 107);
+            C3 = Verde;
             Cubo2C3G.setText("V");
             Cubo2.C3I = "V";
             Cubo2C3G.setBackground(C3);
 
         } else if (Cubo2C3.getItemAt(Cubo2C3.getSelectedIndex()).equals("Amarillo")) {
-            C3 = new Color(255, 234, 78);
+            C3 = Amarillo;
             Cubo2C3G.setText("A");
             Cubo2.C3I = "A";
             Cubo2C3G.setBackground(C3);
@@ -3539,25 +3545,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C4 = null;
         if (Cubo2C4.getItemAt(Cubo2C4.getSelectedIndex()).equals("Rojo")) {
-            C4 = new Color(155, 22, 57);
+            C4 = Rojo;
             Cubo2C4G.setText("R");
             Cubo2.C4I = "R";
             Cubo2C4G.setBackground(C4);
 
         } else if (Cubo2C4.getItemAt(Cubo2C4.getSelectedIndex()).equals("Blanco")) {
-            C4 = new Color(255, 255, 255);
+            C4 = Blanco;
             Cubo2C4G.setText("B");
             Cubo2.C4I = "B";
             Cubo2C4G.setBackground(C4);
 
         } else if (Cubo2C4.getItemAt(Cubo2C4.getSelectedIndex()).equals("Verde")) {
-            C4 = new Color(16, 175, 107);
+            C4 = Verde;
             Cubo2C4G.setText("V");
             Cubo2.C4I = "V";
             Cubo2C4G.setBackground(C4);
 
         } else if (Cubo2C4.getItemAt(Cubo2C4.getSelectedIndex()).equals("Amarillo")) {
-            C4 = new Color(255, 234, 78);
+            C4 = Amarillo;
             Cubo2C4G.setText("A");
             Cubo2.C4I = "A";
             Cubo2C4G.setBackground(C4);
@@ -3565,25 +3571,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C5 = null;
         if (Cubo2C5.getItemAt(Cubo2C5.getSelectedIndex()).equals("Rojo")) {
-            C5 = new Color(155, 22, 57);
+            C5 = Rojo;
             Cubo2C5G.setText("R");
             Cubo2.C5I = "R";
             Cubo2C5G.setBackground(C5);
 
         } else if (Cubo2C5.getItemAt(Cubo2C5.getSelectedIndex()).equals("Blanco")) {
-            C5 = new Color(255, 255, 255);
+            C5 = Blanco;
             Cubo2C5G.setText("B");
             Cubo2.C5I = "B";
             Cubo2C5G.setBackground(C5);
 
         } else if (Cubo2C5.getItemAt(Cubo2C5.getSelectedIndex()).equals("Verde")) {
-            C5 = new Color(16, 175, 107);
+            C5 = Verde;
             Cubo2C5G.setText("V");
             Cubo2.C5I = "V";
             Cubo2C5G.setBackground(C5);
 
         } else if (Cubo2C5.getItemAt(Cubo2C5.getSelectedIndex()).equals("Amarillo")) {
-            C5 = new Color(255, 234, 78);
+            C5 = Amarillo;
             Cubo2C5G.setText("A");
             Cubo2.C5I = "A";
             Cubo2C5G.setBackground(C5);
@@ -3591,25 +3597,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C6 = null;
         if (Cubo2C6.getItemAt(Cubo2C6.getSelectedIndex()).equals("Rojo")) {
-            C6 = new Color(155, 22, 57);
+            C6 = Rojo;
             Cubo2C6G.setText("R");
             Cubo2.C6I = "R";
             Cubo2C6G.setBackground(C6);
 
         } else if (Cubo2C6.getItemAt(Cubo2C6.getSelectedIndex()).equals("Blanco")) {
-            C6 = new Color(255, 255, 255);
+            C6 = Blanco;
             Cubo2C6G.setText("B");
             Cubo2.C6I = "B";
             Cubo2C6G.setBackground(C6);
 
         } else if (Cubo2C6.getItemAt(Cubo2C6.getSelectedIndex()).equals("Verde")) {
-            C6 = new Color(16, 175, 107);
+            C6 = Verde;
             Cubo2C6G.setText("V");
             Cubo2.C6I = "V";
             Cubo2C6G.setBackground(C6);
 
         } else if (Cubo2C6.getItemAt(Cubo2C6.getSelectedIndex()).equals("Amarillo")) {
-            C6 = new Color(255, 234, 78);
+            C6 = Amarillo;
             Cubo2C6G.setText("A");
             Cubo2.C6I = "A";
             Cubo2C6G.setBackground(C6);
@@ -3639,31 +3645,32 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         sigBtnPressed = false;
         resolverBtnClicked = false;
         fondo.repaint();
+        ;
     }
 
     public void genCubo3() {
         sigBtnPressed = false;
         Color C1 = null;
         if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Rojo")) {
-            C1 = new Color(155, 22, 57);
+            C1 = Rojo;
             Cubo3C1G.setText("R");
             Cubo3.C1I = "R";
             Cubo3C1G.setBackground(C1);
 
         } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Blanco")) {
-            C1 = new Color(255, 255, 255);
+            C1 = Blanco;
             Cubo3C1G.setText("B");
             Cubo3.C1I = "B";
             Cubo3C1G.setBackground(C1);
 
         } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Verde")) {
-            C1 = new Color(16, 175, 107);
+            C1 = Verde;
             Cubo3C1G.setText("V");
             Cubo3.C1I = "V";
             Cubo3C1G.setBackground(C1);
 
         } else if (Cubo3C1.getItemAt(Cubo3C1.getSelectedIndex()).equals("Amarillo")) {
-            C1 = new Color(255, 234, 78);
+            C1 = Amarillo;
             Cubo3C1G.setText("A");
             Cubo3.C1I = "A";
             Cubo3C1G.setBackground(C1);
@@ -3671,25 +3678,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C2 = null;
         if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Rojo")) {
-            C2 = new Color(155, 22, 57);
+            C2 = Rojo;
             Cubo3C2G.setText("R");
             Cubo3.C2I = "R";
             Cubo3C2G.setBackground(C2);
 
         } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Blanco")) {
-            C2 = new Color(255, 255, 255);
+            C2 = Blanco;
             Cubo3C2G.setText("B");
             Cubo3.C2I = "B";
             Cubo3C2G.setBackground(C2);
 
         } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Verde")) {
-            C2 = new Color(16, 175, 107);
+            C2 = Verde;
             Cubo3C2G.setText("V");
             Cubo3.C2I = "V";
             Cubo3C2G.setBackground(C2);
 
         } else if (Cubo3C2.getItemAt(Cubo3C2.getSelectedIndex()).equals("Amarillo")) {
-            C2 = new Color(255, 234, 78);
+            C2 = Amarillo;
             Cubo3C2G.setText("A");
             Cubo3.C2I = "A";
             Cubo3C2G.setBackground(C2);
@@ -3697,25 +3704,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C3 = null;
         if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Rojo")) {
-            C3 = new Color(155, 22, 57);
+            C3 = Rojo;
             Cubo3C3G.setText("R");
             Cubo3.C3I = "R";
             Cubo3C3G.setBackground(C3);
 
         } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Blanco")) {
-            C3 = new Color(255, 255, 255);
+            C3 = Blanco;
             Cubo3C3G.setText("B");
             Cubo3.C3I = "B";
             Cubo3C3G.setBackground(C3);
 
         } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Verde")) {
-            C3 = new Color(16, 175, 107);
+            C3 = Verde;
             Cubo3C3G.setText("V");
             Cubo3.C3I = "V";
             Cubo3C3G.setBackground(C3);
 
         } else if (Cubo3C3.getItemAt(Cubo3C3.getSelectedIndex()).equals("Amarillo")) {
-            C3 = new Color(255, 234, 78);
+            C3 = Amarillo;
             Cubo3C3G.setText("A");
             Cubo3.C3I = "A";
             Cubo3C3G.setBackground(C3);
@@ -3723,25 +3730,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C4 = null;
         if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Rojo")) {
-            C4 = new Color(155, 22, 57);
+            C4 = Rojo;
             Cubo3C4G.setText("R");
             Cubo3.C4I = "R";
             Cubo3C4G.setBackground(C4);
 
         } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Blanco")) {
-            C4 = new Color(255, 255, 255);
+            C4 = Blanco;
             Cubo3C4G.setText("B");
             Cubo3.C4I = "B";
             Cubo3C4G.setBackground(C4);
 
         } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Verde")) {
-            C4 = new Color(16, 175, 107);
+            C4 = Verde;
             Cubo3C4G.setText("V");
             Cubo3.C4I = "V";
             Cubo3C4G.setBackground(C4);
 
         } else if (Cubo3C4.getItemAt(Cubo3C4.getSelectedIndex()).equals("Amarillo")) {
-            C4 = new Color(255, 234, 78);
+            C4 = Amarillo;
             Cubo3C4G.setText("A");
             Cubo3.C4I = "A";
             Cubo3C4G.setBackground(C4);
@@ -3749,25 +3756,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C5 = null;
         if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Rojo")) {
-            C5 = new Color(155, 22, 57);
+            C5 = Rojo;
             Cubo3C5G.setText("R");
             Cubo3.C5I = "R";
             Cubo3C5G.setBackground(C5);
 
         } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Blanco")) {
-            C5 = new Color(255, 255, 255);
+            C5 = Blanco;
             Cubo3C5G.setText("B");
             Cubo3.C5I = "B";
             Cubo3C5G.setBackground(C5);
 
         } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Verde")) {
-            C5 = new Color(16, 175, 107);
+            C5 = Verde;
             Cubo3C5G.setText("V");
             Cubo3.C5I = "V";
             Cubo3C5G.setBackground(C5);
 
         } else if (Cubo3C5.getItemAt(Cubo3C5.getSelectedIndex()).equals("Amarillo")) {
-            C5 = new Color(255, 234, 78);
+            C5 = Amarillo;
             Cubo3C5G.setText("A");
             Cubo3.C5I = "A";
             Cubo3C5G.setBackground(C5);
@@ -3775,25 +3782,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C6 = null;
         if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Rojo")) {
-            C6 = new Color(155, 22, 57);
+            C6 = Rojo;
             Cubo3C6G.setText("R");
             Cubo3.C6I = "R";
             Cubo3C6G.setBackground(C6);
 
         } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Blanco")) {
-            C6 = new Color(255, 255, 255);
+            C6 = Blanco;
             Cubo3C6G.setText("B");
             Cubo3.C6I = "B";
             Cubo3C6G.setBackground(C6);
 
         } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Verde")) {
-            C6 = new Color(16, 175, 107);
+            C6 = Verde;
             Cubo3C6G.setText("V");
             Cubo3.C6I = "V";
             Cubo3C6G.setBackground(C6);
 
         } else if (Cubo3C6.getItemAt(Cubo3C6.getSelectedIndex()).equals("Amarillo")) {
-            C6 = new Color(255, 234, 78);
+            C6 = Amarillo;
             Cubo3C6G.setText("A");
             Cubo3.C6I = "A";
             Cubo3C6G.setBackground(C6);
@@ -3823,31 +3830,32 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         sigBtnPressed = false;
         resolverBtnClicked = false;
         fondo.repaint();
+        ;
     }
 
     public void genCubo4() {
         sigBtnPressed = false;
         Color C1 = null;
         if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Rojo")) {
-            C1 = new Color(155, 22, 57);
+            C1 = Rojo;
             Cubo4C1G.setText("R");
             Cubo4.C1I = "R";
             Cubo4C1G.setBackground(C1);
 
         } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Blanco")) {
-            C1 = new Color(255, 255, 255);
+            C1 = Blanco;
             Cubo4C1G.setText("B");
             Cubo4.C1I = "B";
             Cubo4C1G.setBackground(C1);
 
         } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Verde")) {
-            C1 = new Color(16, 175, 107);
+            C1 = Verde;
             Cubo4C1G.setText("V");
             Cubo4.C1I = "V";
             Cubo4C1G.setBackground(C1);
 
         } else if (Cubo4C1.getItemAt(Cubo4C1.getSelectedIndex()).equals("Amarillo")) {
-            C1 = new Color(255, 234, 78);
+            C1 = Amarillo;
             Cubo4C1G.setText("A");
             Cubo4.C1I = "A";
             Cubo4C1G.setBackground(C1);
@@ -3855,25 +3863,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C2 = null;
         if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Rojo")) {
-            C2 = new Color(155, 22, 57);
+            C2 = Rojo;
             Cubo4C2G.setText("R");
             Cubo4.C2I = "R";
             Cubo4C2G.setBackground(C2);
 
         } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Blanco")) {
-            C2 = new Color(255, 255, 255);
+            C2 = Blanco;
             Cubo4C2G.setText("B");
             Cubo4.C2I = "B";
             Cubo4C2G.setBackground(C2);
 
         } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Verde")) {
-            C2 = new Color(16, 175, 107);
+            C2 = Verde;
             Cubo4C2G.setText("V");
             Cubo4.C2I = "V";
             Cubo4C2G.setBackground(C2);
 
         } else if (Cubo4C2.getItemAt(Cubo4C2.getSelectedIndex()).equals("Amarillo")) {
-            C2 = new Color(255, 234, 78);
+            C2 = Amarillo;
             Cubo4C2G.setText("A");
             Cubo4.C2I = "A";
             Cubo4C2G.setBackground(C2);
@@ -3881,25 +3889,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C3 = null;
         if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Rojo")) {
-            C3 = new Color(155, 22, 57);
+            C3 = Rojo;
             Cubo4C3G.setText("R");
             Cubo4.C3I = "R";
             Cubo4C3G.setBackground(C3);
 
         } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Blanco")) {
-            C3 = new Color(255, 255, 255);
+            C3 = Blanco;
             Cubo4C3G.setText("B");
             Cubo4.C3I = "B";
             Cubo4C3G.setBackground(C3);
 
         } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Verde")) {
-            C3 = new Color(16, 175, 107);
+            C3 = Verde;
             Cubo4C3G.setText("V");
             Cubo4.C3I = "V";
             Cubo4C3G.setBackground(C3);
 
         } else if (Cubo4C3.getItemAt(Cubo4C3.getSelectedIndex()).equals("Amarillo")) {
-            C3 = new Color(255, 234, 78);
+            C3 = Amarillo;
             Cubo4C3G.setText("A");
             Cubo4.C3I = "A";
             Cubo4C3G.setBackground(C3);
@@ -3907,25 +3915,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C4 = null;
         if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Rojo")) {
-            C4 = new Color(155, 22, 57);
+            C4 = Rojo;
             Cubo4C4G.setText("R");
             Cubo4.C4I = "R";
             Cubo4C4G.setBackground(C4);
 
         } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Blanco")) {
-            C4 = new Color(255, 255, 255);
+            C4 = Blanco;
             Cubo4C4G.setText("B");
             Cubo4.C4I = "B";
             Cubo4C4G.setBackground(C4);
 
         } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Verde")) {
-            C4 = new Color(16, 175, 107);
+            C4 = Verde;
             Cubo4C4G.setText("V");
             Cubo4.C4I = "V";
             Cubo4C4G.setBackground(C4);
 
         } else if (Cubo4C4.getItemAt(Cubo4C4.getSelectedIndex()).equals("Amarillo")) {
-            C4 = new Color(255, 234, 78);
+            C4 = Amarillo;
             Cubo4C4G.setText("A");
             Cubo4.C4I = "A";
             Cubo4C4G.setBackground(C4);
@@ -3933,25 +3941,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C5 = null;
         if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Rojo")) {
-            C5 = new Color(155, 22, 57);
+            C5 = Rojo;
             Cubo4C5G.setText("R");
             Cubo4.C5I = "R";
             Cubo4C5G.setBackground(C5);
 
         } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Blanco")) {
-            C5 = new Color(255, 255, 255);
+            C5 = Blanco;
             Cubo4C5G.setText("B");
             Cubo4.C5I = "B";
             Cubo4C5G.setBackground(C5);
 
         } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Verde")) {
-            C5 = new Color(16, 175, 107);
+            C5 = Verde;
             Cubo4C5G.setText("V");
             Cubo4.C5I = "V";
             Cubo4C5G.setBackground(C5);
 
         } else if (Cubo4C5.getItemAt(Cubo4C5.getSelectedIndex()).equals("Amarillo")) {
-            C5 = new Color(255, 234, 78);
+            C5 = Amarillo;
             Cubo4C5G.setText("A");
             Cubo4.C5I = "A";
             Cubo4C5G.setBackground(C5);
@@ -3959,25 +3967,25 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         Color C6 = null;
         if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Rojo")) {
-            C6 = new Color(155, 22, 57);
+            C6 = Rojo;
             Cubo4C6G.setText("R");
             Cubo4.C6I = "R";
             Cubo4C6G.setBackground(C6);
 
         } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Blanco")) {
-            C6 = new Color(255, 255, 255);
+            C6 = Blanco;
             Cubo4C6G.setText("B");
             Cubo4.C6I = "B";
             Cubo4C6G.setBackground(C6);
 
         } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Verde")) {
-            C6 = new Color(16, 175, 107);
+            C6 = Verde;
             Cubo4C6G.setText("V");
             Cubo4.C6I = "V";
             Cubo4C6G.setBackground(C6);
 
         } else if (Cubo4C6.getItemAt(Cubo4C6.getSelectedIndex()).equals("Amarillo")) {
-            C6 = new Color(255, 234, 78);
+            C6 = Amarillo;
             Cubo4C6G.setText("A");
             Cubo4.C6I = "A";
             Cubo4C6G.setBackground(C6);
@@ -4007,6 +4015,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         sigBtnPressed = false;
         resolverBtnClicked = false;
         fondo.repaint();
+        ;
     }
 
     private void genAleatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genAleatorioActionPerformed
@@ -4024,8 +4033,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 options[0]);
 
         if (JOptionPane.YES_OPTION == yes) {
-            Color[] coloresDisp = {new Color(155, 22, 57), new Color(255, 255, 255),
-                new Color(16, 175, 107), new Color(255, 234, 78)};
+            Color[] coloresDisp = {Rojo, Blanco,
+                Verde, Amarillo};
 
             Random random = new Random();
 
@@ -4072,22 +4081,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C1.equals(new Color(155, 22, 57))) {
+            if (C1.equals(Rojo)) {
                 Cubo1C1.setSelectedItem("Rojo");
                 Cubo1.C1I = "R";
                 Cubo1C1G.setText(Cubo1.C1I);
                 Cubo1C1G.setBackground(C1);
-            } else if (C1.equals(new Color(255, 255, 255))) {
+            } else if (C1.equals(Blanco)) {
                 Cubo1C1.setSelectedItem("Blanco");
                 Cubo1.C1I = "B";
                 Cubo1C1G.setText(Cubo1.C1I);
                 Cubo1C1G.setBackground(C1);
-            } else if (C1.equals(new Color(16, 175, 107))) {
+            } else if (C1.equals(Verde)) {
                 Cubo1C1.setSelectedItem("Verde");
                 Cubo1.C1I = "V";
                 Cubo1C1G.setText(Cubo1.C1I);
                 Cubo1C1G.setBackground(C1);
-            } else if (C1.equals(new Color(255, 234, 78))) {
+            } else if (C1.equals(Amarillo)) {
                 Cubo1C1.setSelectedItem("Amarillo");
                 Cubo1.C1I = "A";
                 Cubo1C1G.setText(Cubo1.C1I);
@@ -4095,22 +4104,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C2.equals(new Color(155, 22, 57))) {
+            if (C2.equals(Rojo)) {
                 Cubo1C2.setSelectedItem("Rojo");
                 Cubo1.C2I = "R";
                 Cubo1C2G.setText(Cubo1.C2I);
                 Cubo1C2G.setBackground(C2);
-            } else if (C2.equals(new Color(255, 255, 255))) {
+            } else if (C2.equals(Blanco)) {
                 Cubo1C2.setSelectedItem("Blanco");
                 Cubo1.C2I = "B";
                 Cubo1C2G.setText(Cubo1.C2I);
                 Cubo1C2G.setBackground(C2);
-            } else if (C2.equals(new Color(16, 175, 107))) {
+            } else if (C2.equals(Verde)) {
                 Cubo1C2.setSelectedItem("Verde");
                 Cubo1.C2I = "V";
                 Cubo1C2G.setText(Cubo1.C2I);
                 Cubo1C2G.setBackground(C2);
-            } else if (C2.equals(new Color(255, 234, 78))) {
+            } else if (C2.equals(Amarillo)) {
                 Cubo1C2.setSelectedItem("Amarillo");
                 Cubo1.C2I = "A";
                 Cubo1C2G.setText(Cubo1.C2I);
@@ -4118,22 +4127,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C3.equals(new Color(155, 22, 57))) {
+            if (C3.equals(Rojo)) {
                 Cubo1C3.setSelectedItem("Rojo");
                 Cubo1.C3I = "R";
                 Cubo1C3G.setText(Cubo1.C3I);
                 Cubo1C3G.setBackground(C3);
-            } else if (C3.equals(new Color(255, 255, 255))) {
+            } else if (C3.equals(Blanco)) {
                 Cubo1C3.setSelectedItem("Blanco");
                 Cubo1.C3I = "B";
                 Cubo1C3G.setText(Cubo1.C3I);
                 Cubo1C3G.setBackground(C3);
-            } else if (C3.equals(new Color(16, 175, 107))) {
+            } else if (C3.equals(Verde)) {
                 Cubo1C3.setSelectedItem("Verde");
                 Cubo1.C3I = "V";
                 Cubo1C3G.setText(Cubo1.C3I);
                 Cubo1C3G.setBackground(C3);
-            } else if (C3.equals(new Color(255, 234, 78))) {
+            } else if (C3.equals(Amarillo)) {
                 Cubo1C3.setSelectedItem("Amarillo");
                 Cubo1.C3I = "A";
                 Cubo1C3G.setText(Cubo1.C3I);
@@ -4141,22 +4150,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C4.equals(new Color(155, 22, 57))) {
+            if (C4.equals(Rojo)) {
                 Cubo1C4.setSelectedItem("Rojo");
                 Cubo1.C4I = "R";
                 Cubo1C4G.setText(Cubo1.C4I);
                 Cubo1C4G.setBackground(C4);
-            } else if (C4.equals(new Color(255, 255, 255))) {
+            } else if (C4.equals(Blanco)) {
                 Cubo1C4.setSelectedItem("Blanco");
                 Cubo1.C4I = "B";
                 Cubo1C4G.setText(Cubo1.C4I);
                 Cubo1C4G.setBackground(C4);
-            } else if (C4.equals(new Color(16, 175, 107))) {
+            } else if (C4.equals(Verde)) {
                 Cubo1C4.setSelectedItem("Verde");
                 Cubo1.C4I = "V";
                 Cubo1C4G.setText(Cubo1.C4I);
                 Cubo1C4G.setBackground(C4);
-            } else if (C4.equals(new Color(255, 234, 78))) {
+            } else if (C4.equals(Amarillo)) {
                 Cubo1C4.setSelectedItem("Amarillo");
                 Cubo1.C4I = "A";
                 Cubo1C4G.setText(Cubo1.C4I);
@@ -4164,22 +4173,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C5.equals(new Color(155, 22, 57))) {
+            if (C5.equals(Rojo)) {
                 Cubo1C5.setSelectedItem("Rojo");
                 Cubo1.C5I = "R";
                 Cubo1C5G.setText(Cubo1.C5I);
                 Cubo1C5G.setBackground(C5);
-            } else if (C5.equals(new Color(255, 255, 255))) {
+            } else if (C5.equals(Blanco)) {
                 Cubo1C5.setSelectedItem("Blanco");
                 Cubo1.C5I = "B";
                 Cubo1C5G.setText(Cubo1.C5I);
                 Cubo1C5G.setBackground(C5);
-            } else if (C5.equals(new Color(16, 175, 107))) {
+            } else if (C5.equals(Verde)) {
                 Cubo1C5.setSelectedItem("Verde");
                 Cubo1.C5I = "V";
                 Cubo1C5G.setText(Cubo1.C5I);
                 Cubo1C5G.setBackground(C5);
-            } else if (C5.equals(new Color(255, 234, 78))) {
+            } else if (C5.equals(Amarillo)) {
                 Cubo1C5.setSelectedItem("Amarillo");
                 Cubo1.C5I = "A";
                 Cubo1C5G.setText(Cubo1.C5I);
@@ -4187,22 +4196,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C6.equals(new Color(155, 22, 57))) {
+            if (C6.equals(Rojo)) {
                 Cubo1C6.setSelectedItem("Rojo");
                 Cubo1.C6I = "R";
                 Cubo1C6G.setText(Cubo1.C6I);
                 Cubo1C6G.setBackground(C6);
-            } else if (C6.equals(new Color(255, 255, 255))) {
+            } else if (C6.equals(Blanco)) {
                 Cubo1C6.setSelectedItem("Blanco");
                 Cubo1.C6I = "B";
                 Cubo1C6G.setText(Cubo1.C6I);
                 Cubo1C6G.setBackground(C6);
-            } else if (C6.equals(new Color(16, 175, 107))) {
+            } else if (C6.equals(Verde)) {
                 Cubo1C6.setSelectedItem("Verde");
                 Cubo1.C6I = "V";
                 Cubo1C6G.setText(Cubo1.C6I);
                 Cubo1C6G.setBackground(C6);
-            } else if (C6.equals(new Color(255, 234, 78))) {
+            } else if (C6.equals(Amarillo)) {
                 Cubo1C6.setSelectedItem("Amarillo");
                 Cubo1.C6I = "A";
                 Cubo1C6G.setText(Cubo1.C6I);
@@ -4232,23 +4241,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C1.equals(new Color(155, 22, 57))) {
+            if (C1.equals(Rojo)) {
                 Cubo2C1.setSelectedItem("Rojo");
                 Cubo2.C1I = "R";
                 Cubo2C1G.setText(Cubo2.C1I);
                 Cubo2C1G.setBackground(C1);
-            } else if (C1.equals(new Color(255, 255, 255))) {
+            } else if (C1.equals(Blanco)) {
                 Cubo2C1.setSelectedItem("Blanco");
                 Cubo2.C1I = "B";
                 Cubo2C1G.setText(Cubo2.C1I);
                 Cubo2C1G.setBackground(C1);
-            } else if (C1.equals(new Color(16, 175, 107))) {
+            } else if (C1.equals(Verde)) {
                 Cubo2C1.setSelectedItem("Verde");
                 Cubo2.C1I = "V";
                 Cubo2C1G.setBackground(C1);
                 Cubo2C1G.setText(Cubo2.C1I);
                 Cubo2C1G.setBackground(C1);
-            } else if (C1.equals(new Color(255, 234, 78))) {
+            } else if (C1.equals(Amarillo)) {
                 Cubo2C1.setSelectedItem("Amarillo");
                 Cubo2.C1I = "A";
                 Cubo2C1G.setText(Cubo2.C1I);
@@ -4256,22 +4265,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C2.equals(new Color(155, 22, 57))) {
+            if (C2.equals(Rojo)) {
                 Cubo2C2.setSelectedItem("Rojo");
                 Cubo2.C2I = "R";
                 Cubo2C2G.setText(Cubo2.C2I);
                 Cubo2C2G.setBackground(C2);
-            } else if (C2.equals(new Color(255, 255, 255))) {
+            } else if (C2.equals(Blanco)) {
                 Cubo2C2.setSelectedItem("Blanco");
                 Cubo2.C2I = "B";
                 Cubo2C2G.setText(Cubo2.C2I);
                 Cubo2C2G.setBackground(C2);
-            } else if (C2.equals(new Color(16, 175, 107))) {
+            } else if (C2.equals(Verde)) {
                 Cubo2C2.setSelectedItem("Verde");
                 Cubo2.C2I = "V";
                 Cubo2C2G.setText(Cubo2.C2I);
                 Cubo2C2G.setBackground(C2);
-            } else if (C2.equals(new Color(255, 234, 78))) {
+            } else if (C2.equals(Amarillo)) {
                 Cubo2C2.setSelectedItem("Amarillo");
                 Cubo2.C2I = "A";
                 Cubo2C2G.setText(Cubo2.C2I);
@@ -4279,22 +4288,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C3.equals(new Color(155, 22, 57))) {
+            if (C3.equals(Rojo)) {
                 Cubo2C3.setSelectedItem("Rojo");
                 Cubo2.C3I = "R";
                 Cubo2C3G.setText(Cubo2.C3I);
                 Cubo2C3G.setBackground(C3);
-            } else if (C3.equals(new Color(255, 255, 255))) {
+            } else if (C3.equals(Blanco)) {
                 Cubo2C3.setSelectedItem("Blanco");
                 Cubo2.C3I = "B";
                 Cubo2C3G.setText(Cubo2.C3I);
                 Cubo2C3G.setBackground(C3);
-            } else if (C3.equals(new Color(16, 175, 107))) {
+            } else if (C3.equals(Verde)) {
                 Cubo2C3.setSelectedItem("Verde");
                 Cubo2.C3I = "V";
                 Cubo2C3G.setText(Cubo2.C3I);
                 Cubo2C3G.setBackground(C3);
-            } else if (C3.equals(new Color(255, 234, 78))) {
+            } else if (C3.equals(Amarillo)) {
                 Cubo2C3.setSelectedItem("Amarillo");
                 Cubo2.C3I = "A";
                 Cubo2C3G.setText(Cubo2.C3I);
@@ -4302,22 +4311,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C4.equals(new Color(155, 22, 57))) {
+            if (C4.equals(Rojo)) {
                 Cubo2C4.setSelectedItem("Rojo");
                 Cubo2.C4I = "R";
                 Cubo2C4G.setText(Cubo2.C4I);
                 Cubo2C4G.setBackground(C4);
-            } else if (C4.equals(new Color(255, 255, 255))) {
+            } else if (C4.equals(Blanco)) {
                 Cubo2C4.setSelectedItem("Blanco");
                 Cubo2.C4I = "B";
                 Cubo2C4G.setText(Cubo2.C4I);
                 Cubo2C4G.setBackground(C4);
-            } else if (C4.equals(new Color(16, 175, 107))) {
+            } else if (C4.equals(Verde)) {
                 Cubo2C4.setSelectedItem("Verde");
                 Cubo2.C4I = "V";
                 Cubo2C4G.setText(Cubo2.C4I);
                 Cubo2C4G.setBackground(C4);
-            } else if (C4.equals(new Color(255, 234, 78))) {
+            } else if (C4.equals(Amarillo)) {
                 Cubo2C4.setSelectedItem("Amarillo");
                 Cubo2.C4I = "A";
                 Cubo2C4G.setText(Cubo2.C4I);
@@ -4325,22 +4334,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C5.equals(new Color(155, 22, 57))) {
+            if (C5.equals(Rojo)) {
                 Cubo2C5.setSelectedItem("Rojo");
                 Cubo2.C5I = "R";
                 Cubo2C5G.setText(Cubo2.C5I);
                 Cubo2C5G.setBackground(C5);
-            } else if (C5.equals(new Color(255, 255, 255))) {
+            } else if (C5.equals(Blanco)) {
                 Cubo2C5.setSelectedItem("Blanco");
                 Cubo2.C5I = "B";
                 Cubo2C5G.setText(Cubo2.C5I);
                 Cubo2C5G.setBackground(C5);
-            } else if (C5.equals(new Color(16, 175, 107))) {
+            } else if (C5.equals(Verde)) {
                 Cubo2C5.setSelectedItem("Verde");
                 Cubo2.C5I = "V";
                 Cubo2C5G.setText(Cubo2.C5I);
                 Cubo2C5G.setBackground(C5);
-            } else if (C5.equals(new Color(255, 234, 78))) {
+            } else if (C5.equals(Amarillo)) {
                 Cubo2C5.setSelectedItem("Amarillo");
                 Cubo2.C5I = "A";
                 Cubo2C5G.setText(Cubo2.C5I);
@@ -4348,22 +4357,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C6.equals(new Color(155, 22, 57))) {
+            if (C6.equals(Rojo)) {
                 Cubo2C6.setSelectedItem("Rojo");
                 Cubo2.C6I = "R";
                 Cubo2C6G.setText(Cubo2.C6I);
                 Cubo2C6G.setBackground(C6);
-            } else if (C6.equals(new Color(255, 255, 255))) {
+            } else if (C6.equals(Blanco)) {
                 Cubo2C6.setSelectedItem("Blanco");
                 Cubo2.C6I = "B";
                 Cubo2C6G.setText(Cubo2.C6I);
                 Cubo2C6G.setBackground(C6);
-            } else if (C6.equals(new Color(16, 175, 107))) {
+            } else if (C6.equals(Verde)) {
                 Cubo2C6.setSelectedItem("Verde");
                 Cubo2.C6I = "V";
                 Cubo2C6G.setText(Cubo2.C6I);
                 Cubo2C6G.setBackground(C6);
-            } else if (C6.equals(new Color(255, 234, 78))) {
+            } else if (C6.equals(Amarillo)) {
                 Cubo2C6.setSelectedItem("Amarillo");
                 Cubo2.C6I = "A";
                 Cubo2C6G.setText(Cubo2.C6I);
@@ -4393,22 +4402,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C1.equals(new Color(155, 22, 57))) {
+            if (C1.equals(Rojo)) {
                 Cubo3C1.setSelectedItem("Rojo");
                 Cubo3.C1I = "R";
                 Cubo3C1G.setText(Cubo3.C1I);
                 Cubo3C1G.setBackground(C1);
-            } else if (C1.equals(new Color(255, 255, 255))) {
+            } else if (C1.equals(Blanco)) {
                 Cubo3C1.setSelectedItem("Blanco");
                 Cubo3.C1I = "B";
                 Cubo3C1G.setText(Cubo3.C1I);
                 Cubo3C1G.setBackground(C1);
-            } else if (C1.equals(new Color(16, 175, 107))) {
+            } else if (C1.equals(Verde)) {
                 Cubo3C1.setSelectedItem("Verde");
                 Cubo3.C1I = "V";
                 Cubo3C1G.setText(Cubo3.C1I);
                 Cubo3C1G.setBackground(C1);
-            } else if (C1.equals(new Color(255, 234, 78))) {
+            } else if (C1.equals(Amarillo)) {
                 Cubo3C1.setSelectedItem("Amarillo");
                 Cubo3.C1I = "A";
                 Cubo3C1G.setText(Cubo3.C1I);
@@ -4416,22 +4425,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C2.equals(new Color(155, 22, 57))) {
+            if (C2.equals(Rojo)) {
                 Cubo3C2.setSelectedItem("Rojo");
                 Cubo3.C2I = "R";
                 Cubo3C2G.setText(Cubo3.C2I);
                 Cubo3C2G.setBackground(C2);
-            } else if (C2.equals(new Color(255, 255, 255))) {
+            } else if (C2.equals(Blanco)) {
                 Cubo3C2.setSelectedItem("Blanco");
                 Cubo3.C2I = "B";
                 Cubo3C2G.setText(Cubo3.C2I);
                 Cubo3C2G.setBackground(C2);
-            } else if (C2.equals(new Color(16, 175, 107))) {
+            } else if (C2.equals(Verde)) {
                 Cubo3C2.setSelectedItem("Verde");
                 Cubo3.C2I = "V";
                 Cubo3C2G.setText(Cubo3.C2I);
                 Cubo3C2G.setBackground(C2);
-            } else if (C2.equals(new Color(255, 234, 78))) {
+            } else if (C2.equals(Amarillo)) {
                 Cubo3C2.setSelectedItem("Amarillo");
                 Cubo3.C2I = "A";
                 Cubo3C2G.setText(Cubo3.C2I);
@@ -4439,22 +4448,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C3.equals(new Color(155, 22, 57))) {
+            if (C3.equals(Rojo)) {
                 Cubo3C3.setSelectedItem("Rojo");
                 Cubo3.C3I = "R";
                 Cubo3C3G.setText(Cubo3.C3I);
                 Cubo3C3G.setBackground(C3);
-            } else if (C3.equals(new Color(255, 255, 255))) {
+            } else if (C3.equals(Blanco)) {
                 Cubo3C3.setSelectedItem("Blanco");
                 Cubo3.C3I = "B";
                 Cubo3C3G.setText(Cubo3.C3I);
                 Cubo3C3G.setBackground(C3);
-            } else if (C3.equals(new Color(16, 175, 107))) {
+            } else if (C3.equals(Verde)) {
                 Cubo3C3.setSelectedItem("Verde");
                 Cubo3.C3I = "V";
                 Cubo3C3G.setText(Cubo3.C3I);
                 Cubo3C3G.setBackground(C3);
-            } else if (C3.equals(new Color(255, 234, 78))) {
+            } else if (C3.equals(Amarillo)) {
                 Cubo3C3.setSelectedItem("Amarillo");
                 Cubo3.C3I = "A";
                 Cubo3C3G.setText(Cubo3.C3I);
@@ -4462,22 +4471,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C4.equals(new Color(155, 22, 57))) {
+            if (C4.equals(Rojo)) {
                 Cubo3C4.setSelectedItem("Rojo");
                 Cubo3.C4I = "R";
                 Cubo3C4G.setText(Cubo3.C4I);
                 Cubo3C4G.setBackground(C4);
-            } else if (C4.equals(new Color(255, 255, 255))) {
+            } else if (C4.equals(Blanco)) {
                 Cubo3C4.setSelectedItem("Blanco");
                 Cubo3.C4I = "B";
                 Cubo3C4G.setText(Cubo3.C4I);
                 Cubo3C4G.setBackground(C4);
-            } else if (C4.equals(new Color(16, 175, 107))) {
+            } else if (C4.equals(Verde)) {
                 Cubo3C4.setSelectedItem("Verde");
                 Cubo3.C4I = "V";
                 Cubo3C4G.setText(Cubo3.C4I);
                 Cubo3C4G.setBackground(C4);
-            } else if (C4.equals(new Color(255, 234, 78))) {
+            } else if (C4.equals(Amarillo)) {
                 Cubo3C4.setSelectedItem("Amarillo");
                 Cubo3.C4I = "A";
                 Cubo3C4G.setText(Cubo3.C4I);
@@ -4485,22 +4494,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C5.equals(new Color(155, 22, 57))) {
+            if (C5.equals(Rojo)) {
                 Cubo3C5.setSelectedItem("Rojo");
                 Cubo3.C5I = "R";
                 Cubo3C5G.setText(Cubo3.C5I);
                 Cubo3C5G.setBackground(C5);
-            } else if (C5.equals(new Color(255, 255, 255))) {
+            } else if (C5.equals(Blanco)) {
                 Cubo3C5.setSelectedItem("Blanco");
                 Cubo3.C5I = "B";
                 Cubo3C5G.setText(Cubo3.C5I);
                 Cubo3C5G.setBackground(C5);
-            } else if (C5.equals(new Color(16, 175, 107))) {
+            } else if (C5.equals(Verde)) {
                 Cubo3C5.setSelectedItem("Verde");
                 Cubo3.C5I = "V";
                 Cubo3C5G.setText(Cubo3.C5I);
                 Cubo3C5G.setBackground(C5);
-            } else if (C5.equals(new Color(255, 234, 78))) {
+            } else if (C5.equals(Amarillo)) {
                 Cubo3C5.setSelectedItem("Amarillo");
                 Cubo3.C5I = "A";
                 Cubo3C5G.setText(Cubo3.C5I);
@@ -4508,22 +4517,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C6.equals(new Color(155, 22, 57))) {
+            if (C6.equals(Rojo)) {
                 Cubo3C6.setSelectedItem("Rojo");
                 Cubo3.C6I = "R";
                 Cubo3C6G.setText(Cubo3.C6I);
                 Cubo3C6G.setBackground(C6);
-            } else if (C6.equals(new Color(255, 255, 255))) {
+            } else if (C6.equals(Blanco)) {
                 Cubo3C6.setSelectedItem("Blanco");
                 Cubo3.C6I = "B";
                 Cubo3C6G.setText(Cubo3.C6I);
                 Cubo3C6G.setBackground(C6);
-            } else if (C6.equals(new Color(16, 175, 107))) {
+            } else if (C6.equals(Verde)) {
                 Cubo3C6.setSelectedItem("Verde");
                 Cubo3.C6I = "V";
                 Cubo3C6G.setText(Cubo3.C6I);
                 Cubo3C6G.setBackground(C6);
-            } else if (C6.equals(new Color(255, 234, 78))) {
+            } else if (C6.equals(Amarillo)) {
                 Cubo3C6.setSelectedItem("Amarillo");
                 Cubo3.C6I = "A";
                 Cubo3C6G.setText(Cubo3.C6I);
@@ -4552,22 +4561,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C1.equals(new Color(155, 22, 57))) {
+            if (C1.equals(Rojo)) {
                 Cubo4C1.setSelectedItem("Rojo");
                 Cubo4.C1I = "R";
                 Cubo4C1G.setText(Cubo4.C1I);
                 Cubo4C1G.setBackground(C1);
-            } else if (C1.equals(new Color(255, 255, 255))) {
+            } else if (C1.equals(Blanco)) {
                 Cubo4C1.setSelectedItem("Blanco");
                 Cubo4.C1I = "B";
                 Cubo4C1G.setText(Cubo4.C1I);
                 Cubo4C1G.setBackground(C1);
-            } else if (C1.equals(new Color(16, 175, 107))) {
+            } else if (C1.equals(Verde)) {
                 Cubo4C1.setSelectedItem("Verde");
                 Cubo4.C1I = "V";
                 Cubo4C1G.setText(Cubo4.C1I);
                 Cubo4C1G.setBackground(C1);
-            } else if (C1.equals(new Color(255, 234, 78))) {
+            } else if (C1.equals(Amarillo)) {
                 Cubo4C1.setSelectedItem("Amarillo");
                 Cubo4.C1I = "A";
                 Cubo4C1G.setText(Cubo4.C1I);
@@ -4575,22 +4584,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C2.equals(new Color(155, 22, 57))) {
+            if (C2.equals(Rojo)) {
                 Cubo4C2.setSelectedItem("Rojo");
                 Cubo4.C2I = "R";
                 Cubo4C2G.setText(Cubo4.C2I);
                 Cubo4C2G.setBackground(C2);
-            } else if (C2.equals(new Color(255, 255, 255))) {
+            } else if (C2.equals(Blanco)) {
                 Cubo4C2.setSelectedItem("Blanco");
                 Cubo4.C2I = "B";
                 Cubo4C2G.setText(Cubo4.C2I);
                 Cubo4C2G.setBackground(C2);
-            } else if (C2.equals(new Color(16, 175, 107))) {
+            } else if (C2.equals(Verde)) {
                 Cubo4C2.setSelectedItem("Verde");
                 Cubo4.C2I = "V";
                 Cubo4C2G.setText(Cubo4.C2I);
                 Cubo4C2G.setBackground(C2);
-            } else if (C2.equals(new Color(255, 234, 78))) {
+            } else if (C2.equals(Amarillo)) {
                 Cubo4C2.setSelectedItem("Amarillo");
                 Cubo4.C2I = "A";
                 Cubo4C2G.setText(Cubo4.C2I);
@@ -4598,22 +4607,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C3.equals(new Color(155, 22, 57))) {
+            if (C3.equals(Rojo)) {
                 Cubo4C3.setSelectedItem("Rojo");
                 Cubo4.C3I = "R";
                 Cubo4C3G.setText(Cubo4.C3I);
                 Cubo4C3G.setBackground(C3);
-            } else if (C3.equals(new Color(255, 255, 255))) {
+            } else if (C3.equals(Blanco)) {
                 Cubo4C3.setSelectedItem("Blanco");
                 Cubo4.C3I = "B";
                 Cubo4C3G.setText(Cubo4.C3I);
                 Cubo4C3G.setBackground(C3);
-            } else if (C3.equals(new Color(16, 175, 107))) {
+            } else if (C3.equals(Verde)) {
                 Cubo4C3.setSelectedItem("Verde");
                 Cubo4.C3I = "V";
                 Cubo4C3G.setText(Cubo4.C3I);
                 Cubo4C3G.setBackground(C3);
-            } else if (C3.equals(new Color(255, 234, 78))) {
+            } else if (C3.equals(Amarillo)) {
                 Cubo4C3.setSelectedItem("Amarillo");
                 Cubo4.C3I = "A";
                 Cubo4C3G.setText(Cubo4.C3I);
@@ -4621,22 +4630,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C4.equals(new Color(155, 22, 57))) {
+            if (C4.equals(Rojo)) {
                 Cubo4C4.setSelectedItem("Rojo");
                 Cubo4.C4I = "R";
                 Cubo4C4G.setText(Cubo4.C4I);
                 Cubo4C4G.setBackground(C4);
-            } else if (C4.equals(new Color(255, 255, 255))) {
+            } else if (C4.equals(Blanco)) {
                 Cubo4C4.setSelectedItem("Blanco");
                 Cubo4.C4I = "B";
                 Cubo4C4G.setText(Cubo4.C4I);
                 Cubo4C4G.setBackground(C4);
-            } else if (C4.equals(new Color(16, 175, 107))) {
+            } else if (C4.equals(Verde)) {
                 Cubo4C4.setSelectedItem("Verde");
                 Cubo4.C4I = "V";
                 Cubo4C4G.setText(Cubo4.C4I);
                 Cubo4C4G.setBackground(C4);
-            } else if (C4.equals(new Color(255, 234, 78))) {
+            } else if (C4.equals(Amarillo)) {
                 Cubo4C4.setSelectedItem("Amarillo");
                 Cubo4.C4I = "A";
                 Cubo4C4G.setText(Cubo4.C4I);
@@ -4644,22 +4653,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C5.equals(new Color(155, 22, 57))) {
+            if (C5.equals(Rojo)) {
                 Cubo4C5.setSelectedItem("Rojo");
                 Cubo4.C5I = "R";
                 Cubo4C5G.setText(Cubo4.C5I);
                 Cubo4C5G.setBackground(C5);
-            } else if (C5.equals(new Color(255, 255, 255))) {
+            } else if (C5.equals(Blanco)) {
                 Cubo4C5.setSelectedItem("Blanco");
                 Cubo4.C5I = "B";
                 Cubo4C5G.setText(Cubo4.C5I);
                 Cubo4C5G.setBackground(C5);
-            } else if (C5.equals(new Color(16, 175, 107))) {
+            } else if (C5.equals(Verde)) {
                 Cubo4C5.setSelectedItem("Verde");
                 Cubo4.C5I = "V";
                 Cubo4C5G.setText(Cubo4.C5I);
                 Cubo4C5G.setBackground(C5);
-            } else if (C5.equals(new Color(255, 234, 78))) {
+            } else if (C5.equals(Amarillo)) {
                 Cubo4C5.setSelectedItem("Amarillo");
                 Cubo4.C5I = "A";
                 Cubo4C5G.setText(Cubo4.C5I);
@@ -4667,22 +4676,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             }
 
-            if (C6.equals(new Color(155, 22, 57))) {
+            if (C6.equals(Rojo)) {
                 Cubo4C6.setSelectedItem("Rojo");
                 Cubo4.C6I = "R";
                 Cubo4C6G.setText(Cubo4.C6I);
                 Cubo4C6G.setBackground(C6);
-            } else if (C6.equals(new Color(255, 255, 255))) {
+            } else if (C6.equals(Blanco)) {
                 Cubo4C6.setSelectedItem("Blanco");
                 Cubo4.C6I = "B";
                 Cubo4C6G.setText(Cubo4.C6I);
                 Cubo4C6G.setBackground(C6);
-            } else if (C6.equals(new Color(16, 175, 107))) {
+            } else if (C6.equals(Verde)) {
                 Cubo4C6.setSelectedItem("Verde");
                 Cubo4.C6I = "V";
                 Cubo4C6G.setText(Cubo4.C6I);
                 Cubo4C6G.setBackground(C6);
-            } else if (C6.equals(new Color(255, 234, 78))) {
+            } else if (C6.equals(Amarillo)) {
                 Cubo4C6.setSelectedItem("Amarillo");
                 Cubo4.C6I = "A";
                 Cubo4C6G.setText(Cubo4.C6I);
@@ -6157,6 +6166,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 resolverJuego();
                 actualTorre();
                 fondo.repaint();
+                ;
             } else {
                 resuelto = false;
                 resolverBtnClicked = false;
@@ -6692,23 +6702,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 // Cara Frontal
                 if (Cubo1C1J.getText().equals("R")) {
-                    Cubo1C1J.setBackground(new Color(155, 22, 57));
+                    Cubo1C1J.setBackground(Rojo);
                 } else if (Cubo1C1J.getText().equals("B")) {
-                    Cubo1C1J.setBackground(new Color(255, 255, 255));
+                    Cubo1C1J.setBackground(Blanco);
                 } else if (Cubo1C1J.getText().equals("V")) {
-                    Cubo1C1J.setBackground(new Color(16, 175, 107));
+                    Cubo1C1J.setBackground(Verde);
                 } else if (Cubo1C1J.getText().equals("A")) {
-                    Cubo1C1J.setBackground(new Color(255, 234, 78));
+                    Cubo1C1J.setBackground(Amarillo);
                 }
                 // Cara Trasera
                 if (Cubo1C2J.getText().equals("R")) {
-                    Cubo1C2J.setBackground(new Color(155, 22, 57));
+                    Cubo1C2J.setBackground(Rojo);
                 } else if (Cubo1C2J.getText().equals("B")) {
-                    Cubo1C2J.setBackground(new Color(255, 255, 255));
+                    Cubo1C2J.setBackground(Blanco);
                 } else if (Cubo1C2J.getText().equals("V")) {
-                    Cubo1C2J.setBackground(new Color(16, 175, 107));
+                    Cubo1C2J.setBackground(Verde);
                 } else if (Cubo1C2J.getText().equals("A")) {
-                    Cubo1C2J.setBackground(new Color(255, 234, 78));
+                    Cubo1C2J.setBackground(Amarillo);
                 }
 
                 // Otras Caras
@@ -6717,26 +6727,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo1C6E.setText(soluciones.get(0).Cubo1aristaI);
 
                 if (soluciones.get(0).Cubo1aristaI.equals("R")) {
-                    Cubo1C6J.setBackground(new Color(155, 22, 57));
+                    Cubo1C6J.setBackground(Rojo);
                 } else if (soluciones.get(0).Cubo1aristaI.equals("B")) {
-                    Cubo1C6J.setBackground(new Color(255, 255, 255));
+                    Cubo1C6J.setBackground(Blanco);
                 } else if (soluciones.get(0).Cubo1aristaI.equals("V")) {
-                    Cubo1C6J.setBackground(new Color(16, 175, 107));
+                    Cubo1C6J.setBackground(Verde);
                 } else if (soluciones.get(0).Cubo1aristaI.equals("A")) {
-                    Cubo1C6J.setBackground(new Color(255, 234, 78));
+                    Cubo1C6J.setBackground(Amarillo);
                 }
 
                 // Cara derecha
                 Cubo1C5J.setText(soluciones.get(0).Cubo1aristaF);
                 Cubo1C5E.setText(soluciones.get(0).Cubo1aristaF);
                 if (soluciones.get(0).Cubo1aristaF.equals("R")) {
-                    Cubo1C5J.setBackground(new Color(155, 22, 57));
+                    Cubo1C5J.setBackground(Rojo);
                 } else if (soluciones.get(0).Cubo1aristaF.equals("B")) {
-                    Cubo1C5J.setBackground(new Color(255, 255, 255));
+                    Cubo1C5J.setBackground(Blanco);
                 } else if (soluciones.get(0).Cubo1aristaF.equals("V")) {
-                    Cubo1C5J.setBackground(new Color(16, 175, 107));
+                    Cubo1C5J.setBackground(Verde);
                 } else if (soluciones.get(0).Cubo1aristaF.equals("A")) {
-                    Cubo1C5J.setBackground(new Color(255, 234, 78));
+                    Cubo1C5J.setBackground(Amarillo);
                 }
 
                 // Cara superior
@@ -6744,13 +6754,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo1C3E.setText(soluciones.get(1).Cubo1aristaI);
 
                 if (soluciones.get(1).Cubo1aristaI.equals("R")) {
-                    Cubo1C3J.setBackground(new Color(155, 22, 57));
+                    Cubo1C3J.setBackground(Rojo);
                 } else if (soluciones.get(1).Cubo1aristaI.equals("B")) {
-                    Cubo1C3J.setBackground(new Color(255, 255, 255));
+                    Cubo1C3J.setBackground(Blanco);
                 } else if (soluciones.get(1).Cubo1aristaI.equals("V")) {
-                    Cubo1C3J.setBackground(new Color(16, 175, 107));
+                    Cubo1C3J.setBackground(Verde);
                 } else if (soluciones.get(1).Cubo1aristaI.equals("A")) {
-                    Cubo1C3J.setBackground(new Color(255, 234, 78));
+                    Cubo1C3J.setBackground(Amarillo);
                 }
 
                 // Cara inferior
@@ -6758,13 +6768,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo1C4E.setText(soluciones.get(1).Cubo1aristaF);
 
                 if (soluciones.get(1).Cubo1aristaF.equals("R")) {
-                    Cubo1C4J.setBackground(new Color(155, 22, 57));
+                    Cubo1C4J.setBackground(Rojo);
                 } else if (soluciones.get(1).Cubo1aristaF.equals("B")) {
-                    Cubo1C4J.setBackground(new Color(255, 255, 255));
+                    Cubo1C4J.setBackground(Blanco);
                 } else if (soluciones.get(1).Cubo1aristaF.equals("V")) {
-                    Cubo1C4J.setBackground(new Color(16, 175, 107));
+                    Cubo1C4J.setBackground(Verde);
                 } else if (soluciones.get(1).Cubo1aristaF.equals("A")) {
-                    Cubo1C4J.setBackground(new Color(255, 234, 78));
+                    Cubo1C4J.setBackground(Amarillo);
                 }
 
                 // CUBO 2
@@ -6785,23 +6795,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 // Cara Frontal
                 if (Cubo2C1J.getText().equals("R")) {
-                    Cubo2C1J.setBackground(new Color(155, 22, 57));
+                    Cubo2C1J.setBackground(Rojo);
                 } else if (Cubo2C1J.getText().equals("B")) {
-                    Cubo2C1J.setBackground(new Color(255, 255, 255));
+                    Cubo2C1J.setBackground(Blanco);
                 } else if (Cubo2C1J.getText().equals("V")) {
-                    Cubo2C1J.setBackground(new Color(16, 175, 107));
+                    Cubo2C1J.setBackground(Verde);
                 } else if (Cubo2C1J.getText().equals("A")) {
-                    Cubo2C1J.setBackground(new Color(255, 234, 78));
+                    Cubo2C1J.setBackground(Amarillo);
                 }
                 // Cara Trasera
                 if (Cubo2C2J.getText().equals("R")) {
-                    Cubo2C2J.setBackground(new Color(155, 22, 57));
+                    Cubo2C2J.setBackground(Rojo);
                 } else if (Cubo2C2J.getText().equals("B")) {
-                    Cubo2C2J.setBackground(new Color(255, 255, 255));
+                    Cubo2C2J.setBackground(Blanco);
                 } else if (Cubo2C2J.getText().equals("V")) {
-                    Cubo2C2J.setBackground(new Color(16, 175, 107));
+                    Cubo2C2J.setBackground(Verde);
                 } else if (Cubo2C2J.getText().equals("A")) {
-                    Cubo2C2J.setBackground(new Color(255, 234, 78));
+                    Cubo2C2J.setBackground(Amarillo);
                 }
 
                 // Cara izquierda
@@ -6809,26 +6819,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo2C6E.setText(soluciones.get(0).Cubo2aristaI);
 
                 if (soluciones.get(0).Cubo2aristaI.equals("R")) {
-                    Cubo2C6J.setBackground(new Color(155, 22, 57));
+                    Cubo2C6J.setBackground(Rojo);
                 } else if (soluciones.get(0).Cubo2aristaI.equals("B")) {
-                    Cubo2C6J.setBackground(new Color(255, 255, 255));
+                    Cubo2C6J.setBackground(Blanco);
                 } else if (soluciones.get(0).Cubo2aristaI.equals("V")) {
-                    Cubo2C6J.setBackground(new Color(16, 175, 107));
+                    Cubo2C6J.setBackground(Verde);
                 } else if (soluciones.get(0).Cubo2aristaI.equals("A")) {
-                    Cubo2C6J.setBackground(new Color(255, 234, 78));
+                    Cubo2C6J.setBackground(Amarillo);
                 }
 
                 // Cara derecha
                 Cubo2C5J.setText(soluciones.get(0).Cubo2aristaF);
                 Cubo2C5E.setText(soluciones.get(0).Cubo2aristaF);
                 if (soluciones.get(0).Cubo2aristaF.equals("R")) {
-                    Cubo2C5J.setBackground(new Color(155, 22, 57));
+                    Cubo2C5J.setBackground(Rojo);
                 } else if (soluciones.get(0).Cubo2aristaF.equals("B")) {
-                    Cubo2C5J.setBackground(new Color(255, 255, 255));
+                    Cubo2C5J.setBackground(Blanco);
                 } else if (soluciones.get(0).Cubo2aristaF.equals("V")) {
-                    Cubo2C5J.setBackground(new Color(16, 175, 107));
+                    Cubo2C5J.setBackground(Verde);
                 } else if (soluciones.get(0).Cubo2aristaF.equals("A")) {
-                    Cubo2C5J.setBackground(new Color(255, 234, 78));
+                    Cubo2C5J.setBackground(Amarillo);
                 }
 
                 // Cara superior
@@ -6836,13 +6846,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo2C3E.setText(soluciones.get(1).Cubo2aristaI);
 
                 if (soluciones.get(1).Cubo2aristaI.equals("R")) {
-                    Cubo2C3J.setBackground(new Color(155, 22, 57));
+                    Cubo2C3J.setBackground(Rojo);
                 } else if (soluciones.get(1).Cubo2aristaI.equals("B")) {
-                    Cubo2C3J.setBackground(new Color(255, 255, 255));
+                    Cubo2C3J.setBackground(Blanco);
                 } else if (soluciones.get(1).Cubo2aristaI.equals("V")) {
-                    Cubo2C3J.setBackground(new Color(16, 175, 107));
+                    Cubo2C3J.setBackground(Verde);
                 } else if (soluciones.get(1).Cubo2aristaI.equals("A")) {
-                    Cubo2C3J.setBackground(new Color(255, 234, 78));
+                    Cubo2C3J.setBackground(Amarillo);
                 }
 
                 // Cara inferior
@@ -6850,13 +6860,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo2C4E.setText(soluciones.get(1).Cubo2aristaF);
 
                 if (soluciones.get(1).Cubo2aristaF.equals("R")) {
-                    Cubo2C4J.setBackground(new Color(155, 22, 57));
+                    Cubo2C4J.setBackground(Rojo);
                 } else if (soluciones.get(1).Cubo2aristaF.equals("B")) {
-                    Cubo2C4J.setBackground(new Color(255, 255, 255));
+                    Cubo2C4J.setBackground(Blanco);
                 } else if (soluciones.get(1).Cubo2aristaF.equals("V")) {
-                    Cubo2C4J.setBackground(new Color(16, 175, 107));
+                    Cubo2C4J.setBackground(Verde);
                 } else if (soluciones.get(1).Cubo2aristaF.equals("A")) {
-                    Cubo2C4J.setBackground(new Color(255, 234, 78));
+                    Cubo2C4J.setBackground(Amarillo);
                 }
 
                 // CUBO 3
@@ -6877,23 +6887,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 // Cara Frontal
                 if (Cubo3C1J.getText().equals("R")) {
-                    Cubo3C1J.setBackground(new Color(155, 22, 57));
+                    Cubo3C1J.setBackground(Rojo);
                 } else if (Cubo3C1J.getText().equals("B")) {
-                    Cubo3C1J.setBackground(new Color(255, 255, 255));
+                    Cubo3C1J.setBackground(Blanco);
                 } else if (Cubo3C1J.getText().equals("V")) {
-                    Cubo3C1J.setBackground(new Color(16, 175, 107));
+                    Cubo3C1J.setBackground(Verde);
                 } else if (Cubo3C1J.getText().equals("A")) {
-                    Cubo3C1J.setBackground(new Color(255, 234, 78));
+                    Cubo3C1J.setBackground(Amarillo);
                 }
                 // Cara Trasera
                 if (Cubo3C2J.getText().equals("R")) {
-                    Cubo3C2J.setBackground(new Color(155, 22, 57));
+                    Cubo3C2J.setBackground(Rojo);
                 } else if (Cubo3C2J.getText().equals("B")) {
-                    Cubo3C2J.setBackground(new Color(255, 255, 255));
+                    Cubo3C2J.setBackground(Blanco);
                 } else if (Cubo3C2J.getText().equals("V")) {
-                    Cubo3C2J.setBackground(new Color(16, 175, 107));
+                    Cubo3C2J.setBackground(Verde);
                 } else if (Cubo3C2J.getText().equals("A")) {
-                    Cubo3C2J.setBackground(new Color(255, 234, 78));
+                    Cubo3C2J.setBackground(Amarillo);
                 }
 
                 // Cara izquierda
@@ -6901,26 +6911,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo3C6E.setText(soluciones.get(0).Cubo3aristaI);
 
                 if (soluciones.get(0).Cubo3aristaI.equals("R")) {
-                    Cubo3C6J.setBackground(new Color(155, 22, 57));
+                    Cubo3C6J.setBackground(Rojo);
                 } else if (soluciones.get(0).Cubo3aristaI.equals("B")) {
-                    Cubo3C6J.setBackground(new Color(255, 255, 255));
+                    Cubo3C6J.setBackground(Blanco);
                 } else if (soluciones.get(0).Cubo3aristaI.equals("V")) {
-                    Cubo3C6J.setBackground(new Color(16, 175, 107));
+                    Cubo3C6J.setBackground(Verde);
                 } else if (soluciones.get(0).Cubo3aristaI.equals("A")) {
-                    Cubo3C6J.setBackground(new Color(255, 234, 78));
+                    Cubo3C6J.setBackground(Amarillo);
                 }
 
                 // Cara derecha
                 Cubo3C5J.setText(soluciones.get(0).Cubo3aristaF);
                 Cubo3C5E.setText(soluciones.get(0).Cubo3aristaF);
                 if (soluciones.get(0).Cubo3aristaF.equals("R")) {
-                    Cubo3C5J.setBackground(new Color(155, 22, 57));
+                    Cubo3C5J.setBackground(Rojo);
                 } else if (soluciones.get(0).Cubo3aristaF.equals("B")) {
-                    Cubo3C5J.setBackground(new Color(255, 255, 255));
+                    Cubo3C5J.setBackground(Blanco);
                 } else if (soluciones.get(0).Cubo3aristaF.equals("V")) {
-                    Cubo3C5J.setBackground(new Color(16, 175, 107));
+                    Cubo3C5J.setBackground(Verde);
                 } else if (soluciones.get(0).Cubo3aristaF.equals("A")) {
-                    Cubo3C5J.setBackground(new Color(255, 234, 78));
+                    Cubo3C5J.setBackground(Amarillo);
                 }
 
                 // Cara superior
@@ -6928,13 +6938,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo3C3E.setText(soluciones.get(1).Cubo3aristaI);
 
                 if (soluciones.get(1).Cubo3aristaI.equals("R")) {
-                    Cubo3C3J.setBackground(new Color(155, 22, 57));
+                    Cubo3C3J.setBackground(Rojo);
                 } else if (soluciones.get(1).Cubo3aristaI.equals("B")) {
-                    Cubo3C3J.setBackground(new Color(255, 255, 255));
+                    Cubo3C3J.setBackground(Blanco);
                 } else if (soluciones.get(1).Cubo3aristaI.equals("V")) {
-                    Cubo3C3J.setBackground(new Color(16, 175, 107));
+                    Cubo3C3J.setBackground(Verde);
                 } else if (soluciones.get(1).Cubo3aristaI.equals("A")) {
-                    Cubo3C3J.setBackground(new Color(255, 234, 78));
+                    Cubo3C3J.setBackground(Amarillo);
                 }
 
                 // Cara inferior
@@ -6942,13 +6952,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo3C4E.setText(soluciones.get(1).Cubo3aristaF);
 
                 if (soluciones.get(1).Cubo3aristaF.equals("R")) {
-                    Cubo3C4J.setBackground(new Color(155, 22, 57));
+                    Cubo3C4J.setBackground(Rojo);
                 } else if (soluciones.get(1).Cubo3aristaF.equals("B")) {
-                    Cubo3C4J.setBackground(new Color(255, 255, 255));
+                    Cubo3C4J.setBackground(Blanco);
                 } else if (soluciones.get(1).Cubo3aristaF.equals("V")) {
-                    Cubo3C4J.setBackground(new Color(16, 175, 107));
+                    Cubo3C4J.setBackground(Verde);
                 } else if (soluciones.get(1).Cubo3aristaF.equals("A")) {
-                    Cubo3C4J.setBackground(new Color(255, 234, 78));
+                    Cubo3C4J.setBackground(Amarillo);
                 }
 
                 // CUBO 4
@@ -6969,23 +6979,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 // Cara Frontal
                 if (Cubo4C1J.getText().equals("R")) {
-                    Cubo4C1J.setBackground(new Color(155, 22, 57));
+                    Cubo4C1J.setBackground(Rojo);
                 } else if (Cubo4C1J.getText().equals("B")) {
-                    Cubo4C1J.setBackground(new Color(255, 255, 255));
+                    Cubo4C1J.setBackground(Blanco);
                 } else if (Cubo4C1J.getText().equals("V")) {
-                    Cubo4C1J.setBackground(new Color(16, 175, 107));
+                    Cubo4C1J.setBackground(Verde);
                 } else if (Cubo4C1J.getText().equals("A")) {
-                    Cubo4C1J.setBackground(new Color(255, 234, 78));
+                    Cubo4C1J.setBackground(Amarillo);
                 }
                 // Cara Trasera
                 if (Cubo4C2J.getText().equals("R")) {
-                    Cubo4C2J.setBackground(new Color(155, 22, 57));
+                    Cubo4C2J.setBackground(Rojo);
                 } else if (Cubo4C2J.getText().equals("B")) {
-                    Cubo4C2J.setBackground(new Color(255, 255, 255));
+                    Cubo4C2J.setBackground(Blanco);
                 } else if (Cubo4C2J.getText().equals("V")) {
-                    Cubo4C2J.setBackground(new Color(16, 175, 107));
+                    Cubo4C2J.setBackground(Verde);
                 } else if (Cubo4C2J.getText().equals("A")) {
-                    Cubo4C2J.setBackground(new Color(255, 234, 78));
+                    Cubo4C2J.setBackground(Amarillo);
                 }
 
                 // Cara izquierda
@@ -6993,26 +7003,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo4C6E.setText(soluciones.get(0).Cubo4aristaI);
 
                 if (soluciones.get(0).Cubo4aristaI.equals("R")) {
-                    Cubo4C6J.setBackground(new Color(155, 22, 57));
+                    Cubo4C6J.setBackground(Rojo);
                 } else if (soluciones.get(0).Cubo4aristaI.equals("B")) {
-                    Cubo4C6J.setBackground(new Color(255, 255, 255));
+                    Cubo4C6J.setBackground(Blanco);
                 } else if (soluciones.get(0).Cubo4aristaI.equals("V")) {
-                    Cubo4C6J.setBackground(new Color(16, 175, 107));
+                    Cubo4C6J.setBackground(Verde);
                 } else if (soluciones.get(0).Cubo4aristaI.equals("A")) {
-                    Cubo4C6J.setBackground(new Color(255, 234, 78));
+                    Cubo4C6J.setBackground(Amarillo);
                 }
 
                 // Cara derecha
                 Cubo4C5J.setText(soluciones.get(0).Cubo4aristaF);
                 Cubo4C5E.setText(soluciones.get(0).Cubo4aristaF);
                 if (soluciones.get(0).Cubo4aristaF.equals("R")) {
-                    Cubo4C5J.setBackground(new Color(155, 22, 57));
+                    Cubo4C5J.setBackground(Rojo);
                 } else if (soluciones.get(0).Cubo4aristaF.equals("B")) {
-                    Cubo4C5J.setBackground(new Color(255, 255, 255));
+                    Cubo4C5J.setBackground(Blanco);
                 } else if (soluciones.get(0).Cubo4aristaF.equals("V")) {
-                    Cubo4C5J.setBackground(new Color(16, 175, 107));
+                    Cubo4C5J.setBackground(Verde);
                 } else if (soluciones.get(0).Cubo4aristaF.equals("A")) {
-                    Cubo4C5J.setBackground(new Color(255, 234, 78));
+                    Cubo4C5J.setBackground(Amarillo);
                 }
 
                 // Cara superior
@@ -7020,13 +7030,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo4C3E.setText(soluciones.get(1).Cubo4aristaI);
 
                 if (soluciones.get(1).Cubo4aristaI.equals("R")) {
-                    Cubo4C3J.setBackground(new Color(155, 22, 57));
+                    Cubo4C3J.setBackground(Rojo);
                 } else if (soluciones.get(1).Cubo4aristaI.equals("B")) {
-                    Cubo4C3J.setBackground(new Color(255, 255, 255));
+                    Cubo4C3J.setBackground(Blanco);
                 } else if (soluciones.get(1).Cubo4aristaI.equals("V")) {
-                    Cubo4C3J.setBackground(new Color(16, 175, 107));
+                    Cubo4C3J.setBackground(Verde);
                 } else if (soluciones.get(1).Cubo4aristaI.equals("A")) {
-                    Cubo4C3J.setBackground(new Color(255, 234, 78));
+                    Cubo4C3J.setBackground(Amarillo);
                 }
 
                 // Cara inferior
@@ -7034,13 +7044,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo4C4E.setText(soluciones.get(1).Cubo4aristaF);
 
                 if (soluciones.get(1).Cubo4aristaF.equals("R")) {
-                    Cubo4C4J.setBackground(new Color(155, 22, 57));
+                    Cubo4C4J.setBackground(Rojo);
                 } else if (soluciones.get(1).Cubo4aristaF.equals("B")) {
-                    Cubo4C4J.setBackground(new Color(255, 255, 255));
+                    Cubo4C4J.setBackground(Blanco);
                 } else if (soluciones.get(1).Cubo4aristaF.equals("V")) {
-                    Cubo4C4J.setBackground(new Color(16, 175, 107));
+                    Cubo4C4J.setBackground(Verde);
                 } else if (soluciones.get(1).Cubo4aristaF.equals("A")) {
-                    Cubo4C4J.setBackground(new Color(255, 234, 78));
+                    Cubo4C4J.setBackground(Amarillo);
                 }
 
                 System.out.println("Aristas restantes: ");
@@ -8247,23 +8257,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 // Cara Frontal
                 if (Cubo1C1J.getText().equals("R")) {
-                    Cubo1C1J.setBackground(new Color(155, 22, 57));
+                    Cubo1C1J.setBackground(Rojo);
                 } else if (Cubo1C1J.getText().equals("B")) {
-                    Cubo1C1J.setBackground(new Color(255, 255, 255));
+                    Cubo1C1J.setBackground(Blanco);
                 } else if (Cubo1C1J.getText().equals("V")) {
-                    Cubo1C1J.setBackground(new Color(16, 175, 107));
+                    Cubo1C1J.setBackground(Verde);
                 } else if (Cubo1C1J.getText().equals("A")) {
-                    Cubo1C1J.setBackground(new Color(255, 234, 78));
+                    Cubo1C1J.setBackground(Amarillo);
                 }
                 // Cara Trasera
                 if (Cubo1C2J.getText().equals("R")) {
-                    Cubo1C2J.setBackground(new Color(155, 22, 57));
+                    Cubo1C2J.setBackground(Rojo);
                 } else if (Cubo1C2J.getText().equals("B")) {
-                    Cubo1C2J.setBackground(new Color(255, 255, 255));
+                    Cubo1C2J.setBackground(Blanco);
                 } else if (Cubo1C2J.getText().equals("V")) {
-                    Cubo1C2J.setBackground(new Color(16, 175, 107));
+                    Cubo1C2J.setBackground(Verde);
                 } else if (Cubo1C2J.getText().equals("A")) {
-                    Cubo1C2J.setBackground(new Color(255, 234, 78));
+                    Cubo1C2J.setBackground(Amarillo);
                 }
 
                 // Cara izquierda
@@ -8271,26 +8281,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo1C6E.setText(Cubo1Cara6);
 
                 if (Cubo1Cara6.equals("R")) {
-                    Cubo1C6J.setBackground(new Color(155, 22, 57));
+                    Cubo1C6J.setBackground(Rojo);
                 } else if (Cubo1Cara6.equals("B")) {
-                    Cubo1C6J.setBackground(new Color(255, 255, 255));
+                    Cubo1C6J.setBackground(Blanco);
                 } else if (Cubo1Cara6.equals("V")) {
-                    Cubo1C6J.setBackground(new Color(16, 175, 107));
+                    Cubo1C6J.setBackground(Verde);
                 } else if (Cubo1Cara6.equals("A")) {
-                    Cubo1C6J.setBackground(new Color(255, 234, 78));
+                    Cubo1C6J.setBackground(Amarillo);
                 }
 
                 // Cara derecha
                 Cubo1C5J.setText(Cubo1Cara5);
                 Cubo1C5E.setText(Cubo1Cara5);
                 if (Cubo1Cara5.equals("R")) {
-                    Cubo1C5J.setBackground(new Color(155, 22, 57));
+                    Cubo1C5J.setBackground(Rojo);
                 } else if (Cubo1Cara5.equals("B")) {
-                    Cubo1C5J.setBackground(new Color(255, 255, 255));
+                    Cubo1C5J.setBackground(Blanco);
                 } else if (Cubo1Cara5.equals("V")) {
-                    Cubo1C5J.setBackground(new Color(16, 175, 107));
+                    Cubo1C5J.setBackground(Verde);
                 } else if (Cubo1Cara5.equals("A")) {
-                    Cubo1C5J.setBackground(new Color(255, 234, 78));
+                    Cubo1C5J.setBackground(Amarillo);
                 }
 
                 // Cara superior
@@ -8298,13 +8308,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo1C3E.setText(Cubo1Cara3);
 
                 if (Cubo1Cara3.equals("R")) {
-                    Cubo1C3J.setBackground(new Color(155, 22, 57));
+                    Cubo1C3J.setBackground(Rojo);
                 } else if (Cubo1Cara3.equals("B")) {
-                    Cubo1C3J.setBackground(new Color(255, 255, 255));
+                    Cubo1C3J.setBackground(Blanco);
                 } else if (Cubo1Cara3.equals("V")) {
-                    Cubo1C3J.setBackground(new Color(16, 175, 107));
+                    Cubo1C3J.setBackground(Verde);
                 } else if (Cubo1Cara3.equals("A")) {
-                    Cubo1C3J.setBackground(new Color(255, 234, 78));
+                    Cubo1C3J.setBackground(Amarillo);
                 }
 
                 // Cara inferior
@@ -8312,13 +8322,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo1C4E.setText(Cubo1Cara4);
 
                 if (Cubo1Cara4.equals("R")) {
-                    Cubo1C4J.setBackground(new Color(155, 22, 57));
+                    Cubo1C4J.setBackground(Rojo);
                 } else if (Cubo1Cara4.equals("B")) {
-                    Cubo1C4J.setBackground(new Color(255, 255, 255));
+                    Cubo1C4J.setBackground(Blanco);
                 } else if (Cubo1Cara4.equals("V")) {
-                    Cubo1C4J.setBackground(new Color(16, 175, 107));
+                    Cubo1C4J.setBackground(Verde);
                 } else if (Cubo1Cara4.equals("A")) {
-                    Cubo1C4J.setBackground(new Color(255, 234, 78));
+                    Cubo1C4J.setBackground(Amarillo);
                 }
 
                 // CUBO 2
@@ -8341,23 +8351,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 // Cara Frontal
                 if (Cubo2C1J.getText().equals("R")) {
-                    Cubo2C1J.setBackground(new Color(155, 22, 57));
+                    Cubo2C1J.setBackground(Rojo);
                 } else if (Cubo2C1J.getText().equals("B")) {
-                    Cubo2C1J.setBackground(new Color(255, 255, 255));
+                    Cubo2C1J.setBackground(Blanco);
                 } else if (Cubo2C1J.getText().equals("V")) {
-                    Cubo2C1J.setBackground(new Color(16, 175, 107));
+                    Cubo2C1J.setBackground(Verde);
                 } else if (Cubo2C1J.getText().equals("A")) {
-                    Cubo2C1J.setBackground(new Color(255, 234, 78));
+                    Cubo2C1J.setBackground(Amarillo);
                 }
                 // Cara Trasera
                 if (Cubo2C2J.getText().equals("R")) {
-                    Cubo2C2J.setBackground(new Color(155, 22, 57));
+                    Cubo2C2J.setBackground(Rojo);
                 } else if (Cubo2C2J.getText().equals("B")) {
-                    Cubo2C2J.setBackground(new Color(255, 255, 255));
+                    Cubo2C2J.setBackground(Blanco);
                 } else if (Cubo2C2J.getText().equals("V")) {
-                    Cubo2C2J.setBackground(new Color(16, 175, 107));
+                    Cubo2C2J.setBackground(Verde);
                 } else if (Cubo2C2J.getText().equals("A")) {
-                    Cubo2C2J.setBackground(new Color(255, 234, 78));
+                    Cubo2C2J.setBackground(Amarillo);
                 }
 
                 // Cara izquierda
@@ -8365,13 +8375,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo2C6E.setText(Cubo2Cara6);
 
                 if (Cubo2Cara6.equals("R")) {
-                    Cubo2C6J.setBackground(new Color(155, 22, 57));
+                    Cubo2C6J.setBackground(Rojo);
                 } else if (Cubo2Cara6.equals("B")) {
-                    Cubo2C6J.setBackground(new Color(255, 255, 255));
+                    Cubo2C6J.setBackground(Blanco);
                 } else if (Cubo2Cara6.equals("V")) {
-                    Cubo2C6J.setBackground(new Color(16, 175, 107));
+                    Cubo2C6J.setBackground(Verde);
                 } else if (Cubo2Cara6.equals("A")) {
-                    Cubo2C6J.setBackground(new Color(255, 234, 78));
+                    Cubo2C6J.setBackground(Amarillo);
                 }
 
                 // Cara derecha
@@ -8379,13 +8389,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo2C5E.setText(Cubo2Cara5);
 
                 if (Cubo2Cara5.equals("R")) {
-                    Cubo2C5J.setBackground(new Color(155, 22, 57));
+                    Cubo2C5J.setBackground(Rojo);
                 } else if (Cubo2Cara5.equals("B")) {
-                    Cubo2C5J.setBackground(new Color(255, 255, 255));
+                    Cubo2C5J.setBackground(Blanco);
                 } else if (Cubo2Cara5.equals("V")) {
-                    Cubo2C5J.setBackground(new Color(16, 175, 107));
+                    Cubo2C5J.setBackground(Verde);
                 } else if (Cubo2Cara5.equals("A")) {
-                    Cubo2C5J.setBackground(new Color(255, 234, 78));
+                    Cubo2C5J.setBackground(Amarillo);
                 }
 
                 // Cara superior
@@ -8393,13 +8403,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo2C3E.setText(Cubo2Cara3);
 
                 if (Cubo2Cara3.equals("R")) {
-                    Cubo2C3J.setBackground(new Color(155, 22, 57));
+                    Cubo2C3J.setBackground(Rojo);
                 } else if (Cubo2Cara3.equals("B")) {
-                    Cubo2C3J.setBackground(new Color(255, 255, 255));
+                    Cubo2C3J.setBackground(Blanco);
                 } else if (Cubo2Cara3.equals("V")) {
-                    Cubo2C3J.setBackground(new Color(16, 175, 107));
+                    Cubo2C3J.setBackground(Verde);
                 } else if (Cubo2Cara3.equals("A")) {
-                    Cubo2C3J.setBackground(new Color(255, 234, 78));
+                    Cubo2C3J.setBackground(Amarillo);
                 }
 
                 // Cara inferior
@@ -8407,13 +8417,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo2C4E.setText(Cubo2Cara4);
 
                 if (Cubo2Cara4.equals("R")) {
-                    Cubo2C4J.setBackground(new Color(155, 22, 57));
+                    Cubo2C4J.setBackground(Rojo);
                 } else if (Cubo2Cara4.equals("B")) {
-                    Cubo2C4J.setBackground(new Color(255, 255, 255));
+                    Cubo2C4J.setBackground(Blanco);
                 } else if (Cubo2Cara4.equals("V")) {
-                    Cubo2C4J.setBackground(new Color(16, 175, 107));
+                    Cubo2C4J.setBackground(Verde);
                 } else if (Cubo2Cara4.equals("A")) {
-                    Cubo2C4J.setBackground(new Color(255, 234, 78));
+                    Cubo2C4J.setBackground(Amarillo);
                 }
 
                 // CUBO 3
@@ -8436,23 +8446,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 // Cara Frontal
                 if (Cubo3C1J.getText().equals("R")) {
-                    Cubo3C1J.setBackground(new Color(155, 22, 57));
+                    Cubo3C1J.setBackground(Rojo);
                 } else if (Cubo3C1J.getText().equals("B")) {
-                    Cubo3C1J.setBackground(new Color(255, 255, 255));
+                    Cubo3C1J.setBackground(Blanco);
                 } else if (Cubo3C1J.getText().equals("V")) {
-                    Cubo3C1J.setBackground(new Color(16, 175, 107));
+                    Cubo3C1J.setBackground(Verde);
                 } else if (Cubo3C1J.getText().equals("A")) {
-                    Cubo3C1J.setBackground(new Color(255, 234, 78));
+                    Cubo3C1J.setBackground(Amarillo);
                 }
                 // Cara Trasera
                 if (Cubo3C2J.getText().equals("R")) {
-                    Cubo3C2J.setBackground(new Color(155, 22, 57));
+                    Cubo3C2J.setBackground(Rojo);
                 } else if (Cubo3C2J.getText().equals("B")) {
-                    Cubo3C2J.setBackground(new Color(255, 255, 255));
+                    Cubo3C2J.setBackground(Blanco);
                 } else if (Cubo3C2J.getText().equals("V")) {
-                    Cubo3C2J.setBackground(new Color(16, 175, 107));
+                    Cubo3C2J.setBackground(Verde);
                 } else if (Cubo3C2J.getText().equals("A")) {
-                    Cubo3C2J.setBackground(new Color(255, 234, 78));
+                    Cubo3C2J.setBackground(Amarillo);
                 }
 
                 // Cara izquierda
@@ -8460,13 +8470,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo3C6E.setText(Cubo3Cara6);
 
                 if (Cubo3Cara6.equals("R")) {
-                    Cubo3C6J.setBackground(new Color(155, 22, 57));
+                    Cubo3C6J.setBackground(Rojo);
                 } else if (Cubo3Cara6.equals("B")) {
-                    Cubo3C6J.setBackground(new Color(255, 255, 255));
+                    Cubo3C6J.setBackground(Blanco);
                 } else if (Cubo3Cara6.equals("V")) {
-                    Cubo3C6J.setBackground(new Color(16, 175, 107));
+                    Cubo3C6J.setBackground(Verde);
                 } else if (Cubo3Cara6.equals("A")) {
-                    Cubo3C6J.setBackground(new Color(255, 234, 78));
+                    Cubo3C6J.setBackground(Amarillo);
                 }
 
                 // Cara derecha
@@ -8474,13 +8484,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo3C5E.setText(Cubo3Cara5);
 
                 if (Cubo3Cara5.equals("R")) {
-                    Cubo3C5J.setBackground(new Color(155, 22, 57));
+                    Cubo3C5J.setBackground(Rojo);
                 } else if (Cubo3Cara5.equals("B")) {
-                    Cubo3C5J.setBackground(new Color(255, 255, 255));
+                    Cubo3C5J.setBackground(Blanco);
                 } else if (Cubo3Cara5.equals("V")) {
-                    Cubo3C5J.setBackground(new Color(16, 175, 107));
+                    Cubo3C5J.setBackground(Verde);
                 } else if (Cubo3Cara5.equals("A")) {
-                    Cubo3C5J.setBackground(new Color(255, 234, 78));
+                    Cubo3C5J.setBackground(Amarillo);
                 }
 
                 // Cara superior
@@ -8488,13 +8498,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo3C3E.setText(Cubo3Cara3);
 
                 if (Cubo3Cara3.equals("R")) {
-                    Cubo3C3J.setBackground(new Color(155, 22, 57));
+                    Cubo3C3J.setBackground(Rojo);
                 } else if (Cubo3Cara3.equals("B")) {
-                    Cubo3C3J.setBackground(new Color(255, 255, 255));
+                    Cubo3C3J.setBackground(Blanco);
                 } else if (Cubo3Cara3.equals("V")) {
-                    Cubo3C3J.setBackground(new Color(16, 175, 107));
+                    Cubo3C3J.setBackground(Verde);
                 } else if (Cubo3Cara3.equals("A")) {
-                    Cubo3C3J.setBackground(new Color(255, 234, 78));
+                    Cubo3C3J.setBackground(Amarillo);
                 }
 
                 // Cara inferior
@@ -8502,13 +8512,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo3C4E.setText(Cubo3Cara4);
 
                 if (Cubo3Cara4.equals("R")) {
-                    Cubo3C4J.setBackground(new Color(155, 22, 57));
+                    Cubo3C4J.setBackground(Rojo);
                 } else if (Cubo3Cara4.equals("B")) {
-                    Cubo3C4J.setBackground(new Color(255, 255, 255));
+                    Cubo3C4J.setBackground(Blanco);
                 } else if (Cubo3Cara4.equals("V")) {
-                    Cubo3C4J.setBackground(new Color(16, 175, 107));
+                    Cubo3C4J.setBackground(Verde);
                 } else if (Cubo3Cara4.equals("A")) {
-                    Cubo3C4J.setBackground(new Color(255, 234, 78));
+                    Cubo3C4J.setBackground(Amarillo);
                 }
 
                 // CUBO 4
@@ -8531,23 +8541,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
                 // Cara Frontal
                 if (Cubo4C1J.getText().equals("R")) {
-                    Cubo4C1J.setBackground(new Color(155, 22, 57));
+                    Cubo4C1J.setBackground(Rojo);
                 } else if (Cubo4C1J.getText().equals("B")) {
-                    Cubo4C1J.setBackground(new Color(255, 255, 255));
+                    Cubo4C1J.setBackground(Blanco);
                 } else if (Cubo4C1J.getText().equals("V")) {
-                    Cubo4C1J.setBackground(new Color(16, 175, 107));
+                    Cubo4C1J.setBackground(Verde);
                 } else if (Cubo4C1J.getText().equals("A")) {
-                    Cubo4C1J.setBackground(new Color(255, 234, 78));
+                    Cubo4C1J.setBackground(Amarillo);
                 }
                 // Cara Trasera
                 if (Cubo4C2J.getText().equals("R")) {
-                    Cubo4C2J.setBackground(new Color(155, 22, 57));
+                    Cubo4C2J.setBackground(Rojo);
                 } else if (Cubo4C2J.getText().equals("B")) {
-                    Cubo4C2J.setBackground(new Color(255, 255, 255));
+                    Cubo4C2J.setBackground(Blanco);
                 } else if (Cubo4C2J.getText().equals("V")) {
-                    Cubo4C2J.setBackground(new Color(16, 175, 107));
+                    Cubo4C2J.setBackground(Verde);
                 } else if (Cubo4C2J.getText().equals("A")) {
-                    Cubo4C2J.setBackground(new Color(255, 234, 78));
+                    Cubo4C2J.setBackground(Amarillo);
                 }
 
                 // Cara izquierda
@@ -8555,13 +8565,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo4C6E.setText(Cubo4Cara6);
 
                 if (Cubo4Cara6.equals("R")) {
-                    Cubo4C6J.setBackground(new Color(155, 22, 57));
+                    Cubo4C6J.setBackground(Rojo);
                 } else if (Cubo4Cara6.equals("B")) {
-                    Cubo4C6J.setBackground(new Color(255, 255, 255));
+                    Cubo4C6J.setBackground(Blanco);
                 } else if (Cubo4Cara6.equals("V")) {
-                    Cubo4C6J.setBackground(new Color(16, 175, 107));
+                    Cubo4C6J.setBackground(Verde);
                 } else if (Cubo4Cara6.equals("A")) {
-                    Cubo4C6J.setBackground(new Color(255, 234, 78));
+                    Cubo4C6J.setBackground(Amarillo);
                 }
 
                 // Cara derecha
@@ -8569,13 +8579,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo4C5E.setText(Cubo4Cara5);
 
                 if (Cubo4Cara5.equals("R")) {
-                    Cubo4C5J.setBackground(new Color(155, 22, 57));
+                    Cubo4C5J.setBackground(Rojo);
                 } else if (Cubo4Cara5.equals("B")) {
-                    Cubo4C5J.setBackground(new Color(255, 255, 255));
+                    Cubo4C5J.setBackground(Blanco);
                 } else if (Cubo4Cara5.equals("V")) {
-                    Cubo4C5J.setBackground(new Color(16, 175, 107));
+                    Cubo4C5J.setBackground(Verde);
                 } else if (Cubo4Cara5.equals("A")) {
-                    Cubo4C5J.setBackground(new Color(255, 234, 78));
+                    Cubo4C5J.setBackground(Amarillo);
                 }
 
                 // Cara superior
@@ -8583,13 +8593,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo4C3E.setText(Cubo4Cara3);
 
                 if (Cubo4Cara3.equals("R")) {
-                    Cubo4C3J.setBackground(new Color(155, 22, 57));
+                    Cubo4C3J.setBackground(Rojo);
                 } else if (Cubo4Cara3.equals("B")) {
-                    Cubo4C3J.setBackground(new Color(255, 255, 255));
+                    Cubo4C3J.setBackground(Blanco);
                 } else if (Cubo4Cara3.equals("V")) {
-                    Cubo4C3J.setBackground(new Color(16, 175, 107));
+                    Cubo4C3J.setBackground(Verde);
                 } else if (Cubo4Cara3.equals("A")) {
-                    Cubo4C3J.setBackground(new Color(255, 234, 78));
+                    Cubo4C3J.setBackground(Amarillo);
                 }
 
                 // Cara inferior
@@ -8597,13 +8607,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 Cubo4C4E.setText(Cubo4Cara4);
 
                 if (Cubo4Cara4.equals("R")) {
-                    Cubo4C4J.setBackground(new Color(155, 22, 57));
+                    Cubo4C4J.setBackground(Rojo);
                 } else if (Cubo4Cara4.equals("B")) {
-                    Cubo4C4J.setBackground(new Color(255, 255, 255));
+                    Cubo4C4J.setBackground(Blanco);
                 } else if (Cubo4Cara4.equals("V")) {
-                    Cubo4C4J.setBackground(new Color(16, 175, 107));
+                    Cubo4C4J.setBackground(Verde);
                 } else if (Cubo4Cara4.equals("A")) {
-                    Cubo4C4J.setBackground(new Color(255, 234, 78));
+                    Cubo4C4J.setBackground(Amarillo);
                 }
 
             }
@@ -9192,6 +9202,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         } finally {
             graphGL.getModel().endUpdate();
+            ;
 
         }
 
@@ -12881,6 +12892,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 }
             }
         }
+        ;
         if (G1Encontrado == true && G2Encontrado == true) {
             System.out.println("true");
             return true;
@@ -13188,22 +13200,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             //Cubo 1
             Color C1 = null;
             if (Cubo1C1H.getText().equals("Rojo")) {
-                C1 = new Color(155, 22, 57);
+                C1 = Rojo;
                 Cubo1C1G1.setText("R");
                 Cubo1C1G1.setBackground(C1);
 
             } else if (Cubo1C1H.getText().equals("Blanco")) {
-                C1 = new Color(255, 255, 255);
+                C1 = Blanco;
                 Cubo1C1G1.setText("B");
                 Cubo1C1G1.setBackground(C1);
 
             } else if (Cubo1C1H.getText().equals("Verde")) {
-                C1 = new Color(16, 175, 107);
+                C1 = Verde;
                 Cubo1C1G1.setText("V");
                 Cubo1C1G1.setBackground(C1);
 
             } else if (Cubo1C1H.getText().equals("Amarillo")) {
-                C1 = new Color(255, 234, 78);
+                C1 = Amarillo;
                 Cubo1C1G1.setText("A");
                 Cubo1C1G1.setBackground(C1);
 
@@ -13211,22 +13223,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             Color C2 = null;
             if (Cubo1C2H.getText().equals("Rojo")) {
-                C2 = new Color(155, 22, 57);
+                C2 = Rojo;
                 Cubo1C2G1.setText("R");
                 Cubo1C2G1.setBackground(C2);
 
             } else if (Cubo1C2H.getText().equals("Blanco")) {
-                C2 = new Color(255, 255, 255);
+                C2 = Blanco;
                 Cubo1C2G1.setText("B");
                 Cubo1C2G1.setBackground(C2);
 
             } else if (Cubo1C2H.getText().equals("Verde")) {
-                C2 = new Color(16, 175, 107);
+                C2 = Verde;
                 Cubo1C2G1.setText("V");
                 Cubo1C2G1.setBackground(C2);
 
             } else if (Cubo1C2H.getText().equals("Amarillo")) {
-                C2 = new Color(255, 234, 78);
+                C2 = Amarillo;
                 Cubo1C2G1.setText("A");
                 Cubo1C2G1.setBackground(C2);
 
@@ -13234,22 +13246,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             Color C3 = null;
             if (Cubo1C3H.getText().equals("Rojo")) {
-                C3 = new Color(155, 22, 57);
+                C3 = Rojo;
                 Cubo1C3G1.setText("R");
                 Cubo1C3G1.setBackground(C3);
 
             } else if (Cubo1C3H.getText().equals("Blanco")) {
-                C3 = new Color(255, 255, 255);
+                C3 = Blanco;
                 Cubo1C3G1.setText("B");
                 Cubo1C3G1.setBackground(C3);
 
             } else if (Cubo1C3H.getText().equals("Verde")) {
-                C3 = new Color(16, 175, 107);
+                C3 = Verde;
                 Cubo1C3G1.setText("V");
                 Cubo1C3G1.setBackground(C3);
 
             } else if (Cubo1C3H.getText().equals("Amarillo")) {
-                C3 = new Color(255, 234, 78);
+                C3 = Amarillo;
                 Cubo1C3G1.setText("A");
                 Cubo1C3G1.setBackground(C3);
 
@@ -13257,22 +13269,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             Color C4 = null;
             if (Cubo1C4H.getText().equals("Rojo")) {
-                C4 = new Color(155, 22, 57);
+                C4 = Rojo;
                 Cubo1C4G1.setText("R");
                 Cubo1C4G1.setBackground(C4);
 
             } else if (Cubo1C4H.getText().equals("Blanco")) {
-                C4 = new Color(255, 255, 255);
+                C4 = Blanco;
                 Cubo1C4G1.setText("B");
                 Cubo1C4G1.setBackground(C4);
 
             } else if (Cubo1C4H.getText().equals("Verde")) {
-                C4 = new Color(16, 175, 107);
+                C4 = Verde;
                 Cubo1C4G1.setText("V");
                 Cubo1C4G1.setBackground(C4);
 
             } else if (Cubo1C4H.getText().equals("Amarillo")) {
-                C4 = new Color(255, 234, 78);
+                C4 = Amarillo;
                 Cubo1C4G1.setText("A");
                 Cubo1C4G1.setBackground(C4);
 
@@ -13280,22 +13292,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             Color C5 = null;
             if (Cubo1C5H.getText().equals("Rojo")) {
-                C5 = new Color(155, 22, 57);
+                C5 = Rojo;
                 Cubo1C5G1.setText("R");
                 Cubo1C5G1.setBackground(C5);
 
             } else if (Cubo1C5H.getText().equals("Blanco")) {
-                C5 = new Color(255, 255, 255);
+                C5 = Blanco;
                 Cubo1C5G1.setText("B");
                 Cubo1C5G1.setBackground(C5);
 
             } else if (Cubo1C5H.getText().equals("Verde")) {
-                C5 = new Color(16, 175, 107);
+                C5 = Verde;
                 Cubo1C5G1.setText("V");
                 Cubo1C5G1.setBackground(C5);
 
             } else if (Cubo1C5H.getText().equals("Amarillo")) {
-                C5 = new Color(255, 234, 78);
+                C5 = Amarillo;
                 Cubo1C5G1.setText("A");
                 Cubo1C5G1.setBackground(C5);
 
@@ -13303,22 +13315,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             Color C6 = null;
             if (Cubo1C6H.getText().equals("Rojo")) {
-                C6 = new Color(155, 22, 57);
+                C6 = Rojo;
                 Cubo1C6G1.setText("R");
                 Cubo1C6G1.setBackground(C6);
 
             } else if (Cubo1C6H.getText().equals("Blanco")) {
-                C6 = new Color(255, 255, 255);
+                C6 = Blanco;
                 Cubo1C6G1.setText("B");
                 Cubo1C6G1.setBackground(C6);
 
             } else if (Cubo1C6H.getText().equals("Verde")) {
-                C6 = new Color(16, 175, 107);
+                C6 = Verde;
                 Cubo1C6G1.setText("V");
                 Cubo1C6G1.setBackground(C6);
 
             } else if (Cubo1C6H.getText().equals("Amarillo")) {
-                C6 = new Color(255, 234, 78);
+                C6 = Amarillo;
                 Cubo1C6G1.setText("A");
                 Cubo1C6G1.setBackground(C6);
 
@@ -13327,22 +13339,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             //Cubo 2
             C1 = null;
             if (Cubo2C1H.getText().equals("Rojo")) {
-                C1 = new Color(155, 22, 57);
+                C1 = Rojo;
                 Cubo2C1G1.setText("R");
                 Cubo2C1G1.setBackground(C1);
 
             } else if (Cubo2C1H.getText().equals("Blanco")) {
-                C1 = new Color(255, 255, 255);
+                C1 = Blanco;
                 Cubo2C1G1.setText("B");
                 Cubo2C1G1.setBackground(C1);
 
             } else if (Cubo2C1H.getText().equals("Verde")) {
-                C1 = new Color(16, 175, 107);
+                C1 = Verde;
                 Cubo2C1G1.setText("V");
                 Cubo2C1G1.setBackground(C1);
 
             } else if (Cubo2C1H.getText().equals("Amarillo")) {
-                C1 = new Color(255, 234, 78);
+                C1 = Amarillo;
                 Cubo2C1G1.setText("A");
                 Cubo2C1G1.setBackground(C1);
 
@@ -13350,22 +13362,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C2 = null;
             if (Cubo2C2H.getText().equals("Rojo")) {
-                C2 = new Color(155, 22, 57);
+                C2 = Rojo;
                 Cubo2C2G1.setText("R");
                 Cubo2C2G1.setBackground(C2);
 
             } else if (Cubo2C2H.getText().equals("Blanco")) {
-                C2 = new Color(255, 255, 255);
+                C2 = Blanco;
                 Cubo2C2G1.setText("B");
                 Cubo2C2G1.setBackground(C2);
 
             } else if (Cubo2C2H.getText().equals("Verde")) {
-                C2 = new Color(16, 175, 107);
+                C2 = Verde;
                 Cubo2C2G1.setText("V");
                 Cubo2C2G1.setBackground(C2);
 
             } else if (Cubo2C2H.getText().equals("Amarillo")) {
-                C2 = new Color(255, 234, 78);
+                C2 = Amarillo;
                 Cubo2C2G1.setText("A");
                 Cubo2C2G1.setBackground(C2);
 
@@ -13373,22 +13385,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C3 = null;
             if (Cubo2C3H.getText().equals("Rojo")) {
-                C3 = new Color(155, 22, 57);
+                C3 = Rojo;
                 Cubo2C3G1.setText("R");
                 Cubo2C3G1.setBackground(C3);
 
             } else if (Cubo2C3H.getText().equals("Blanco")) {
-                C3 = new Color(255, 255, 255);
+                C3 = Blanco;
                 Cubo2C3G1.setText("B");
                 Cubo2C3G1.setBackground(C3);
 
             } else if (Cubo2C3H.getText().equals("Verde")) {
-                C3 = new Color(16, 175, 107);
+                C3 = Verde;
                 Cubo2C3G1.setText("V");
                 Cubo2C3G1.setBackground(C3);
 
             } else if (Cubo2C3H.getText().equals("Amarillo")) {
-                C3 = new Color(255, 234, 78);
+                C3 = Amarillo;
                 Cubo2C3G1.setText("A");
                 Cubo2C3G1.setBackground(C3);
 
@@ -13396,22 +13408,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C4 = null;
             if (Cubo2C4H.getText().equals("Rojo")) {
-                C4 = new Color(155, 22, 57);
+                C4 = Rojo;
                 Cubo2C4G1.setText("R");
                 Cubo2C4G1.setBackground(C4);
 
             } else if (Cubo2C4H.getText().equals("Blanco")) {
-                C4 = new Color(255, 255, 255);
+                C4 = Blanco;
                 Cubo2C4G1.setText("B");
                 Cubo2C4G1.setBackground(C4);
 
             } else if (Cubo2C4H.getText().equals("Verde")) {
-                C4 = new Color(16, 175, 107);
+                C4 = Verde;
                 Cubo2C4G1.setText("V");
                 Cubo2C4G1.setBackground(C4);
 
             } else if (Cubo2C4H.getText().equals("Amarillo")) {
-                C4 = new Color(255, 234, 78);
+                C4 = Amarillo;
                 Cubo2C4G1.setText("A");
                 Cubo2C4G1.setBackground(C4);
 
@@ -13419,22 +13431,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C5 = null;
             if (Cubo2C5H.getText().equals("Rojo")) {
-                C5 = new Color(155, 22, 57);
+                C5 = Rojo;
                 Cubo2C5G1.setText("R");
                 Cubo2C5G1.setBackground(C5);
 
             } else if (Cubo2C5H.getText().equals("Blanco")) {
-                C5 = new Color(255, 255, 255);
+                C5 = Blanco;
                 Cubo2C5G1.setText("B");
                 Cubo2C5G1.setBackground(C5);
 
             } else if (Cubo2C5H.getText().equals("Verde")) {
-                C5 = new Color(16, 175, 107);
+                C5 = Verde;
                 Cubo2C5G1.setText("V");
                 Cubo2C5G1.setBackground(C5);
 
             } else if (Cubo2C5H.getText().equals("Amarillo")) {
-                C5 = new Color(255, 234, 78);
+                C5 = Amarillo;
                 Cubo2C5G1.setText("A");
                 Cubo2C5G1.setBackground(C5);
 
@@ -13442,22 +13454,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C6 = null;
             if (Cubo2C6H.getText().equals("Rojo")) {
-                C6 = new Color(155, 22, 57);
+                C6 = Rojo;
                 Cubo2C6G1.setText("R");
                 Cubo2C6G1.setBackground(C6);
 
             } else if (Cubo2C6H.getText().equals("Blanco")) {
-                C6 = new Color(255, 255, 255);
+                C6 = Blanco;
                 Cubo2C6G1.setText("B");
                 Cubo2C6G1.setBackground(C6);
 
             } else if (Cubo2C6H.getText().equals("Verde")) {
-                C6 = new Color(16, 175, 107);
+                C6 = Verde;
                 Cubo2C6G1.setText("V");
                 Cubo2C6G1.setBackground(C6);
 
             } else if (Cubo2C6H.getText().equals("Amarillo")) {
-                C6 = new Color(255, 234, 78);
+                C6 = Amarillo;
                 Cubo2C6G1.setText("A");
                 Cubo2C6G1.setBackground(C6);
 
@@ -13466,22 +13478,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             //Cubo 3
             C1 = null;
             if (Cubo3C1H.getText().equals("Rojo")) {
-                C1 = new Color(155, 22, 57);
+                C1 = Rojo;
                 Cubo3C1G1.setText("R");
                 Cubo3C1G1.setBackground(C1);
 
             } else if (Cubo3C1H.getText().equals("Blanco")) {
-                C1 = new Color(255, 255, 255);
+                C1 = Blanco;
                 Cubo3C1G1.setText("B");
                 Cubo3C1G1.setBackground(C1);
 
             } else if (Cubo3C1H.getText().equals("Verde")) {
-                C1 = new Color(16, 175, 107);
+                C1 = Verde;
                 Cubo3C1G1.setText("V");
                 Cubo3C1G1.setBackground(C1);
 
             } else if (Cubo3C1H.getText().equals("Amarillo")) {
-                C1 = new Color(255, 234, 78);
+                C1 = Amarillo;
                 Cubo3C1G1.setText("A");
                 Cubo3C1G1.setBackground(C1);
 
@@ -13489,22 +13501,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C2 = null;
             if (Cubo3C2H.getText().equals("Rojo")) {
-                C2 = new Color(155, 22, 57);
+                C2 = Rojo;
                 Cubo3C2G1.setText("R");
                 Cubo3C2G1.setBackground(C2);
 
             } else if (Cubo3C2H.getText().equals("Blanco")) {
-                C2 = new Color(255, 255, 255);
+                C2 = Blanco;
                 Cubo3C2G1.setText("B");
                 Cubo3C2G1.setBackground(C2);
 
             } else if (Cubo3C2H.getText().equals("Verde")) {
-                C2 = new Color(16, 175, 107);
+                C2 = Verde;
                 Cubo3C2G1.setText("V");
                 Cubo3C2G1.setBackground(C2);
 
             } else if (Cubo3C2H.getText().equals("Amarillo")) {
-                C2 = new Color(255, 234, 78);
+                C2 = Amarillo;
                 Cubo3C2G1.setText("A");
                 Cubo3C2G1.setBackground(C2);
 
@@ -13512,22 +13524,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C3 = null;
             if (Cubo3C3H.getText().equals("Rojo")) {
-                C3 = new Color(155, 22, 57);
+                C3 = Rojo;
                 Cubo3C3G1.setText("R");
                 Cubo3C3G1.setBackground(C3);
 
             } else if (Cubo3C3H.getText().equals("Blanco")) {
-                C3 = new Color(255, 255, 255);
+                C3 = Blanco;
                 Cubo3C3G1.setText("B");
                 Cubo3C3G1.setBackground(C3);
 
             } else if (Cubo3C3H.getText().equals("Verde")) {
-                C3 = new Color(16, 175, 107);
+                C3 = Verde;
                 Cubo3C3G1.setText("V");
                 Cubo3C3G1.setBackground(C3);
 
             } else if (Cubo3C3H.getText().equals("Amarillo")) {
-                C3 = new Color(255, 234, 78);
+                C3 = Amarillo;
                 Cubo3C3G1.setText("A");
                 Cubo3C3G1.setBackground(C3);
 
@@ -13535,22 +13547,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C4 = null;
             if (Cubo3C4H.getText().equals("Rojo")) {
-                C4 = new Color(155, 22, 57);
+                C4 = Rojo;
                 Cubo3C4G1.setText("R");
                 Cubo3C4G1.setBackground(C4);
 
             } else if (Cubo3C4H.getText().equals("Blanco")) {
-                C4 = new Color(255, 255, 255);
+                C4 = Blanco;
                 Cubo3C4G1.setText("B");
                 Cubo3C4G1.setBackground(C4);
 
             } else if (Cubo3C4H.getText().equals("Verde")) {
-                C4 = new Color(16, 175, 107);
+                C4 = Verde;
                 Cubo3C4G1.setText("V");
                 Cubo3C4G1.setBackground(C4);
 
             } else if (Cubo3C4H.getText().equals("Amarillo")) {
-                C4 = new Color(255, 234, 78);
+                C4 = Amarillo;
                 Cubo3C4G1.setText("A");
                 Cubo3C4G1.setBackground(C4);
 
@@ -13558,22 +13570,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C5 = null;
             if (Cubo3C5H.getText().equals("Rojo")) {
-                C5 = new Color(155, 22, 57);
+                C5 = Rojo;
                 Cubo3C5G1.setText("R");
                 Cubo3C5G1.setBackground(C5);
 
             } else if (Cubo3C5H.getText().equals("Blanco")) {
-                C5 = new Color(255, 255, 255);
+                C5 = Blanco;
                 Cubo3C5G1.setText("B");
                 Cubo3C5G1.setBackground(C5);
 
             } else if (Cubo3C5H.getText().equals("Verde")) {
-                C5 = new Color(16, 175, 107);
+                C5 = Verde;
                 Cubo3C5G1.setText("V");
                 Cubo3C5G1.setBackground(C5);
 
             } else if (Cubo3C5H.getText().equals("Amarillo")) {
-                C5 = new Color(255, 234, 78);
+                C5 = Amarillo;
                 Cubo3C5G1.setText("A");
                 Cubo3C5G1.setBackground(C5);
 
@@ -13581,22 +13593,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C6 = null;
             if (Cubo3C6H.getText().equals("Rojo")) {
-                C6 = new Color(155, 22, 57);
+                C6 = Rojo;
                 Cubo3C6G1.setText("R");
                 Cubo3C6G1.setBackground(C6);
 
             } else if (Cubo3C6H.getText().equals("Blanco")) {
-                C6 = new Color(255, 255, 255);
+                C6 = Blanco;
                 Cubo3C6G1.setText("B");
                 Cubo3C6G1.setBackground(C6);
 
             } else if (Cubo3C6H.getText().equals("Verde")) {
-                C6 = new Color(16, 175, 107);
+                C6 = Verde;
                 Cubo3C6G1.setText("V");
                 Cubo3C6G1.setBackground(C6);
 
             } else if (Cubo3C6H.getText().equals("Amarillo")) {
-                C6 = new Color(255, 234, 78);
+                C6 = Amarillo;
                 Cubo3C6G1.setText("A");
                 Cubo3C6G1.setBackground(C6);
 
@@ -13605,22 +13617,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             //Cubo 4
             C1 = null;
             if (Cubo4C1H.getText().equals("Rojo")) {
-                C1 = new Color(155, 22, 57);
+                C1 = Rojo;
                 Cubo4C1G1.setText("R");
                 Cubo4C1G1.setBackground(C1);
 
             } else if (Cubo4C1H.getText().equals("Blanco")) {
-                C1 = new Color(255, 255, 255);
+                C1 = Blanco;
                 Cubo4C1G1.setText("B");
                 Cubo4C1G1.setBackground(C1);
 
             } else if (Cubo4C1H.getText().equals("Verde")) {
-                C1 = new Color(16, 175, 107);
+                C1 = Verde;
                 Cubo4C1G1.setText("V");
                 Cubo4C1G1.setBackground(C1);
 
             } else if (Cubo4C1H.getText().equals("Amarillo")) {
-                C1 = new Color(255, 234, 78);
+                C1 = Amarillo;
                 Cubo4C1G1.setText("A");
                 Cubo4C1G1.setBackground(C1);
 
@@ -13628,22 +13640,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C2 = null;
             if (Cubo4C2H.getText().equals("Rojo")) {
-                C2 = new Color(155, 22, 57);
+                C2 = Rojo;
                 Cubo4C2G1.setText("R");
                 Cubo4C2G1.setBackground(C2);
 
             } else if (Cubo4C2H.getText().equals("Blanco")) {
-                C2 = new Color(255, 255, 255);
+                C2 = Blanco;
                 Cubo4C2G1.setText("B");
                 Cubo4C2G1.setBackground(C2);
 
             } else if (Cubo4C2H.getText().equals("Verde")) {
-                C2 = new Color(16, 175, 107);
+                C2 = Verde;
                 Cubo4C2G1.setText("V");
                 Cubo4C2G1.setBackground(C2);
 
             } else if (Cubo4C2H.getText().equals("Amarillo")) {
-                C2 = new Color(255, 234, 78);
+                C2 = Amarillo;
                 Cubo4C2G1.setText("A");
                 Cubo4C2G1.setBackground(C2);
 
@@ -13651,22 +13663,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C3 = null;
             if (Cubo4C3H.getText().equals("Rojo")) {
-                C3 = new Color(155, 22, 57);
+                C3 = Rojo;
                 Cubo4C3G1.setText("R");
                 Cubo4C3G1.setBackground(C3);
 
             } else if (Cubo4C3H.getText().equals("Blanco")) {
-                C3 = new Color(255, 255, 255);
+                C3 = Blanco;
                 Cubo4C3G1.setText("B");
                 Cubo4C3G1.setBackground(C3);
 
             } else if (Cubo4C3H.getText().equals("Verde")) {
-                C3 = new Color(16, 175, 107);
+                C3 = Verde;
                 Cubo4C3G1.setText("V");
                 Cubo4C3G1.setBackground(C3);
 
             } else if (Cubo4C3H.getText().equals("Amarillo")) {
-                C3 = new Color(255, 234, 78);
+                C3 = Amarillo;
                 Cubo4C3G1.setText("A");
                 Cubo4C3G1.setBackground(C3);
 
@@ -13674,22 +13686,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C4 = null;
             if (Cubo4C4H.getText().equals("Rojo")) {
-                C4 = new Color(155, 22, 57);
+                C4 = Rojo;
                 Cubo4C4G1.setText("R");
                 Cubo4C4G1.setBackground(C4);
 
             } else if (Cubo4C4H.getText().equals("Blanco")) {
-                C4 = new Color(255, 255, 255);
+                C4 = Blanco;
                 Cubo4C4G1.setText("B");
                 Cubo4C4G1.setBackground(C4);
 
             } else if (Cubo4C4H.getText().equals("Verde")) {
-                C4 = new Color(16, 175, 107);
+                C4 = Verde;
                 Cubo4C4G1.setText("V");
                 Cubo4C4G1.setBackground(C4);
 
             } else if (Cubo4C4H.getText().equals("Amarillo")) {
-                C4 = new Color(255, 234, 78);
+                C4 = Amarillo;
                 Cubo4C4G1.setText("A");
                 Cubo4C4G1.setBackground(C4);
 
@@ -13697,22 +13709,22 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C5 = null;
             if (Cubo4C5H.getText().equals("Rojo")) {
-                C5 = new Color(155, 22, 57);
+                C5 = Rojo;
                 Cubo4C5G1.setText("R");
                 Cubo4C5G1.setBackground(C5);
 
             } else if (Cubo4C5H.getText().equals("Blanco")) {
-                C5 = new Color(255, 255, 255);
+                C5 = Blanco;
                 Cubo4C5G1.setText("B");
                 Cubo4C5G1.setBackground(C5);
 
             } else if (Cubo4C5H.getText().equals("Verde")) {
-                C5 = new Color(16, 175, 107);
+                C5 = Verde;
                 Cubo4C5G1.setText("V");
                 Cubo4C5G1.setBackground(C5);
 
             } else if (Cubo4C5H.getText().equals("Amarillo")) {
-                C5 = new Color(255, 234, 78);
+                C5 = Amarillo;
                 Cubo4C5G1.setText("A");
                 Cubo4C5G1.setBackground(C5);
 
@@ -13720,26 +13732,29 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             C6 = null;
             if (Cubo4C6H.getText().equals("Rojo")) {
-                C6 = new Color(155, 22, 57);
+                C6 = Rojo;
                 Cubo4C6G1.setText("R");
                 Cubo4C6G1.setBackground(C6);
 
             } else if (Cubo4C6H.getText().equals("Blanco")) {
-                C6 = new Color(255, 255, 255);
+                C6 = Blanco;
                 Cubo4C6G1.setText("B");
                 Cubo4C6G1.setBackground(C6);
 
             } else if (Cubo4C6H.getText().equals("Verde")) {
-                C6 = new Color(16, 175, 107);
+                C6 = Verde;
                 Cubo4C6G1.setText("V");
                 Cubo4C6G1.setBackground(C6);
 
             } else if (Cubo4C6H.getText().equals("Amarillo")) {
-                C6 = new Color(255, 234, 78);
+                C6 = Amarillo;
                 Cubo4C6G1.setText("A");
                 Cubo4C6G1.setBackground(C6);
 
             }
+
+            fondo.repaint();
+            ;
         }
     }//GEN-LAST:event_noPartidaActionPerformed
 
@@ -13890,23 +13905,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             // Cara Frontal
             if (Cubo1C1J.getText().equals("R")) {
-                Cubo1C1J.setBackground(new Color(155, 22, 57));
+                Cubo1C1J.setBackground(Rojo);
             } else if (Cubo1C1J.getText().equals("B")) {
-                Cubo1C1J.setBackground(new Color(255, 255, 255));
+                Cubo1C1J.setBackground(Blanco);
             } else if (Cubo1C1J.getText().equals("V")) {
-                Cubo1C1J.setBackground(new Color(16, 175, 107));
+                Cubo1C1J.setBackground(Verde);
             } else if (Cubo1C1J.getText().equals("A")) {
-                Cubo1C1J.setBackground(new Color(255, 234, 78));
+                Cubo1C1J.setBackground(Amarillo);
             }
             // Cara Trasera
             if (Cubo1C2J.getText().equals("R")) {
-                Cubo1C2J.setBackground(new Color(155, 22, 57));
+                Cubo1C2J.setBackground(Rojo);
             } else if (Cubo1C2J.getText().equals("B")) {
-                Cubo1C2J.setBackground(new Color(255, 255, 255));
+                Cubo1C2J.setBackground(Blanco);
             } else if (Cubo1C2J.getText().equals("V")) {
-                Cubo1C2J.setBackground(new Color(16, 175, 107));
+                Cubo1C2J.setBackground(Verde);
             } else if (Cubo1C2J.getText().equals("A")) {
-                Cubo1C2J.setBackground(new Color(255, 234, 78));
+                Cubo1C2J.setBackground(Amarillo);
             }
 
             // Otras Caras
@@ -13915,26 +13930,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo1C6E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaI);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaI.equals("R")) {
-                Cubo1C6J.setBackground(new Color(155, 22, 57));
+                Cubo1C6J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaI.equals("B")) {
-                Cubo1C6J.setBackground(new Color(255, 255, 255));
+                Cubo1C6J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaI.equals("V")) {
-                Cubo1C6J.setBackground(new Color(16, 175, 107));
+                Cubo1C6J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaI.equals("A")) {
-                Cubo1C6J.setBackground(new Color(255, 234, 78));
+                Cubo1C6J.setBackground(Amarillo);
             }
 
             // Cara derecha
             Cubo1C5J.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaF);
             Cubo1C5E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaF);
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaF.equals("R")) {
-                Cubo1C5J.setBackground(new Color(155, 22, 57));
+                Cubo1C5J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaF.equals("B")) {
-                Cubo1C5J.setBackground(new Color(255, 255, 255));
+                Cubo1C5J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaF.equals("V")) {
-                Cubo1C5J.setBackground(new Color(16, 175, 107));
+                Cubo1C5J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo1aristaF.equals("A")) {
-                Cubo1C5J.setBackground(new Color(255, 234, 78));
+                Cubo1C5J.setBackground(Amarillo);
             }
 
             // Cara superior
@@ -13942,13 +13957,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo1C3E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo1aristaI);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo1aristaI.equals("R")) {
-                Cubo1C3J.setBackground(new Color(155, 22, 57));
+                Cubo1C3J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo1aristaI.equals("B")) {
-                Cubo1C3J.setBackground(new Color(255, 255, 255));
+                Cubo1C3J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo1aristaI.equals("V")) {
-                Cubo1C3J.setBackground(new Color(16, 175, 107));
+                Cubo1C3J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo1aristaI.equals("A")) {
-                Cubo1C3J.setBackground(new Color(255, 234, 78));
+                Cubo1C3J.setBackground(Amarillo);
             }
 
             // Cara inferior
@@ -13956,13 +13971,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo1C4E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo1aristaF);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo1aristaF.equals("R")) {
-                Cubo1C4J.setBackground(new Color(155, 22, 57));
+                Cubo1C4J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo1aristaF.equals("B")) {
-                Cubo1C4J.setBackground(new Color(255, 255, 255));
+                Cubo1C4J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo1aristaF.equals("V")) {
-                Cubo1C4J.setBackground(new Color(16, 175, 107));
+                Cubo1C4J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo1aristaF.equals("A")) {
-                Cubo1C4J.setBackground(new Color(255, 234, 78));
+                Cubo1C4J.setBackground(Amarillo);
             }
 
             // CUBO 2
@@ -13983,23 +13998,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             // Cara Frontal
             if (Cubo2C1J.getText().equals("R")) {
-                Cubo2C1J.setBackground(new Color(155, 22, 57));
+                Cubo2C1J.setBackground(Rojo);
             } else if (Cubo2C1J.getText().equals("B")) {
-                Cubo2C1J.setBackground(new Color(255, 255, 255));
+                Cubo2C1J.setBackground(Blanco);
             } else if (Cubo2C1J.getText().equals("V")) {
-                Cubo2C1J.setBackground(new Color(16, 175, 107));
+                Cubo2C1J.setBackground(Verde);
             } else if (Cubo2C1J.getText().equals("A")) {
-                Cubo2C1J.setBackground(new Color(255, 234, 78));
+                Cubo2C1J.setBackground(Amarillo);
             }
             // Cara Trasera
             if (Cubo2C2J.getText().equals("R")) {
-                Cubo2C2J.setBackground(new Color(155, 22, 57));
+                Cubo2C2J.setBackground(Rojo);
             } else if (Cubo2C2J.getText().equals("B")) {
-                Cubo2C2J.setBackground(new Color(255, 255, 255));
+                Cubo2C2J.setBackground(Blanco);
             } else if (Cubo2C2J.getText().equals("V")) {
-                Cubo2C2J.setBackground(new Color(16, 175, 107));
+                Cubo2C2J.setBackground(Verde);
             } else if (Cubo2C2J.getText().equals("A")) {
-                Cubo2C2J.setBackground(new Color(255, 234, 78));
+                Cubo2C2J.setBackground(Amarillo);
             }
 
             // Cara izquierda
@@ -14007,26 +14022,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo2C6E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaI);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaI.equals("R")) {
-                Cubo2C6J.setBackground(new Color(155, 22, 57));
+                Cubo2C6J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaI.equals("B")) {
-                Cubo2C6J.setBackground(new Color(255, 255, 255));
+                Cubo2C6J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaI.equals("V")) {
-                Cubo2C6J.setBackground(new Color(16, 175, 107));
+                Cubo2C6J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaI.equals("A")) {
-                Cubo2C6J.setBackground(new Color(255, 234, 78));
+                Cubo2C6J.setBackground(Amarillo);
             }
 
             // Cara derecha
             Cubo2C5J.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaF);
             Cubo2C5E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaF);
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaF.equals("R")) {
-                Cubo2C5J.setBackground(new Color(155, 22, 57));
+                Cubo2C5J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaF.equals("B")) {
-                Cubo2C5J.setBackground(new Color(255, 255, 255));
+                Cubo2C5J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaF.equals("V")) {
-                Cubo2C5J.setBackground(new Color(16, 175, 107));
+                Cubo2C5J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo2aristaF.equals("A")) {
-                Cubo2C5J.setBackground(new Color(255, 234, 78));
+                Cubo2C5J.setBackground(Amarillo);
             }
 
             // Cara superior
@@ -14034,13 +14049,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo2C3E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo2aristaI);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo2aristaI.equals("R")) {
-                Cubo2C3J.setBackground(new Color(155, 22, 57));
+                Cubo2C3J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo2aristaI.equals("B")) {
-                Cubo2C3J.setBackground(new Color(255, 255, 255));
+                Cubo2C3J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo2aristaI.equals("V")) {
-                Cubo2C3J.setBackground(new Color(16, 175, 107));
+                Cubo2C3J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo2aristaI.equals("A")) {
-                Cubo2C3J.setBackground(new Color(255, 234, 78));
+                Cubo2C3J.setBackground(Amarillo);
             }
 
             // Cara inferior
@@ -14048,13 +14063,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo2C4E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo2aristaF);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo2aristaF.equals("R")) {
-                Cubo2C4J.setBackground(new Color(155, 22, 57));
+                Cubo2C4J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo2aristaF.equals("B")) {
-                Cubo2C4J.setBackground(new Color(255, 255, 255));
+                Cubo2C4J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo2aristaF.equals("V")) {
-                Cubo2C4J.setBackground(new Color(16, 175, 107));
+                Cubo2C4J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo2aristaF.equals("A")) {
-                Cubo2C4J.setBackground(new Color(255, 234, 78));
+                Cubo2C4J.setBackground(Amarillo);
             }
 
             // CUBO 3
@@ -14075,23 +14090,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             // Cara Frontal
             if (Cubo3C1J.getText().equals("R")) {
-                Cubo3C1J.setBackground(new Color(155, 22, 57));
+                Cubo3C1J.setBackground(Rojo);
             } else if (Cubo3C1J.getText().equals("B")) {
-                Cubo3C1J.setBackground(new Color(255, 255, 255));
+                Cubo3C1J.setBackground(Blanco);
             } else if (Cubo3C1J.getText().equals("V")) {
-                Cubo3C1J.setBackground(new Color(16, 175, 107));
+                Cubo3C1J.setBackground(Verde);
             } else if (Cubo3C1J.getText().equals("A")) {
-                Cubo3C1J.setBackground(new Color(255, 234, 78));
+                Cubo3C1J.setBackground(Amarillo);
             }
             // Cara Trasera
             if (Cubo3C2J.getText().equals("R")) {
-                Cubo3C2J.setBackground(new Color(155, 22, 57));
+                Cubo3C2J.setBackground(Rojo);
             } else if (Cubo3C2J.getText().equals("B")) {
-                Cubo3C2J.setBackground(new Color(255, 255, 255));
+                Cubo3C2J.setBackground(Blanco);
             } else if (Cubo3C2J.getText().equals("V")) {
-                Cubo3C2J.setBackground(new Color(16, 175, 107));
+                Cubo3C2J.setBackground(Verde);
             } else if (Cubo3C2J.getText().equals("A")) {
-                Cubo3C2J.setBackground(new Color(255, 234, 78));
+                Cubo3C2J.setBackground(Amarillo);
             }
 
             // Cara izquierda
@@ -14099,26 +14114,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo3C6E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaI);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaI.equals("R")) {
-                Cubo3C6J.setBackground(new Color(155, 22, 57));
+                Cubo3C6J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaI.equals("B")) {
-                Cubo3C6J.setBackground(new Color(255, 255, 255));
+                Cubo3C6J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaI.equals("V")) {
-                Cubo3C6J.setBackground(new Color(16, 175, 107));
+                Cubo3C6J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaI.equals("A")) {
-                Cubo3C6J.setBackground(new Color(255, 234, 78));
+                Cubo3C6J.setBackground(Amarillo);
             }
 
             // Cara derecha
             Cubo3C5J.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaF);
             Cubo3C5E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaF);
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaF.equals("R")) {
-                Cubo3C5J.setBackground(new Color(155, 22, 57));
+                Cubo3C5J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaF.equals("B")) {
-                Cubo3C5J.setBackground(new Color(255, 255, 255));
+                Cubo3C5J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaF.equals("V")) {
-                Cubo3C5J.setBackground(new Color(16, 175, 107));
+                Cubo3C5J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo3aristaF.equals("A")) {
-                Cubo3C5J.setBackground(new Color(255, 234, 78));
+                Cubo3C5J.setBackground(Amarillo);
             }
 
             // Cara superior
@@ -14126,13 +14141,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo3C3E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo3aristaI);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo3aristaI.equals("R")) {
-                Cubo3C3J.setBackground(new Color(155, 22, 57));
+                Cubo3C3J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo3aristaI.equals("B")) {
-                Cubo3C3J.setBackground(new Color(255, 255, 255));
+                Cubo3C3J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo3aristaI.equals("V")) {
-                Cubo3C3J.setBackground(new Color(16, 175, 107));
+                Cubo3C3J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo3aristaI.equals("A")) {
-                Cubo3C3J.setBackground(new Color(255, 234, 78));
+                Cubo3C3J.setBackground(Amarillo);
             }
 
             // Cara inferior
@@ -14140,13 +14155,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo3C4E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo3aristaF);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo3aristaF.equals("R")) {
-                Cubo3C4J.setBackground(new Color(155, 22, 57));
+                Cubo3C4J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo3aristaF.equals("B")) {
-                Cubo3C4J.setBackground(new Color(255, 255, 255));
+                Cubo3C4J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo3aristaF.equals("V")) {
-                Cubo3C4J.setBackground(new Color(16, 175, 107));
+                Cubo3C4J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo3aristaF.equals("A")) {
-                Cubo3C4J.setBackground(new Color(255, 234, 78));
+                Cubo3C4J.setBackground(Amarillo);
             }
 
             // CUBO 4
@@ -14167,23 +14182,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             // Cara Frontal
             if (Cubo4C1J.getText().equals("R")) {
-                Cubo4C1J.setBackground(new Color(155, 22, 57));
+                Cubo4C1J.setBackground(Rojo);
             } else if (Cubo4C1J.getText().equals("B")) {
-                Cubo4C1J.setBackground(new Color(255, 255, 255));
+                Cubo4C1J.setBackground(Blanco);
             } else if (Cubo4C1J.getText().equals("V")) {
-                Cubo4C1J.setBackground(new Color(16, 175, 107));
+                Cubo4C1J.setBackground(Verde);
             } else if (Cubo4C1J.getText().equals("A")) {
-                Cubo4C1J.setBackground(new Color(255, 234, 78));
+                Cubo4C1J.setBackground(Amarillo);
             }
             // Cara Trasera
             if (Cubo4C2J.getText().equals("R")) {
-                Cubo4C2J.setBackground(new Color(155, 22, 57));
+                Cubo4C2J.setBackground(Rojo);
             } else if (Cubo4C2J.getText().equals("B")) {
-                Cubo4C2J.setBackground(new Color(255, 255, 255));
+                Cubo4C2J.setBackground(Blanco);
             } else if (Cubo4C2J.getText().equals("V")) {
-                Cubo4C2J.setBackground(new Color(16, 175, 107));
+                Cubo4C2J.setBackground(Verde);
             } else if (Cubo4C2J.getText().equals("A")) {
-                Cubo4C2J.setBackground(new Color(255, 234, 78));
+                Cubo4C2J.setBackground(Amarillo);
             }
 
             // Cara izquierda
@@ -14191,26 +14206,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C6E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaI);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaI.equals("R")) {
-                Cubo4C6J.setBackground(new Color(155, 22, 57));
+                Cubo4C6J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaI.equals("B")) {
-                Cubo4C6J.setBackground(new Color(255, 255, 255));
+                Cubo4C6J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaI.equals("V")) {
-                Cubo4C6J.setBackground(new Color(16, 175, 107));
+                Cubo4C6J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaI.equals("A")) {
-                Cubo4C6J.setBackground(new Color(255, 234, 78));
+                Cubo4C6J.setBackground(Amarillo);
             }
 
             // Cara derecha
             Cubo4C5J.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaF);
             Cubo4C5E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaF);
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaF.equals("R")) {
-                Cubo4C5J.setBackground(new Color(155, 22, 57));
+                Cubo4C5J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaF.equals("B")) {
-                Cubo4C5J.setBackground(new Color(255, 255, 255));
+                Cubo4C5J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaF.equals("V")) {
-                Cubo4C5J.setBackground(new Color(16, 175, 107));
+                Cubo4C5J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada).Cubo4aristaF.equals("A")) {
-                Cubo4C5J.setBackground(new Color(255, 234, 78));
+                Cubo4C5J.setBackground(Amarillo);
             }
 
             // Cara superior
@@ -14218,13 +14233,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C3E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo4aristaI);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo4aristaI.equals("R")) {
-                Cubo4C3J.setBackground(new Color(155, 22, 57));
+                Cubo4C3J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo4aristaI.equals("B")) {
-                Cubo4C3J.setBackground(new Color(255, 255, 255));
+                Cubo4C3J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo4aristaI.equals("V")) {
-                Cubo4C3J.setBackground(new Color(16, 175, 107));
+                Cubo4C3J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo4aristaI.equals("A")) {
-                Cubo4C3J.setBackground(new Color(255, 234, 78));
+                Cubo4C3J.setBackground(Amarillo);
             }
 
             // Cara inferior
@@ -14232,13 +14247,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C4E.setText(partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo4aristaF);
 
             if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo4aristaF.equals("R")) {
-                Cubo4C4J.setBackground(new Color(155, 22, 57));
+                Cubo4C4J.setBackground(Rojo);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo4aristaF.equals("B")) {
-                Cubo4C4J.setBackground(new Color(255, 255, 255));
+                Cubo4C4J.setBackground(Blanco);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo4aristaF.equals("V")) {
-                Cubo4C4J.setBackground(new Color(16, 175, 107));
+                Cubo4C4J.setBackground(Verde);
             } else if (partidas.get(iPartida - 1).soluciones.get(solucionAplicada + 1).Cubo4aristaF.equals("A")) {
-                Cubo4C4J.setBackground(new Color(255, 234, 78));
+                Cubo4C4J.setBackground(Amarillo);
             }
 
             System.out.println("Aristas restantes: ");
@@ -14248,6 +14263,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             System.out.println("Cubo 4: " + Cubo4C1J.getText() + "-" + Cubo4C2J.getText());
 
             noSoluciones.setText(((solucionAplicada / 2) + 1) + " / " + (partidas.get(iPartida - 1).soluciones.size() / 2));
+            ;
 
         } else {
 
@@ -15447,23 +15463,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             // Cara Frontal
             if (Cubo1C1J.getText().equals("R")) {
-                Cubo1C1J.setBackground(new Color(155, 22, 57));
+                Cubo1C1J.setBackground(Rojo);
             } else if (Cubo1C1J.getText().equals("B")) {
-                Cubo1C1J.setBackground(new Color(255, 255, 255));
+                Cubo1C1J.setBackground(Blanco);
             } else if (Cubo1C1J.getText().equals("V")) {
-                Cubo1C1J.setBackground(new Color(16, 175, 107));
+                Cubo1C1J.setBackground(Verde);
             } else if (Cubo1C1J.getText().equals("A")) {
-                Cubo1C1J.setBackground(new Color(255, 234, 78));
+                Cubo1C1J.setBackground(Amarillo);
             }
             // Cara Trasera
             if (Cubo1C2J.getText().equals("R")) {
-                Cubo1C2J.setBackground(new Color(155, 22, 57));
+                Cubo1C2J.setBackground(Rojo);
             } else if (Cubo1C2J.getText().equals("B")) {
-                Cubo1C2J.setBackground(new Color(255, 255, 255));
+                Cubo1C2J.setBackground(Blanco);
             } else if (Cubo1C2J.getText().equals("V")) {
-                Cubo1C2J.setBackground(new Color(16, 175, 107));
+                Cubo1C2J.setBackground(Verde);
             } else if (Cubo1C2J.getText().equals("A")) {
-                Cubo1C2J.setBackground(new Color(255, 234, 78));
+                Cubo1C2J.setBackground(Amarillo);
             }
 
             // Cara izquierda
@@ -15471,26 +15487,26 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo1C6E.setText(Cubo1Cara6);
 
             if (Cubo1Cara6.equals("R")) {
-                Cubo1C6J.setBackground(new Color(155, 22, 57));
+                Cubo1C6J.setBackground(Rojo);
             } else if (Cubo1Cara6.equals("B")) {
-                Cubo1C6J.setBackground(new Color(255, 255, 255));
+                Cubo1C6J.setBackground(Blanco);
             } else if (Cubo1Cara6.equals("V")) {
-                Cubo1C6J.setBackground(new Color(16, 175, 107));
+                Cubo1C6J.setBackground(Verde);
             } else if (Cubo1Cara6.equals("A")) {
-                Cubo1C6J.setBackground(new Color(255, 234, 78));
+                Cubo1C6J.setBackground(Amarillo);
             }
 
             // Cara derecha
             Cubo1C5J.setText(Cubo1Cara5);
             Cubo1C5E.setText(Cubo1Cara5);
             if (Cubo1Cara5.equals("R")) {
-                Cubo1C5J.setBackground(new Color(155, 22, 57));
+                Cubo1C5J.setBackground(Rojo);
             } else if (Cubo1Cara5.equals("B")) {
-                Cubo1C5J.setBackground(new Color(255, 255, 255));
+                Cubo1C5J.setBackground(Blanco);
             } else if (Cubo1Cara5.equals("V")) {
-                Cubo1C5J.setBackground(new Color(16, 175, 107));
+                Cubo1C5J.setBackground(Verde);
             } else if (Cubo1Cara5.equals("A")) {
-                Cubo1C5J.setBackground(new Color(255, 234, 78));
+                Cubo1C5J.setBackground(Amarillo);
             }
 
             // Cara superior
@@ -15498,13 +15514,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo1C3E.setText(Cubo1Cara3);
 
             if (Cubo1Cara3.equals("R")) {
-                Cubo1C3J.setBackground(new Color(155, 22, 57));
+                Cubo1C3J.setBackground(Rojo);
             } else if (Cubo1Cara3.equals("B")) {
-                Cubo1C3J.setBackground(new Color(255, 255, 255));
+                Cubo1C3J.setBackground(Blanco);
             } else if (Cubo1Cara3.equals("V")) {
-                Cubo1C3J.setBackground(new Color(16, 175, 107));
+                Cubo1C3J.setBackground(Verde);
             } else if (Cubo1Cara3.equals("A")) {
-                Cubo1C3J.setBackground(new Color(255, 234, 78));
+                Cubo1C3J.setBackground(Amarillo);
             }
 
             // Cara inferior
@@ -15512,13 +15528,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo1C4E.setText(Cubo1Cara4);
 
             if (Cubo1Cara4.equals("R")) {
-                Cubo1C4J.setBackground(new Color(155, 22, 57));
+                Cubo1C4J.setBackground(Rojo);
             } else if (Cubo1Cara4.equals("B")) {
-                Cubo1C4J.setBackground(new Color(255, 255, 255));
+                Cubo1C4J.setBackground(Blanco);
             } else if (Cubo1Cara4.equals("V")) {
-                Cubo1C4J.setBackground(new Color(16, 175, 107));
+                Cubo1C4J.setBackground(Verde);
             } else if (Cubo1Cara4.equals("A")) {
-                Cubo1C4J.setBackground(new Color(255, 234, 78));
+                Cubo1C4J.setBackground(Amarillo);
             }
 
             // CUBO 2
@@ -15541,23 +15557,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             // Cara Frontal
             if (Cubo2C1J.getText().equals("R")) {
-                Cubo2C1J.setBackground(new Color(155, 22, 57));
+                Cubo2C1J.setBackground(Rojo);
             } else if (Cubo2C1J.getText().equals("B")) {
-                Cubo2C1J.setBackground(new Color(255, 255, 255));
+                Cubo2C1J.setBackground(Blanco);
             } else if (Cubo2C1J.getText().equals("V")) {
-                Cubo2C1J.setBackground(new Color(16, 175, 107));
+                Cubo2C1J.setBackground(Verde);
             } else if (Cubo2C1J.getText().equals("A")) {
-                Cubo2C1J.setBackground(new Color(255, 234, 78));
+                Cubo2C1J.setBackground(Amarillo);
             }
             // Cara Trasera
             if (Cubo2C2J.getText().equals("R")) {
-                Cubo2C2J.setBackground(new Color(155, 22, 57));
+                Cubo2C2J.setBackground(Rojo);
             } else if (Cubo2C2J.getText().equals("B")) {
-                Cubo2C2J.setBackground(new Color(255, 255, 255));
+                Cubo2C2J.setBackground(Blanco);
             } else if (Cubo2C2J.getText().equals("V")) {
-                Cubo2C2J.setBackground(new Color(16, 175, 107));
+                Cubo2C2J.setBackground(Verde);
             } else if (Cubo2C2J.getText().equals("A")) {
-                Cubo2C2J.setBackground(new Color(255, 234, 78));
+                Cubo2C2J.setBackground(Amarillo);
             }
 
             // Cara izquierda
@@ -15565,13 +15581,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo2C6E.setText(Cubo2Cara6);
 
             if (Cubo2Cara6.equals("R")) {
-                Cubo2C6J.setBackground(new Color(155, 22, 57));
+                Cubo2C6J.setBackground(Rojo);
             } else if (Cubo2Cara6.equals("B")) {
-                Cubo2C6J.setBackground(new Color(255, 255, 255));
+                Cubo2C6J.setBackground(Blanco);
             } else if (Cubo2Cara6.equals("V")) {
-                Cubo2C6J.setBackground(new Color(16, 175, 107));
+                Cubo2C6J.setBackground(Verde);
             } else if (Cubo2Cara6.equals("A")) {
-                Cubo2C6J.setBackground(new Color(255, 234, 78));
+                Cubo2C6J.setBackground(Amarillo);
             }
 
             // Cara derecha
@@ -15579,13 +15595,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo2C5E.setText(Cubo2Cara5);
 
             if (Cubo2Cara5.equals("R")) {
-                Cubo2C5J.setBackground(new Color(155, 22, 57));
+                Cubo2C5J.setBackground(Rojo);
             } else if (Cubo2Cara5.equals("B")) {
-                Cubo2C5J.setBackground(new Color(255, 255, 255));
+                Cubo2C5J.setBackground(Blanco);
             } else if (Cubo2Cara5.equals("V")) {
-                Cubo2C5J.setBackground(new Color(16, 175, 107));
+                Cubo2C5J.setBackground(Verde);
             } else if (Cubo2Cara5.equals("A")) {
-                Cubo2C5J.setBackground(new Color(255, 234, 78));
+                Cubo2C5J.setBackground(Amarillo);
             }
 
             // Cara superior
@@ -15593,13 +15609,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo2C3E.setText(Cubo2Cara3);
 
             if (Cubo2Cara3.equals("R")) {
-                Cubo2C3J.setBackground(new Color(155, 22, 57));
+                Cubo2C3J.setBackground(Rojo);
             } else if (Cubo2Cara3.equals("B")) {
-                Cubo2C3J.setBackground(new Color(255, 255, 255));
+                Cubo2C3J.setBackground(Blanco);
             } else if (Cubo2Cara3.equals("V")) {
-                Cubo2C3J.setBackground(new Color(16, 175, 107));
+                Cubo2C3J.setBackground(Verde);
             } else if (Cubo2Cara3.equals("A")) {
-                Cubo2C3J.setBackground(new Color(255, 234, 78));
+                Cubo2C3J.setBackground(Amarillo);
             }
 
             // Cara inferior
@@ -15607,13 +15623,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo2C4E.setText(Cubo2Cara4);
 
             if (Cubo2Cara4.equals("R")) {
-                Cubo2C4J.setBackground(new Color(155, 22, 57));
+                Cubo2C4J.setBackground(Rojo);
             } else if (Cubo2Cara4.equals("B")) {
-                Cubo2C4J.setBackground(new Color(255, 255, 255));
+                Cubo2C4J.setBackground(Blanco);
             } else if (Cubo2Cara4.equals("V")) {
-                Cubo2C4J.setBackground(new Color(16, 175, 107));
+                Cubo2C4J.setBackground(Verde);
             } else if (Cubo2Cara4.equals("A")) {
-                Cubo2C4J.setBackground(new Color(255, 234, 78));
+                Cubo2C4J.setBackground(Amarillo);
             }
 
             // CUBO 3
@@ -15636,23 +15652,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             // Cara Frontal
             if (Cubo3C1J.getText().equals("R")) {
-                Cubo3C1J.setBackground(new Color(155, 22, 57));
+                Cubo3C1J.setBackground(Rojo);
             } else if (Cubo3C1J.getText().equals("B")) {
-                Cubo3C1J.setBackground(new Color(255, 255, 255));
+                Cubo3C1J.setBackground(Blanco);
             } else if (Cubo3C1J.getText().equals("V")) {
-                Cubo3C1J.setBackground(new Color(16, 175, 107));
+                Cubo3C1J.setBackground(Verde);
             } else if (Cubo3C1J.getText().equals("A")) {
-                Cubo3C1J.setBackground(new Color(255, 234, 78));
+                Cubo3C1J.setBackground(Amarillo);
             }
             // Cara Trasera
             if (Cubo3C2J.getText().equals("R")) {
-                Cubo3C2J.setBackground(new Color(155, 22, 57));
+                Cubo3C2J.setBackground(Rojo);
             } else if (Cubo3C2J.getText().equals("B")) {
-                Cubo3C2J.setBackground(new Color(255, 255, 255));
+                Cubo3C2J.setBackground(Blanco);
             } else if (Cubo3C2J.getText().equals("V")) {
-                Cubo3C2J.setBackground(new Color(16, 175, 107));
+                Cubo3C2J.setBackground(Verde);
             } else if (Cubo3C2J.getText().equals("A")) {
-                Cubo3C2J.setBackground(new Color(255, 234, 78));
+                Cubo3C2J.setBackground(Amarillo);
             }
 
             // Cara izquierda
@@ -15660,13 +15676,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo3C6E.setText(Cubo3Cara6);
 
             if (Cubo3Cara6.equals("R")) {
-                Cubo3C6J.setBackground(new Color(155, 22, 57));
+                Cubo3C6J.setBackground(Rojo);
             } else if (Cubo3Cara6.equals("B")) {
-                Cubo3C6J.setBackground(new Color(255, 255, 255));
+                Cubo3C6J.setBackground(Blanco);
             } else if (Cubo3Cara6.equals("V")) {
-                Cubo3C6J.setBackground(new Color(16, 175, 107));
+                Cubo3C6J.setBackground(Verde);
             } else if (Cubo3Cara6.equals("A")) {
-                Cubo3C6J.setBackground(new Color(255, 234, 78));
+                Cubo3C6J.setBackground(Amarillo);
             }
 
             // Cara derecha
@@ -15674,13 +15690,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo3C5E.setText(Cubo3Cara5);
 
             if (Cubo3Cara5.equals("R")) {
-                Cubo3C5J.setBackground(new Color(155, 22, 57));
+                Cubo3C5J.setBackground(Rojo);
             } else if (Cubo3Cara5.equals("B")) {
-                Cubo3C5J.setBackground(new Color(255, 255, 255));
+                Cubo3C5J.setBackground(Blanco);
             } else if (Cubo3Cara5.equals("V")) {
-                Cubo3C5J.setBackground(new Color(16, 175, 107));
+                Cubo3C5J.setBackground(Verde);
             } else if (Cubo3Cara5.equals("A")) {
-                Cubo3C5J.setBackground(new Color(255, 234, 78));
+                Cubo3C5J.setBackground(Amarillo);
             }
 
             // Cara superior
@@ -15688,13 +15704,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo3C3E.setText(Cubo3Cara3);
 
             if (Cubo3Cara3.equals("R")) {
-                Cubo3C3J.setBackground(new Color(155, 22, 57));
+                Cubo3C3J.setBackground(Rojo);
             } else if (Cubo3Cara3.equals("B")) {
-                Cubo3C3J.setBackground(new Color(255, 255, 255));
+                Cubo3C3J.setBackground(Blanco);
             } else if (Cubo3Cara3.equals("V")) {
-                Cubo3C3J.setBackground(new Color(16, 175, 107));
+                Cubo3C3J.setBackground(Verde);
             } else if (Cubo3Cara3.equals("A")) {
-                Cubo3C3J.setBackground(new Color(255, 234, 78));
+                Cubo3C3J.setBackground(Amarillo);
             }
 
             // Cara inferior
@@ -15702,13 +15718,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo3C4E.setText(Cubo3Cara4);
 
             if (Cubo3Cara4.equals("R")) {
-                Cubo3C4J.setBackground(new Color(155, 22, 57));
+                Cubo3C4J.setBackground(Rojo);
             } else if (Cubo3Cara4.equals("B")) {
-                Cubo3C4J.setBackground(new Color(255, 255, 255));
+                Cubo3C4J.setBackground(Blanco);
             } else if (Cubo3Cara4.equals("V")) {
-                Cubo3C4J.setBackground(new Color(16, 175, 107));
+                Cubo3C4J.setBackground(Verde);
             } else if (Cubo3Cara4.equals("A")) {
-                Cubo3C4J.setBackground(new Color(255, 234, 78));
+                Cubo3C4J.setBackground(Amarillo);
             }
 
             // CUBO 4
@@ -15731,23 +15747,23 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
             // Cara Frontal
             if (Cubo4C1J.getText().equals("R")) {
-                Cubo4C1J.setBackground(new Color(155, 22, 57));
+                Cubo4C1J.setBackground(Rojo);
             } else if (Cubo4C1J.getText().equals("B")) {
-                Cubo4C1J.setBackground(new Color(255, 255, 255));
+                Cubo4C1J.setBackground(Blanco);
             } else if (Cubo4C1J.getText().equals("V")) {
-                Cubo4C1J.setBackground(new Color(16, 175, 107));
+                Cubo4C1J.setBackground(Verde);
             } else if (Cubo4C1J.getText().equals("A")) {
-                Cubo4C1J.setBackground(new Color(255, 234, 78));
+                Cubo4C1J.setBackground(Amarillo);
             }
             // Cara Trasera
             if (Cubo4C2J.getText().equals("R")) {
-                Cubo4C2J.setBackground(new Color(155, 22, 57));
+                Cubo4C2J.setBackground(Rojo);
             } else if (Cubo4C2J.getText().equals("B")) {
-                Cubo4C2J.setBackground(new Color(255, 255, 255));
+                Cubo4C2J.setBackground(Blanco);
             } else if (Cubo4C2J.getText().equals("V")) {
-                Cubo4C2J.setBackground(new Color(16, 175, 107));
+                Cubo4C2J.setBackground(Verde);
             } else if (Cubo4C2J.getText().equals("A")) {
-                Cubo4C2J.setBackground(new Color(255, 234, 78));
+                Cubo4C2J.setBackground(Amarillo);
             }
 
             // Cara izquierda
@@ -15755,13 +15771,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C6E.setText(Cubo4Cara6);
 
             if (Cubo4Cara6.equals("R")) {
-                Cubo4C6J.setBackground(new Color(155, 22, 57));
+                Cubo4C6J.setBackground(Rojo);
             } else if (Cubo4Cara6.equals("B")) {
-                Cubo4C6J.setBackground(new Color(255, 255, 255));
+                Cubo4C6J.setBackground(Blanco);
             } else if (Cubo4Cara6.equals("V")) {
-                Cubo4C6J.setBackground(new Color(16, 175, 107));
+                Cubo4C6J.setBackground(Verde);
             } else if (Cubo4Cara6.equals("A")) {
-                Cubo4C6J.setBackground(new Color(255, 234, 78));
+                Cubo4C6J.setBackground(Amarillo);
             }
 
             // Cara derecha
@@ -15769,13 +15785,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C5E.setText(Cubo4Cara5);
 
             if (Cubo4Cara5.equals("R")) {
-                Cubo4C5J.setBackground(new Color(155, 22, 57));
+                Cubo4C5J.setBackground(Rojo);
             } else if (Cubo4Cara5.equals("B")) {
-                Cubo4C5J.setBackground(new Color(255, 255, 255));
+                Cubo4C5J.setBackground(Blanco);
             } else if (Cubo4Cara5.equals("V")) {
-                Cubo4C5J.setBackground(new Color(16, 175, 107));
+                Cubo4C5J.setBackground(Verde);
             } else if (Cubo4Cara5.equals("A")) {
-                Cubo4C5J.setBackground(new Color(255, 234, 78));
+                Cubo4C5J.setBackground(Amarillo);
             }
 
             // Cara superior
@@ -15783,13 +15799,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C3E.setText(Cubo4Cara3);
 
             if (Cubo4Cara3.equals("R")) {
-                Cubo4C3J.setBackground(new Color(155, 22, 57));
+                Cubo4C3J.setBackground(Rojo);
             } else if (Cubo4Cara3.equals("B")) {
-                Cubo4C3J.setBackground(new Color(255, 255, 255));
+                Cubo4C3J.setBackground(Blanco);
             } else if (Cubo4Cara3.equals("V")) {
-                Cubo4C3J.setBackground(new Color(16, 175, 107));
+                Cubo4C3J.setBackground(Verde);
             } else if (Cubo4Cara3.equals("A")) {
-                Cubo4C3J.setBackground(new Color(255, 234, 78));
+                Cubo4C3J.setBackground(Amarillo);
             }
 
             // Cara inferior
@@ -15797,13 +15813,13 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             Cubo4C4E.setText(Cubo4Cara4);
 
             if (Cubo4Cara4.equals("R")) {
-                Cubo4C4J.setBackground(new Color(155, 22, 57));
+                Cubo4C4J.setBackground(Rojo);
             } else if (Cubo4Cara4.equals("B")) {
-                Cubo4C4J.setBackground(new Color(255, 255, 255));
+                Cubo4C4J.setBackground(Blanco);
             } else if (Cubo4Cara4.equals("V")) {
-                Cubo4C4J.setBackground(new Color(16, 175, 107));
+                Cubo4C4J.setBackground(Verde);
             } else if (Cubo4Cara4.equals("A")) {
-                Cubo4C4J.setBackground(new Color(255, 234, 78));
+                Cubo4C4J.setBackground(Amarillo);
             }
 
         }
@@ -15815,6 +15831,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         grafoGL();
         grafoG1();
         grafoG2();
+        ;
 
     }
 
