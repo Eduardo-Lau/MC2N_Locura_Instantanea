@@ -37,10 +37,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     public static Cubos Cubo2 = new Cubos();
     public static Cubos Cubo3 = new Cubos();
     public static Cubos Cubo4 = new Cubos();
-    Color Rojo  = new Color(155, 22, 57);
-    Color Blanco  = new Color(255, 255, 255);
-    Color Verde  = new Color(16, 175, 107);
-    Color Amarillo  = new Color(255, 234, 78);
+    Color Rojo = new Color(155, 22, 57);
+    Color Blanco = new Color(255, 255, 255);
+    Color Verde = new Color(16, 175, 107);
+    Color Amarillo = new Color(255, 234, 78);
 
     public ArrayList<Partidas> partidas = new ArrayList<>();
     public ArrayList<Soluciones> soluciones = new ArrayList<>();
@@ -2488,7 +2488,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         Cubo4C1E.setText("4");
         Cubo4C1E.setOpaque(true);
         jPanel6.add(Cubo4C1E, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 80, 80));
-        jPanel6.add(grafoGL, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 230, 230));
+        jPanel6.add(grafoGL, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 280, 230));
         jPanel6.add(grafoG2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, 230, 220));
         jPanel6.add(grafoG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 230, 220));
 
@@ -2496,7 +2496,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel17.setForeground(new java.awt.Color(255, 202, 117));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setText("GL");
-        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 430, 40, -1));
+        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, 40, -1));
 
         jLabel30.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 202, 117));
@@ -2508,7 +2508,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel31.setForeground(new java.awt.Color(255, 202, 117));
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel31.setText("G2 : Vertical");
-        jPanel6.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(702, 430, 160, -1));
+        jPanel6.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(695, 430, 160, -1));
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 255));
         jLabel1.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
@@ -6448,9 +6448,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             System.out.println(soluciones.get(1).posI + "," + soluciones.get(1).posC + "," + soluciones.get(1).posW + "," + soluciones.get(1).posR);
 
             //Encontrar otras posibles soluciones
-            for (int g = 0; g < 20; g++) {
-                boolean G1Alt = false;
-                boolean G2Alt = false;
+            for (int g = 0; g < 81; g++) {
                 for (int i = 0; i < 6; i += 2) {
                     for (int c = 0; c < 6; c += 2) {
                         for (int w = 0; w < 6; w += 2) {
@@ -6567,7 +6565,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                                             posW = w;
                                             posR = r;
 
-                                            G1Alt = true;
                                             Cubo1aristaG1I = verticesCubo1[i];
                                             Cubo1aristaG1F = verticesCubo1[i + 1];
 
@@ -6589,8 +6586,6 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                                         }
 
                                     } else if (((Intento + 1) % 2 == 0) && ((i != posI) && (c != posC) && (w != posW) && (r != posR))) {
-
-                                        G2Alt = true;
 
                                         Cubo1aristaG2I = verticesCubo1[i];
                                         Cubo1aristaG2F = verticesCubo1[i + 1];
@@ -8666,10 +8661,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         graphGL.getModel().beginUpdate();
         try {
-            Object R = graphGL.insertVertex(parent, null, "R", 30, 40, 20, 20, "fontColor=#000000");
-            Object B = graphGL.insertVertex(parent, null, "B", 170, 40, 20, 20, "fontColor=#000000");
-            Object V = graphGL.insertVertex(parent, null, "V", 30, 160, 20, 20, "fontColor=#000000");
-            Object A = graphGL.insertVertex(parent, null, "A", 170, 160, 20, 20, "fontColor=#000000");
+            Object R = graphGL.insertVertex(parent, null, "R", 40, 40, 20, 20, "fontColor=#000000");
+            Object B = graphGL.insertVertex(parent, null, "B", 150, 40, 20, 20, "fontColor=#000000");
+            Object V = graphGL.insertVertex(parent, null, "V", 40, 160, 20, 20, "fontColor=#000000");
+            Object A = graphGL.insertVertex(parent, null, "A", 150, 160, 20, 20, "fontColor=#000000");
 
             Object aristaCubo1 = null;
             Object aristaCubo2 = null;
@@ -9208,7 +9203,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         mxGraphComponent graphComponentL = new mxGraphComponent(graphGL);
         graphComponentL.setEnabled(false);
-        graphComponentL.setPreferredSize(new Dimension(230, 225));
+        //graphComponentL.setPreferredSize(new Dimension(280, 225));
+        graphComponentL.setBorder(null);
 
         grafoGL.removeAll();
         grafoGL.add(graphComponentL);
@@ -9419,6 +9415,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         mxGraphComponent graphComponent = new mxGraphComponent(graphG1);
         graphComponent.setEnabled(false);
         graphComponent.setPreferredSize(new Dimension(230, 210));
+        graphComponent.setBorder(null);
 
         grafoG1.removeAll();
         grafoG1.add(graphComponent);
@@ -9627,6 +9624,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         mxGraphComponent graphComponent = new mxGraphComponent(graphG2);
         graphComponent.setEnabled(false);
         graphComponent.setPreferredSize(new Dimension(230, 210));
+        graphComponent.setBorder(null);
 
         grafoG2.removeAll();
         grafoG2.add(graphComponent);
@@ -12700,7 +12698,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             System.out.println(soluciones.get(1).posI + "," + soluciones.get(1).posC + "," + soluciones.get(1).posW + "," + soluciones.get(1).posR);
 
             //Encontrar otras posibles soluciones
-            for (int g = 0; g < 20; g++) {
+            for (int g = 0; g < 81; g++) {
                 boolean G1Alt = false;
                 boolean G2Alt = false;
                 for (int i = 0; i < 6; i += 2) {
