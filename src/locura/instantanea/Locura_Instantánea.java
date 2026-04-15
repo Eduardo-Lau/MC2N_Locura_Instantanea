@@ -585,6 +585,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private void initComponents() {
 
         fondo = new javax.swing.JLabel();
+        fondo1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -892,6 +893,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel29 = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
 
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo.png"))); // NOI18N
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -900,12 +903,12 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo.png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 930, 770));
+        fondo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/fondo.png"))); // NOI18N
+        getContentPane().add(fondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 930, 770));
 
         jLabel2.setFont(new java.awt.Font("Snap ITC", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(127, 27, 53));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/instantanea/Logo_LocInst.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/locura/instantanea/LOCURA INSTANTÁNEA2.gif"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 14, 698, -1));
 
         jTabbedPane1.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
@@ -1683,7 +1686,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(horarioCubo1);
-        horarioCubo1.setBounds(27, 188, 35, 25);
+        horarioCubo1.setBounds(27, 188, 36, 25);
 
         antihorarioCubo1.setBackground(new java.awt.Color(135, 146, 255));
         antihorarioCubo1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -1695,7 +1698,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(antihorarioCubo1);
-        antihorarioCubo1.setBounds(134, 188, 35, 25);
+        antihorarioCubo1.setBounds(134, 188, 36, 25);
 
         Cubo2C1J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo2C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1814,7 +1817,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(horarioCubo2);
-        horarioCubo2.setBounds(244, 188, 35, 25);
+        horarioCubo2.setBounds(244, 188, 36, 25);
 
         antihorarioCubo2.setBackground(new java.awt.Color(135, 146, 255));
         antihorarioCubo2.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -1826,7 +1829,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(antihorarioCubo2);
-        antihorarioCubo2.setBounds(351, 188, 35, 25);
+        antihorarioCubo2.setBounds(351, 188, 36, 25);
 
         Cubo3C1J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo3C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -1945,7 +1948,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(horarioCubo3);
-        horarioCubo3.setBounds(473, 188, 35, 25);
+        horarioCubo3.setBounds(473, 188, 36, 25);
 
         antihorarioCubo3.setBackground(new java.awt.Color(135, 146, 255));
         antihorarioCubo3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -1957,7 +1960,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(antihorarioCubo3);
-        antihorarioCubo3.setBounds(580, 188, 35, 25);
+        antihorarioCubo3.setBounds(580, 188, 36, 25);
 
         Cubo4C1J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo4C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2076,7 +2079,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(horarioCubo4);
-        horarioCubo4.setBounds(704, 188, 35, 25);
+        horarioCubo4.setBounds(704, 188, 36, 25);
 
         antihorarioCubo4.setBackground(new java.awt.Color(135, 146, 255));
         antihorarioCubo4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 18)); // NOI18N
@@ -2088,7 +2091,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel2.add(antihorarioCubo4);
-        antihorarioCubo4.setBounds(811, 188, 35, 25);
+        antihorarioCubo4.setBounds(811, 188, 36, 25);
 
         Cubo1C1J.setBackground(new java.awt.Color(51, 51, 51));
         Cubo1C1J.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2266,7 +2269,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel28.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jLabel28.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jPanel2.add(jLabel28);
-        jLabel28.setBounds(272, 300, 320, 25);
+        jLabel28.setBounds(260, 300, 350, 25);
 
         explicacionBtn.setBackground(new java.awt.Color(135, 146, 255));
         explicacionBtn.setFont(new java.awt.Font("Consolas", 1, 16)); // NOI18N
@@ -2388,7 +2391,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jPanel6.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 900, 130));
 
         existeSolucion.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        existeSolucion.setForeground(new java.awt.Color(45, 160, 106));
+        existeSolucion.setForeground(new java.awt.Color(255, 202, 117));
         existeSolucion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         existeSolucion.setText("Solución del Juego");
         jPanel6.add(existeSolucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 290, -1));
@@ -2495,8 +2498,8 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         jLabel17.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 202, 117));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("GL");
-        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 430, 40, -1));
+        jLabel17.setText("GL : General");
+        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 140, -1));
 
         jLabel30.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 202, 117));
@@ -2512,14 +2515,14 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 255));
         jLabel1.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel1.setForeground(new java.awt.Color(51, 175, 252));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("4");
         jPanel6.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 165, 20, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(255, 202, 117));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("1");
         jPanel6.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 165, 20, -1));
@@ -3263,7 +3266,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
             }
         });
         jPanel4.add(borrarHistorial);
-        borrarHistorial.setBounds(23, 8, 175, 32);
+        borrarHistorial.setBounds(23, 8, 178, 32);
 
         jTabbedPane1.addTab("Historial", jPanel4);
 
@@ -8661,10 +8664,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         graphGL.getModel().beginUpdate();
         try {
-            Object R = graphGL.insertVertex(parent, null, "R", 40, 40, 20, 20, "fontColor=#000000");
-            Object B = graphGL.insertVertex(parent, null, "B", 150, 40, 20, 20, "fontColor=#000000");
-            Object V = graphGL.insertVertex(parent, null, "V", 40, 160, 20, 20, "fontColor=#000000");
-            Object A = graphGL.insertVertex(parent, null, "A", 150, 160, 20, 20, "fontColor=#000000");
+            Object R = graphGL.insertVertex(parent, null, "R", 40, 40, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
+            Object B = graphGL.insertVertex(parent, null, "B", 150, 40, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
+            Object V = graphGL.insertVertex(parent, null, "V", 40, 160, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
+            Object A = graphGL.insertVertex(parent, null, "A", 150, 160, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
 
             Object aristaCubo1 = null;
             Object aristaCubo2 = null;
@@ -8715,7 +8718,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, A, "endArrow=none;");
             }
 
-            graphGL.getModel().setStyle(aristaCubo1, "strokeColor=#FFFFFF;endArrow=none;fontColor=#FFFFFF");
+            graphGL.getModel().setStyle(aristaCubo1, "strokeColor=#FFCA75;endArrow=none;fontColor=#FFCA75");
 
             // Arista 2
             if (Cubo1C6J.getText().equals("R") && Cubo1C5J.getText().equals("R")) {
@@ -8758,7 +8761,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, A, "endArrow=none;");
             }
 
-            graphGL.getModel().setStyle(aristaCubo1, "strokeColor=#FFFFFF;endArrow=none;fontColor=#FFFFFF");
+            graphGL.getModel().setStyle(aristaCubo1, "strokeColor=#FFCA75;endArrow=none;fontColor=#FFCA75");
 
             // Arista 3
             if (Cubo1C3J.getText().equals("R") && Cubo1C4J.getText().equals("R")) {
@@ -8801,7 +8804,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 aristaCubo1 = graphGL.insertEdge(parent, null, "1", A, A, "endArrow=none;");
             }
 
-            graphGL.getModel().setStyle(aristaCubo1, "strokeColor=#FFFFFF;endArrow=none;fontColor=#FFFFFF");
+            graphGL.getModel().setStyle(aristaCubo1, "strokeColor=#FFCA75;endArrow=none;fontColor=#FFCA75");
 
             // Cubo 2
             // Arista 1
@@ -9105,7 +9108,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, A, "endArrow=none;");
             }
 
-            graphGL.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
+            graphGL.getModel().setStyle(aristaCubo4, "strokeColor=#33AFFC;endArrow=none;fontColor=#33AFFC");
 
             // Arista 2
             if (Cubo4C6J.getText().equals("R") && Cubo4C5J.getText().equals("R")) {
@@ -9148,7 +9151,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, A, "endArrow=none;");
             }
 
-            graphGL.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
+            graphGL.getModel().setStyle(aristaCubo4, "strokeColor=#33AFFC;endArrow=none;fontColor=#33AFFC");
 
             // Arista 3
             if (Cubo4C3J.getText().equals("R") && Cubo4C4J.getText().equals("R")) {
@@ -9191,7 +9194,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 aristaCubo4 = graphGL.insertEdge(parent, null, "4", A, A, "endArrow=none;");
             }
 
-            graphGL.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
+            graphGL.getModel().setStyle(aristaCubo4, "strokeColor=#33AFFC;endArrow=none;fontColor=#33AFFC");
 
             layout.execute(graphGL.getDefaultParent());
 
@@ -9223,10 +9226,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
         mxParallelEdgeLayout layout = new mxParallelEdgeLayout(graphG1);
         try {
 
-            Object R = graphG1.insertVertex(parent, null, "R", 30, 20, 20, 20, "fontColor=#000000");
-            Object B = graphG1.insertVertex(parent, null, "B", 170, 20, 20, 20, "fontColor=#000000");
-            Object V = graphG1.insertVertex(parent, null, "V", 30, 160, 20, 20, "fontColor=#000000");
-            Object A = graphG1.insertVertex(parent, null, "A", 170, 160, 20, 20, "fontColor=#000000");
+            Object R = graphG1.insertVertex(parent, null, "R", 30, 20, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
+            Object B = graphG1.insertVertex(parent, null, "B", 170, 20, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
+            Object V = graphG1.insertVertex(parent, null, "V", 30, 160, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
+            Object A = graphG1.insertVertex(parent, null, "A", 170, 160, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
 
             Object aristaCubo1 = null;
             Object aristaCubo2 = null;
@@ -9276,7 +9279,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 aristaCubo1 = graphG1.insertEdge(parent, null, "1", A, A, "endArrow=none;");
             }
 
-            graphG1.getModel().setStyle(aristaCubo1, "strokeColor=#FFFFFF;endArrow=none;fontColor=#FFFFFF");
+            graphG1.getModel().setStyle(aristaCubo1, "strokeColor=#FFCA75;endArrow=none;fontColor=#FFCA75");
 
             // Cubo 2
             if (Cubo2C6J.getText().equals("R") && Cubo2C5J.getText().equals("R")) {
@@ -9405,7 +9408,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 aristaCubo4 = graphG1.insertEdge(parent, null, "4", A, A, "endArrow=none;");
             }
 
-            graphG1.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
+            graphG1.getModel().setStyle(aristaCubo4, "strokeColor=#33AFFC;endArrow=none;fontColor=#33AFFC");
 
             layout.execute(graphG1.getDefaultParent());
         } finally {
@@ -9435,10 +9438,10 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
 
         try {
 
-            Object R = graphG2.insertVertex(parent, null, "R", 30, 20, 20, 20, "fontColor=#000000");
-            Object B = graphG2.insertVertex(parent, null, "B", 170, 20, 20, 20, "fontColor=#000000");
-            Object V = graphG2.insertVertex(parent, null, "V", 30, 160, 20, 20, "fontColor=#000000");
-            Object A = graphG2.insertVertex(parent, null, "A", 170, 160, 20, 20, "fontColor=#000000");
+            Object R = graphG2.insertVertex(parent, null, "R", 30, 20, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
+            Object B = graphG2.insertVertex(parent, null, "B", 170, 20, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
+            Object V = graphG2.insertVertex(parent, null, "V", 30, 160, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
+            Object A = graphG2.insertVertex(parent, null, "A", 170, 160, 20, 20, "fontColor=#000000;fontStyle=1;fontSize=14");
 
             Object aristaCubo1 = null;
             Object aristaCubo2 = null;
@@ -9486,7 +9489,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 aristaCubo1 = graphG2.insertEdge(parent, null, "1", A, A, "endArrow=none;");
             }
 
-            graphG2.getModel().setStyle(aristaCubo1, "strokeColor=#FFFFFF;endArrow=none;fontColor=#FFFFFF");
+            graphG2.getModel().setStyle(aristaCubo1, "strokeColor=#FFCA75;endArrow=none;fontColor=#FFCA75");
 
             // Cubo 2
             if (Cubo2C3J.getText().equals("R") && Cubo2C4J.getText().equals("R")) {
@@ -9615,7 +9618,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
                 aristaCubo4 = graphG2.insertEdge(parent, null, "4", A, A, "endArrow=none;");
             }
 
-            graphG2.getModel().setStyle(aristaCubo4, "strokeColor=#0000FF;endArrow=none;fontColor=#0000FF");
+            graphG2.getModel().setStyle(aristaCubo4, "strokeColor=#33AFFC;endArrow=none;fontColor=#33AFFC");
 
         } finally {
             graphG2.getModel().endUpdate();
@@ -16048,6 +16051,7 @@ public class Locura_Instantánea extends javax.swing.JFrame implements Serializa
     private javax.swing.JButton explicacionBtn;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel fondo;
+    private javax.swing.JLabel fondo1;
     private javax.swing.JButton genAleatorio;
     public static javax.swing.JPanel grafoG1;
     public static javax.swing.JPanel grafoG2;
