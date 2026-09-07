@@ -3632,7 +3632,7 @@
                       <Font name="Consolas" size="17" style="0"/>
                     </Property>
                     <Property name="rows" type="int" value="2"/>
-                    <Property name="text" type="java.lang.String" value="Utilizando la teor&#xed;a de Grafos, se construye un grafo Gl que represente a los 4 cubos &#xa;con las siguientes reglas:&#xa; - El grafo tiene 4 v&#xe9;rtices que representan los 4 colores posibles (R, B, V, A).&#xa; - Las aristas representan caras opuestas de cada cubo, 3 aristas por cubo.&#xa; - Las aristas se etiquetan con el n&#xfa;mero del cubo (1, 2, 3, 4).    &#x2193; Deslice hacia abajo &#x2193;&#xa;&#xa;Despu&#xe9;s, se construyen 2 subgrafos de Gl (si existen) que representan las soluciones &#xa;horizontal y vertical, se deben seguir las siguientes reglas:&#xa; - Cada subgrafo debe tener los 4 v&#xe9;rtices de Gl&#xa; - Cada subgrafo debe tener &#xfa;nicamente 4 aristas, 1 arista por cubo. (etiquetas 1,2,3,4)&#xa; - El grado de cada v&#xe9;rtice debe ser igual a 2&#xa; - Las aristas del 1er subgrafo no se deben repetir en el 2do subgrafo&#xa;&#xa;Interpretaci&#xf3;n de subgrafos G1 y G2 :&#xa;&#xa;Por &#xfa;ltimo, se interpretan ambos subgrafos de la siguiente forma:&#xa; Soluci&#xf3;n Horizontal: (Grafo G1- recorrido horario)&#xa; - Se localiza la arista 1 (cubo 1) y se observa que v&#xe9;rtices conecta.&#xa; - En el cubo 1 se colocan estos 2 colores, de izquierda a derecha. (por ejemplo, R-B)&#xa; - Se observa en que v&#xe9;rtice termina la arista 1, y a partir de ese v&#xe9;rtice se observa la&#xa;   siguiente arista y los v&#xe9;rtices que conecta, as&#xed; sucesivamente. Siempre en sentido&#xa;   horario.                                                          Deslice hacia abajo &#x2193;&#xa;&#xa;Soluci&#xf3;n Vertical: (Grafo G2- recorrido horario)&#xa; - Se localiza la arista 1 (cubo 1) y se observa que v&#xe9;rtices conecta.&#xa; - En el cubo 1 se colocan estos 2 colores, de arriba hacia abajo. (por ejemplo, V-A)&#xa; - Se observa en que v&#xe9;rtice termina la arista 1, y a partir de ese v&#xe9;rtice se observa la&#xa;   siguiente arista y los v&#xe9;rtices que conecta, as&#xed; sucesivamente. Siempre en sentido&#xa;   horario."/>
+                    <Property name="text" type="java.lang.String" value="&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#xa;               RESOLUCI&#xd3;N MEDIANTE TEOR&#xcd;A DE GRAFOS (INSTANT INSANITY)&#xa;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#xa;&#xa;1. MODELO DEL GRAFO PRINCIPAL (GL):&#xa;   &#x2022; V&#xe9;rtices (4): Representan los 4 colores del juego (Rojo, Blanco, Verde, Amarillo).&#xa;   &#x2022; Aristas (12): Cada cubo posee 3 pares de caras opuestas (Frente-Atr&#xe1;s, Arriba-Abajo, &#xa;     Izquierda-Derecha). Se traza una arista entre los dos colores de cada par y se etiqueta&#xa;     con el n&#xfa;mero del cubo correspondiente (1, 2, 3 o 4).&#xa;   &#x2022; Total: Un multigrafo GL con 4 v&#xe9;rtices y 12 aristas (3 aristas por cada cubo).&#xa;&#xa;2. CONDICIONES DE RESOLUCI&#xd3;N (SUBGRAFOS H1 y H2):&#xa;   Para apilar la torre sin repetir colores en ninguna cara lateral, buscamos dos subgrafos:&#xa;     - Grafo G1 (H1): Define el eje horizontal (Frente y Atr&#xe1;s).&#xa;     - Grafo G2 (H2): Define el eje vertical (Izquierda y Derecha).&#xa;   &#xa;   Ambos subgrafos deben cumplir simult&#xe1;neamente:&#xa;     a) 1 arista por cubo: Cada subgrafo debe contener exactamente 4 aristas (etiquetadas 1, 2, 3 y 4).&#xa;     b) Grado 2 en cada v&#xe9;rtice (2-regular): Cada uno de los 4 colores debe tener grado exactamente 2.&#xa;        Esto garantiza que cada color aparezca exactamente 2 veces por eje (una al frente y otra atr&#xe1;s).&#xa;     c) Disyunci&#xf3;n de aristas: H1 y H2 no pueden compartir aristas del mismo cubo.&#xa;&#xa;3. ORIENTACI&#xd3;N ESPACIAL EN LA TORRE:&#xa;   &#x2022; En G1 (H1): Se orientan las 4 aristas como un ciclo dirigido; el nodo origen va al Frente &#xa;     y el nodo destino va Atr&#xe1;s (o viceversa).&#xa;   &#x2022; En G2 (H2): Se orientan las 4 aristas; el nodo origen va a la Izquierda y el destino a la Derecha.&#xa;   &#x2022; El par de caras restante de cada cubo queda libre en la base superior e inferior."/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>
@@ -4133,7 +4133,68 @@
                 </Constraint>
               </Constraints>
             </Component>
-          </SubComponents>
+                      <Component class="javax.swing.JButton" name="solucionPrevExp">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="37" green="25" red="7a" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Symbol" size="14" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&#x25c4;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="solucionPrevExpActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="40" y="162" width="25" height="25"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="noSolucionesExp">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Consolas" size="16" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="75" green="ca" red="ff" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="1 / 1"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="70" y="165" width="95" height="20"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JButton" name="solucionPostExp">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="37" green="25" red="7a" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Symbol" size="14" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&#x25ba;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="solucionPostExpActionPerformed"/>
+              </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="170" y="162" width="25" height="25"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+</SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel4">
           <AuxValues>

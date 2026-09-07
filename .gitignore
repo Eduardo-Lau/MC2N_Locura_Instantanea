@@ -36,3 +36,5 @@ nbdist/
 /build/
 /dist/
 
+# Web migration (to become separate repository)
+/locura_instantanea_web/
